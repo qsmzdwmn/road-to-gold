@@ -52,3 +52,18 @@ Implementation stops here. Request approval before additional implementation, in
 The original /workspace has an empty read-only .git directory and was never a Git checkout: it had no branch, commits or remote. The source files existed locally but had not been committed or pushed. The connected GitHub repository is `qsmzdwmn/road-to-gold`, default branch `main`, initially at `d19b5786562ec1c3169de6a2bbda17461862e24c` with only README.md.
 
 An isolated real checkout at `/workspace/work/github-checkout` is used to commit and push the project to `main`, preserving the initial commit and README heading. Generated builds, template archives, browser profiles and .godot caches are excluded. GitHub source ZIPs must be downloaded from the branch containing the project files. No gameplay features were added during export verification or repository delivery.
+
+## Web compatibility and Pages preparation — 2026-11-09
+- [x] Reconfirm exact Godot/template versions and installed Web ZIP integrity.
+- [x] Export the existing single-thread Compatibility project again without gameplay changes.
+- [x] Real Chromium under `/road-to-gold/`: 23 assertions pass for navigation, browser keyboard movement, save/load, IndexedDB, reload/restart, confirmation and desktop resolutions; no observed console/JS/WASM/storage/network errors.
+- [x] Add `tests/web_pages_verification.json` and restored-track screenshot evidence without replacing the previous verification report.
+- [x] Prepare `.github/workflows/web-pages.yml`: manual build by default, explicit optional deployment on main, fixed official binary/template checksums, native checks and artifact upload.
+- [x] Check workflow structure/shell/Python syntax; run exact install/native/export scripts locally successfully (34 native assertions preserved).
+- [x] Document Windows local HTTP serving and Pages instructions/limits in README.md. User reports native Windows launch succeeds; Windows browser/performance testing is still pending.
+- [ ] Run the workflow on GitHub when desired; hosted Actions execution has not been tested.
+- [ ] Confirm Pages eligibility for this currently private repository within the $0 budget. Do not change visibility, plan or hosting settings automatically.
+- [ ] After explicit publication approval, configure Pages if eligible, deploy and test real HTTPS behavior. No deployment was performed in this milestone.
+- [ ] Validate Windows desktop browser/hardware performance, additional browsers, focus-loss and adverse-storage cases.
+
+Stop after this milestone. All gameplay and input/save implementations remain unchanged; only workflow, verification evidence and documentation were added.

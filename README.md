@@ -144,3 +144,39 @@ XDG_CONFIG_HOME=/workspace/work/config XDG_DATA_HOME=/workspace/work/data XDG_CA
 `scenes/app/main.tscn` and `scripts/app/main.gd` own navigation. `scenes/ui/` and `scripts/ui/` own the interface. `scenes/race/` and `scripts/race/` build the static probe track; this is not a race simulator. `scenes/athletes/` and `scripts/input/` contain the placeholder and movement actions. `scripts/persistence/` alone handles probe storage. `tests/prototype_test.gd` is the native integration test. Original asset provenance is recorded in `assets/licenses/README.md`.
 
 Next recommended task: verify Windows 10 / 4 GB hardware, additional desktop browsers and the intended HTTPS host. The matching-template, Web export and Chromium persistence blockers are resolved; T01 retains the explicitly pending hardware/host checks. Only after that gate and approval should T02 athlete/appearance/career data contracts begin. Stop at this technical milestone; no further implementation is authorized.
+
+## Local Web run on Windows
+
+The user reports that the native prototype launches on Windows; browser and performance testing on that machine is still separate. With Godot 4.6.3 and matching templates installed, export the existing **Web** preset from **Project → Export** to `builds/web/index.html`. Keep every exported file together.
+
+From a terminal in the project root, if Python is installed:
+
+```powershell
+py -m http.server 8000 --bind 127.0.0.1 --directory builds/web
+```
+
+Open **http://127.0.0.1:8000/index.html** in Chrome/Edge. Use the same address, port and browser profile for save testing; `localhost` and `127.0.0.1` are different origins. Do not double-click the HTML file. Stop the server with Ctrl+C. Python is only an optional local development server, not a dependency of the exported game.
+
+The build retains Compatibility/WebGL 2, single-thread operation, primitive geometry, static lighting and no real-time shadows. No gameplay, resolution, movement or save mechanics were changed for Pages preparation. This avoids adding load, but does not establish an FPS or memory guarantee on a 4 GB Windows computer.
+
+## Prepared GitHub Pages workflow
+
+`.github/workflows/web-pages.yml` is **manual only**. There is no push trigger and no automatic publication. It uses official GitHub actions and downloads the official Godot 4.6.3 Linux binary and standard template archive, verifying both against fixed SHA-512 values from the release. It installs only the required Web templates, imports the project, runs the existing native checks, exports the existing single-thread preset and uploads a Pages-ready artifact. It does not automate the separate Chromium/OCR checks.
+
+To build without publishing after the workflow is on GitHub: **Actions → Web build and optional Pages deployment → Run workflow**, select `main`, leave **deploy** unchecked, then run. The `github-pages` artifact contains the static export; extract the artifact's tar archive before serving it. GitHub-hosted execution has not yet been run or validated; the installation, native-check and export scripts were exercised locally.
+
+To publish later, first confirm repository/plan eligibility and explicitly approve publication, then configure **Settings → Pages → Build and deployment → Source: GitHub Actions**. Dispatch the same workflow on `main` with **deploy** checked. The deployment job uses the `github-pages` environment and only that job receives Pages-write/OIDC permissions. Its `configure-pages` step does not enable a site automatically. Merely committing this workflow does not deploy anything.
+
+**Current hosting prerequisite:** this repository is private. GitHub Pages on GitHub Free supports public repositories; private-repository Pages availability depends on the account plan. No paid plan or repository visibility change is authorized or required for the local build. Do not purchase a plan or make the repository public automatically. To keep hosting at $0, a public-repository option would require an explicit visibility decision, or a separate free static-host choice. The account's actual Pages eligibility has not been verified.
+
+The workflow serializes Pages runs, refuses its deployment job outside `main`, and defaults to an artifact-only build. If the site is later enabled with the normal project-site URL, it would use the `/road-to-gold/` path. The real production HTTPS origin, headers and persistence must still be tested after an approved deployment. Changing from localhost to Pages creates a different save-storage origin; existing local browser saves will not transfer automatically. Pages serves static public content even when source-repository access is restricted, unless account-specific private-site access controls apply.
+
+### Follow-up Web/Pages-path verification — 2026-11-09
+
+Reconfirmed Godot `4.6.3.stable.official.7d41c59c4` and the installed `4.6.3.stable` template marker. Both installed Web template ZIPs passed full CRC/integrity checks. A fresh release export succeeded without changing the preset or any gameplay script.
+
+Ran real Chromium **156.0.8078.79** again with a new persistent profile and software WebGL 2, this time at **http://127.0.0.1:8001/road-to-gold/index.html** to exercise a GitHub Pages-style subdirectory. All **23 browser assertions passed**: menu/settings/Back, keyboard movement, Save & Menu, actual IndexedDB values, Continue after reload, replacement cancellation, four desktop sizes and recovery after full browser restart. There were **no browser-console errors, uncaught JavaScript errors, failed requests, HTTP errors, or observed WebAssembly/storage errors** in this run. The saved position was `[1.60000050067902, -2.86666655540466]`, and the stored JSON remained identical after restart. Evidence: `tests/web_pages_verification.json` and `tests/web-evidence/pages-restored-track.png`.
+
+Validated workflow YAML structure, all embedded shell syntax and Python syntax. Ran the workflow's exact checksum/install Python against official downloaded archives, then its native-regression and export shell steps locally using the extracted official binary. Import/main checks and all **34 existing native assertions** passed, and the Web export step succeeded. This is local verification of those scripts; no GitHub Actions run, Pages configuration change or deployment was performed.
+
+No new Web-specific runtime defect was found. Single-thread Compatibility settings, shadow-free lighting and lightweight geometry remain unchanged. The remaining blockers to claiming production/low-end compatibility are the actual Windows browser/GPU and 4 GB performance checks, cross-browser/adverse-storage tests, Pages account eligibility, and an approved HTTPS deployment test. The local Web build itself has no outstanding startup/input/save blocker in the tested Chromium environment.

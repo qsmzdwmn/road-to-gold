@@ -1,0 +1,115 @@
+name: Web build and optional Pages deployment
+
+on:
+  workflow_dispatch:
+    inputs:
+      deploy:
+        description: Deploy to the already configured GitHub Pages site
+        required: true
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: road-to-gold-pages
+  cancel-in-progress: false
+
+env:
+  GODOT_VERSION: 4.6.3
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Download and verify official Godot and Web templates
+        shell: bash
+        run: |
+          set -euo pipefail
+          release="https://github.com/godotengine/godot-builds/releases/download/${GODOT_VERSION}-stable"
+          mkdir -p "$RUNNER_TEMP/godot-downloads"
+          curl --fail --location --retry 3 "$release/Godot_v${GODOT_VERSION}-stable_linux.x86_64.zip" -o "$RUNNER_TEMP/godot-downloads/engine.zip"
+          curl --fail --location --retry 3 "$release/Godot_v${GODOT_VERSION}-stable_export_templates.tpz" -o "$RUNNER_TEMP/godot-downloads/templates.tpz"
+          python3 - <<'PY'
+          import hashlib, os, pathlib, shutil, zipfile
+          downloads = pathlib.Path(os.environ['RUNNER_TEMP']) / 'godot-downloads'
+          expected = {
+              'engine.zip': 'a035258da32b77f966a5376f9fa29c30a6adde826a85ba918e1605bd1fc9823eba7d85f1dd5e748956bd2ba72827c0025ffa11bb82aec91128c407a2e723c99c',
+              'templates.tpz': 'da606b61c10157844f8300172df374472665f95015495cb1a7cd132c40ede404faa96cc1016a4b9662db9909ddea69632c4948b2cd11163438dad4808881fb68',
+          }
+          for name, digest in expected.items():
+              with (downloads / name).open('rb') as archive:
+                  checksum = hashlib.sha512()
+                  for chunk in iter(lambda: archive.read(1024 * 1024), b''):
+                      checksum.update(chunk)
+                  if checksum.hexdigest() != digest:
+                      raise SystemExit('Checksum mismatch: ' + name)
+          binary_dir = pathlib.Path(os.environ['RUNNER_TEMP']) / 'godot-bin'
+          binary_dir.mkdir(parents=True, exist_ok=True)
+          with zipfile.ZipFile(downloads / 'engine.zip') as archive:
+              with archive.open('Godot_v4.6.3-stable_linux.x86_64') as source, (binary_dir / 'godot').open('wb') as target:
+                  shutil.copyfileobj(source, target)
+          (binary_dir / 'godot').chmod(0o755)
+          data_home = pathlib.Path(os.environ.get('XDG_DATA_HOME', str(pathlib.Path.home() / '.local/share')))
+          with zipfile.ZipFile(downloads / 'templates.tpz') as archive:
+              if archive.read('templates/version.txt').decode().strip() != '4.6.3.stable':
+                  raise SystemExit('Template version mismatch')
+              target_dir = data_home / 'godot/export_templates/4.6.3.stable'
+              target_dir.mkdir(parents=True, exist_ok=True)
+              for name in ['version.txt', 'web_nothreads_debug.zip', 'web_nothreads_release.zip']:
+                  with archive.open('templates/' + name) as source, (target_dir / name).open('wb') as target:
+                      shutil.copyfileobj(source, target)
+          with open(os.environ['GITHUB_PATH'], 'a') as paths:
+              paths.write(str(binary_dir) + '\n')
+          PY
+
+      - name: Validate and run existing native regression checks
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(godot --headless --version)" = "4.6.3.stable.official.7d41c59c4"
+          godot --headless --path . --editor --import --quit
+          godot --headless --path . --quit-after 120
+          godot --headless --path . --script tests/prototype_test.gd
+          godot --headless --path . --script tests/prototype_test.gd -- --reload-check
+
+      - name: Export single-thread Web build
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p builds/web
+          godot --headless --path . --export-release Web builds/web/index.html
+          test -s builds/web/index.html
+          test -s builds/web/index.wasm
+          test -s builds/web/index.pck
+          touch builds/web/.nojekyll
+
+      - name: Upload Pages-ready artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: builds/web
+
+  deploy:
+    if: ${{ inputs.deploy && github.ref == 'refs/heads/main' }}
+    needs: build
+    runs-on: ubuntu-22.04
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: false
+      - name: Deploy the verified artifact
+        id: deployment
+        uses: actions/deploy-pages@v4
