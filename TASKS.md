@@ -1,6 +1,6 @@
 # ROAD TO GOLD — Tasks
 
-Status: Version 0.2.1 male/female career support implemented and verified on 2026-11-09. Version 0.2 career creation remains the preserved baseline. Implementation 01 remains the preserved technical baseline. Native checks and local Chromium verification pass. Official matching Web templates are installed and Web export succeeds; T01 retains Windows hardware and actual-host verification. Further implementation waits for approval.
+Status: Version 0.2.2 THE LOCKER ROOM implemented; verified with 260 native assertions, 135 Chromium checks and successful Web exports on 2026-11-09. Version 0.2 career creation remains the preserved baseline. Implementation 01 remains the preserved technical baseline. Native checks and local Chromium verification pass. Official matching Web templates are installed and Web export succeeds; T01 retains Windows hardware and actual-host verification. Further implementation waits for approval.
 
 ## Completed initialization
 - [x] Inspect /workspace and search for project and AGENTS.md files; no existing project found.
@@ -106,7 +106,24 @@ T02/T04 data and creator portions are now implemented. Their original story/race
 - [x] 198 native assertions, including six category/origin combinations, customization, confirmation guards, legacy behavior, invalid data, distinct silhouettes and separate-process male/female reloads.
 - [x] 48 real Chromium assertions for both paths, visible preview differences, data validation, movement, saved category, page/browser restart and unchanged v2 legacy category state. No recorded console/network errors or warnings.
 - [x] Update design/technical/roadmap/README documentation, native tests, browser evidence and manual workflow test commands. Web export succeeds.
-- [ ] Future explicit legacy-category migration UI, competition systems, creator redesign and branding changes are deferred.
+- [ ] Future explicit legacy-category migration UI, competition systems and branding changes are deferred. Creator redesign is implemented in v0.2.2 below.
 - [ ] Windows low-end hardware/additional browser/live HTTPS testing remains outstanding.
 
 Stop after source delivery to main. No automatic deployment is authorized or dispatched.
+
+## Version 0.2.2 — THE LOCKER ROOM
+- [x] Inspect clean main at 328a71f; preserve v0.2.1 data, category and persistence implementation.
+- [x] Reorganize the creator into Athlete → Story → Appearance → Identity → Summary, with numbered progress and final BEGIN CAREER.
+- [x] Apply midnight/graphite/ivory/muted-gold local UI styling; retain original logo assets, menu, settings and track.
+- [x] Add one bounded procedural locker room with shared simple materials, shadow-free lighting and a static full-body orthographic camera visible on all steps.
+- [x] Refine both explicitly selected category models with neck/shoulder transitions, hands, balanced arms and shoes; keep neutral legacy geometry/materials unchanged.
+- [x] Responsive actual-window UI, stacked below 900 px, independently scrolling controls and persistent navigation; native keyboard/mouse controls with visible focus.
+- [x] Keep ten customization/identity controls and original validation bounds; track pending numeric text without applying stale hidden control text.
+- [x] Preserve save schemas 1/2/3, same path, no inferred legacy category, no migration, final replacement authorization and Cancel protection.
+- [x] All 198 existing native assertions preserved with navigation/title adaptations; 62 additional locker-room assertions pass. Import and main-scene smoke check pass from the actual Git checkout without logged warnings/errors.
+- [x] Official 4.6.3 single-thread Web export succeeds; Pages workflow remains manual-only and adds the new native suite.
+- [x] 135 real Chromium checks pass: both paths, all origins/appearance controls, validation, draft retention, confirmation, movement, Continue, page/browser restart, v1/v2 legacy profiles, five steps at five resolutions and final checkout keyboard/menu checks. No recorded engine/JavaScript/storage/network warnings/errors.
+- [x] Capture all five steps, both models, numeric controls, responsive layouts and keyboard scrolling; save raw verification JSON and dated report.
+- [ ] Windows 10 / 4 GB hardware performance, other browsers, screen readers, live-host and denied/private/quota storage paths remain unverified.
+
+No story, competition, record or progression systems, new branding assets or automatic deployment are part of this milestone. Stop after tested source delivery to main.

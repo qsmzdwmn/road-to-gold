@@ -1,14 +1,14 @@
 # road-to-gold
 
-## ROAD TO GOLD — Version 0.2.1
+## ROAD TO GOLD — Version 0.2.2: THE LOCKER ROOM
 
-A Godot **4.6.3 standard / GDScript** career-creation prototype using the **Compatibility** renderer. No paid assets, APIs, plugins, services, or project dependencies. Version 0.2 adds origins, athlete customization with a live procedural 3D preview, a summary and confirmed local career saving. The existing dark menu, settings/help, test track, camera, lighting and keyboard movement are preserved. There is no story, career-year simulation or sprint race yet.
+A Godot **4.6.3 standard / GDScript** career-creation prototype using the **Compatibility** renderer. No paid assets, APIs, plugins, services, or project dependencies. Version 0.2.2 presents the existing category, origin and athlete data in THE LOCKER ROOM: a five-step creator with a static full-body procedural preview, midnight/graphite panels, ivory text and muted gold accents. The existing dark menu, settings/help, test track, camera, lighting and keyboard movement are preserved. There is no story, career-year simulation or sprint race yet.
 
 ## Run locally
 
 1. Install/extract Godot 4.6.3 **standard**, not the .NET build. Import `project.godot` in the Project Manager.
 2. Press **F6** with `scenes/app/main.tscn` open, or **F5** to run the project.
-3. Select **New Career** → **Choose Athlete Category** → **Create Career** → **Choose Origin** → **Customize Athlete** → **Review Career** → **Create Career**. Use Back/Next without losing choices. The last button saves and opens the test track; existing progress requires a replacement confirmation. **Continue** loads either an existing v0.1 track session or a v0.2 career.
+3. Select **New Career** → **Choose Your Athlete** → **Your Story** → **Your Appearance** → **Your Identity** → **Begin Your Legacy** → **Begin Career**. Use Back/Continue without losing choices. The last button saves and opens the test track; existing progress requires a replacement confirmation. **Continue** loads either an existing v0.1 track session or a v0.2 career.
 4. Move with **WASD or arrow keys**. **Escape** returns to the menu without saving. **Save & Menu** writes the current position. **Continue** restores it. **Settings → Back** returns to the menu.
 5. Losing application focus pauses movement; choose **Resume** to continue. The track limits exploration to its marked area.
 
@@ -24,7 +24,7 @@ On Windows use the Godot executable's full path if it is not on PATH. For termin
 
 `user://prototype_v1.json` remains the local slot for compatibility. Version 1 `track_probe` saves contain a position only; Version 2 `career` saves add origin, derived starting age, names, country code and all appearance fields. Version 3 adds an explicitly selected `athlete_category` (`male` or `female`). Position stays separate. Existing v2 careers without a category remain unselected; loading or saving their position does not add a category or upgrade the schema. The custom user directory remains `road-to-gold-prototype`; on Windows the normal path is `%APPDATA%/road-to-gold-prototype/prototype_v1.json`. Use Godot's **Project → Open User Data Folder** to locate it.
 
-Opening New Career never writes this file. All creator steps share an in-memory draft; Back/Next and returning to the menu retain it within the session. A page reload discards unconfirmed drafts. Only final Create Career commits a new record; if any slot already exists, a confirmation dialog must be accepted before replacement. Invalid names/data block creation. Failed writes leave the old save intact and keep the editable summary visible with an error.
+Opening New Career never writes this file. All creator steps share an in-memory draft; Back/Next and returning to the menu retain it within the session. A page reload discards unconfirmed drafts. Only final BEGIN CAREER commits a new record; if any slot already exists, a confirmation dialog must be accepted before replacement. Invalid names/data block creation. Failed writes leave the old save intact and keep the editable summary visible with an error.
 
 Continue reads all three schemas; a legacy save is never automatically rewritten or assigned an invented athlete. Save & Menu stores track position while preserving the complete career or the original legacy format. Escape/menu without saving does not update position. Invalid/unsupported saves disable Continue, show an error and remain unchanged unless the user explicitly confirms replacement. Writes use a temporary file then rename. Full backup/migration, multi-tab conflict handling and import/export remain future work.
 
@@ -236,3 +236,31 @@ The existing manual-only Pages workflow also runs the category-native suite and 
 - Evidence: `tests/category_verification.json`, `tests/web-evidence/male-category-preview.png` and `tests/web-evidence/female-category-preview.png`. Native reproduction: run `tests/category_support_test.gd`, then `-- --reload-categories` with the same user data directory. Existing prototype/creator suites remain available and are also run by the manual workflow.
 
 Remaining limits: older careers remain unselected; this patch does not add an edit/migration UI for assigning a category to existing progress. Separate competitions, records, opponents, story paths and progression are future work; only explicit identifiers/context hooks are prepared. Windows 10 / 4 GB performance and additional browsers remain unmeasured. Source is committed/pushed to main; deployment remains an explicit manual action, not part of this task.
+
+## Version 0.2.2 — THE LOCKER ROOM
+
+The creator has five steps: **Choose Your Athlete**, **Your Story**, **Your Appearance**, **Your Identity**, **Begin Your Legacy**. Both categories share all three origins and every original control. Identity displays the age derived from the origin. Back/Continue, Escape and returning from the main menu preserve the session draft; final **BEGIN CAREER** uses the existing replacement dialog and repository authorization.
+
+One shared procedural room contains lockers, a bench, dark floor/walls and a simple overhead light strip. An orthographic camera stays fixed across all steps and all appearance choices. The preview updates only while visible; lighting has no shadow maps, textures, animation or post-processing. Explicit male/female models gain modest neck/shoulder transitions, balanced arms, hands and training shoes. Uncategorized legacy models retain their original geometry and kit. No logo asset, track, movement or competition system is changed.
+
+UI now uses native window dimensions instead of shrinking the whole interface into a 1280×720 letterbox. Below 900 pixels wide, the form and preview stack vertically. Forms scroll independently and follow keyboard focus; navigation stays outside the scroll area. Native buttons, dropdowns and inputs support Tab/Shift+Tab, Enter/Space and arrow keys; a gold outline identifies keyboard focus, text labels identify all options, and selection uses text plus a border. Editing widgets/popups consume their own cancel keys; Tab to Back/Continue for step navigation. Canvas-based Godot UI does not supply an HTML form accessibility tree; screen-reader support has not been verified. Desktop browser use remains the target.
+
+There are **no new save fields or migrations**. The path, validation limits, country and origin IDs, category contract and schemas 1/2/3 are preserved. Continue never invents a category for a legacy career. Browser-local limitations described above still apply.
+
+### Reproduce the locker-room checks
+
+Run all existing native commands above, then:
+
+```sh
+godot --headless --path . --script tests/locker_room_test.gd
+```
+
+The manual-only Pages workflow includes this additional native suite. It remains `workflow_dispatch` only, with deployment disabled by default. This update does not dispatch it.
+
+Export and serve using the existing instructions above (`godot --headless --path . --export-release Web builds/web/index.html`, then `python -m http.server 8000 --directory builds/web`). Open `http://localhost:8000/index.html`; never use `file://`. To test persistence, confirm a career, move with WASD, choose Save & Menu, reload, then Continue; close and reopen the same browser/profile/origin and repeat. Back up real progress before testing confirmed replacement. Use a disposable browser profile for destructive replacement checks.
+
+Screenshots, actual test totals and remaining verification limits are recorded in [the 0.2.2 verification report](tests/LOCKER_ROOM_VERIFICATION.md). Historical reports below/above retain the behavior and counts of their dated versions.
+
+### Version 0.2.2 observed verification — 2026-11-09
+
+**260 native assertions and 135 real Chromium checks pass.** Import, 120-frame main-scene smoke and official matching single-thread Web exports pass, including from the actual Git checkout. Both category paths, every origin/appearance control, identity validation, draft retention, summary, replacement protection, movement, Continue, page/browser restart, legacy formats, keyboard focus scrolling and five-step navigation at five resolutions were exercised. No warnings/errors were recorded in the completed runs. [Full results, all five screenshots, changed files and limits](tests/LOCKER_ROOM_VERIFICATION.md); [raw evidence](tests/locker_room_verification.json). No deployment was performed. Windows 10 / 4 GB performance and live-host/other-browser verification remain pending.

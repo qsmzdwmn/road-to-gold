@@ -82,6 +82,7 @@ jobs:
           godot --headless --path . --script tests/career_creation_test.gd -- --reload-career
           godot --headless --path . --script tests/category_support_test.gd
           godot --headless --path . --script tests/category_support_test.gd -- --reload-categories
+          godot --headless --path . --script tests/locker_room_test.gd
 
       - name: Export single-thread Web build
         shell: bash

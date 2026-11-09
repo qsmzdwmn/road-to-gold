@@ -53,7 +53,7 @@ func _ready() -> void:
 	stack.add_theme_constant_override("separation", 16)
 	panel.add_child(stack)
 	_label(stack, "ROAD TO GOLD", 32, Color("eac45e"))
-	_label(stack, "VERSION 0.2.1 / CAREER CREATION", 14)
+	_label(stack, "VERSION 0.2.2 / THE LOCKER ROOM", 14)
 	menu = _section(stack)
 	_button(menu, "New Career", func(): new_requested.emit())
 	continue_button = _button(menu, "Continue", func(): continue_requested.emit())

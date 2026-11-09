@@ -1,6 +1,6 @@
 # ROAD TO GOLD — Technical Design
 
-Status: proposed architecture; documentation only, 2026-11-09.
+Status: historical initialization notes followed by implemented contracts through Version 0.2.2, 2026-11-09.
 
 ## Repository and engine inspection
 Inspected /workspace including hidden entries and searched for AGENTS.md. No project, source files, project.godot, or local agent instructions were found. The .git directory is empty and `git status --short` reports that this is not a Git repository. Existing library-files, scratch and shared directories are environment scaffolding; preserve them.
@@ -114,3 +114,10 @@ Appearance preset indices are stable within schema v2; changing their ordering r
 New careers use schema v3 and require `career.athlete_category`. V1 track probes and v2 careers remain readable at the unchanged local path. Loading a missing v2 category does not inject a field, infer a category or rewrite a file. Position saves preserve the original schema and missing category. The v2 procedural silhouette remains the neutral fallback; v1 retains the original placeholder. A future explicit legacy-category selection/migration flow would be needed before category-specific competition, and is outside this patch. V3 missing/invalid categories disable Continue and cannot be overwritten by normal track saving. Creation still requires explicit existing-slot replacement confirmation.
 
 Category profiles adjust only existing torso, hip and limb placement transforms; material/mesh counts, outfits, control ranges and the parent movement node are unchanged. No extra textures, brand assets, dependencies, animation, race simulation or server calls are added. The existing interface and manual-only Pages workflow remain in place; CI adds category regression/reload checks.
+
+## Version 0.2.2 presentation boundary
+`career_creator.gd` retains one draft and the same ten field controls, now divided between appearance (step 2, zero-based) and identity (step 3). Category and origin steps use the existing identifiers and catalog. Validation occurs at identity/review; final confirmation still emits the existing career object to App. Numeric text is applied only for edited inputs, preventing stale text in a hidden SpinBox from replacing its current value during navigation.
+
+`scripts/customization/locker_room.gd` owns the bounded procedural set, shared materials, ambient/directional lighting and a fixed orthographic camera. It has no physics or per-frame callback. The existing single SubViewport/athlete architecture is reused, updating only while visible. The model adds low-segment/box details for selected categories; the empty legacy category hides those details and preserves the old transforms/materials. Body geometry is cosmetic and cannot change the parent movement controller.
+
+UI uses actual window dimensions (`window/stretch/mode="disabled"`); the creator stacks below 900 px with an independently scrolling form that follows keyboard focus and a fixed footer. Its local theme does not replace the menu/HUD theme. There are no new resources fetched at runtime, texture downloads, dependencies, shadow maps, camera animation, schema changes or migrations. The single-thread Compatibility Web preset, JSON inclusion, custom loading shell and manual-only Pages deployment contract are unchanged. Native QA covers maximum body framing at multiple viewports, camera invariance on all five screens, all four hairstyles/both models, proportions, step ordering and identity validation in addition to the preserved regression suites.

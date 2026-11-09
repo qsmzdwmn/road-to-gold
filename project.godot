@@ -7,7 +7,7 @@ config/icon="res://assets/branding/road_to_gold.svg"
 boot_splash/show_image=false
 boot_splash/bg_color=Color(0.025, 0.04, 0.06, 1)
 boot_splash/minimum_display_time=0
-config/description="Version 0.2.1 — athlete category support"
+config/description="Version 0.2.2 — The Locker Room"
 run/main_scene="res://scenes/app/main.tscn"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/use_custom_user_dir=true
@@ -18,7 +18,7 @@ window/size/viewport_width=1280
 window/size/viewport_height=720
 window/size/window_width_override=1280
 window/size/window_height_override=720
-window/stretch/mode="canvas_items"
+window/stretch/mode="disabled"
 
 [rendering]
 renderer/rendering_method="gl_compatibility"

@@ -1,6 +1,6 @@
 # ROAD TO GOLD — Roadmap
 
-Updated for Version 0.2.1, 2026-11-09. Gates are evidence-based; implementation stops at the currently approved milestone.
+Updated for Version 0.2.2, 2026-11-09. Gates are evidence-based; implementation stops at the currently approved milestone.
 
 ## Milestones
 1. **Approval and feasibility:** agree Alpha scope and unresolved defaults; scaffold the minimal Compatibility project; pin engine/templates; export a placeholder Web scene and validate hosting, keyboard focus and persistence on a desktop browser. Check the Windows 10 / 4 GB machine early. Gate: documented real Web results and no unresolved export blocker.
@@ -45,3 +45,8 @@ Scope: category selection first after New Career; equal origin/customization acc
 Acceptance: no preselected category in a fresh draft; selection required to advance; both categories support all three origin ages and every customization field; Back/Next preserve selections; categorized saves survive reload; legacy careers remain unselected; replacement protection remains intact; actual native and Chromium results are recorded in README/TASKS and test evidence.
 
 Deferred: creator redesign and new branding, explicit legacy-category migration UI, all separate competition/record/opponent/progression systems, full story and sports gameplay, additional browser and low-end hardware measurements. Do not deploy automatically.
+
+## Version 0.2.2 — THE LOCKER ROOM
+Scope: implement the approved five-step creator presentation, midnight/graphite/ivory/muted-gold UI, lightweight procedural room, fixed full-body camera, modest selected-category model refinements and responsive native-sized controls. Preserve all v0.2.1 data, validation, save authorization, legacy handling and tests. No progression or competition implementation, new logo, framework or automatic deployment.
+
+Acceptance: both categories traverse all three origins; every appearance control updates the preview; identity validation and accurate summary remain intact; Back/Continue retain drafts; camera framing stays fixed and includes maximum-sized athletes; replacement cancel/accept and schema 1/2/3 saving/loading pass native and real Chromium checks; capture all five screens; record actual export/persistence results and remaining limitations. Source delivery is followed by a stop for approval. Windows 10 / 4 GB performance, additional browsers, screen readers and live-host verification remain separate gates.

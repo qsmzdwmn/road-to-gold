@@ -38,10 +38,10 @@ func _run() -> void:
 	check(creator.step == 0 and creator.visible, "New Career opens category selection")
 	creator.select_category("female")
 	creator._next()
-	creator._next()
 	for index in range(3):
 		creator.origin_buttons[index].pressed.emit()
 		check(creator.draft.to_dict().age == [15, 17, 20][index], "origin %d has correct age" % index)
+	creator._next()
 	creator._next()
 	creator._next()
 	check(creator.step == 3 and not creator.error.text.is_empty() and not repo.has_file(), "blank names block summary and saving")

@@ -1,0 +1,756 @@
+{
+  "date": "2026-11-09",
+  "baseline_commit": "328a71f",
+  "engine": "4.6.3.stable.official.7d41c59c4",
+  "template_version": "4.6.3.stable",
+  "renderer": "Compatibility / WebGL 2",
+  "native": [
+    {
+      "name": "import",
+      "exit_code": 0,
+      "passes": 0,
+      "errors": []
+    },
+    {
+      "name": "main",
+      "exit_code": 0,
+      "passes": 0,
+      "errors": []
+    },
+    {
+      "name": "prototype",
+      "exit_code": 0,
+      "passes": 35,
+      "errors": []
+    },
+    {
+      "name": "prototype-reload",
+      "exit_code": 0,
+      "passes": 1,
+      "errors": []
+    },
+    {
+      "name": "career",
+      "exit_code": 0,
+      "passes": 81,
+      "errors": []
+    },
+    {
+      "name": "career-reload",
+      "exit_code": 0,
+      "passes": 2,
+      "errors": []
+    },
+    {
+      "name": "category",
+      "exit_code": 0,
+      "passes": 77,
+      "errors": []
+    },
+    {
+      "name": "category-reload",
+      "exit_code": 0,
+      "passes": 2,
+      "errors": []
+    },
+    {
+      "name": "locker",
+      "exit_code": 0,
+      "passes": 62,
+      "errors": []
+    }
+  ],
+  "native_assertions": 260,
+  "chromium_checks": 135,
+  "browser_environment": "Chromium 156.0.8078.79, Linux headless, SwiftShader software WebGL 2, Playwright mouse/keyboard and screenshots, read-only IndexedDB inspection",
+  "browser": {
+    "url": "http://127.0.0.1:8001/road-to-gold/index.html",
+    "console": [
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      },
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      },
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      },
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      },
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      },
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      },
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      },
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      }
+    ],
+    "page_errors": [],
+    "failed_requests": [],
+    "http_errors": [],
+    "checks": [
+      {
+        "pass": true,
+        "message": "step-1-unselected visible: CHOOSE YOUR ATHLETE"
+      },
+      {
+        "pass": true,
+        "message": "category-required visible: Choose Male Athlete or Female Athlete"
+      },
+      {
+        "pass": true,
+        "message": "unconfirmed draft writes no storage"
+      },
+      {
+        "pass": true,
+        "message": "both category silhouettes visibly distinct"
+      },
+      {
+        "pass": true,
+        "message": "male-selected visible: Selected: Male Athlete"
+      },
+      {
+        "pass": true,
+        "message": "male-story visible: YOUR STORY"
+      },
+      {
+        "pass": true,
+        "message": "male-origin-selected-15 visible: Selected: FROM NOTHING"
+      },
+      {
+        "pass": true,
+        "message": "male-origin-selected-17 visible: Selected: THE LEGACY"
+      },
+      {
+        "pass": true,
+        "message": "male-origin-selected-20 visible: Selected: THE CHOSEN ONE"
+      },
+      {
+        "pass": true,
+        "message": "male-appearance visible: YOUR APPEARANCE"
+      },
+      {
+        "pass": true,
+        "message": "male skin visibly updates"
+      },
+      {
+        "pass": true,
+        "message": "male hairstyle visibly updates"
+      },
+      {
+        "pass": true,
+        "message": "male hair color visibly updates"
+      },
+      {
+        "pass": true,
+        "message": "male Height visibly updates"
+      },
+      {
+        "pass": true,
+        "message": "male Weight visibly updates"
+      },
+      {
+        "pass": true,
+        "message": "male Shoulder width visibly updates"
+      },
+      {
+        "pass": true,
+        "message": "male Leg proportion visibly updates"
+      },
+      {
+        "pass": true,
+        "message": "male-identity visible: YOUR IDENTITY"
+      },
+      {
+        "pass": true,
+        "message": "male-derived-age visible: STARTING AGE / 17"
+      },
+      {
+        "pass": true,
+        "message": "male-name-validation visible: Enter a first and last name"
+      },
+      {
+        "pass": true,
+        "message": "invalid identity cannot save"
+      },
+      {
+        "pass": true,
+        "message": "male-category-retained visible: Selected: Male Athlete"
+      },
+      {
+        "pass": true,
+        "message": "male-identity-retained visible: Alex"
+      },
+      {
+        "pass": true,
+        "message": "male-country-retained visible: Azerbaijan"
+      },
+      {
+        "pass": true,
+        "message": "male-summary visible: BEGIN YOUR LEGACY"
+      },
+      {
+        "pass": true,
+        "message": "male summary identity and age accurate"
+      },
+      {
+        "pass": true,
+        "message": "male summary appearance accurate"
+      },
+      {
+        "pass": true,
+        "message": "male-track visible: TRACK EXPLORATION"
+      },
+      {
+        "pass": true,
+        "message": "one durable local career slot"
+      },
+      {
+        "pass": true,
+        "message": "male saved category/origin/age unchanged contract"
+      },
+      {
+        "pass": true,
+        "message": "male saved complete identity"
+      },
+      {
+        "pass": true,
+        "message": "male every appearance field persisted"
+      },
+      {
+        "pass": true,
+        "message": "male real keyboard input still moves track athlete"
+      },
+      {
+        "pass": true,
+        "message": "male-reload-and-restart-status visible: Loaded saved career."
+      },
+      {
+        "pass": true,
+        "message": "one durable local career slot"
+      },
+      {
+        "pass": true,
+        "message": "male page reload and full browser restart restore confirmed identity/category/position"
+      },
+      {
+        "pass": true,
+        "message": "female-selected visible: Selected: Female Athlete"
+      },
+      {
+        "pass": true,
+        "message": "female-story visible: YOUR STORY"
+      },
+      {
+        "pass": true,
+        "message": "female-origin-selected-15 visible: Selected: FROM NOTHING"
+      },
+      {
+        "pass": true,
+        "message": "female-origin-selected-17 visible: Selected: THE LEGACY"
+      },
+      {
+        "pass": true,
+        "message": "female-origin-selected-20 visible: Selected: THE CHOSEN ONE"
+      },
+      {
+        "pass": true,
+        "message": "female-appearance visible: YOUR APPEARANCE"
+      },
+      {
+        "pass": true,
+        "message": "female skin visibly updates"
+      },
+      {
+        "pass": true,
+        "message": "female hairstyle visibly updates"
+      },
+      {
+        "pass": true,
+        "message": "female hair color visibly updates"
+      },
+      {
+        "pass": true,
+        "message": "female Height visibly updates"
+      },
+      {
+        "pass": true,
+        "message": "female Weight visibly updates"
+      },
+      {
+        "pass": true,
+        "message": "female Shoulder width visibly updates"
+      },
+      {
+        "pass": true,
+        "message": "female Leg proportion visibly updates"
+      },
+      {
+        "pass": true,
+        "message": "female-identity visible: YOUR IDENTITY"
+      },
+      {
+        "pass": true,
+        "message": "female-derived-age visible: STARTING AGE / 20"
+      },
+      {
+        "pass": true,
+        "message": "female-category-retained visible: Selected: Female Athlete"
+      },
+      {
+        "pass": true,
+        "message": "female-identity-retained visible: Nadia"
+      },
+      {
+        "pass": true,
+        "message": "female-country-retained visible: Austria"
+      },
+      {
+        "pass": true,
+        "message": "female-summary visible: BEGIN YOUR LEGACY"
+      },
+      {
+        "pass": true,
+        "message": "female summary identity and age accurate"
+      },
+      {
+        "pass": true,
+        "message": "female summary appearance accurate"
+      },
+      {
+        "pass": true,
+        "message": "female-replace-dialog visible: Replace saved progress?"
+      },
+      {
+        "pass": true,
+        "message": "replacement waits without changing saved bytes"
+      },
+      {
+        "pass": true,
+        "message": "Cancel preserves previous career"
+      },
+      {
+        "pass": true,
+        "message": "cancel-keeps-summary visible: BEGIN YOUR LEGACY"
+      },
+      {
+        "pass": true,
+        "message": "female-track visible: TRACK EXPLORATION"
+      },
+      {
+        "pass": true,
+        "message": "one durable local career slot"
+      },
+      {
+        "pass": true,
+        "message": "female saved category/origin/age unchanged contract"
+      },
+      {
+        "pass": true,
+        "message": "female saved complete identity"
+      },
+      {
+        "pass": true,
+        "message": "female every appearance field persisted"
+      },
+      {
+        "pass": true,
+        "message": "female real keyboard input still moves track athlete"
+      },
+      {
+        "pass": true,
+        "message": "female-continue-after-reload visible: Loaded saved career."
+      },
+      {
+        "pass": true,
+        "message": "one durable local career slot"
+      },
+      {
+        "pass": true,
+        "message": "female page reload and Continue preserve entire record"
+      },
+      {
+        "pass": true,
+        "message": "restart-continue visible: Loaded saved career."
+      },
+      {
+        "pass": true,
+        "message": "one durable local career slot"
+      },
+      {
+        "pass": true,
+        "message": "complete browser restart preserves saved category and every field"
+      },
+      {
+        "pass": true,
+        "message": "keyboard-selection visible: Female Athlete"
+      },
+      {
+        "pass": true,
+        "message": "layout-800-step-1 visible: CHOOSE YOUR ATHLETE"
+      },
+      {
+        "pass": true,
+        "message": "layout-800-step-2 visible: YOUR STORY"
+      },
+      {
+        "pass": true,
+        "message": "layout-800-step-1 visible: CHOOSE YOUR ATHLETE"
+      },
+      {
+        "pass": true,
+        "message": "layout-800-step-2 visible: YOUR STORY"
+      },
+      {
+        "pass": true,
+        "message": "layout-800-step-3 visible: YOUR APPEARANCE"
+      },
+      {
+        "pass": true,
+        "message": "layout-800-step-4 visible: YOUR IDENTITY"
+      },
+      {
+        "pass": true,
+        "message": "layout-800-step-5 visible: BEGIN YOUR LEGACY"
+      },
+      {
+        "pass": true,
+        "message": "all five responsive steps navigate at 800x600"
+      },
+      {
+        "pass": true,
+        "message": "layout-1024-step-1 visible: CHOOSE YOUR ATHLETE"
+      },
+      {
+        "pass": true,
+        "message": "layout-1024-step-2 visible: YOUR STORY"
+      },
+      {
+        "pass": true,
+        "message": "layout-1024-step-3 visible: YOUR APPEARANCE"
+      },
+      {
+        "pass": true,
+        "message": "layout-1024-step-4 visible: YOUR IDENTITY"
+      },
+      {
+        "pass": true,
+        "message": "layout-1024-step-5 visible: BEGIN YOUR LEGACY"
+      },
+      {
+        "pass": true,
+        "message": "all five responsive steps navigate at 1024x600"
+      },
+      {
+        "pass": true,
+        "message": "layout-1280-step-1 visible: CHOOSE YOUR ATHLETE"
+      },
+      {
+        "pass": true,
+        "message": "layout-1280-step-2 visible: YOUR STORY"
+      },
+      {
+        "pass": true,
+        "message": "layout-1280-step-3 visible: YOUR APPEARANCE"
+      },
+      {
+        "pass": true,
+        "message": "layout-1280-step-4 visible: YOUR IDENTITY"
+      },
+      {
+        "pass": true,
+        "message": "layout-1280-step-5 visible: BEGIN YOUR LEGACY"
+      },
+      {
+        "pass": true,
+        "message": "all five responsive steps navigate at 1280x720"
+      },
+      {
+        "pass": true,
+        "message": "layout-1366-step-1 visible: CHOOSE YOUR ATHLETE"
+      },
+      {
+        "pass": true,
+        "message": "layout-1366-step-2 visible: YOUR STORY"
+      },
+      {
+        "pass": true,
+        "message": "layout-1366-step-3 visible: YOUR APPEARANCE"
+      },
+      {
+        "pass": true,
+        "message": "layout-1366-step-4 visible: YOUR IDENTITY"
+      },
+      {
+        "pass": true,
+        "message": "layout-1366-step-5 visible: BEGIN YOUR LEGACY"
+      },
+      {
+        "pass": true,
+        "message": "all five responsive steps navigate at 1366x768"
+      },
+      {
+        "pass": true,
+        "message": "layout-1920-step-1 visible: CHOOSE YOUR ATHLETE"
+      },
+      {
+        "pass": true,
+        "message": "layout-1920-step-2 visible: YOUR STORY"
+      },
+      {
+        "pass": true,
+        "message": "layout-1920-step-3 visible: YOUR APPEARANCE"
+      },
+      {
+        "pass": true,
+        "message": "layout-1920-step-4 visible: YOUR IDENTITY"
+      },
+      {
+        "pass": true,
+        "message": "layout-1920-step-5 visible: BEGIN YOUR LEGACY"
+      },
+      {
+        "pass": true,
+        "message": "all five responsive steps navigate at 1920x1080"
+      },
+      {
+        "pass": true,
+        "message": "v1 fixture has expected schema"
+      },
+      {
+        "pass": true,
+        "message": "v1-continue visible: TRACK EXPLORATION"
+      },
+      {
+        "pass": true,
+        "message": "v1 Continue never rewrites legacy bytes"
+      },
+      {
+        "pass": true,
+        "message": "one durable local career slot"
+      },
+      {
+        "pass": true,
+        "message": "v1 position save preserves original schema and career"
+      },
+      {
+        "pass": true,
+        "message": "v1 never invents a category"
+      },
+      {
+        "pass": true,
+        "message": "v2 fixture has expected schema"
+      },
+      {
+        "pass": true,
+        "message": "v2-continue visible: TRACK EXPLORATION"
+      },
+      {
+        "pass": true,
+        "message": "v2 Continue never rewrites legacy bytes"
+      },
+      {
+        "pass": true,
+        "message": "v2-unselected-category visible: (legacy)"
+      },
+      {
+        "pass": true,
+        "message": "one durable local career slot"
+      },
+      {
+        "pass": true,
+        "message": "v2 position save preserves original schema and career"
+      },
+      {
+        "pass": true,
+        "message": "v2 never invents a category"
+      },
+      {
+        "pass": true,
+        "message": "no recorded Godot/JavaScript/WebAssembly/storage/network errors or warnings"
+      }
+    ],
+    "browser": "156.0.8078.79",
+    "driver_notes": [
+      "Initial category label assertion expected one OCR line; the real status wrapped Male Athlete across two lines. Resumed with visible loaded-career status plus exact read-only saved-category verification.",
+      "Sparse-layout OCR omitted a visibly present 800px title; added a sparse-text OCR fallback and reran responsive checks. Product screenshot confirmed the title was visible."
+    ]
+  },
+  "checkout_browser": {
+    "url": "http://127.0.0.1:8002/index.html",
+    "console": [
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      }
+    ],
+    "page_errors": [],
+    "failed_requests": [],
+    "http_errors": [],
+    "checks": [
+      {
+        "pass": true,
+        "message": "checkout-main-menu visible: New Career"
+      },
+      {
+        "pass": true,
+        "message": "checkout-settings visible: SETTINGS"
+      },
+      {
+        "pass": true,
+        "message": "keyboard-settings-back visible: New Career"
+      },
+      {
+        "pass": true,
+        "message": "keyboard-new-career visible: CHOOSE YOUR ATHLETE"
+      },
+      {
+        "pass": true,
+        "message": "keyboard-explicit-category-selection visible: Selected: Female Athlete"
+      },
+      {
+        "pass": true,
+        "message": "keyboard-continue-story visible: YOUR STORY"
+      },
+      {
+        "pass": true,
+        "message": "keyboard-origin-choice visible: Selected: FROM NOTHING"
+      },
+      {
+        "pass": true,
+        "message": "keyboard-continue-appearance visible: YOUR APPEARANCE"
+      },
+      {
+        "pass": true,
+        "message": "keyboard-dropdown-choice visible: Tone 4"
+      },
+      {
+        "pass": true,
+        "message": "keyboard-focus-scrolls-last-field visible: Leg proportion"
+      },
+      {
+        "pass": true,
+        "message": "keyboard-escape-back visible: YOUR STORY"
+      },
+      {
+        "pass": true,
+        "message": "keyboard-return-menu visible: New Career"
+      },
+      {
+        "pass": true,
+        "message": "responsive-settings-800 visible: SETTINGS"
+      },
+      {
+        "pass": true,
+        "message": "keyboard navigation of draft never writes a career"
+      },
+      {
+        "pass": true,
+        "message": "checkout export has no recorded engine/JavaScript/network errors or warnings"
+      }
+    ],
+    "browser": "156.0.8078.79"
+  },
+  "web_export": {
+    "success": true,
+    "single_thread": true,
+    "source_working_copy": true,
+    "git_checkout": true,
+    "deployed": false
+  },
+  "qa_driver_notes": [
+    "Wrapped/highlighted text required sparse/raw screenshot OCR fallbacks. Reviewed actual screenshots; no game changes were made to satisfy OCR.",
+    "Keyboard dropdown verification uses ArrowDown from the selected item. Escape is tested from navigation focus; editable widgets retain their normal cancel semantics."
+  ],
+  "limits": [
+    "Windows 10 / 4 GB hardware performance not measured",
+    "Additional browsers, screen readers, browser zoom and live HTTPS deployment not tested",
+    "Denied/private/quota/eviction storage and multi-tab conflicts not tested"
+  ]
+}

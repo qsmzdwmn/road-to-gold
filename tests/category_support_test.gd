@@ -32,7 +32,7 @@ func _run() -> void:
 	var creator = app.creator
 	DirAccess.remove_absolute(PATH)
 	app._new_requested()
-	check(creator.step == 0 and "Choose Athlete Category" in creator.heading.text, "category screen is immediate New Career destination")
+	check(creator.step == 0 and "CHOOSE YOUR ATHLETE" in creator.heading.text, "category screen is immediate New Career destination")
 	check(creator.draft.athlete_category == "" and not creator.category_buttons[0].button_pressed and not creator.category_buttons[1].button_pressed, "no category is preselected")
 	creator._next()
 	check(creator.step == 0 and not creator.error.text.is_empty() and not repo.has_file(), "explicit category selection required before proceeding")
@@ -47,10 +47,10 @@ func _run() -> void:
 			app._new_requested()
 			creator.select_category(category)
 			creator._next()
-			creator._next()
 			for button: Button in creator.origin_buttons:
 				if button.text.begins_with(origin.title):
 					button.pressed.emit()
+			creator._next()
 			creator._next()
 			check(creator.step == 3 and creator.fields.size() == 10, "%s / %s has every customization control" % [category, origin.id])
 			creator.fields.first_name.text = "Alex"
