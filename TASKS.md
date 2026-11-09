@@ -1,6 +1,6 @@
 # ROAD TO GOLD — Tasks
 
-Status: Version 0.2 career creation implemented and verified on 2026-11-09. Implementation 01 remains the preserved technical baseline. Native checks and local Chromium verification pass. Official matching Web templates are installed and Web export succeeds; T01 retains Windows hardware and actual-host verification. Further implementation waits for approval.
+Status: Version 0.2.1 male/female career support implemented and verified on 2026-11-09. Version 0.2 career creation remains the preserved baseline. Implementation 01 remains the preserved technical baseline. Native checks and local Chromium verification pass. Official matching Web templates are installed and Web export succeeds; T01 retains Windows hardware and actual-host verification. Further implementation waits for approval.
 
 ## Completed initialization
 - [x] Inspect /workspace and search for project and AGENTS.md files; no existing project found.
@@ -95,3 +95,18 @@ No gameplay scripts, save schema/user directory, or navigation mechanics were mo
 - [ ] Future approval: introductory story events and career hub; full save backups/import-export/migrations/conflict handling; then sprint development. No such features are implemented in v0.2.
 
 T02/T04 data and creator portions are now implemented. Their original story/race/hub scope remains deferred. T03 now supports validated v1/v2 records and explicit replacement, but its full recovery/migration/import-export scope remains open. Version 0.2 delivery targets main after source verification; deployment remains manual. Stop after this milestone.
+
+## Version 0.2.1 — Male and female categories completed
+- [x] Choose Athlete Category immediately after New Career; Male Athlete/Female Athlete, no fresh-draft default. Existing welcome/origin/customization/summary layout follows unchanged.
+- [x] Both categories have all three origins/ages and all existing customization options; Back/Next and switching categories retain entered values.
+- [x] Respectful, modest procedural shoulder/hip profiles using the same meshes/materials/kit. No logo or branding asset changes; no movement or athletic-stat changes.
+- [x] Schema v3 explicitly saves category. V1/v2 remain supported; absent v2 category remains absent, neutral and visibly labeled unselected. Position saves never silently migrate or classify it.
+- [x] New career validation and existing-slot confirmation/authorization remain mandatory. Missing/invalid v3 category disables Continue without overwriting progress.
+- [x] Shared category IDs and `CareerData.competition_scope(event_id)` prepare future category-isolated records/opponents/progression. Empty legacy context has no default category. No separate competition systems implemented.
+- [x] 198 native assertions, including six category/origin combinations, customization, confirmation guards, legacy behavior, invalid data, distinct silhouettes and separate-process male/female reloads.
+- [x] 48 real Chromium assertions for both paths, visible preview differences, data validation, movement, saved category, page/browser restart and unchanged v2 legacy category state. No recorded console/network errors or warnings.
+- [x] Update design/technical/roadmap/README documentation, native tests, browser evidence and manual workflow test commands. Web export succeeds.
+- [ ] Future explicit legacy-category migration UI, competition systems, creator redesign and branding changes are deferred.
+- [ ] Windows low-end hardware/additional browser/live HTTPS testing remains outstanding.
+
+Stop after source delivery to main. No automatic deployment is authorized or dispatched.

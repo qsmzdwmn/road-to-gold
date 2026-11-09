@@ -1,6 +1,8 @@
 extends Node3D
 ## Cosmetic geometry only. Never changes movement speed or collision bounds.
+const Category = preload("res://scripts/data/athlete_category.gd")
 const Appearance = preload("res://scripts/data/appearance_data.gd")
+var athlete_category := ""
 var appearance = Appearance.new()
 var parts: Dictionary = {}
 var skin_material: StandardMaterial3D
@@ -30,7 +32,7 @@ func _ready() -> void:
 		part.mesh = mesh
 		parts[key] = part
 		add_child(part)
-	apply_appearance(appearance)
+	apply_appearance(appearance, athlete_category)
 
 func _material(color: Color) -> StandardMaterial3D:
 	var material := StandardMaterial3D.new()
@@ -42,20 +44,24 @@ func _part(key: String, dimensions: Vector3, at: Vector3) -> void:
 	parts[key].scale = dimensions
 	parts[key].position = at
 
-func apply_appearance(data) -> void:
+func apply_appearance(data, category := "") -> void:
 	appearance = data
+	athlete_category = category
 	if not is_node_ready():
 		return
 	skin_material.albedo_color = Color(Appearance.SKIN_COLORS[data.skin])
 	hair_material.albedo_color = Color(Appearance.HAIR_COLORS[data.hair_color])
 	var stature: float = data.height / 180.0
 	var build: float = clampf(pow(data.weight / 75.0, 0.35), 0.82, 1.26)
-	var width: float = 0.48 * build * data.shoulders
+	var profile: Dictionary = Category.PROFILES.get(athlete_category, Category.PROFILES[""])
+	var base_width: float = 0.48 * build * data.shoulders
+	var width: float = base_width * profile.shoulders
+	var hips: float = base_width * profile.hips
 	var leg: float = 0.72 * data.legs
 	_part("torso", Vector3(width, 0.65, 0.3 * build), Vector3(0, leg + 0.38, 0))
-	_part("shorts", Vector3(width * 0.86, 0.22, 0.31 * build), Vector3(0, leg + 0.03, 0))
+	_part("shorts", Vector3(hips, 0.22, 0.31 * build), Vector3(0, leg + 0.03, 0))
 	for side: float in [-1.0, 1.0]:
-		_part("left_leg" if side < 0 else "right_leg", Vector3(0.15 * build, leg, 0.18 * build), Vector3(side * width * 0.27, leg * 0.5, 0))
+		_part("left_leg" if side < 0 else "right_leg", Vector3(0.15 * build, leg, 0.18 * build), Vector3(side * hips * (0.27 / 0.86), leg * 0.5, 0))
 		_part("left_arm" if side < 0 else "right_arm", Vector3(0.14 * build, 0.65, 0.17), Vector3(side * (width * 0.5 + 0.09), leg + 0.31, 0))
 	var head_y: float = leg + 0.93
 	_part("head", Vector3(0.38, 0.4, 0.38), Vector3(0, head_y, 0))

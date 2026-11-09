@@ -1,6 +1,7 @@
 extends Control
 signal cancelled
 signal confirmed(career)
+const Category = preload("res://scripts/data/athlete_category.gd")
 const Career = preload("res://scripts/career/career_data.gd")
 const Catalog = preload("res://scripts/data/career_catalog.gd")
 const Appearance = preload("res://scripts/data/appearance_data.gd")
@@ -9,6 +10,8 @@ var draft = Career.new()
 var step := 0
 var sections: Array[VBoxContainer] = []
 var fields: Dictionary = {}
+var category_buttons: Array[Button] = []
+var category_caption: Label
 var origin_buttons: Array[Button] = []
 var preview_model
 var origin_caption: Label
@@ -49,14 +52,26 @@ func _ready() -> void:
 	var content := VBoxContainer.new()
 	content.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	scroll.add_child(content)
-	for i in range(4):
+	for i in range(5):
 		var section := VBoxContainer.new()
 		section.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		section.add_theme_constant_override("separation", 12)
 		sections.append(section)
 		content.add_child(section)
-	_label(sections[0], "Create a fictional athlete and choose where their career begins.\n\nYour draft stays with you when you go Back or Next. Saved progress is only replaced after you confirm the completed career.\n\nThis version returns to the existing test track. Story events and sporting progression come later.", 20)
-	origin_caption = _label(sections[1], "Selected: FROM NOTHING — age 15", 18, Color("eac45e"))
+	category_caption = _label(sections[0], "Choose an athlete category to continue.", 18, Color("eac45e"))
+	var category_group := ButtonGroup.new()
+	for id: String in Category.IDS:
+		var button := Button.new()
+		button.text = Category.label(id)
+		button.toggle_mode = true
+		button.button_group = category_group
+		button.custom_minimum_size.y = 64
+		button.pressed.connect(func(): select_category(id))
+		category_buttons.append(button)
+		sections[0].add_child(button)
+	_label(sections[0], "Both categories have all three origins and every customization option. Competition systems will be added in a later version.", 18)
+	_label(sections[1], "Create a fictional athlete and choose where their career begins.\n\nYour draft stays with you when you go Back or Next. Saved progress is only replaced after you confirm the completed career.\n\nThis version returns to the existing test track. Story events and sporting progression come later.", 20)
+	origin_caption = _label(sections[2], "Selected: FROM NOTHING — age 15", 18, Color("eac45e"))
 	var group := ButtonGroup.new()
 	for entry: Dictionary in Catalog.origins():
 		var button := Button.new()
@@ -72,7 +87,7 @@ func _ready() -> void:
 			origin_caption.text = "Selected: %s — age %d" % [entry.title, entry.age]
 		)
 		origin_buttons.append(button)
-		sections[1].add_child(button)
+		sections[2].add_child(button)
 	_name_field("first_name", "First name")
 	_name_field("last_name", "Last name")
 	var country := OptionButton.new()
@@ -95,9 +110,9 @@ func _ready() -> void:
 		spin.suffix = "cm" if key == "height" else ("kg" if key == "weight" else "×")
 		_field(key, {"height": "Height", "weight": "Weight", "shoulders": "Shoulder width", "legs": "Leg proportion"}[key], spin)
 		spin.value_changed.connect(func(_value): _changed())
-	_label(sections[2], "Appearance and country do not change athletic ability.", 16)
-	summary = _label(sections[3], "", 20)
-	_label(sections[3], "Create Career saves this athlete and opens the test track.", 18)
+	_label(sections[3], "Appearance and country do not change athletic ability.", 16)
+	summary = _label(sections[4], "", 20)
+	_label(sections[4], "Create Career saves this athlete and opens the test track.", 18)
 	preview_pane = VBoxContainer.new()
 	preview_pane.custom_minimum_size.x = 280
 	preview_pane.size_flags_vertical = Control.SIZE_EXPAND_FILL
@@ -168,11 +183,11 @@ func _button(parent: Node, text: String, callback: Callable) -> Button:
 	return button
 
 func _field(key: String, title: String, control: Control) -> void:
-	_label(sections[2], title, 18)
+	_label(sections[3], title, 18)
 	control.custom_minimum_size.y = 42
 	control.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	control.tooltip_text = title
-	sections[2].add_child(control)
+	sections[3].add_child(control)
 	fields[key] = control
 
 func _name_field(key: String, title: String) -> void:
@@ -205,7 +220,17 @@ func _changed() -> void:
 	if not is_node_ready():
 		return
 	_capture()
-	preview_model.apply_appearance(draft.athlete.appearance)
+	preview_model.apply_appearance(draft.athlete.appearance, draft.athlete_category)
+	error.text = ""
+
+func select_category(id: String) -> void:
+	if not Category.valid(id):
+		return
+	draft.athlete_category = id
+	for index in range(category_buttons.size()):
+		category_buttons[index].button_pressed = Category.IDS[index] == id
+	category_caption.text = "Selected: " + Category.label(id)
+	preview_model.apply_appearance(draft.athlete.appearance, id)
 	error.text = ""
 
 func open() -> void:
@@ -214,29 +239,32 @@ func open() -> void:
 	_show_step()
 
 func _show_step() -> void:
-	heading.text = "%d / 4 — %s" % [step + 1, ["Create Career", "Choose Origin", "Customize Athlete", "Career Summary"][step]]
+	heading.text = "%d / 5 — %s" % [step + 1, ["Choose Athlete Category", "Create Career", "Choose Origin", "Customize Athlete", "Career Summary"][step]]
 	for index in range(sections.size()):
 		sections[index].visible = index == step
-	preview_pane.visible = step >= 2
+	preview_pane.visible = step == 0 or step >= 3
 	back_button.text = "Main Menu" if step == 0 else "Back"
-	next_button.text = ["Choose Origin", "Customize Athlete", "Review Career", "Create Career"][step]
+	next_button.text = ["Next", "Choose Origin", "Customize Athlete", "Review Career", "Create Career"][step]
 	error.text = ""
 	scroll.scroll_vertical = 0
-	if step == 3:
+	if step == 4:
 		var data: Dictionary = draft.to_dict()
 		var origin := Catalog.origin(draft.origin_id)
-		summary.text = "%s\n%s %s\nCountry: %s\nAge: %d\nHeight: %.0f cm\nWeight: %.0f kg\nSkin: Tone %d\nHair: %s / %s\nShoulders: %.2f ×\nLeg proportion: %.2f ×" % [origin.title, data.athlete.first_name, data.athlete.last_name, Catalog.country_name(data.athlete.country), origin.age, data.athlete.appearance.height, data.athlete.appearance.weight, data.athlete.appearance.skin + 1, Appearance.STYLES[data.athlete.appearance.hairstyle], Appearance.HAIR_NAMES[data.athlete.appearance.hair_color], data.athlete.appearance.shoulders, data.athlete.appearance.legs]
+		summary.text = "Category: %s\n%s\n%s %s\nCountry: %s\nAge: %d\nHeight: %.0f cm\nWeight: %.0f kg\nSkin: Tone %d\nHair: %s / %s\nShoulders: %.2f ×\nLeg proportion: %.2f ×" % [Category.label(draft.athlete_category), origin.title, data.athlete.first_name, data.athlete.last_name, Catalog.country_name(data.athlete.country), origin.age, data.athlete.appearance.height, data.athlete.appearance.weight, data.athlete.appearance.skin + 1, Appearance.STYLES[data.athlete.appearance.hairstyle], Appearance.HAIR_NAMES[data.athlete.appearance.hair_color], data.athlete.appearance.shoulders, data.athlete.appearance.legs]
 	if visible:
 		next_button.grab_focus()
 
 func _next() -> void:
 	_capture(true)
-	if step >= 2:
-		var message: String = Career.validate(draft.to_dict())
+	if step == 0 and not Category.valid(draft.athlete_category):
+		error.text = "Choose Male Athlete or Female Athlete."
+		return
+	if step >= 3:
+		var message: String = Career.validate(draft.to_dict(), true)
 		if not message.is_empty():
 			error.text = message
 			return
-	if step == 3:
+	if step == 4:
 		confirmed.emit(Career.from_dict(draft.to_dict()))
 		return
 	step += 1

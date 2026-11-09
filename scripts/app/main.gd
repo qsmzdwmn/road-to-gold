@@ -1,6 +1,7 @@
 extends Node3D
 const Repository = preload("res://scripts/persistence/prototype_save_repository.gd")
 const Controls = preload("res://scripts/input/placeholder_input.gd")
+const Category = preload("res://scripts/data/athlete_category.gd")
 const Career = preload("res://scripts/career/career_data.gd")
 const CreatorScene = preload("res://scenes/ui/career_creator.tscn")
 const Model = preload("res://scripts/customization/procedural_athlete.gd")
@@ -79,7 +80,7 @@ func _continue() -> void:
 	current_career = Career.from_dict(snapshot.career) if snapshot.kind == "career" else null
 	athlete.position = Vector3(snapshot.position[0], 0, snapshot.position[1])
 	_enter_track()
-	ui.status.text = "Loaded saved career." if current_career != null else "Loaded saved test position."
+	ui.status.text = ("Loaded saved career. Category: " + Category.label(current_career.athlete_category)) if current_career != null else "Loaded saved test position."
 
 func _enter_track() -> void:
 	exploring = true
@@ -92,7 +93,7 @@ func _enter_track() -> void:
 		if child is MeshInstance3D:
 			child.visible = current_career == null
 	if current_career != null:
-		career_visual.apply_appearance(current_career.athlete.appearance)
+		career_visual.apply_appearance(current_career.athlete.appearance, current_career.athlete_category)
 
 func _save_and_menu() -> void:
 	var succeeded: bool = repository.save_position(athlete.position)

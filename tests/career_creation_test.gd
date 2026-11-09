@@ -35,14 +35,16 @@ func _run() -> void:
 	check(root.gui_get_focus_owner() == app.ui.menu.get_child(0), "initial menu retains keyboard focus")
 	check(Catalog.countries().size() == 195 and Catalog.country_name("AZ") == "Azerbaijan", "real-country dataset available with stable codes")
 	app.ui.new_requested.emit()
-	check(creator.step == 0 and creator.visible, "New Career opens dedicated introduction")
+	check(creator.step == 0 and creator.visible, "New Career opens category selection")
+	creator.select_category("female")
+	creator._next()
 	creator._next()
 	for index in range(3):
 		creator.origin_buttons[index].pressed.emit()
 		check(creator.draft.to_dict().age == [15, 17, 20][index], "origin %d has correct age" % index)
 	creator._next()
 	creator._next()
-	check(creator.step == 2 and not creator.error.text.is_empty() and not repo.has_file(), "blank names block summary and saving")
+	check(creator.step == 3 and not creator.error.text.is_empty() and not repo.has_file(), "blank names block summary and saving")
 	creator.fields.first_name.text = "  Nadia  "
 	creator.fields.last_name.text = "O’Connor"
 	for i in range(creator.fields.country.item_count):
@@ -62,7 +64,7 @@ func _run() -> void:
 	check(creator.preview_model.scale.x > 1 and creator.preview_model.parts.torso.scale.x > 0.48, "height, weight and proportions visibly scale geometry")
 	await process_frame
 	creator._next()
-	check(creator.step == 3 and "THE CHOSEN ONE" in creator.summary.text and "Azerbaijan" in creator.summary.text and "Age: 20" in creator.summary.text, "summary includes origin, country and derived age")
+	check(creator.step == 4 and "THE CHOSEN ONE" in creator.summary.text and "Azerbaijan" in creator.summary.text and "Age: 20" in creator.summary.text, "summary includes origin, country and derived age")
 	var expected: Dictionary = creator.draft.to_dict()
 	creator._back()
 	creator._back()
@@ -72,7 +74,7 @@ func _run() -> void:
 	creator._next()
 	check(app.exploring and not creator.visible and app.career_visual.visible, "confirmed creation saves and enters track with appearance")
 	var saved: Dictionary = repo.load_snapshot()
-	check(saved.kind == "career" and saved.schema_version == 2 and Career.from_dict(saved.career).to_dict() == expected, "all career fields persist in version 2")
+	check(saved.kind == "career" and saved.schema_version == 3 and Career.from_dict(saved.career).to_dict() == expected, "all career fields persist in version 3")
 	check(saved.career.athlete.first_name == "Nadia", "saved names are trimmed")
 	app.athlete.position = Vector3(1.25, 0, -4.5)
 	app._save_and_menu()
@@ -82,6 +84,7 @@ func _run() -> void:
 	app._menu()
 	var before := FileAccess.get_file_as_string(PATH)
 	app.ui.new_requested.emit()
+	creator._next()
 	creator._next()
 	creator._next()
 	creator.fields.first_name.text = "Replacement"
@@ -114,7 +117,7 @@ func _run() -> void:
 	for resolution: Vector2i in [Vector2i(640, 640), Vector2i(800, 600), Vector2i(1024, 600), Vector2i(1280, 720), Vector2i(1920, 1080)]:
 		root.size = resolution
 		creator.show()
-		for i in range(4):
+		for i in range(5):
 			creator.step = i
 			creator._show_step()
 			await process_frame

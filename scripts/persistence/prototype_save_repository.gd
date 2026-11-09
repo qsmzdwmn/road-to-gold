@@ -1,5 +1,5 @@
 extends RefCounted
-## One validated local slot: v1 track probes remain readable; v2 adds career data.
+## One validated local slot: v1 track probes remain readable; v2 uncategorized careers and v3 categorized careers remain separate.
 const Career = preload("res://scripts/career/career_data.gd")
 const DEFAULT_PATH := "user://prototype_v1.json"
 const MAX_BYTES := 16384
@@ -25,7 +25,7 @@ func load_snapshot() -> Dictionary:
 	var parsed: Variant = JSON.parse_string(file.get_as_text())
 	if not parsed is Dictionary:
 		return _invalid()
-	if not ((parsed.get("schema_version") == 1 and parsed.get("kind") == "track_probe") or (parsed.get("schema_version") == 2 and parsed.get("kind") == "career")):
+	if not ((parsed.get("schema_version") == 1 and parsed.get("kind") == "track_probe") or ((parsed.get("schema_version") == 2 or parsed.get("schema_version") == 3) and parsed.get("kind") == "career")):
 		return _invalid()
 	var coords: Variant = parsed.get("position")
 	if not coords is Array or coords.size() != 2:
@@ -35,8 +35,8 @@ func load_snapshot() -> Dictionary:
 			return _invalid()
 	if absf(float(coords[0])) > 3.30001 or absf(float(coords[1])) > 12.0:
 		return _invalid()
-	if parsed.schema_version == 2:
-		var message: String = Career.validate(parsed.get("career"))
+	if parsed.schema_version == 2 or parsed.schema_version == 3:
+		var message: String = Career.validate(parsed.get("career"), parsed.schema_version == 3)
 		if not message.is_empty():
 			return _invalid(message + " Saved progress was left unchanged.")
 	return parsed
@@ -60,13 +60,13 @@ func save_position(position: Vector3) -> bool:
 	return _write(snapshot, position)
 
 func save_career(career, position: Vector3, replace_authorized := false) -> bool:
-	error_message = Career.validate(career.to_dict())
+	error_message = Career.validate(career.to_dict(), true)
 	if not error_message.is_empty():
 		return false
 	if has_file() and not replace_authorized:
 		error_message = "Confirm before replacing saved progress."
 		return false
-	return _write({"schema_version": 2, "kind": "career", "career": career.to_dict()}, position)
+	return _write({"schema_version": 3, "kind": "career", "career": career.to_dict()}, position)
 
 func _write(snapshot: Dictionary, position: Vector3) -> bool:
 	error_message = ""

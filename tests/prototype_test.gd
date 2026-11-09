@@ -44,9 +44,10 @@ func _run() -> void:
 	app.ui.new_requested.emit()
 	check(app.creator.visible and not app.exploring, "New Career opens draft instead of starting track")
 	check(not repository.has_file(), "opening creation does not write a save")
+	app.creator.select_category("male")
 	app.creator.fields.first_name.text = "Test"
 	app.creator.fields.last_name.text = "Runner"
-	for i in range(4):
+	for i in range(5):
 		app.creator._next()
 	check(repository.load_position() == Vector3.ZERO, "confirmed career saves initial position")
 	var before: Vector3 = app.athlete.position
@@ -81,7 +82,7 @@ func _run() -> void:
 	app._menu()
 	app.ui.new_requested.emit()
 	check(not app.ui.confirmation.visible, "opening a draft leaves existing save untouched")
-	for i in range(4):
+	for i in range(5):
 		app.creator._next()
 	check(app.ui.confirmation.visible and not app.exploring, "final Create Career requests replacement confirmation")
 	app.ui.confirmation.hide()

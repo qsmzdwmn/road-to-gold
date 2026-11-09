@@ -1,6 +1,6 @@
 # road-to-gold
 
-## ROAD TO GOLD — Version 0.2
+## ROAD TO GOLD — Version 0.2.1
 
 A Godot **4.6.3 standard / GDScript** career-creation prototype using the **Compatibility** renderer. No paid assets, APIs, plugins, services, or project dependencies. Version 0.2 adds origins, athlete customization with a live procedural 3D preview, a summary and confirmed local career saving. The existing dark menu, settings/help, test track, camera, lighting and keyboard movement are preserved. There is no story, career-year simulation or sprint race yet.
 
@@ -8,7 +8,7 @@ A Godot **4.6.3 standard / GDScript** career-creation prototype using the **Comp
 
 1. Install/extract Godot 4.6.3 **standard**, not the .NET build. Import `project.godot` in the Project Manager.
 2. Press **F6** with `scenes/app/main.tscn` open, or **F5** to run the project.
-3. Select **New Career** → **Choose Origin** → **Customize Athlete** → **Review Career** → **Create Career**. Use Back/Next without losing choices. The last button saves and opens the test track; existing progress requires a replacement confirmation. **Continue** loads either an existing v0.1 track session or a v0.2 career.
+3. Select **New Career** → **Choose Athlete Category** → **Create Career** → **Choose Origin** → **Customize Athlete** → **Review Career** → **Create Career**. Use Back/Next without losing choices. The last button saves and opens the test track; existing progress requires a replacement confirmation. **Continue** loads either an existing v0.1 track session or a v0.2 career.
 4. Move with **WASD or arrow keys**. **Escape** returns to the menu without saving. **Save & Menu** writes the current position. **Continue** restores it. **Settings → Back** returns to the menu.
 5. Losing application focus pauses movement; choose **Resume** to continue. The track limits exploration to its marked area.
 
@@ -22,11 +22,11 @@ On Windows use the Godot executable's full path if it is not on PATH. For termin
 
 ## Save behavior
 
-`user://prototype_v1.json` remains the local slot for compatibility. Version 1 `track_probe` saves contain a position only; Version 2 `career` saves add origin, derived starting age, names, country code and all appearance fields, while retaining position separately. The custom user directory remains `road-to-gold-prototype`; on Windows the normal path is `%APPDATA%/road-to-gold-prototype/prototype_v1.json`. Use Godot's **Project → Open User Data Folder** to locate it.
+`user://prototype_v1.json` remains the local slot for compatibility. Version 1 `track_probe` saves contain a position only; Version 2 `career` saves add origin, derived starting age, names, country code and all appearance fields. Version 3 adds an explicitly selected `athlete_category` (`male` or `female`). Position stays separate. Existing v2 careers without a category remain unselected; loading or saving their position does not add a category or upgrade the schema. The custom user directory remains `road-to-gold-prototype`; on Windows the normal path is `%APPDATA%/road-to-gold-prototype/prototype_v1.json`. Use Godot's **Project → Open User Data Folder** to locate it.
 
 Opening New Career never writes this file. All creator steps share an in-memory draft; Back/Next and returning to the menu retain it within the session. A page reload discards unconfirmed drafts. Only final Create Career commits a new record; if any slot already exists, a confirmation dialog must be accepted before replacement. Invalid names/data block creation. Failed writes leave the old save intact and keep the editable summary visible with an error.
 
-Continue reads either schema; a legacy save is never automatically rewritten or assigned an invented athlete. Save & Menu stores track position while preserving the complete career or the original legacy format. Escape/menu without saving does not update position. Invalid/unsupported saves disable Continue, show an error and remain unchanged unless the user explicitly confirms replacement. Writes use a temporary file then rename. Full backup/migration, multi-tab conflict handling and import/export remain future work.
+Continue reads all three schemas; a legacy save is never automatically rewritten or assigned an invented athlete. Save & Menu stores track position while preserving the complete career or the original legacy format. Escape/menu without saving does not update position. Invalid/unsupported saves disable Continue, show an error and remain unchanged unless the user explicitly confirms replacement. Writes use a temporary file then rename. Full backup/migration, multi-tab conflict handling and import/export remain future work.
 
 In Web builds, Godot maps `user://` to browser storage, normally backed by IndexedDB. The UI warns when the filesystem reports nonpersistent storage. A successful write does not guarantee a browser has durably synchronized it. Wait briefly before closing/reloading, and verify on the actual browser/host. Saves are scoped to profile and site origin; they are not synced to another device. Private browsing, denied storage, clearing site data or changing host may lose saves. Use one tab for this prototype.
 
@@ -82,6 +82,8 @@ godot --headless --path . --script tests/prototype_test.gd
 godot --headless --path . --script tests/prototype_test.gd -- --reload-check
 godot --headless --path . --script tests/career_creation_test.gd
 godot --headless --path . --script tests/career_creation_test.gd -- --reload-career
+godot --headless --path . --script tests/category_support_test.gd
+godot --headless --path . --script tests/category_support_test.gd -- --reload-categories
 ```
 
 Run each suite followed by its matching reload check with the same user data directory. Prototype tests use `user://tests/prototype.json`; career tests use `user://tests/career.json`. The reload checks verify their respective fixtures in separate processes. They do not overwrite the interactive prototype save. Keyboard verification uses injected physical key events through Godot's InputMap, not a human pressing keys or a browser. UI-fit checks inspect container bounds; they are not screenshots or visual/accessibility certification.
@@ -216,3 +218,21 @@ The Web preset explicitly includes authored JSON catalog files; test/work files 
 - Evidence: `tests/career_verification.json` and the four `tests/web-evidence/career-*.png` images. These are actual browser captures, not mockups.
 
 Remaining scope/limits: one local save slot; unconfirmed drafts are session memory only; no story system, training, career-year progression or sprint competition. Full backup/migration chains, JSON import/export and multi-tab conflict handling remain future work. Windows 10 / 4 GB performance, additional browsers, adverse browser storage conditions and the newly built version on the live HTTPS site were not tested here. No automatic deployment was performed; use the existing manual workflow when ready.
+
+## Version 0.2.1 — Male and female careers
+
+New Career first asks for Male Athlete or Female Athlete. A fresh draft has no choice selected. Both use the existing creator layout, kit, three origins and every existing customization option. Back/Next retain the selection; summary and Continue show the category. Procedural shoulder/hip profiles are modest visual defaults, not athletic modifiers; all body/hair/color controls remain available and unchanged. Logo, branding assets, track and movement input are unchanged.
+
+The new `AthleteCategory` utility supplies stable IDs, labels and future `category/event_id` namespaces. No category-specific competitions, records, opponents or progression are implemented. The new v3 save requires a selected category; existing v1/v2 records still load. V2 missing category stays absent in serialized data and is shown as Not selected (legacy), using the original neutral appearance. It is never guessed from a name or body. Normal position saves do not silently reclassify or migrate a legacy career. The existing replacement dialog and backend authorization guard still apply.
+
+The existing manual-only Pages workflow also runs the category-native suite and a separate-process reload check for both categories. No deployment is dispatched by this change.
+
+### Version 0.2.1 observed verification — 2026-11-09
+
+- **198 native assertions pass** across prototype, creator, category and reload suites. Both categories traverse all three origins with every customization control; Back/Next and switching category preserve entered appearance/identity. Tests check category-aware save/load, modest distinct model profiles, future namespace isolation, invalid/missing categories, cancellation/replacement authorization, v1/v2 compatibility and separate-process reload for both male/female fixtures.
+- **48 real Chromium assertions pass** (Chromium 156.0.8078.79, Linux headless/SwiftShader WebGL 2), served under `/road-to-gold/` locally. The browser verifies the immediate category screen, no implicit selection, differing rendered silhouettes with equal measurements, both full creation/customization/summary paths, Back/Next, schema-3 saving, cancellation and acceptance of female-over-male replacement, movement/position saving, page reload and full browser restart for both categories. A copied v2 profile stays unselected; Continue leaves its save bytes unchanged and position saving retains schema 2 with no category.
+- No browser/engine console errors or warnings, uncaught JavaScript errors, failed requests or HTTP errors were recorded in the verified run. An initial OCR assertion missed a category label wrapped across two HUD lines; the test driver was corrected and the full run repeated successfully.
+- Web export succeeds with the existing single-thread Compatibility preset. No new branding assets, textures, mesh types, runtime dependencies or category-specific sport mechanics were added. Native regression testing caught a schema-number comparison issue (JSON numeric values versus array membership); explicit version comparisons corrected it before the successful native/browser runs.
+- Evidence: `tests/category_verification.json`, `tests/web-evidence/male-category-preview.png` and `tests/web-evidence/female-category-preview.png`. Native reproduction: run `tests/category_support_test.gd`, then `-- --reload-categories` with the same user data directory. Existing prototype/creator suites remain available and are also run by the manual workflow.
+
+Remaining limits: older careers remain unselected; this patch does not add an edit/migration UI for assigning a category to existing progress. Separate competitions, records, opponents, story paths and progression are future work; only explicit identifiers/context hooks are prepared. Windows 10 / 4 GB performance and additional browsers remain unmeasured. Source is committed/pushed to main; deployment remains an explicit manual action, not part of this task.

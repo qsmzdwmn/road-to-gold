@@ -1,0 +1,388 @@
+{
+  "milestone": "0.2.1 \u2014 Male and female career support",
+  "date": "2026-11-09",
+  "engine": "4.6.3.stable.official.7d41c59c4",
+  "native_assertions": 198,
+  "native": [
+    {
+      "name": "import",
+      "exit": 0,
+      "assertions": 0
+    },
+    {
+      "name": "main",
+      "exit": 0,
+      "assertions": 0
+    },
+    {
+      "name": "prototype",
+      "exit": 0,
+      "assertions": 35
+    },
+    {
+      "name": "legacy-reload",
+      "exit": 0,
+      "assertions": 1
+    },
+    {
+      "name": "career",
+      "exit": 0,
+      "assertions": 81
+    },
+    {
+      "name": "career-reload",
+      "exit": 0,
+      "assertions": 2
+    },
+    {
+      "name": "category",
+      "exit": 0,
+      "assertions": 77
+    },
+    {
+      "name": "category-reload",
+      "exit": 0,
+      "assertions": 2
+    }
+  ],
+  "browser_assertions": 48,
+  "browser": {
+    "url": "http://127.0.0.1:8001/road-to-gold/index.html",
+    "console": [
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      },
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      },
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      },
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      },
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      },
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      }
+    ],
+    "page_errors": [],
+    "failed_requests": [],
+    "http_errors": [],
+    "checks": [
+      {
+        "pass": true,
+        "message": "first-category-screen visible: Choose Athlete Category"
+      },
+      {
+        "pass": true,
+        "message": "selection-required visible: Choose Male Athlete or Female Athlete"
+      },
+      {
+        "pass": true,
+        "message": "unselected draft never writes a save"
+      },
+      {
+        "pass": true,
+        "message": "male-selected visible: Selected: Male Athlete"
+      },
+      {
+        "pass": true,
+        "message": "female-selected visible: Selected: Female Athlete"
+      },
+      {
+        "pass": true,
+        "message": "same measurements render different category silhouettes"
+      },
+      {
+        "pass": true,
+        "message": "male-intro visible: Create Career"
+      },
+      {
+        "pass": true,
+        "message": "male-origins visible: Choose Origin"
+      },
+      {
+        "pass": true,
+        "message": "male-customize visible: Customize Athlete"
+      },
+      {
+        "pass": true,
+        "message": "male-back-category visible: Selected: Male Athlete"
+      },
+      {
+        "pass": true,
+        "message": "male-retained-name visible: Alex"
+      },
+      {
+        "pass": true,
+        "message": "male-summary visible: Category: Male Athlete"
+      },
+      {
+        "pass": true,
+        "message": "summary shows correct male origin age"
+      },
+      {
+        "pass": true,
+        "message": "male-track visible: TRACK EXPLORATION"
+      },
+      {
+        "pass": true,
+        "message": "male identity/category/origin saved in schema 3"
+      },
+      {
+        "pass": true,
+        "message": "male retains every customization option"
+      },
+      {
+        "pass": true,
+        "message": "male movement/save preserves metadata"
+      },
+      {
+        "pass": true,
+        "message": "male-reload visible: Male"
+      },
+      {
+        "pass": true,
+        "message": "male survives page reload"
+      },
+      {
+        "pass": true,
+        "message": "male-restart visible: Male"
+      },
+      {
+        "pass": true,
+        "message": "male survives browser restart"
+      },
+      {
+        "pass": true,
+        "message": "male-next-career visible: Choose Athlete Category"
+      },
+      {
+        "pass": true,
+        "message": "female-intro visible: Create Career"
+      },
+      {
+        "pass": true,
+        "message": "female-origins visible: Choose Origin"
+      },
+      {
+        "pass": true,
+        "message": "female-customize visible: Customize Athlete"
+      },
+      {
+        "pass": true,
+        "message": "female-back-category visible: Selected: Female Athlete"
+      },
+      {
+        "pass": true,
+        "message": "female-retained-name visible: Nadia"
+      },
+      {
+        "pass": true,
+        "message": "female-summary visible: Category: Female Athlete"
+      },
+      {
+        "pass": true,
+        "message": "summary shows correct female origin age"
+      },
+      {
+        "pass": true,
+        "message": "female-replace-dialog visible: Replace saved progress?"
+      },
+      {
+        "pass": true,
+        "message": "old career protected before female replacement"
+      },
+      {
+        "pass": true,
+        "message": "cancel keeps saved male career and female draft"
+      },
+      {
+        "pass": true,
+        "message": "female-track visible: TRACK EXPLORATION"
+      },
+      {
+        "pass": true,
+        "message": "female identity/category/origin saved in schema 3"
+      },
+      {
+        "pass": true,
+        "message": "female retains every customization option"
+      },
+      {
+        "pass": true,
+        "message": "female movement/save preserves metadata"
+      },
+      {
+        "pass": true,
+        "message": "female-reload visible: Female"
+      },
+      {
+        "pass": true,
+        "message": "female survives page reload"
+      },
+      {
+        "pass": true,
+        "message": "female-restart visible: Female"
+      },
+      {
+        "pass": true,
+        "message": "female survives browser restart"
+      },
+      {
+        "pass": true,
+        "message": "female-next-career visible: Choose Athlete Category"
+      },
+      {
+        "pass": true,
+        "message": "legacy v2 fixture never selected a category"
+      },
+      {
+        "pass": true,
+        "message": "legacy-v2-continue visible: (legacy)"
+      },
+      {
+        "pass": true,
+        "message": "legacy v2 Continue leaves bytes unchanged"
+      },
+      {
+        "pass": true,
+        "message": "legacy position save never assigns category"
+      },
+      {
+        "pass": true,
+        "message": "no uncaught JavaScript errors"
+      },
+      {
+        "pass": true,
+        "message": "no engine/browser console errors"
+      },
+      {
+        "pass": true,
+        "message": "no failed requests or HTTP errors"
+      }
+    ],
+    "browser": "156.0.8078.79",
+    "male_save": {
+      "career": {
+        "age": 17.0,
+        "athlete": {
+          "appearance": {
+            "hair_color": 0,
+            "hairstyle": 3,
+            "height": 190.0,
+            "legs": 1.05,
+            "shoulders": 1.1,
+            "skin": 4,
+            "weight": 85.0
+          },
+          "country": "AZ",
+          "first_name": "Alex",
+          "last_name": "Runner"
+        },
+        "athlete_category": "male",
+        "origin_id": "the_legacy"
+      },
+      "kind": "career",
+      "position": [
+        0.0,
+        0.0
+      ],
+      "schema_version": 3
+    },
+    "female_save": {
+      "career": {
+        "age": 20.0,
+        "athlete": {
+          "appearance": {
+            "hair_color": 0,
+            "hairstyle": 3,
+            "height": 190.0,
+            "legs": 1.05,
+            "shoulders": 1.1,
+            "skin": 4,
+            "weight": 85.0
+          },
+          "country": "AZ",
+          "first_name": "Nadia",
+          "last_name": "Runner"
+        },
+        "athlete_category": "female",
+        "origin_id": "the_chosen_one"
+      },
+      "kind": "career",
+      "position": [
+        0.0,
+        0.0
+      ],
+      "schema_version": 3
+    }
+  },
+  "method": "Real headless Chromium / SwiftShader WebGL 2; actual mouse/keyboard events, screenshot review and read-only IndexedDB inspection. No Godot state/save values injected.",
+  "visual_review": "Reviewed both category previews with identical measurements: modest torso/hip differences, identical kit and hairstyle. Existing creator layout/branding retained.",
+  "export": {
+    "success": true,
+    "preset": "Web",
+    "pck_bytes": 63272,
+    "pck_sha256": "89e7abfd865539b2b503f81dff728d8168c870e6fcbeb08a17fd4f0caea722e0"
+  },
+  "limitations": "Separate competition/record/opponent/progression systems and legacy category migration UI are not implemented. No Windows 4 GB performance or new live HTTPS deployment test.",
+  "deployment": "Not dispatched; workflow remains manual-only."
+}

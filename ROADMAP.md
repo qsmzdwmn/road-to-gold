@@ -1,6 +1,6 @@
 # ROAD TO GOLD — Roadmap
 
-Updated for Version 0.2, 2026-11-09. Gates are evidence-based; implementation stops at the currently approved milestone.
+Updated for Version 0.2.1, 2026-11-09. Gates are evidence-based; implementation stops at the currently approved milestone.
 
 ## Milestones
 1. **Approval and feasibility:** agree Alpha scope and unresolved defaults; scaffold the minimal Compatibility project; pin engine/templates; export a placeholder Web scene and validate hosting, keyboard focus and persistence on a desktop browser. Check the Windows 10 / 4 GB machine early. Gate: documented real Web results and no unresolved export blocker.
@@ -38,3 +38,10 @@ Maintain an acceptance checklist with date, build identifier, test environment, 
 
 ## Open approval items
 Control rhythm and accessible alternative; origin sporting balance; pinned engine version after Web spike; target browser versions and exact low-end CPU/GPU; free hosting choice; final performance budgets; country dataset/license; full-career progression. Proposed Alpha defaults are documented in GAME_DESIGN.md and TECHNICAL_DESIGN.md.
+
+## Version 0.2.1 — Male and female career support
+Scope: category selection first after New Career; equal origin/customization access; modest procedural silhouette profiles; category-aware summaries/Continue; validated schema v3 and unchanged legacy v1/v2 behavior. Shared future competition namespace is prepared without implementing records, opponents or progression.
+
+Acceptance: no preselected category in a fresh draft; selection required to advance; both categories support all three origin ages and every customization field; Back/Next preserve selections; categorized saves survive reload; legacy careers remain unselected; replacement protection remains intact; actual native and Chromium results are recorded in README/TASKS and test evidence.
+
+Deferred: creator redesign and new branding, explicit legacy-category migration UI, all separate competition/record/opponent/progression systems, full story and sports gameplay, additional browser and low-end hardware measurements. Do not deploy automatically.
