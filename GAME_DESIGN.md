@@ -1,6 +1,6 @@
 # ROAD TO GOLD — Game Design
 
-Status: Version 0.2.2 THE LOCKER ROOM, 2026-11-09. Current behavior and future Alpha scope are distinguished below.
+Status: Version 0.2.3 GOLDEN ROAD, 2026-11-09. Current behavior and future Alpha scope are distinguished below.
 
 ## Vision and constraints
 A zero-budget, desktop-first browser 3D sports career RPG. The player creates a fictional athlete representing a real country and directly controls competitions. Godot 4, GDScript, Compatibility renderer; minimalist procedural low-poly characters and venues, lightweight materials. Development must remain practical on Windows 10 with 4 GB RAM. No paid services, mandatory commercial assets, accounts, or servers. Use original or appropriately licensed assets; record attribution. No official Olympic logos, protected mascots, or implied Olympic affiliation.
@@ -50,7 +50,7 @@ Time starts at the signal. Finish occurs when the athlete's logical race positio
 Training and recovery, season scheduling, qualification, branching relationships, aging, retirement and the other sports are later milestones. Add them only after sprint, Web export and saving are validated.
 
 ## Open design decisions
-Approve control cadence and accessibility alternatives; origin balance and potential; stat ranges and progression; calendar granularity and retirement; country list maintenance; final logo and further model art direction; audio direction and optional sound cues. These are proposals, not completed mechanics.
+Approve control cadence and accessibility alternatives; origin balance and potential; stat ranges and progression; calendar granularity and retirement; country list maintenance; further model art direction; audio direction and optional sound cues. These are proposals, not completed mechanics.
 
 ## Version 0.2.1 — Athlete categories
 New Career immediately opens Choose Athlete Category. Male Athlete and Female Athlete are explicit choices; neither is preselected for a fresh draft. Next requires a selection. Both have the same three origins, starting ages, country list, hairstyles/colors, skin tones, height/weight and shoulder/leg controls. Back/Next retains category and all customization. The category also appears in the summary and loaded-career status. No creator redesign, logo or branding asset change is part of this patch.
@@ -65,3 +65,10 @@ The five steps separate athlete category, origin, cosmetic appearance, identity 
 The visual palette is Midnight #101820, Graphite #28333B, Ivory #E9E8E3 and Muted Gold #C6A66B. Existing ROAD TO GOLD typography and logo assets remain in use. The creator places compact controls on the left and a full-body athlete in a quiet procedural locker room on the right, with a numbered progress indicator above and persistent navigation below. Narrow windows stack the form and preview; form scrolling does not move navigation. Both category models have modest neck/shoulder/limb refinements and simple training clothing. The neutral legacy visual remains unchanged. Camera position, rotation and orthographic size never animate or change between steps.
 
 This is presentation and navigation work only: no story progression, competition paths, new sporting attributes or gameplay are added. Skin tone and all other appearance controls remain cosmetic. The single-slot save and explicit replacement policy are unchanged.
+
+## Version 0.2.3 — GOLDEN ROAD main menu
+The approved Golden Path full logo is the primary brand element in a cinematic split menu: roughly 40% left content, symbolic curved pathway on the right, restrained warm horizon light and negative space. The logo is about 25% larger than the first implementation; the intentional three-line tagline reads Your Story. / Your Sacrifice. / Your Legacy. Buttons retain their existing actions and keyboard support, with gold focus/hover accents and readable disabled Continue text. The menu supports 800×600 and larger desktop windows.
+
+Fresh sessions say Your journey begins here. Valid careers display the existing athlete name; position-only sessions use a generic saved-progress caption. Long names can truncate visually with a full tooltip. Original logos remain unchanged. The standalone emblem appears in loading and the existing Locker Room header without changing its five steps or static full-body camera. No gameplay, athletic performance, competition or save-format change is included. The menu pathway is symbolic and cannot be played.
+
+The v0.2.3 preview-facing correction rotates only the creator preview instance 180°: model-forward (-Z) faces the fixed camera on +Z, with the ponytail behind the head. This constant orientation is shared by all five steps and both categories. Camera transforms, the shared athlete model, gameplay instance and serialized appearance data are unchanged.

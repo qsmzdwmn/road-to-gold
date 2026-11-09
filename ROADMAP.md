@@ -1,6 +1,6 @@
 # ROAD TO GOLD — Roadmap
 
-Updated for Version 0.2.2, 2026-11-09. Gates are evidence-based; implementation stops at the currently approved milestone.
+Updated for Version 0.2.3, 2026-11-09. Gates are evidence-based; implementation stops at the currently approved milestone.
 
 ## Milestones
 1. **Approval and feasibility:** agree Alpha scope and unresolved defaults; scaffold the minimal Compatibility project; pin engine/templates; export a placeholder Web scene and validate hosting, keyboard focus and persistence on a desktop browser. Check the Windows 10 / 4 GB machine early. Gate: documented real Web results and no unresolved export blocker.
@@ -50,3 +50,8 @@ Deferred: creator redesign and new branding, explicit legacy-category migration 
 Scope: implement the approved five-step creator presentation, midnight/graphite/ivory/muted-gold UI, lightweight procedural room, fixed full-body camera, modest selected-category model refinements and responsive native-sized controls. Preserve all v0.2.1 data, validation, save authorization, legacy handling and tests. No progression or competition implementation, new logo, framework or automatic deployment.
 
 Acceptance: both categories traverse all three origins; every appearance control updates the preview; identity validation and accurate summary remain intact; Back/Continue retain drafts; camera framing stays fixed and includes maximum-sized athletes; replacement cancel/accept and schema 1/2/3 saving/loading pass native and real Chromium checks; capture all five screens; record actual export/persistence results and remaining limitations. Source delivery is followed by a stop for approval. Windows 10 / 4 GB performance, additional browsers, screen readers and live-host verification remain separate gates.
+
+## Version 0.2.3 — GOLDEN ROAD
+Scope: approved official-logo integration, cinematic split main menu with a lightweight static curved pathway, refined tagline/buttons, named career caption, branded real-progress loader and small Locker Room emblem. Preserve all career creation, data and save contracts, gameplay track and camera. No automatic deployment.
+
+Acceptance: verify immutable source PNGs and optimized transparency/aspect ratio; all existing native suites plus focused menu tests; real Chromium loader/progress, brand rendering, keyboard/mouse menu actions, five target resolutions, new career/Continue/settings, schema 1/2/3 and restart persistence; screenshots of menu/loader/Locker Room; exact export/version evidence. Commit/push only after tests and updated screenshots. Windows 10 / 4 GB performance, additional browsers and live-host checks remain outside observed cloud evidence.

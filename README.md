@@ -1,8 +1,8 @@
 # road-to-gold
 
-## ROAD TO GOLD — Version 0.2.2: THE LOCKER ROOM
+## ROAD TO GOLD — Version 0.2.3: GOLDEN ROAD
 
-A Godot **4.6.3 standard / GDScript** career-creation prototype using the **Compatibility** renderer. No paid assets, APIs, plugins, services, or project dependencies. Version 0.2.2 presents the existing category, origin and athlete data in THE LOCKER ROOM: a five-step creator with a static full-body procedural preview, midnight/graphite panels, ivory text and muted gold accents. The existing dark menu, settings/help, test track, camera, lighting and keyboard movement are preserved. There is no story, career-year simulation or sprint race yet.
+A Godot **4.6.3 standard / GDScript** career-creation prototype using the **Compatibility** renderer. No paid assets, APIs, plugins, services, or project dependencies. Version 0.2.3 adds the approved Golden Path branding and a static cinematic Golden Road main menu. The existing category, origin and athlete data remain in THE LOCKER ROOM: a five-step creator with a static full-body procedural preview, midnight/graphite panels, ivory text and muted gold accents. The existing dark menu, settings/help, test track, camera, lighting and keyboard movement are preserved. There is no story, career-year simulation or sprint race yet.
 
 ## Run locally
 
@@ -264,3 +264,25 @@ Screenshots, actual test totals and remaining verification limits are recorded i
 ### Version 0.2.2 observed verification — 2026-11-09
 
 **260 native assertions and 135 real Chromium checks pass.** Import, 120-frame main-scene smoke and official matching single-thread Web exports pass, including from the actual Git checkout. Both category paths, every origin/appearance control, identity validation, draft retention, summary, replacement protection, movement, Continue, page/browser restart, legacy formats, keyboard focus scrolling and five-step navigation at five resolutions were exercised. No warnings/errors were recorded in the completed runs. [Full results, all five screenshots, changed files and limits](tests/LOCKER_ROOM_VERIFICATION.md); [raw evidence](tests/locker_room_verification.json). No deployment was performed. Windows 10 / 4 GB performance and live-host/other-browser verification remain pending.
+
+## Version 0.2.3 — GOLDEN ROAD
+
+The approved Cinematic Split menu uses the official full logo, three-line tagline, New Career / Continue / Settings actions and a discreet version from `application/config/version`. Its symbolic road curves into a distant warm light with subtle edge bevels and dark horizon layers. The camera and lighting are static. A single generated 64×64 radial texture supplies the soft glow; there is no bloom, fog, particle system, camera movement or intro delay. The actual athletics track, its camera, controls and physics remain unchanged, and are shown only when playing.
+
+The full logo is approximately 25% larger than the initial 0.2.3 foundation, with aspect ratio/transparency preserved. Original approved PNGs remain byte-for-byte unchanged. Small derivatives provide the menu image, the Locker Room header emblem, project/Web icon and embedded loading emblem. The loader still reports actual engine download progress and disappears as soon as startup finishes. The country/origin catalogs, five creator steps, body models, independent full-body preview camera, save schemas and user-data directory are unchanged.
+
+A fresh menu says **Your journey begins here.** Continue stays disabled until a valid save exists. Career saves show the saved athlete's first and last name; position-only legacy saves say Saved progress available. Long names use an ellipsis with the full text available on hover. Successful Save & Menu keeps the athlete caption with save feedback in its tooltip; failed saves or nonpersistent browser storage still show a visible warning. No name or category is invented for old saves.
+
+Use the existing native/export/local-server instructions above. The new focused suite is:
+
+```sh
+godot --headless --path . --script tests/golden_menu_test.gd
+```
+
+Official matching Godot 4.6.3 Web templates remain required. The manual Pages workflow includes this suite and still requires explicit dispatch; no automatic deployment is enabled. Source full-resolution PNGs and the owner's ZIP remain in Git but are excluded from Web exports. The game adds no runtime dependencies. See [asset provenance](assets/licenses/README.md) and [the Golden Road verification report](tests/GOLDEN_ROAD_VERIFICATION.md) for actual tests, screenshots, changed files and limits.
+
+The v0.2.3 preview-facing correction rotates only the creator preview instance 180°: model-forward (-Z) faces the fixed camera on +Z, with the ponytail behind the head. This constant orientation is shared by all five steps and both categories. Camera transforms, the shared athlete model, gameplay instance and serialized appearance data are unchanged.
+
+### Version 0.2.3 observed verification — 2026-11-09
+
+**332 native assertions and 129 real Chromium checks pass.** All existing native suites remain unchanged; 72 additional menu/branding/name/facing checks pass. The final facing correction rotates only the preview instance toward the unchanged camera, leaving shared/gameplay models and save data alone. Core browser checks cover menu/loader/five resolutions, both complete creation paths, every appearance field, names, confirmation, input, page/browser restart and genuine schema 1/2/3 profiles; final focused checks cover both front-facing previews and stable framing. Official matching single-thread Web export succeeds. No runtime/console/storage/network warnings/errors were recorded in completed runs. [Full report, changed files, screenshots and limits](tests/GOLDEN_ROAD_VERIFICATION.md); [raw evidence](tests/golden_road_verification.json). Windows low-end performance, other browsers and live-host verification remain untested. No deployment was performed.

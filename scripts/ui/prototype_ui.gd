@@ -6,6 +6,11 @@ signal save_requested
 signal menu_requested
 signal resume_requested
 
+const GoldenMenu = preload("res://scripts/ui/golden_menu.gd")
+const Brand = preload("res://scripts/branding/brand.gd")
+var golden_menu
+var legacy_margin: MarginContainer
+var legacy_status: Label
 var menu: VBoxContainer
 var settings: VBoxContainer
 var hud: VBoxContainer
@@ -33,6 +38,7 @@ func _ready() -> void:
 	theme_resource.set_color("font_disabled_color", "Button", Color("78858b"))
 	theme = theme_resource
 	var margin := MarginContainer.new()
+	legacy_margin = margin
 	margin.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	for side: String in ["left", "top", "right", "bottom"]:
 		margin.add_theme_constant_override("margin_" + side, 24)
@@ -53,12 +59,7 @@ func _ready() -> void:
 	stack.add_theme_constant_override("separation", 16)
 	panel.add_child(stack)
 	_label(stack, "ROAD TO GOLD", 32, Color("eac45e"))
-	_label(stack, "VERSION 0.2.2 / THE LOCKER ROOM", 14)
-	menu = _section(stack)
-	_button(menu, "New Career", func(): new_requested.emit())
-	continue_button = _button(menu, "Continue", func(): continue_requested.emit())
-	_button(menu, "Settings", show_settings)
-	_label(menu, "Create your athlete.\nExplore the test track.", 18)
+	_label(stack, Brand.version_label(), 14)
 	settings = _section(stack)
 	_label(settings, "SETTINGS", 24)
 	_label(settings, "Move: WASD or arrow keys\nEscape: menu / pause\nSave & Menu: store position\n\nFixed low-cost graphics.\nNo audio in this prototype.", 18)
@@ -70,11 +71,19 @@ func _ready() -> void:
 	resume = _button(hud, "Resume", func(): resume_requested.emit())
 	_button(hud, "Save & Menu", func(): save_requested.emit())
 	_button(hud, "Menu (without saving)", func(): menu_requested.emit())
-	status = _label(stack, "", 16)
+	legacy_status = _label(stack, "", 16)
+	status = legacy_status
 	confirmation = ConfirmationDialog.new()
 	confirmation.title = "Replace prototype save?"
 	confirmation.dialog_text = "New Career resets your saved test position.\nNo full career data is stored in this prototype."
 	add_child(confirmation)
+	golden_menu = GoldenMenu.new()
+	add_child(golden_menu)
+	menu = golden_menu.menu
+	continue_button = golden_menu.continue_button
+	golden_menu.new_requested.connect(func(): new_requested.emit())
+	golden_menu.continue_requested.connect(func(): continue_requested.emit())
+	golden_menu.settings_requested.connect(show_settings)
 	show_menu()
 
 func _section(parent: Node) -> VBoxContainer:
@@ -102,20 +111,33 @@ func _button(parent: Node, text: String, callback: Callable) -> Button:
 	return button
 
 func show_menu() -> void:
+	legacy_margin.hide()
+	golden_menu.show()
+	status = golden_menu.status
 	menu.show()
 	settings.hide()
 	hud.hide()
 	(menu.get_child(0) as Button).grab_focus()
 
 func show_settings() -> void:
+	golden_menu.hide()
+	legacy_margin.show()
+	status = legacy_status
 	menu.hide()
 	settings.show()
 	hud.hide()
 	(settings.get_child(settings.get_child_count() - 1) as Button).grab_focus()
 
 func show_track() -> void:
+	golden_menu.hide()
+	legacy_margin.show()
+	status = legacy_status
 	menu.hide()
 	settings.hide()
 	hud.show()
 	resume.hide()
 	get_viewport().gui_release_focus()
+
+func set_continue_available(available: bool) -> void:
+	continue_button.disabled = not available
+	continue_button.focus_mode = Control.FOCUS_ALL if available else Control.FOCUS_NONE

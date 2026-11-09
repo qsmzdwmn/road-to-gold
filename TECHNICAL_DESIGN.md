@@ -1,6 +1,6 @@
 # ROAD TO GOLD — Technical Design
 
-Status: historical initialization notes followed by implemented contracts through Version 0.2.2, 2026-11-09.
+Status: historical initialization notes followed by implemented contracts through Version 0.2.3, 2026-11-09.
 
 ## Repository and engine inspection
 Inspected /workspace including hidden entries and searched for AGENTS.md. No project, source files, project.godot, or local agent instructions were found. The .git directory is empty and `git status --short` reports that this is not a Git repository. Existing library-files, scratch and shared directories are environment scaffolding; preserve them.
@@ -121,3 +121,14 @@ Category profiles adjust only existing torso, hip and limb placement transforms;
 `scripts/customization/locker_room.gd` owns the bounded procedural set, shared materials, ambient/directional lighting and a fixed orthographic camera. It has no physics or per-frame callback. The existing single SubViewport/athlete architecture is reused, updating only while visible. The model adds low-segment/box details for selected categories; the empty legacy category hides those details and preserves the old transforms/materials. Body geometry is cosmetic and cannot change the parent movement controller.
 
 UI uses actual window dimensions (`window/stretch/mode="disabled"`); the creator stacks below 900 px with an independently scrolling form that follows keyboard focus and a fixed footer. Its local theme does not replace the menu/HUD theme. There are no new resources fetched at runtime, texture downloads, dependencies, shadow maps, camera animation, schema changes or migrations. The single-thread Compatibility Web preset, JSON inclusion, custom loading shell and manual-only Pages deployment contract are unchanged. Native QA covers maximum body framing at multiple viewports, camera invariance on all five screens, all four hairstyles/both models, proportions, step ordering and identity validation in addition to the preserved regression suites.
+
+## Version 0.2.3 menu and branding boundary
+`scenes/menu/golden_road.tscn` / `scripts/menu/golden_road.gd` own a small static menu set and camera. `Main._set_track_visible()` switches visibility/current camera between this set and the original Track. Both main-world sets hide during career creation; the Locker Room keeps its independent SubViewport and fixed full-body camera. Track scene/scripts/materials, movement and data objects are unchanged.
+
+`golden_menu.gd` owns only the presentation panel, logo, action buttons, caption and version. `prototype_ui.gd` adapts it to the existing app signals and retains the previous settings and track HUD. `scripts/branding/brand.gd` shares optimized textures and derives version text from the single project metadata setting. The creator adds only the small official emblem to its existing header. Native tests preserve the original suites and add menu action/scene switching, responsive control bounds, version, immutable source-logo hashes and long-name handling.
+
+The path is a gently curved sampled ribbon with lightweight beveled edge strips and two low dark horizon silhouettes. A static 64×64 radial texture on one transparent billboard provides distant warmth, with no depth test so the glow can soften the horizon. It has no fog, bloom, particles, animation or per-frame work. Original PNGs and archival ZIP are excluded from exports, while aspect-preserving lossless derivatives remain included. Loading embeds the small emblem to avoid another path/request dependency, keeps actual engine progress (indeterminate while total is unknown) and removes its overlay on the existing startup promise. The single-thread export and manual-only Pages workflow are retained.
+
+SaveRepository, schema 1/2/3, career/category/appearance classes, country/origin IDs and user-data paths do not change. Main reads already validated athlete names for the menu caption; it never writes names, categories or migrations. Successful menu saving retains the name with save feedback in a tooltip; actual failed/nonpersistent saves retain visible warnings. Long menu captions/errors use one-line ellipsis with full text in the tooltip to preserve layout.
+
+The v0.2.3 preview-facing correction rotates only the creator preview instance 180°: model-forward (-Z) faces the fixed camera on +Z, with the ponytail behind the head. This constant orientation is shared by all five steps and both categories. Camera transforms, the shared athlete model, gameplay instance and serialized appearance data are unchanged.

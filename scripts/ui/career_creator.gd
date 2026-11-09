@@ -5,6 +5,7 @@ const Category = preload("res://scripts/data/athlete_category.gd")
 const Career = preload("res://scripts/career/career_data.gd")
 const Catalog = preload("res://scripts/data/career_catalog.gd")
 const Appearance = preload("res://scripts/data/appearance_data.gd")
+const Brand = preload("res://scripts/branding/brand.gd")
 const Room = preload("res://scripts/customization/locker_room.gd")
 const Model = preload("res://scripts/customization/procedural_athlete.gd")
 var draft = Career.new()
@@ -53,6 +54,9 @@ func _ready() -> void:
 	margin.add_child(layout)
 	var masthead := HBoxContainer.new()
 	layout.add_child(masthead)
+	var official_emblem := Brand.logo(true)
+	official_emblem.custom_minimum_size = Vector2(44, 34)
+	masthead.add_child(official_emblem)
 	var wordmark := _label(masthead, "ROAD TO GOLD", 24, Color("c6a66b"))
 	wordmark.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	var subtitle := _label(masthead, "CAREER CREATION  /  THE LOCKER ROOM", 14)
@@ -166,6 +170,9 @@ func _ready() -> void:
 	preview_room = Room.new()
 	viewport.add_child(preview_room)
 	preview_model = Model.new()
+	# The model's +Z ponytail marks its back; local -Z is its forward direction.
+	# Turn only this preview toward the fixed camera's +Z side (natural 3/4 view).
+	preview_model.rotation.y = PI
 	preview_room.add_child(preview_model)
 	error = _label(layout, "", 17, Color("ffbc9c"))
 	layout.add_child(HSeparator.new())

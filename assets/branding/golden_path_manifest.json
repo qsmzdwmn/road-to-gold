@@ -1,0 +1,40 @@
+{
+  "full": {
+    "source_sha256": "2dba23bd22654e6285cf80ef31dc7dfd4094bfb9435e2121acc709981ed6e9c7",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "alpha_crop": [
+      31,
+      7,
+      1514,
+      1024
+    ],
+    "derivative": "golden_path_full_ui.png",
+    "derivative_size": [
+      768,
+      527
+    ],
+    "bytes": 235579
+  },
+  "emblem": {
+    "source_sha256": "ba918fba2db9e0c83b1450c5e1caad57519f746b23b65e76851e9d1ed2dd3cca",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "alpha_crop": [
+      63,
+      9,
+      1520,
+      1008
+    ],
+    "derivative": "golden_path_emblem_ui.png",
+    "derivative_size": [
+      256,
+      176
+    ],
+    "bytes": 33803
+  }
+}

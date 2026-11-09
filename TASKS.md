@@ -1,6 +1,6 @@
 # ROAD TO GOLD — Tasks
 
-Status: Version 0.2.2 THE LOCKER ROOM implemented; verified with 260 native assertions, 135 Chromium checks and successful Web exports on 2026-11-09. Version 0.2 career creation remains the preserved baseline. Implementation 01 remains the preserved technical baseline. Native checks and local Chromium verification pass. Official matching Web templates are installed and Web export succeeds; T01 retains Windows hardware and actual-host verification. Further implementation waits for approval.
+Status: Version 0.2.3 GOLDEN ROAD implemented; 332 native assertions, 129 real Chromium checks and matching Web export pass on 2026-11-09. Version 0.2.2 remains the preserved baseline. Version 0.2 career creation remains the preserved baseline. Implementation 01 remains the preserved technical baseline. Native checks and local Chromium verification pass. Official matching Web templates are installed and Web export succeeds; T01 retains Windows hardware and actual-host verification. Further implementation waits for approval.
 
 ## Completed initialization
 - [x] Inspect /workspace and search for project and AGENTS.md files; no existing project found.
@@ -127,3 +127,20 @@ Stop after source delivery to main. No automatic deployment is authorized or dis
 - [ ] Windows 10 / 4 GB hardware performance, other browsers, screen readers, live-host and denied/private/quota storage paths remain unverified.
 
 No story, competition, record or progression systems, new branding assets or automatic deployment are part of this milestone. Stop after tested source delivery to main.
+
+## Version 0.2.3 — GOLDEN ROAD
+- [x] Synchronize main through c085d57 and verify both approved owner-supplied PNGs; record immutable SHA-256 hashes. Preserve originals and uploaded ZIP.
+- [x] Add optimized transparent logo/emblem/icon derivatives, central Brand helper and a single project version setting (0.2.3).
+- [x] Implement the approved cinematic split menu; refine the full logo size by about 25%, use the three-line tagline, consistent button spacing and gold hover/focus accents.
+- [x] Add a static curved symbolic road, subtle edge bevel/highlights, dark horizon layers and one tiny radial warm glow. Keep the road extending beyond the right viewport edge; no camera motion, fog, bloom or particles.
+- [x] Show Your journey begins here with no save; show validated existing athlete names when available; preserve generic position-only legacy caption, readable disabled Continue, full-name tooltips and visible save failures/nonpersistent warnings.
+- [x] Skip disabled Continue in keyboard focus order; enable keyboard access when valid progress exists. Preserve existing menu signals, settings, new-career entry and original playable track/camera/movement.
+- [x] Brand the real-progress Web loader, existing Locker Room header and icon without redesigning career creation or changing its static preview camera.
+- [x] Preserve save/data/catalog/movement classes, schema 1/2/3 and the user-data directory. No migration or invented legacy category.
+- [x] Run all 260 existing native assertions unchanged and 72 focused main-menu/branding/name/focus/orientation checks. Import/main smoke and matching 4.6.3 single-thread export pass without logged warnings/errors.
+- [x] Verify 104 real Chromium core menu/loader/layout/career/persistence checks, followed by 25 final-build front-facing preview checks (129 total), all passing without recorded engine/JavaScript/storage/network warnings/errors.
+- [x] Rotate only the preview instance toward the static camera; both category-facing checks and gameplay-orientation preservation pass native regression.
+- [x] 25 final-build Chromium orientation checks pass for both categories, identical identity/summary framing, customization retention, confirmation and unchanged save schema; combined with 104 core Chromium checks, total 129. Package final screenshots/report.
+- [ ] Windows 10 / 4 GB hardware performance, additional browsers, screen readers, live-host and denied/private/quota storage remain unverified.
+
+Updated screenshots were shown before committing, as requested. Source delivery and a normal push to main follow successful verification. No deployment is authorized or dispatched.

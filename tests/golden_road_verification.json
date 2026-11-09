@@ -1,0 +1,796 @@
+{
+  "date": "2026-11-09",
+  "baseline_commit": "c085d57",
+  "engine": "4.6.3.stable.official.7d41c59c4",
+  "templates": "4.6.3.stable official single-thread Web",
+  "native_assertions": 332,
+  "native": [
+    {
+      "name": "import",
+      "exit_code": 0,
+      "passes": 0,
+      "errors": []
+    },
+    {
+      "name": "main",
+      "exit_code": 0,
+      "passes": 0,
+      "errors": []
+    },
+    {
+      "name": "prototype",
+      "exit_code": 0,
+      "passes": 35,
+      "errors": []
+    },
+    {
+      "name": "prototype-reload",
+      "exit_code": 0,
+      "passes": 1,
+      "errors": []
+    },
+    {
+      "name": "career",
+      "exit_code": 0,
+      "passes": 81,
+      "errors": []
+    },
+    {
+      "name": "career-reload",
+      "exit_code": 0,
+      "passes": 2,
+      "errors": []
+    },
+    {
+      "name": "category",
+      "exit_code": 0,
+      "passes": 77,
+      "errors": []
+    },
+    {
+      "name": "category-reload",
+      "exit_code": 0,
+      "passes": 2,
+      "errors": []
+    },
+    {
+      "name": "locker",
+      "exit_code": 0,
+      "passes": 62,
+      "errors": []
+    },
+    {
+      "name": "golden",
+      "exit_code": 0,
+      "passes": 72,
+      "errors": []
+    }
+  ],
+  "chromium_checks": 129,
+  "environment": "Linux headless Chromium 156.0.8078.79 / SwiftShader WebGL 2 / Playwright real mouse and keyboard events",
+  "core_browser_regression_before_preview_yaw_fix": {
+    "url": "http://127.0.0.1:8001/road-to-gold/index.html",
+    "console": [
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      },
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      },
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      },
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      },
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      },
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      },
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      }
+    ],
+    "page_errors": [],
+    "failed_requests": [],
+    "http_errors": [],
+    "checks": [
+      {
+        "pass": true,
+        "message": "real loader stays visible while WebAssembly download is paused"
+      },
+      {
+        "pass": true,
+        "message": "loader shows approved embedded emblem and game title"
+      },
+      {
+        "pass": true,
+        "message": "real engine progress element remains present"
+      },
+      {
+        "pass": true,
+        "message": "actual engine downloads update progress before loader removal"
+      },
+      {
+        "pass": true,
+        "message": "menu-version visible: VERSION 0.2.3"
+      },
+      {
+        "pass": true,
+        "message": "fresh menu never writes a save"
+      },
+      {
+        "pass": true,
+        "message": "journey-caption visible: Your journey begins here."
+      },
+      {
+        "pass": true,
+        "message": "menu New Career visible at 800x600"
+      },
+      {
+        "pass": true,
+        "message": "menu Continue visible at 800x600"
+      },
+      {
+        "pass": true,
+        "message": "menu Settings visible at 800x600"
+      },
+      {
+        "pass": true,
+        "message": "menu VERSION 0.2.3 visible at 800x600"
+      },
+      {
+        "pass": true,
+        "message": "official metallic logo visibly rendered at 800"
+      },
+      {
+        "pass": true,
+        "message": "golden pathway visibly rendered at 800"
+      },
+      {
+        "pass": true,
+        "message": "menu New Career visible at 1024x600"
+      },
+      {
+        "pass": true,
+        "message": "menu Continue visible at 1024x600"
+      },
+      {
+        "pass": true,
+        "message": "menu Settings visible at 1024x600"
+      },
+      {
+        "pass": true,
+        "message": "menu VERSION 0.2.3 visible at 1024x600"
+      },
+      {
+        "pass": true,
+        "message": "official metallic logo visibly rendered at 1024"
+      },
+      {
+        "pass": true,
+        "message": "golden pathway visibly rendered at 1024"
+      },
+      {
+        "pass": true,
+        "message": "menu New Career visible at 1280x720"
+      },
+      {
+        "pass": true,
+        "message": "menu Continue visible at 1280x720"
+      },
+      {
+        "pass": true,
+        "message": "menu Settings visible at 1280x720"
+      },
+      {
+        "pass": true,
+        "message": "menu VERSION 0.2.3 visible at 1280x720"
+      },
+      {
+        "pass": true,
+        "message": "official metallic logo visibly rendered at 1280"
+      },
+      {
+        "pass": true,
+        "message": "golden pathway visibly rendered at 1280"
+      },
+      {
+        "pass": true,
+        "message": "menu New Career visible at 1366x768"
+      },
+      {
+        "pass": true,
+        "message": "menu Continue visible at 1366x768"
+      },
+      {
+        "pass": true,
+        "message": "menu Settings visible at 1366x768"
+      },
+      {
+        "pass": true,
+        "message": "menu VERSION 0.2.3 visible at 1366x768"
+      },
+      {
+        "pass": true,
+        "message": "official metallic logo visibly rendered at 1366"
+      },
+      {
+        "pass": true,
+        "message": "golden pathway visibly rendered at 1366"
+      },
+      {
+        "pass": true,
+        "message": "menu New Career visible at 1920x1080"
+      },
+      {
+        "pass": true,
+        "message": "menu Continue visible at 1920x1080"
+      },
+      {
+        "pass": true,
+        "message": "menu Settings visible at 1920x1080"
+      },
+      {
+        "pass": true,
+        "message": "menu VERSION 0.2.3 visible at 1920x1080"
+      },
+      {
+        "pass": true,
+        "message": "official metallic logo visibly rendered at 1920"
+      },
+      {
+        "pass": true,
+        "message": "golden pathway visibly rendered at 1920"
+      },
+      {
+        "pass": true,
+        "message": "road background stays static without camera or lighting animation"
+      },
+      {
+        "pass": true,
+        "message": "keyboard-settings visible: Fixed low-cost graphics."
+      },
+      {
+        "pass": true,
+        "message": "settings-back visible: New Career"
+      },
+      {
+        "pass": true,
+        "message": "new-career-entry visible: CHOOSE YOUR ATHLETE"
+      },
+      {
+        "pass": true,
+        "message": "category-required visible: Choose Male Athlete or Female Athlete"
+      },
+      {
+        "pass": true,
+        "message": "invalid unselected draft does not write save"
+      },
+      {
+        "pass": true,
+        "message": "male-origin visible: YOUR STORY"
+      },
+      {
+        "pass": true,
+        "message": "male-appearance visible: YOUR APPEARANCE"
+      },
+      {
+        "pass": true,
+        "message": "male-identity visible: YOUR IDENTITY"
+      },
+      {
+        "pass": true,
+        "message": "male-validation visible: Enter a first and last name"
+      },
+      {
+        "pass": true,
+        "message": "male-back-category visible: Selected: Male Athlete"
+      },
+      {
+        "pass": true,
+        "message": "male-retained-identity visible: Alex"
+      },
+      {
+        "pass": true,
+        "message": "male-summary visible: BEGIN YOUR LEGACY"
+      },
+      {
+        "pass": true,
+        "message": "male summary retains origin age and customization"
+      },
+      {
+        "pass": true,
+        "message": "male-original-track visible: TRACK EXPLORATION"
+      },
+      {
+        "pass": true,
+        "message": "one persistent career slot"
+      },
+      {
+        "pass": true,
+        "message": "male-named-menu visible: Career: Alex Runner"
+      },
+      {
+        "pass": true,
+        "message": "male schema/category/origin/age persist"
+      },
+      {
+        "pass": true,
+        "message": "male identity and every appearance field persist"
+      },
+      {
+        "pass": true,
+        "message": "male original keyboard movement remains functional"
+      },
+      {
+        "pass": true,
+        "message": "male-loaded-status visible: Loaded saved career."
+      },
+      {
+        "pass": true,
+        "message": "one persistent career slot"
+      },
+      {
+        "pass": true,
+        "message": "male page reload and Continue preserve entire save"
+      },
+      {
+        "pass": true,
+        "message": "female-origin visible: YOUR STORY"
+      },
+      {
+        "pass": true,
+        "message": "female-appearance visible: YOUR APPEARANCE"
+      },
+      {
+        "pass": true,
+        "message": "female-identity visible: YOUR IDENTITY"
+      },
+      {
+        "pass": true,
+        "message": "female-back-category visible: Selected: Female Athlete"
+      },
+      {
+        "pass": true,
+        "message": "female-retained-identity visible: Nadia"
+      },
+      {
+        "pass": true,
+        "message": "female-summary visible: BEGIN YOUR LEGACY"
+      },
+      {
+        "pass": true,
+        "message": "female summary retains origin age and customization"
+      },
+      {
+        "pass": true,
+        "message": "female-replacement visible: Replace saved progress?"
+      },
+      {
+        "pass": true,
+        "message": "replacement waits for explicit authorization"
+      },
+      {
+        "pass": true,
+        "message": "Cancel preserves existing saved career"
+      },
+      {
+        "pass": true,
+        "message": "female-original-track visible: TRACK EXPLORATION"
+      },
+      {
+        "pass": true,
+        "message": "one persistent career slot"
+      },
+      {
+        "pass": true,
+        "message": "female-named-menu visible: Career: Nadia Runner"
+      },
+      {
+        "pass": true,
+        "message": "female schema/category/origin/age persist"
+      },
+      {
+        "pass": true,
+        "message": "female identity and every appearance field persist"
+      },
+      {
+        "pass": true,
+        "message": "female original keyboard movement remains functional"
+      },
+      {
+        "pass": true,
+        "message": "female-loaded-status visible: Loaded saved career."
+      },
+      {
+        "pass": true,
+        "message": "one persistent career slot"
+      },
+      {
+        "pass": true,
+        "message": "female page reload and Continue preserve entire save"
+      },
+      {
+        "pass": true,
+        "message": "restart-loaded visible: Loaded saved career."
+      },
+      {
+        "pass": true,
+        "message": "one persistent career slot"
+      },
+      {
+        "pass": true,
+        "message": "full browser restart retains confirmed category and data"
+      },
+      {
+        "pass": true,
+        "message": "v1 profile has expected pre-update schema"
+      },
+      {
+        "pass": true,
+        "message": "v1-legacy-caption visible: Saved progress available."
+      },
+      {
+        "pass": true,
+        "message": "v1-track visible: TRACK EXPLORATION"
+      },
+      {
+        "pass": true,
+        "message": "v1 Continue preserves exact saved bytes"
+      },
+      {
+        "pass": true,
+        "message": "one persistent career slot"
+      },
+      {
+        "pass": true,
+        "message": "v1 track saving preserves original schema and career"
+      },
+      {
+        "pass": true,
+        "message": "v1 never invents athlete category"
+      },
+      {
+        "pass": true,
+        "message": "v2 profile has expected pre-update schema"
+      },
+      {
+        "pass": true,
+        "message": "v2-saved-athlete-caption visible: Career: Mika Runner"
+      },
+      {
+        "pass": true,
+        "message": "v2-track visible: TRACK EXPLORATION"
+      },
+      {
+        "pass": true,
+        "message": "v2 Continue preserves exact saved bytes"
+      },
+      {
+        "pass": true,
+        "message": "v2-uncategorized visible: (legacy)"
+      },
+      {
+        "pass": true,
+        "message": "one persistent career slot"
+      },
+      {
+        "pass": true,
+        "message": "v2 track saving preserves original schema and career"
+      },
+      {
+        "pass": true,
+        "message": "v2 never invents athlete category"
+      },
+      {
+        "pass": true,
+        "message": "v3 profile has expected pre-update schema"
+      },
+      {
+        "pass": true,
+        "message": "v3-saved-athlete-caption visible: Career: Nadia Runner"
+      },
+      {
+        "pass": true,
+        "message": "v3-track visible: TRACK EXPLORATION"
+      },
+      {
+        "pass": true,
+        "message": "v3 Continue preserves exact saved bytes"
+      },
+      {
+        "pass": true,
+        "message": "one persistent career slot"
+      },
+      {
+        "pass": true,
+        "message": "v3 track saving preserves original schema and career"
+      },
+      {
+        "pass": true,
+        "message": "no recorded engine/JavaScript/WebAssembly/storage/network errors or warnings"
+      }
+    ],
+    "browser": "156.0.8078.79",
+    "loading_progress_observations": [
+      "0",
+      "0.00010228064009648184",
+      "0.008982716385589864",
+      "0.18530799458183358",
+      "0.5639976615559643",
+      "0.8153140746414723",
+      "1"
+    ]
+  },
+  "final_build_preview_browser_regression": {
+    "url": "http://127.0.0.1:8001/road-to-gold/index.html",
+    "console": [
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      },
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      }
+    ],
+    "page_errors": [],
+    "failed_requests": [],
+    "http_errors": [],
+    "checks": [
+      {
+        "pass": true,
+        "message": "male-category visible: Selected: Male Athlete"
+      },
+      {
+        "pass": true,
+        "message": "male-story visible: YOUR STORY"
+      },
+      {
+        "pass": true,
+        "message": "male-appearance visible: YOUR APPEARANCE"
+      },
+      {
+        "pass": true,
+        "message": "male-identity visible: YOUR IDENTITY"
+      },
+      {
+        "pass": true,
+        "message": "male-summary visible: BEGIN YOUR LEGACY"
+      },
+      {
+        "pass": true,
+        "message": "male identity and summary keep identical fixed framing and front orientation"
+      },
+      {
+        "pass": true,
+        "message": "male-retained-identity visible: Alex Runner"
+      },
+      {
+        "pass": true,
+        "message": "male-gameplay-preserved visible: TRACK EXPLORATION"
+      },
+      {
+        "pass": true,
+        "message": "one persistent career slot"
+      },
+      {
+        "pass": true,
+        "message": "male preview direction does not add save fields or alter hairstyle"
+      },
+      {
+        "pass": true,
+        "message": "male career schema has no orientation field"
+      },
+      {
+        "pass": true,
+        "message": "female-category visible: Selected: Female Athlete"
+      },
+      {
+        "pass": true,
+        "message": "female-story visible: YOUR STORY"
+      },
+      {
+        "pass": true,
+        "message": "female-appearance visible: YOUR APPEARANCE"
+      },
+      {
+        "pass": true,
+        "message": "female-identity visible: YOUR IDENTITY"
+      },
+      {
+        "pass": true,
+        "message": "female-summary visible: BEGIN YOUR LEGACY"
+      },
+      {
+        "pass": true,
+        "message": "female identity and summary keep identical fixed framing and front orientation"
+      },
+      {
+        "pass": true,
+        "message": "female-retained-identity visible: Nadia Runner"
+      },
+      {
+        "pass": true,
+        "message": "female-confirmation visible: Replace saved progress?"
+      },
+      {
+        "pass": true,
+        "message": "preview rotation does not bypass replacement confirmation"
+      },
+      {
+        "pass": true,
+        "message": "female-gameplay-preserved visible: TRACK EXPLORATION"
+      },
+      {
+        "pass": true,
+        "message": "one persistent career slot"
+      },
+      {
+        "pass": true,
+        "message": "female preview direction does not add save fields or alter hairstyle"
+      },
+      {
+        "pass": true,
+        "message": "female career schema has no orientation field"
+      },
+      {
+        "pass": true,
+        "message": "no recorded engine/JavaScript/WebAssembly/storage/network errors or warnings"
+      }
+    ],
+    "browser": "156.0.8078.79"
+  },
+  "staging_note": "104 complete core menu/loader/layout/career/legacy checks preceded the isolated preview-yaw correction; 25 final-build checks then reverified both categories, fixed preview framing, navigation, saving and unchanged gameplay entry. Main menu, loading, persistence and shared models did not change during the yaw correction. All native suites and Web export were rerun on the final build.",
+  "web_export": {
+    "success": true,
+    "single_thread": true,
+    "deployed": false,
+    "files_bytes": {
+      "index.audio.position.worklet.js": 2973,
+      "index.png": 21443,
+      "index.apple-touch-icon.png": 23114,
+      "index.icon.png": 12841,
+      "index.audio.worklet.js": 7298,
+      "index.js": 315759,
+      "index.wasm": 37700666,
+      "index.html": 19245,
+      "index.pck": 341820
+    }
+  },
+  "branding_manifest": {
+    "full": {
+      "source_sha256": "2dba23bd22654e6285cf80ef31dc7dfd4094bfb9435e2121acc709981ed6e9c7",
+      "source_size": [
+        1536,
+        1024
+      ],
+      "alpha_crop": [
+        31,
+        7,
+        1514,
+        1024
+      ],
+      "derivative": "golden_path_full_ui.png",
+      "derivative_size": [
+        768,
+        527
+      ],
+      "bytes": 235579
+    },
+    "emblem": {
+      "source_sha256": "ba918fba2db9e0c83b1450c5e1caad57519f746b23b65e76851e9d1ed2dd3cca",
+      "source_size": [
+        1536,
+        1024
+      ],
+      "alpha_crop": [
+        63,
+        9,
+        1520,
+        1008
+      ],
+      "derivative": "golden_path_emblem_ui.png",
+      "derivative_size": [
+        256,
+        176
+      ],
+      "bytes": 33803
+    }
+  },
+  "resolved_issues": [
+    "Disabled Continue is omitted from keyboard focus traversal until a valid save exists.",
+    "Only the creator preview rotates 180 degrees so local -Z faces the fixed +Z camera; shared gameplay model and camera transforms are unchanged."
+  ],
+  "qa_notes": [
+    "Loader screenshot used a temporarily held WebAssembly download in test tooling; the product adds no delay. Recorded progress values come from engine download callbacks.",
+    "Screenshot OCR uses a neutral-text mask to read focused buttons and handles Tone S / Tone 5 ambiguity. Actual persisted values verify all dropdown selections. Browser IndexedDB inspection was read-only; old profiles were cloned."
+  ],
+  "limits": [
+    "Windows 10 / 4 GB physical hardware FPS/memory not measured",
+    "Firefox/Safari/Edge, live HTTPS deployment, screen readers and browser zoom not tested",
+    "Denied/private/quota/eviction storage and multi-tab conflicts not tested"
+  ]
+}

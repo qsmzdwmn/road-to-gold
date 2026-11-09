@@ -30,21 +30,37 @@ func _ready() -> void:
 	ui.save_requested.connect(_save_and_menu)
 	ui.menu_requested.connect(_menu)
 	ui.resume_requested.connect(_resume)
+	_set_track_visible(false)
 	_refresh_save()
+
+func _set_track_visible(active_track: bool) -> void:
+	$Track.visible = active_track
+	$GoldenRoad.visible = not active_track
+	if active_track:
+		$Track/Camera.make_current()
+	else:
+		$GoldenRoad.camera.make_current()
 
 func _refresh_save() -> void:
 	var saved: Dictionary = repository.load_snapshot()
-	ui.continue_button.disabled = saved.is_empty()
+	ui.set_continue_available(not saved.is_empty())
 	if not repository.error_message.is_empty():
 		ui.status.text = repository.error_message
 	elif saved.is_empty():
-		ui.status.text = "No saved test session."
+		ui.status.text = "Your journey begins here."
 	else:
-		ui.status.text = "Saved career available." if saved.kind == "career" else "Saved test session available."
+		if saved.kind == "career":
+			var athlete_data: Dictionary = saved.career.athlete
+			ui.status.text = "Career: %s %s" % [athlete_data.first_name, athlete_data.last_name]
+		else:
+			ui.status.text = "Saved progress available."
+	ui.status.tooltip_text = ui.status.text
 
 func _new_requested() -> void:
 	exploring = false
 	athlete.active = false
+	$Track.hide()
+	$GoldenRoad.hide()
 	ui.hide()
 	creator.open()
 
@@ -83,6 +99,7 @@ func _continue() -> void:
 	ui.status.text = ("Loaded saved career. Category: " + Category.label(current_career.athlete_category)) if current_career != null else "Loaded saved test position."
 
 func _enter_track() -> void:
+	_set_track_visible(true)
 	exploring = true
 	athlete.active = true
 	creator.hide()
@@ -99,7 +116,9 @@ func _save_and_menu() -> void:
 	var succeeded: bool = repository.save_position(athlete.position)
 	var message: String = _save_notice() if succeeded else repository.error_message
 	_menu()
-	ui.status.text = message
+	if not succeeded or (OS.has_feature("web") and not OS.is_userfs_persistent()):
+		ui.status.text = message
+	ui.status.tooltip_text = ui.status.text + "\n" + message
 
 func _save_notice() -> String:
 	if OS.has_feature("web"):
@@ -109,6 +128,7 @@ func _save_notice() -> String:
 	return "Progress saved locally."
 
 func _menu() -> void:
+	_set_track_visible(false)
 	exploring = false
 	athlete.active = false
 	creator.hide()
