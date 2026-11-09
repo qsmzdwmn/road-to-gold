@@ -67,3 +67,14 @@ An isolated real checkout at `/workspace/work/github-checkout` is used to commit
 - [ ] Validate Windows desktop browser/hardware performance, additional browsers, focus-loss and adverse-storage cases.
 
 Stop after this milestone. All gameplay and input/save implementations remain unchanged; only workflow, verification evidence and documentation were added.
+
+## Remove default startup branding — 2026-11-09
+- [x] Confirm Godot 4.6.3 boot splash settings; disable boot image and minimum display time, match dark background.
+- [x] Add minimal custom Web loading shell and original track-mark project/favicon artwork. No external assets/fonts, timer or CSS animation.
+- [x] Export and test in real Chromium: 13 startup assertions plus 23 browser regression assertions pass. Inspect all 14 recorded startup frames; no Godot logo observed. Default splash PNG never requested.
+- [x] Preserve an existing browser-profile save byte-for-byte; verify movement/navigation and save/reload/restart in the full browser regression run.
+- [x] Preserve all 34 native assertions and existing licensing/attribution notes.
+- [x] Record startup screenshots/filmstrip and combined report; leave the existing Pages workflow unchanged.
+- [ ] After the source push, dispatch the existing Pages deployment workflow to update the already deployed site, then check the actual HTTPS page. No deployment is dispatched in this task.
+
+No gameplay scripts, save schema/user directory, or navigation mechanics were modified. Startup visuals are changed through project/export configuration and the standalone HTML shell only.

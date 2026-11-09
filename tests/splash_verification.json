@@ -1,0 +1,331 @@
+{
+  "milestone": "Remove default boot branding",
+  "engine": "4.6.3.stable.official.7d41c59c4",
+  "startup": {
+    "url": "http://127.0.0.1:8001/road-to-gold/index.html",
+    "checks": [
+      {
+        "pass": true,
+        "message": "custom title visible before engine JavaScript loads"
+      },
+      {
+        "pass": true,
+        "message": "static progress indicator visible"
+      },
+      {
+        "pass": true,
+        "message": "no default loading image element"
+      },
+      {
+        "pass": true,
+        "message": "no visible Godot branding in HTML"
+      },
+      {
+        "pass": true,
+        "message": "dark loading background matches game"
+      },
+      {
+        "pass": true,
+        "message": "loader has no CSS animations"
+      },
+      {
+        "pass": true,
+        "message": "engine request held only by verification harness"
+      },
+      {
+        "pass": true,
+        "message": "custom loader transitions into main menu"
+      },
+      {
+        "pass": true,
+        "message": "existing browser-profile save still recognized"
+      },
+      {
+        "pass": true,
+        "message": "default generated splash PNG is never requested"
+      },
+      {
+        "pass": true,
+        "message": "no JavaScript or engine console errors"
+      },
+      {
+        "pass": true,
+        "message": "no failed asset requests"
+      },
+      {
+        "pass": true,
+        "message": "existing IndexedDB save bytes are unchanged by startup branding"
+      }
+    ],
+    "console": [
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      }
+    ],
+    "page_errors": [],
+    "failed_requests": [],
+    "http_errors": [],
+    "requests": [
+      "http://127.0.0.1:8001/road-to-gold/index.html",
+      "http://127.0.0.1:8001/road-to-gold/index.js",
+      "http://127.0.0.1:8001/road-to-gold/index.wasm",
+      "http://127.0.0.1:8001/road-to-gold/index.pck",
+      "http://127.0.0.1:8001/road-to-gold/index.icon.png"
+    ],
+    "browser": "156.0.8078.79",
+    "startup_frames": [
+      {
+        "file": "frame-00.png",
+        "timestamp": 1794234409.119532
+      },
+      {
+        "file": "frame-01.png",
+        "timestamp": 1794234410.396378
+      },
+      {
+        "file": "frame-02.png",
+        "timestamp": 1794234410.729697
+      },
+      {
+        "file": "frame-03.png",
+        "timestamp": 1794234410.84636
+      },
+      {
+        "file": "frame-04.png",
+        "timestamp": 1794234410.946355
+      },
+      {
+        "file": "frame-05.png",
+        "timestamp": 1794234410.996353
+      },
+      {
+        "file": "frame-06.png",
+        "timestamp": 1794234411.029685
+      },
+      {
+        "file": "frame-07.png",
+        "timestamp": 1794234411.113015
+      },
+      {
+        "file": "frame-08.png",
+        "timestamp": 1794234411.146348
+      },
+      {
+        "file": "frame-09.png",
+        "timestamp": 1794234411.213012
+      },
+      {
+        "file": "frame-10.png",
+        "timestamp": 1794234411.229678
+      },
+      {
+        "file": "frame-11.png",
+        "timestamp": 1794234411.296341
+      },
+      {
+        "file": "frame-12.png",
+        "timestamp": 1794234411.396337
+      },
+      {
+        "file": "frame-13.png",
+        "timestamp": 1794234416.129481
+      }
+    ],
+    "menu_ocr": "ROAD TO GOLD\n\nIMPLEMENTATION 01 / TECH PROTOTYPE\n\nNew Career\n\nContinue\n\nSettings\n\nExplore a small test track.\n\nCareer creation arrives later.\n\nSaved test session available.\n",
+    "preserved_save": {
+      "kind": "track_probe",
+      "position": [
+        1.60000050067902,
+        -2.86666655540466
+      ],
+      "schema_version": 1
+    }
+  },
+  "browser_regression": {
+    "url": "http://127.0.0.1:8001/road-to-gold/index.html",
+    "console": [
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      },
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      },
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      }
+    ],
+    "page_errors": [],
+    "failed_requests": [],
+    "http_errors": [],
+    "checks": [
+      {
+        "pass": true,
+        "message": "clean-menu visible: No saved test session"
+      },
+      {
+        "pass": true,
+        "message": "continue-stays-disabled visible: No saved test session"
+      },
+      {
+        "pass": true,
+        "message": "settings-screen visible: Fixed low-cost graphics"
+      },
+      {
+        "pass": true,
+        "message": "menu-after-back visible: New Career"
+      },
+      {
+        "pass": true,
+        "message": "track visible: TRACK EXPLORATION"
+      },
+      {
+        "pass": true,
+        "message": "browser W key moves athlete forward"
+      },
+      {
+        "pass": true,
+        "message": "browser Right arrow moves athlete sideways"
+      },
+      {
+        "pass": true,
+        "message": "saved-menu visible: Save written"
+      },
+      {
+        "pass": true,
+        "message": "prototype JSON is present in IndexedDB"
+      },
+      {
+        "pass": true,
+        "message": "IndexedDB contains moved coordinates"
+      },
+      {
+        "pass": true,
+        "message": "reload-menu visible: Saved test session available"
+      },
+      {
+        "pass": true,
+        "message": "Continue restores exact displayed position after reload"
+      },
+      {
+        "pass": true,
+        "message": "confirmation visible: Replace prototype save"
+      },
+      {
+        "pass": true,
+        "message": "cancel replacement preserves IndexedDB save"
+      },
+      {
+        "pass": true,
+        "message": "keyboard-back visible: New Career"
+      },
+      {
+        "pass": true,
+        "message": "resolution-1024x600 visible: ROAD TO GOLD"
+      },
+      {
+        "pass": true,
+        "message": "resolution-1366x768 visible: ROAD TO GOLD"
+      },
+      {
+        "pass": true,
+        "message": "resolution-1920x1080 visible: ROAD TO GOLD"
+      },
+      {
+        "pass": true,
+        "message": "restart-menu visible: Saved test session available"
+      },
+      {
+        "pass": true,
+        "message": "position survives full Chromium process restart"
+      },
+      {
+        "pass": true,
+        "message": "no uncaught JavaScript errors"
+      },
+      {
+        "pass": true,
+        "message": "no browser console errors in final build"
+      },
+      {
+        "pass": true,
+        "message": "no failed requests or HTTP errors"
+      }
+    ],
+    "browser": "156.0.8078.79",
+    "saved_records": [
+      {
+        "database": "/userfs",
+        "store": "FILE_DATA",
+        "key": "/userfs/road-to-gold-prototype/prototype_v1.json",
+        "content": "{\"kind\":\"track_probe\",\"position\":[2.26666712760925,-2.53333353996277],\"schema_version\":1}"
+      }
+    ],
+    "saved_position": [
+      2.26666712760925,
+      -2.53333353996277
+    ],
+    "restart_records": [
+      {
+        "database": "/userfs",
+        "store": "FILE_DATA",
+        "key": "/userfs/road-to-gold-prototype/prototype_v1.json",
+        "content": "{\"kind\":\"track_probe\",\"position\":[2.26666712760925,-2.53333353996277],\"schema_version\":1}"
+      }
+    ]
+  },
+  "native": [
+    {
+      "name": "main",
+      "exit": 0,
+      "assertions": 0
+    },
+    {
+      "name": "integration",
+      "exit": 0,
+      "assertions": 33
+    },
+    {
+      "name": "reload",
+      "exit": 0,
+      "assertions": 1
+    }
+  ],
+  "visual_review": "Reviewed all 14 recorded startup frames: ROAD TO GOLD loader transitions directly to menu; no Godot logo was seen. Custom track-mark favicon reviewed.",
+  "deployment": "Not redeployed in this task; existing manual workflow unchanged."
+}

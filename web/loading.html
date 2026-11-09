@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>$GODOT_PROJECT_NAME</title>
+  <style>
+    :root { color-scheme: dark; background: #060a0f; color: #d8e1e3; font-family: Arial, sans-serif; }
+    html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; }
+    #canvas { display: block; width: 100%; height: 100%; outline: none; }
+    #loading { position: fixed; inset: 0; display: grid; place-content: center; gap: 18px; padding: 24px; background: #060a0f; text-align: center; }
+    h1 { margin: 0; color: #eac45e; font-size: clamp(24px, 5vw, 40px); letter-spacing: .08em; }
+    p { margin: 0; line-height: 1.5; }
+    progress { width: min(280px, 75vw); height: 4px; margin: 0 auto; border: 0; background: #172630; appearance: none; }
+    progress::-webkit-progress-bar { background: #172630; }
+    progress::-webkit-progress-value { background: #eac45e; }
+    progress::-moz-progress-bar { background: #eac45e; }
+    #notice { max-width: 36em; white-space: pre-line; }
+  </style>
+  $GODOT_HEAD_INCLUDE
+</head>
+<body>
+  <canvas id="canvas" tabindex="0" aria-label="ROAD TO GOLD game">Your browser needs canvas support to play.</canvas>
+  <div id="loading" role="status" aria-live="polite">
+    <h1>ROAD TO GOLD</h1>
+    <p id="notice">Loading…</p>
+    <progress id="progress" value="0" max="1" aria-label="Loading game"></progress>
+  </div>
+  <noscript>JavaScript must be enabled to play ROAD TO GOLD.</noscript>
+  <script src="$GODOT_URL" defer></script>
+  <script>
+    // Official Godot Web API; keep exporter-generated filenames and configuration.
+    document.addEventListener('DOMContentLoaded', () => {
+      const overlay = document.getElementById('loading');
+      const progress = document.getElementById('progress');
+      const notice = document.getElementById('notice');
+      const canvas = document.getElementById('canvas');
+      function fail(error) {
+        console.error(error);
+        notice.textContent = 'Unable to start ROAD TO GOLD.\n' + (error instanceof Error ? error.message : String(error));
+        progress.hidden = true;
+      }
+      try {
+        if (typeof Engine === 'undefined') {
+          throw new Error('The game files could not be loaded. Check your connection and reload.');
+        }
+        const config = $GODOT_CONFIG;
+        const missing = Engine.getMissingFeatures({ threads: $GODOT_THREADS_ENABLED });
+        if (missing.length) {
+          throw new Error('Required browser features are unavailable: ' + missing.join(', '));
+        }
+        const engine = new Engine(config);
+        engine.startGame({
+          canvas,
+          onProgress(current, total) {
+            progress.value = total > 0 ? current / total : 0;
+          },
+        }).then(() => {
+          overlay.remove();
+          canvas.focus();
+        }, fail);
+      } catch (error) {
+        fail(error);
+      }
+    }, { once: true });
+  </script>
+</body>
+</html>
