@@ -1,6 +1,6 @@
 # ROAD TO GOLD — Tasks
 
-Status: Implementation 01 authorized and implemented on 2026-11-09. Native checks and local Chromium verification pass. Official matching Web templates are installed and Web export succeeds; T01 retains Windows hardware and actual-host verification. Further implementation waits for approval.
+Status: Version 0.2 career creation implemented and verified on 2026-11-09. Implementation 01 remains the preserved technical baseline. Native checks and local Chromium verification pass. Official matching Web templates are installed and Web export succeeds; T01 retains Windows hardware and actual-host verification. Further implementation waits for approval.
 
 ## Completed initialization
 - [x] Inspect /workspace and search for project and AGENTS.md files; no existing project found.
@@ -78,3 +78,20 @@ Stop after this milestone. All gameplay and input/save implementations remain un
 - [ ] After the source push, dispatch the existing Pages deployment workflow to update the already deployed site, then check the actual HTTPS page. No deployment is dispatched in this task.
 
 No gameplay scripts, save schema/user directory, or navigation mechanics were modified. Startup visuals are changed through project/export configuration and the standalone HTML shell only.
+
+## Version 0.2 — Career creation completed
+- [x] Main Menu → Create Career → Choose Origin → Customize Athlete → Career Summary → Confirm Career; creator hidden until New Career.
+- [x] Back/Next/Escape retain draft values; opening/canceling a draft never writes saved progress.
+- [x] Three described origins with correct derived ages 15, 17 and 20; no story simulation.
+- [x] First/last name, authored 195-country catalog, six skin tones, four hairstyles, five hair colors, height, weight, shoulder/leg proportions. All cosmetic; movement ability remains independent of appearance/country.
+- [x] Lightweight procedural live preview shared with the track athlete; summary shows required identity/origin/dimensions and appearance.
+- [x] Version 2 career records in the existing local slot, with read-only v1 compatibility; Continue and position saving preserve identity/appearance/origin.
+- [x] Explicit replacement confirmation in the UI and repository guard; validation/failed-write errors keep drafts and existing saves.
+- [x] 114 native assertions pass, including every appearance bound, legacy/new-format separate-process reloads, and existing movement/focus/settings checks.
+- [x] 55 actual Chromium assertions across core flow, save/reload/restart, explicit replacement, unchanged v1 records and four desktop layouts. No recorded engine/JS/network errors in these verified scenarios.
+- [x] Fresh Web export includes authored JSON; ROAD TO GOLD startup/track graphics and input controller retained.
+- [x] Update GAME_DESIGN.md, TECHNICAL_DESIGN.md, ROADMAP.md, README.md, task log and evidence. Manual workflow adds the career-native suite; no automatic deployment trigger added.
+- [ ] Windows low-end browser/hardware performance and additional browser/HTTPS testing remain unmeasured.
+- [ ] Future approval: introductory story events and career hub; full save backups/import-export/migrations/conflict handling; then sprint development. No such features are implemented in v0.2.
+
+T02/T04 data and creator portions are now implemented. Their original story/race/hub scope remains deferred. T03 now supports validated v1/v2 records and explicit replacement, but its full recovery/migration/import-export scope remains open. Version 0.2 delivery targets main after source verification; deployment remains manual. Stop after this milestone.

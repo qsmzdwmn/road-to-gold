@@ -1,6 +1,6 @@
 # ROAD TO GOLD — Game Design
 
-Status: documentation proposal, 2026-11-09. No implementation authorized yet.
+Status: Version 0.2 career creation, 2026-11-09. Current behavior and future Alpha scope are distinguished below.
 
 ## Vision and constraints
 A zero-budget, desktop-first browser 3D sports career RPG. The player creates a fictional athlete representing a real country and directly controls competitions. Godot 4, GDScript, Compatibility renderer; minimalist procedural low-poly characters and venues, lightweight materials. Development must remain practical on Windows 10 with 4 GB RAM. No paid services, mandatory commercial assets, accounts, or servers. Use original or appropriately licensed assets; record attribution. No official Olympic logos, protected mascots, or implied Olympic affiliation.
@@ -21,10 +21,21 @@ Appearance is cosmetic in Alpha, including height, weight, and proportions. Skin
 
 For Alpha, each origin has one introductory event with at least two choices and a visible persisted consequence (for example support or confidence). Proposed: equal starting race attributes across origins for tuning; support and story differ. Long-term potential differences and psychological systems require approval. Treat psychological struggles respectfully; avoid diagnostic labels or punitive stereotypes.
 
-## Alpha player journey
-Main Menu → Character Creator → Career Origin → Introductory Story Event → Career Hub → 100m Race → Results → Career Hub.
+## Version 0.2 player journey
+Main Menu → Create Career → Choose Origin → Customize Athlete → Career Summary → Confirm Career → existing test track.
 
-Menu offers New Career and Continue when a valid save exists. New Career must confirm before replacing a save. Creator previews appearance and validates fields. Origin selection shows age and narrative. Intro choices explain their immediate consequence. Hub displays identity, origin, age, story consequence, personal best, and race entry. Results displays all eight finishers, times, player place, reaction time, and personal best status. Returning to hub preserves results. Replay is available; Alpha races do not advance age automatically. No training economy or full calendar yet.
+The creator is hidden until New Career is pressed. Four persistent draft screens support Back/Next and Escape; moving between steps never discards selected fields. Opening a draft does not alter saved progress. The final Create Career button validates and saves; an existing saved career or legacy test session requires an explicit replacement confirmation. Canceling replacement preserves both the old save and the editable draft. Leaving or reloading without confirming does not save the draft.
+
+Origins use the specified ages (15/17/20) and short premise descriptions only. No story event, training, stat progression, race or career-year simulation is included in Version 0.2. Confirming/Continue enters the original movement test track, with a customized low-poly athlete for new careers and the original placeholder for legacy saves.
+
+Customization: first/last name (1–32 characters, trimmed on commit, no blank/control-only names), one of 195 real-country entries with stable two-letter codes, six skin tones, four hairstyles, five hair colors, height 140–220 cm, weight 40–150 kg, shoulder width 0.80–1.30× and leg proportion 0.85–1.15×. Height/weight/build adjust only procedural visuals. Names/country/origin never change the movement controller. Hair color naturally has no visible hair surface when Bald is selected.
+
+The shared live 3D preview stays visible during customization and summary. Summary displays origin, name, country, derived starting age, height/weight and appearance choices. Controls are native keyboard/mouse widgets in a scrolling form with fixed navigation buttons and an independent lightweight preview. No existing track materials, camera or movement mechanics are redesigned.
+
+## Planned Alpha player journey
+Main Menu → Create Career → Choose Origin → Customize Athlete → Career Summary → Confirm Career → Introductory Story Event → Career Hub → 100m Race → Results → Career Hub.
+
+Menu offers New Career and Continue when a valid save exists. New Career opens an unsaved draft; final creation must confirm before replacing a save. Creator previews appearance and validates fields. Origin selection shows age and narrative. Intro choices explain their immediate consequence. Hub displays identity, origin, age, story consequence, personal best, and race entry. Results displays all eight finishers, times, player place, reaction time, and personal best status. Returning to hub preserves results. Replay is available; Alpha races do not advance age automatically. No training economy or full calendar yet.
 
 ## Sprint design proposal
 Eight lanes, one player and seven AI athletes; straight 100m track, readable lane markers, lightweight fixed follow camera. No lane changes or collisions. Explicit focus/start overlay before racing.

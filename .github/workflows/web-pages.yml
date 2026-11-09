@@ -78,6 +78,8 @@ jobs:
           godot --headless --path . --quit-after 120
           godot --headless --path . --script tests/prototype_test.gd
           godot --headless --path . --script tests/prototype_test.gd -- --reload-check
+          godot --headless --path . --script tests/career_creation_test.gd
+          godot --headless --path . --script tests/career_creation_test.gd -- --reload-career
 
       - name: Export single-thread Web build
         shell: bash

@@ -1,0 +1,440 @@
+{
+  "milestone": "Version 0.2 \u2014 Career creation",
+  "date": "2026-11-09",
+  "engine": "4.6.3.stable.official.7d41c59c4",
+  "browser": "156.0.8078.79",
+  "environment": "Real headless Chromium, Linux, SwiftShader software WebGL 2",
+  "native": [
+    {
+      "name": "import",
+      "exit": 0,
+      "assertions": 0
+    },
+    {
+      "name": "main",
+      "exit": 0,
+      "assertions": 0
+    },
+    {
+      "name": "prototype",
+      "exit": 0,
+      "assertions": 35
+    },
+    {
+      "name": "legacy-reload",
+      "exit": 0,
+      "assertions": 1
+    },
+    {
+      "name": "career",
+      "exit": 0,
+      "assertions": 76
+    },
+    {
+      "name": "career-reload",
+      "exit": 0,
+      "assertions": 2
+    }
+  ],
+  "native_assertions": 114,
+  "browser_assertions": 55,
+  "core_flow": {
+    "url": "http://127.0.0.1:8001/road-to-gold/index.html",
+    "console": [
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      },
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      },
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      }
+    ],
+    "page_errors": [],
+    "failed_requests": [],
+    "http_errors": [],
+    "checks": [
+      {
+        "pass": true,
+        "message": "clean-menu visible: No saved test session"
+      },
+      {
+        "pass": true,
+        "message": "keyboard-new-career visible: Create Career"
+      },
+      {
+        "pass": true,
+        "message": "draft entry never creates a save"
+      },
+      {
+        "pass": true,
+        "message": "customization visible: Customize Athlete"
+      },
+      {
+        "pass": true,
+        "message": "name-validation visible: Enter a first and last name"
+      },
+      {
+        "pass": true,
+        "message": "real-time 3D appearance visibly changes"
+      },
+      {
+        "pass": true,
+        "message": "origin-retained visible: Selected: THE CHOSEN ONE"
+      },
+      {
+        "pass": true,
+        "message": "identity-retained visible: Nadia"
+      },
+      {
+        "pass": true,
+        "message": "summary visible: Career Summary"
+      },
+      {
+        "pass": true,
+        "message": "summary contains all selected identity and appearance values"
+      },
+      {
+        "pass": true,
+        "message": "created-track visible: TRACK EXPLORATION"
+      },
+      {
+        "pass": true,
+        "message": "final confirmation creates versioned career and initial position"
+      },
+      {
+        "pass": true,
+        "message": "origin and full identity saved correctly"
+      },
+      {
+        "pass": true,
+        "message": "all appearance fields saved correctly"
+      },
+      {
+        "pass": true,
+        "message": "keyboard movement still changes saved track position"
+      },
+      {
+        "pass": true,
+        "message": "Save & Menu preserves complete career"
+      },
+      {
+        "pass": true,
+        "message": "replace-dialog visible: Replace saved progress?"
+      },
+      {
+        "pass": true,
+        "message": "existing record unchanged before consent"
+      },
+      {
+        "pass": true,
+        "message": "cancelling replacement keeps exact existing record"
+      },
+      {
+        "pass": true,
+        "message": "reload-menu visible: Saved career available"
+      },
+      {
+        "pass": true,
+        "message": "Continue restores moved position after page reload"
+      },
+      {
+        "pass": true,
+        "message": "page reload preserves all career data"
+      },
+      {
+        "pass": true,
+        "message": "restarted-career visible: Loaded saved career"
+      },
+      {
+        "pass": true,
+        "message": "full browser restart preserves career data"
+      }
+    ],
+    "browser": "156.0.8078.79",
+    "created_career": {
+      "career": {
+        "age": 20.0,
+        "athlete": {
+          "appearance": {
+            "hair_color": 3,
+            "hairstyle": 3,
+            "height": 195.0,
+            "legs": 1.1,
+            "shoulders": 1.2,
+            "skin": 5,
+            "weight": 95.0
+          },
+          "country": "AZ",
+          "first_name": "Nadia",
+          "last_name": "O'Connor"
+        },
+        "origin_id": "the_chosen_one"
+      },
+      "kind": "career",
+      "position": [
+        0.0,
+        0.0
+      ],
+      "schema_version": 2
+    }
+  },
+  "replacement_and_legacy": {
+    "url": "http://127.0.0.1:8001/road-to-gold/index.html",
+    "console": [
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      },
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      }
+    ],
+    "page_errors": [],
+    "failed_requests": [],
+    "http_errors": [],
+    "checks": [
+      {
+        "pass": true,
+        "message": "existing version 2 career available before replacement"
+      },
+      {
+        "pass": true,
+        "message": "welcome visible: Create Career"
+      },
+      {
+        "pass": true,
+        "message": "origin-screen visible: Choose Origin"
+      },
+      {
+        "pass": true,
+        "message": "selected-legacy visible: Selected: THE LEGACY"
+      },
+      {
+        "pass": true,
+        "message": "customization visible: Customize Athlete"
+      },
+      {
+        "pass": true,
+        "message": "name-entry visible: Mika"
+      },
+      {
+        "pass": true,
+        "message": "body fits preview at maximum height, weight and proportions"
+      },
+      {
+        "pass": true,
+        "message": "summary visible: Career Summary"
+      },
+      {
+        "pass": true,
+        "message": "Legacy summary reflects names, age and maximum dimensions"
+      },
+      {
+        "pass": true,
+        "message": "confirmation visible: Replace saved progress?"
+      },
+      {
+        "pass": true,
+        "message": "save unchanged until replacement accepted"
+      },
+      {
+        "pass": true,
+        "message": "new-track visible: TRACK EXPLORATION"
+      },
+      {
+        "pass": true,
+        "message": "accepted replacement saves new athlete/origin and resets position"
+      },
+      {
+        "pass": true,
+        "message": "maximum body settings save correctly"
+      },
+      {
+        "pass": true,
+        "message": "legacy-menu visible: Saved test session available"
+      },
+      {
+        "pass": true,
+        "message": "legacy profile has version 1 record"
+      },
+      {
+        "pass": true,
+        "message": "legacy-track visible: Loaded saved test position"
+      },
+      {
+        "pass": true,
+        "message": "legacy Continue preserves original save bytes"
+      },
+      {
+        "pass": true,
+        "message": "legacy-new-draft visible: Create Career"
+      },
+      {
+        "pass": true,
+        "message": "creating a draft leaves legacy save unchanged"
+      },
+      {
+        "pass": true,
+        "message": "no uncaught JavaScript errors"
+      },
+      {
+        "pass": true,
+        "message": "no engine or browser console errors"
+      },
+      {
+        "pass": true,
+        "message": "no failed requests or HTTP errors"
+      }
+    ],
+    "browser": "156.0.8078.79",
+    "preview_bounds": {
+      "bounds": [
+        47,
+        49,
+        233,
+        406
+      ],
+      "size": [
+        280,
+        459
+      ]
+    },
+    "replaced_career": {
+      "career": {
+        "age": 17.0,
+        "athlete": {
+          "appearance": {
+            "hair_color": 0,
+            "hairstyle": 1,
+            "height": 220.0,
+            "legs": 1.15,
+            "shoulders": 1.3,
+            "skin": 2,
+            "weight": 150.0
+          },
+          "country": "US",
+          "first_name": "Mika",
+          "last_name": "Runner"
+        },
+        "origin_id": "the_legacy"
+      },
+      "kind": "career",
+      "position": [
+        0.0,
+        0.0
+      ],
+      "schema_version": 2
+    }
+  },
+  "desktop_layout": {
+    "url": "http://127.0.0.1:8001/road-to-gold/index.html",
+    "console": [
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      }
+    ],
+    "page_errors": [],
+    "failed_requests": [],
+    "http_errors": [],
+    "checks": [
+      {
+        "pass": true,
+        "message": "welcome visible: Create Career"
+      },
+      {
+        "pass": true,
+        "message": "origin visible: Choose Origin"
+      },
+      {
+        "pass": true,
+        "message": "customization visible: Customize Athlete"
+      },
+      {
+        "pass": true,
+        "message": "layout-800x600 visible: Customize Athlete"
+      },
+      {
+        "pass": true,
+        "message": "layout-1024x600 visible: Customize Athlete"
+      },
+      {
+        "pass": true,
+        "message": "layout-1366x768 visible: Customize Athlete"
+      },
+      {
+        "pass": true,
+        "message": "layout-1920x1080 visible: Customize Athlete"
+      },
+      {
+        "pass": true,
+        "message": "no browser/engine errors during resolution changes"
+      }
+    ],
+    "browser": "156.0.8078.79"
+  },
+  "verification_method": "Staged real-browser cases using actual mouse/key events, screenshots/OCR, and read-only IndexedDB inspection. No Godot state or save values were injected.",
+  "driver_notes": "Exploratory all-in-one automation had input timing/OCR issues. Core creation/reload cases and the separately synchronized replacement/legacy/layout cases above are the actually verified assertions; no success is claimed for unexecuted exploratory steps.",
+  "visual_review": "Reviewed customization/summary, maximum-body preview and desktop layout screenshots; navigation, scrolling and preview are visible. Existing aspect scaling is retained.",
+  "export": {
+    "success": true,
+    "preset": "Web",
+    "pck_bytes": 60588,
+    "pck_sha256": "f51a5fc154139c0a163891485d383512a897060148bb6305af2fda59a10f79cc"
+  },
+  "deployment": "Not dispatched; manual-only workflow remains manual."
+}

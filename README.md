@@ -1,14 +1,14 @@
 # road-to-gold
 
-## ROAD TO GOLD — Implementation 01
+## ROAD TO GOLD — Version 0.2
 
-A small Godot **4.6.3 standard / GDScript** technical prototype using the **Compatibility** renderer. No paid assets, APIs, plugins, services, or project dependencies. It contains a dark menu, settings/help panel, procedural flat track, low-poly placeholder athlete, static camera and basic lighting. It is not Alpha 0.1 or a career/race simulation.
+A Godot **4.6.3 standard / GDScript** career-creation prototype using the **Compatibility** renderer. No paid assets, APIs, plugins, services, or project dependencies. Version 0.2 adds origins, athlete customization with a live procedural 3D preview, a summary and confirmed local career saving. The existing dark menu, settings/help, test track, camera, lighting and keyboard movement are preserved. There is no story, career-year simulation or sprint race yet.
 
 ## Run locally
 
 1. Install/extract Godot 4.6.3 **standard**, not the .NET build. Import `project.godot` in the Project Manager.
 2. Press **F6** with `scenes/app/main.tscn` open, or **F5** to run the project.
-3. Select **New Career** to start the track probe. If a prototype save already exists, confirm before replacing it. **Continue** is enabled only for a readable, supported save.
+3. Select **New Career** → **Choose Origin** → **Customize Athlete** → **Review Career** → **Create Career**. Use Back/Next without losing choices. The last button saves and opens the test track; existing progress requires a replacement confirmation. **Continue** loads either an existing v0.1 track session or a v0.2 career.
 4. Move with **WASD or arrow keys**. **Escape** returns to the menu without saving. **Save & Menu** writes the current position. **Continue** restores it. **Settings → Back** returns to the menu.
 5. Losing application focus pauses movement; choose **Resume** to continue. The track limits exploration to its marked area.
 
@@ -18,13 +18,15 @@ Command-line alternative, from the project root:
 godot --path .
 ```
 
-On Windows use the Godot executable's full path if it is not on PATH. For terminal logs/headless checks, use the corresponding `_console.exe` executable. Godot is the only requirement to run or test the native project. No audio, character creation, AI, career progression, sprint timing or sports mechanics are implemented.
+On Windows use the Godot executable's full path if it is not on PATH. For terminal logs/headless checks, use the corresponding `_console.exe` executable. Godot is the only requirement to run or test the native project. No audio, AI, story events, career progression, sprint timing or sports mechanics are implemented.
 
 ## Save behavior
 
-`user://prototype_v1.json` contains only `{schema_version: 1, kind: "track_probe", position: [x, z]}`. This deliberately separate probe file is not the future career schema. The custom user directory is `road-to-gold-prototype`; on Windows the normal path is `%APPDATA%/road-to-gold-prototype/prototype_v1.json`. Use Godot's **Project → Open User Data Folder** to locate it. Do not delete unrelated files.
+`user://prototype_v1.json` remains the local slot for compatibility. Version 1 `track_probe` saves contain a position only; Version 2 `career` saves add origin, derived starting age, names, country code and all appearance fields, while retaining position separately. The custom user directory remains `road-to-gold-prototype`; on Windows the normal path is `%APPDATA%/road-to-gold-prototype/prototype_v1.json`. Use Godot's **Project → Open User Data Folder** to locate it.
 
-New Career writes an initial position; later movement is saved only with Save & Menu. No automatic save on tab close or Escape. Invalid/unsupported saves disable Continue, show an error and remain unchanged until the player explicitly confirms replacement. Writes use a temporary file then rename; failures show an unsaved warning and leave the session playable. Full backup/migration, conflict detection and import/export belong to later T03, not this probe.
+Opening New Career never writes this file. All creator steps share an in-memory draft; Back/Next and returning to the menu retain it within the session. A page reload discards unconfirmed drafts. Only final Create Career commits a new record; if any slot already exists, a confirmation dialog must be accepted before replacement. Invalid names/data block creation. Failed writes leave the old save intact and keep the editable summary visible with an error.
+
+Continue reads either schema; a legacy save is never automatically rewritten or assigned an invented athlete. Save & Menu stores track position while preserving the complete career or the original legacy format. Escape/menu without saving does not update position. Invalid/unsupported saves disable Continue, show an error and remain unchanged unless the user explicitly confirms replacement. Writes use a temporary file then rename. Full backup/migration, multi-tab conflict handling and import/export remain future work.
 
 In Web builds, Godot maps `user://` to browser storage, normally backed by IndexedDB. The UI warns when the filesystem reports nonpersistent storage. A successful write does not guarantee a browser has durably synchronized it. Wait briefly before closing/reloading, and verify on the actual browser/host. Saves are scoped to profile and site origin; they are not synced to another device. Private browsing, denied storage, clearing site data or changing host may lose saves. Use one tab for this prototype.
 
@@ -78,9 +80,11 @@ godot --headless --path . --editor --import --quit
 godot --headless --path . --quit-after 120
 godot --headless --path . --script tests/prototype_test.gd
 godot --headless --path . --script tests/prototype_test.gd -- --reload-check
+godot --headless --path . --script tests/career_creation_test.gd
+godot --headless --path . --script tests/career_creation_test.gd -- --reload-career
 ```
 
-Run the last two in order with the same user data directory: the first creates an isolated `user://tests/prototype.json` fixture, and the second verifies it in a separate process. They do not overwrite the interactive prototype save. Keyboard verification uses injected physical key events through Godot's InputMap, not a human pressing keys or a browser. UI-fit checks inspect container bounds; they are not screenshots or visual/accessibility certification.
+Run each suite followed by its matching reload check with the same user data directory. Prototype tests use `user://tests/prototype.json`; career tests use `user://tests/career.json`. The reload checks verify their respective fixtures in separate processes. They do not overwrite the interactive prototype save. Keyboard verification uses injected physical key events through Godot's InputMap, not a human pressing keys or a browser. UI-fit checks inspect container bounds; they are not screenshots or visual/accessibility certification.
 
 In this cloud sandbox, Godot's normal home configuration path was not writable. Checks were rerun with the following per-command prefixes; use the same data directory for both test invocations:
 
@@ -167,7 +171,7 @@ To build without publishing after the workflow is on GitHub: **Actions → Web b
 
 To publish later, first confirm repository/plan eligibility and explicitly approve publication, then configure **Settings → Pages → Build and deployment → Source: GitHub Actions**. Dispatch the same workflow on `main` with **deploy** checked. The deployment job uses the `github-pages` environment and only that job receives Pages-write/OIDC permissions. Its `configure-pages` step does not enable a site automatically. Merely committing this workflow does not deploy anything.
 
-**Current hosting prerequisite:** this repository is private. GitHub Pages on GitHub Free supports public repositories; private-repository Pages availability depends on the account plan. No paid plan or repository visibility change is authorized or required for the local build. Do not purchase a plan or make the repository public automatically. To keep hosting at $0, a public-repository option would require an explicit visibility decision, or a separate free static-host choice. The account's actual Pages eligibility has not been verified.
+**Hosting note from the initial setup:** this repository was private when the workflow was prepared; the user now reports that Pages is deployed. Version 0.2 source changes are not deployed by this task. GitHub Pages on GitHub Free supports public repositories; private-repository Pages availability depends on the account plan. No paid plan or repository visibility change is authorized or required for the local build. Do not purchase a plan or make the repository public automatically. To keep hosting at $0, a public-repository option would require an explicit visibility decision, or a separate free static-host choice. The account's actual Pages eligibility has not been verified.
 
 The workflow serializes Pages runs, refuses its deployment job outside `main`, and defaults to an artifact-only build. If the site is later enabled with the normal project-site URL, it would use the `/road-to-gold/` path. The real production HTTPS origin, headers and persistence must still be tested after an approved deployment. Changing from localhost to Pages creates a different save-storage origin; existing local browser saves will not transfer automatically. Pages serves static public content even when source-repository access is restricted, unless account-specific private-site access controls apply.
 
@@ -192,3 +196,23 @@ Export and test the same way as documented above. Chromium 156.0.8078.79 (real b
 A copied browser profile from the preceding milestone still recognized its existing save, with identical IndexedDB save bytes after startup. A separate clean-profile regression run verified settings/Back, keyboard movement, Save & Menu, reload/Continue and browser-restart persistence under `/road-to-gold/`. No JavaScript/engine console errors or failed requests were observed in the successful startup or regression runs. Evidence: `tests/splash_verification.json`, `tests/web-evidence/road-to-gold-loading.png` and `tests/web-evidence/startup-filmstrip.png`. Godot licensing/attribution documentation remains in `assets/licenses/README.md`; removing branding does not remove the engine's license obligations.
 
 The user reports that Pages is already deployed. The existing workflow needs no modification: its normal export consumes the custom shell and icon. This task commits/pushes the source changes but does not dispatch a new deployment. Run the existing Pages workflow on main with deploy selected to publish the updated loading screen. The hosted HTTPS deployment has not been retested with these changes; local Chromium verification does not establish low-end Windows performance.
+
+## Version 0.2 career creation
+
+The dedicated creator is available only after New Career. It has an introduction, three described origins (ages 15/17/20), customization and summary. The summary includes an appearance preview and explicit Create Career action. Starting age derives from origin; there is no calendar or story simulation. Names must contain 1–32 characters, countries come from a small authored 195-entry catalog, and appearance controls use bounded values. Skin/country/name choices never change athletic ability or keyboard movement.
+
+Model layers: `scripts/data/` holds catalog/appearance/identity, `scripts/career/career_data.gd` holds the origin and athlete snapshot, `scenes/ui/career_creator.tscn` and its script hold draft navigation, and `scripts/customization/procedural_athlete.gd` owns cosmetic geometry. Preview updates reuse primitives/materials instead of downloading models. The scrolling form and fixed footer support keyboard/mouse; the preview uses one small independent viewport and no shadows. The existing track rendering/controller and ROAD TO GOLD startup branding remain intact.
+
+The Web preset explicitly includes authored JSON catalog files; test/work files remain excluded. The manual Pages workflow now runs the career-native checks as well as the existing regression tests. No push-trigger or automatic deployment was added. Version 0.2 must be manually deployed after review; pushing source does not publish it.
+
+### Version 0.2 observed verification — 2026-11-09
+
+- Godot 4.6.3 import and main scene pass without reported errors. **114 native assertions pass**: 35 prototype regressions adapted for the new wizard entry, 76 career creation/validation/preview/navigation/compatibility assertions, and three separate-process reload assertions across both save formats. Native checks include all 14 appearance-limit endpoints, each origin's age, blank names, malformed/future saves, canceled replacement, failed writes, and original movement/pause/settings behavior.
+- The current Web preset exports successfully with both JSON catalogs included. Runtime pack is **60588 bytes**; no large external assets or runtime dependencies were added.
+- **55 verified real Chromium 156.0.8078.79 assertions**, across staged core, replacement/legacy and layout scenarios at `http://127.0.0.1:8001/road-to-gold/index.html`. Actual browser events exercise New Career, origin selection, every customization field, live 3D changes, summary, final creation, keyboard movement, Save & Menu, replacement cancellation and acceptance, page reload, full browser restart and a copied v1 profile. IndexedDB inspection verifies the stored values and unchanged legacy/canceled records. No test writes were injected into the browser save store.
+- Rendered screenshots were reviewed at 800×600, 1024×600, 1366×768 and 1920×1080; forms scroll with navigation available, using the game's existing aspect scaling. The preview camera has enough margin for maximum height/weight/proportions; the actual maximum values were confirmed in saved data.
+- No JavaScript/engine console errors, failed requests or HTTP errors were recorded in the verified browser scenarios. The initial exploratory test driver had OCR/focus-timing failures; remaining cases were completed separately with explicit per-screen synchronization, as recorded in `tests/career_verification.json`. This is not a claim that every exploratory script completed successfully.
+- Development checks caught and fixed numeric edit commit timing, hidden-creator focus stealing, and a floating-point edge at the allowed 1.15 leg proportion. The final native boundaries and browser maximum-setting save pass.
+- Evidence: `tests/career_verification.json` and the four `tests/web-evidence/career-*.png` images. These are actual browser captures, not mockups.
+
+Remaining scope/limits: one local save slot; unconfirmed drafts are session memory only; no story system, training, career-year progression or sprint competition. Full backup/migration chains, JSON import/export and multi-tab conflict handling remain future work. Windows 10 / 4 GB performance, additional browsers, adverse browser storage conditions and the newly built version on the live HTTPS site were not tested here. No automatic deployment was performed; use the existing manual workflow when ready.

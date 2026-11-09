@@ -98,3 +98,12 @@ Storage is scoped to browser profile and site origin. Private browsing, denied s
 | Asset/IP errors | Procedural originals and attribution ledger; no protected branding |
 
 Provisional budgets, not measured results: 30 FPS minimum during eight-runner race at 1280×720 on the agreed 4 GB Windows 10 baseline; stretch 60 FPS. Target initial compressed transfer ≤20 MB and browser process memory ≤512 MB after warm-up, with repeated-race growth investigated. Measure using a fixed browser version, hardware/GPU record, ten-race run and frame-time capture. Total system memory pressure matters; editor, browser and background applications must be accounted for. Baseline CPU/GPU and browser versions remain open, so performance acceptance cannot yet be claimed.
+
+## Version 0.2 implemented boundaries
+Career creation uses `AppearanceData`, `AthleteData`, `CareerData` (typed RefCounted data objects), an authored JSON catalog of origins/countries, a separate `CareerCreator` scene, and a procedural cosmetic model shared between preview and the track athlete. App owns screen transitions and final save commits; the preview and data objects cannot alter movement speed. Story/career simulation is not implemented.
+
+The existing SaveRepository now reads the unchanged v1 `track_probe` record or v2 `career` record from the same `user://prototype_v1.json` path. V2 adds `career: {origin_id, age, athlete: {first_name, last_name, country, appearance}}`; track position remains separate. Loading v1 never rewrites/migrates it. Save & Menu keeps its loaded schema and preserves career fields. Unknown, malformed or oversized records disable Continue and remain untouched. New career replacement requires explicit authorization in both App and repository; commits use temp-write/rename. Full backup/recovery, migration chains, import/export and multi-tab revision handling remain future work; they are not claimed by this schema extension.
+
+Export includes authored `*.json` while retaining exclusions for tests/work. The standalone ROAD TO GOLD loading shell and boot branding are unchanged. The existing single-thread Compatibility export and static procedural track remain in place.
+
+Appearance preset indices are stable within schema v2; changing their ordering requires a migration. Proportions serialize to two decimal places using decimal division, so valid minimum/maximum settings remain inside their declared ranges.

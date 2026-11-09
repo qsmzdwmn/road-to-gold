@@ -1,6 +1,6 @@
 # ROAD TO GOLD — Roadmap
 
-Documentation baseline: 2026-11-09. Gates are evidence-based, not date promises. Implementation waits for user approval.
+Updated for Version 0.2, 2026-11-09. Gates are evidence-based; implementation stops at the currently approved milestone.
 
 ## Milestones
 1. **Approval and feasibility:** agree Alpha scope and unresolved defaults; scaffold the minimal Compatibility project; pin engine/templates; export a placeholder Web scene and validate hosting, keyboard focus and persistence on a desktop browser. Check the Windows 10 / 4 GB machine early. Gate: documented real Web results and no unresolved export blocker.
@@ -9,8 +9,15 @@ Documentation baseline: 2026-11-09. Gates are evidence-based, not date promises.
 4. **Alpha 0.1 integration:** full journey, recovery, browser save import/export, low-end optimization, legal/asset review and manual acceptance pass. Gate: criteria below verified, with actual evidence and known issues recorded.
 5. **Post-Alpha:** training/recovery and calendar, longer branching career, aging and retirement; expand content toward 15–20 years. Add long jump, javelin and 100m swimming one at a time after sprint is stable. Do not imply these are included in Alpha.
 
+## Version 0.2 — Career creation
+Current scope: a complete four-step creator behind New Career, three origins, all requested customization with procedural live preview, summary/final confirmation, versioned career saving and legacy Continue. No story or sports progression is implemented.
+
+Acceptance: no customization on startup; Back/Next retain choices; origin ages are 15/17/20; invalid identity/appearance cannot save; all fields reach summary/save; existing progress survives cancel; Continue and track saving preserve full career data; legacy v1 saves remain readable without automatic rewrite; native and actual Chromium navigation, preview and reload checks pass. Record actual results in TASKS.md and README.md, rather than treating this list as test evidence.
+
+Future work after approval: narrative introduction and career hub, then the sprint vertical slice. Full save backup/migration infrastructure, manual import/export, multi-tab conflict handling and long-career progression remain future scope. Windows 4 GB performance and cross-browser hosting measurements remain outstanding.
+
 ## Alpha 0.1 acceptance criteria
-All criteria are pending. A document or version command does not satisfy gameplay acceptance.
+These refer to the future full sprint Alpha. Partial creator/local persistence behavior now exists in Version 0.2; the full Alpha criteria remain pending. A document or version command does not satisfy gameplay acceptance.
 
 - [ ] Export runs over HTTP localhost and the chosen HTTPS host in current stable Chrome/Edge and Firefox on desktop; record browser/engine/template versions. No project-breaking console errors.
 - [ ] Entire Menu → Creator → Origin → Intro → Hub → Race → Results → Hub flow works without developer tools; Continue restores a valid saved career.

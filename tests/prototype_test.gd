@@ -42,8 +42,13 @@ func _run() -> void:
 	(app.ui.settings.get_child(app.ui.settings.get_child_count() - 1) as Button).pressed.emit()
 	check(app.ui.menu.visible and not app.ui.settings.visible, "Back returns to menu")
 	app.ui.new_requested.emit()
-	check(app.exploring and app.athlete.active, "New Career enters prototype")
-	check(repository.load_position() == Vector3.ZERO, "new test session saves initial position")
+	check(app.creator.visible and not app.exploring, "New Career opens draft instead of starting track")
+	check(not repository.has_file(), "opening creation does not write a save")
+	app.creator.fields.first_name.text = "Test"
+	app.creator.fields.last_name.text = "Runner"
+	for i in range(4):
+		app.creator._next()
+	check(repository.load_position() == Vector3.ZERO, "confirmed career saves initial position")
 	var before: Vector3 = app.athlete.position
 	key(KEY_W, true)
 	for i in range(15):
@@ -75,7 +80,10 @@ func _run() -> void:
 	check(app.athlete.position == Vector3(1.25, 0, -4.5), "Continue restores saved position")
 	app._menu()
 	app.ui.new_requested.emit()
-	check(app.ui.confirmation.visible and not app.exploring, "New Career requests save replacement confirmation")
+	check(not app.ui.confirmation.visible, "opening a draft leaves existing save untouched")
+	for i in range(4):
+		app.creator._next()
+	check(app.ui.confirmation.visible and not app.exploring, "final Create Career requests replacement confirmation")
 	app.ui.confirmation.hide()
 	check(repository.load_position() == Vector3(1.25, 0, -4.5), "cancel leaves save unchanged")
 	app._confirm_new()
@@ -99,6 +107,7 @@ func _run() -> void:
 	check(not repository.save_position(Vector3(INF, 0, 0)), "nonfinite position rejected")
 	var denied = Repository.new("user://missing-directory/save.json")
 	check(not denied.save_position(Vector3.ZERO) and not denied.error_message.is_empty(), "write failure returns actionable unsaved error")
+	DirAccess.remove_absolute(TEST_PATH)
 	repository.save_position(Vector3(1.25, 0, -4.5))
 	print("TEST FAILURES: ", failures)
 	app.queue_free()
