@@ -1,6 +1,6 @@
 # road-to-gold
 
-## ROAD TO GOLD — Version 0.2.3: GOLDEN ROAD
+## ROAD TO GOLD — Version 0.2.4: ATHLETE STUDIO 2.0
 
 A Godot **4.6.3 standard / GDScript** career-creation prototype using the **Compatibility** renderer. No paid assets, APIs, plugins, services, or project dependencies. Version 0.2.3 adds the approved Golden Path branding and a static cinematic Golden Road main menu. The existing category, origin and athlete data remain in THE LOCKER ROOM: a five-step creator with a static full-body procedural preview, midnight/graphite panels, ivory text and muted gold accents. The existing dark menu, settings/help, test track, camera, lighting and keyboard movement are preserved. There is no story, career-year simulation or sprint race yet.
 
@@ -286,3 +286,21 @@ The v0.2.3 preview-facing correction rotates only the creator preview instance 1
 ### Version 0.2.3 observed verification — 2026-11-09
 
 **332 native assertions and 129 real Chromium checks pass.** All existing native suites remain unchanged; 72 additional menu/branding/name/facing checks pass. The final facing correction rotates only the preview instance toward the unchanged camera, leaving shared/gameplay models and save data alone. Core browser checks cover menu/loader/five resolutions, both complete creation paths, every appearance field, names, confirmation, input, page/browser restart and genuine schema 1/2/3 profiles; final focused checks cover both front-facing previews and stable framing. Official matching single-thread Web export succeeds. No runtime/console/storage/network warnings/errors were recorded in completed runs. [Full report, changed files, screenshots and limits](tests/GOLDEN_ROAD_VERIFICATION.md); [raw evidence](tests/golden_road_verification.json). Windows low-end performance, other browsers and live-host verification remain untested. No deployment was performed.
+
+## Version 0.2.4 — Athlete Studio 2.0
+
+The five-step creator now uses selectable category/origin cards, a pinned Appearance title/subtitle/tab bar, and native Hair / Skin / Body panels. Drawn 2D silhouettes are larger; hairstyle icons use small procedural shapes. All four hairstyles, five hair colors, six tones and existing numeric bounds remain unchanged. Gold sliders have exact numeric companions. Height/weight appear in Body and Identity but share the same native Range values, so either view updates the other immediately. Tabs retain their state in the session and reuse one preview/model/locker room.
+
+The fixed right preview keeps the existing orthographic camera and shared model. Only the preview instance has a clearer, constant three-quarter yaw; neither the camera nor gameplay athlete rotates. No facial cues, new models, textures or 3D environment changes are added. Controls scroll beneath the pinned heading/tabs with 16 px right/bottom padding; Back/Continue/Begin Career remain outside that scroll area.
+
+Legacy now uses a compact graphite Player Card: a small official emblem and horizontal ATHLETE PROFILE heading, prominent name, country/category/origin/derived age, then seven actual appearance metrics in two columns. The header has an explicit minimum width and horizontal expansion rather than rotating text. There are no invented sporting ratings. Unconfirmed drafts never write, and replacement still requires the original dialog and backend authorization.
+
+All three save schemas, field meanings, catalogs, validation, category handling, menu, loader, movement and gameplay track are preserved. No migrations or new saved fields are introduced. See [the pre-implementation mapping](tests/ATHLETE_STUDIO_MAPPINGS.md) and [Studio verification](tests/ATHLETE_STUDIO_VERIFICATION.md) for controls, screenshots, actual results and remaining limitations.
+
+Run the existing native commands above and:
+
+```sh
+godot --headless --path . --script tests/athlete_studio_test.gd
+```
+
+Web export/local serving instructions remain unchanged. The workflow remains manual-only; this milestone does not deploy automatically.

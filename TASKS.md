@@ -1,6 +1,6 @@
 # ROAD TO GOLD — Tasks
 
-Status: Version 0.2.3 GOLDEN ROAD implemented; 332 native assertions, 129 real Chromium checks and matching Web export pass on 2026-11-09. Version 0.2.2 remains the preserved baseline. Version 0.2 career creation remains the preserved baseline. Implementation 01 remains the preserved technical baseline. Native checks and local Chromium verification pass. Official matching Web templates are installed and Web export succeeds; T01 retains Windows hardware and actual-host verification. Further implementation waits for approval.
+Status: Version 0.2.4 Athlete Studio implementation and final visual verification in progress (2026-11-10). Preserved v0.2.3 baseline: 332 native assertions, 129 real Chromium checks and matching Web export pass on 2026-11-09. Version 0.2.2 remains the preserved baseline. Version 0.2 career creation remains the preserved baseline. Implementation 01 remains the preserved technical baseline. Native checks and local Chromium verification pass. Official matching Web templates are installed and Web export succeeds; T01 retains Windows hardware and actual-host verification. Further implementation waits for approval.
 
 ## Completed initialization
 - [x] Inspect /workspace and search for project and AGENTS.md files; no existing project found.
@@ -144,3 +144,20 @@ No story, competition, record or progression systems, new branding assets or aut
 - [ ] Windows 10 / 4 GB hardware performance, additional browsers, screen readers, live-host and denied/private/quota storage remain unverified.
 
 Updated screenshots were shown before committing, as requested. Source delivery and a normal push to main follow successful verification. No deployment is authorized or dispatched.
+
+## Version 0.2.4 — Athlete Studio 2.0
+- [x] Sync clean main at ae46254; inspect data/validation/persistence, branding, creator and reports; run 332 baseline assertions before editing.
+- [x] Record existing UI-to-data mapping in tests/ATHLETE_STUDIO_MAPPINGS.md.
+- [x] Reusable original 2D silhouette/hair cards, all catalog swatches, and the existing shared front-facing preview; no new 3D graphics.
+- [x] Pin title/subtitle and Hair/Skin/Body tabs outside scrolling options; add 16 px right/bottom content padding and keep footer reachable.
+- [x] Preserve all existing values/ranges/steps and link precise Body/Identity height-weight controls through native Range sharing.
+- [x] Compact Player Card with correctly sized horizontal header, small official emblem, prominent identity/origin/age, and seven actual attributes in two columns. No fabricated ratings.
+- [x] Correct header wrapping through minimum width/no-wrap/expansion constraints; add card-layout/data regression tests.
+- [x] Keep shared model, camera, gameplay and saves unchanged; preview-only fixed yaw clarified to 230° at user's rotation-only preference (about 30° from camera view).
+- [x] All 332 existing assertions retained with version/tab-context adaptations; 90 focused Studio tests pass, total 422. Covers keyboard increments, card layout, data, retention, orientation, bounds and modal fitting.
+- [x] Matching Godot 4.6.3 single-thread Web export succeeds.
+- [x] Complete core Chromium run verifies both categories, tabs, all controls, actual saving/replacement/reload/restart, and legacy schemas.
+- [x] Finish 30 final corrected-card/preview Chromium checks and fresh desktop/small screenshots; 54 earlier core checks also pass (84 staged browser checks). No recorded runtime/storage/network warnings or errors.
+- [ ] Windows 10 / 4 GB FPS/memory, other browsers, screen readers, zoom and restricted/private/quota storage remain unverified.
+
+The user reviewed and approved the compact Legacy layout, selected rotation-only orientation clarification, and authorized commit/push after final testing. Do not deploy automatically.

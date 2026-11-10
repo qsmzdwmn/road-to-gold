@@ -1,6 +1,6 @@
 # ROAD TO GOLD — Game Design
 
-Status: Version 0.2.3 GOLDEN ROAD, 2026-11-09. Current behavior and future Alpha scope are distinguished below.
+Status: Version 0.2.4 ATHLETE STUDIO 2.0, 2026-11-09. Current behavior and future Alpha scope are distinguished below.
 
 ## Vision and constraints
 A zero-budget, desktop-first browser 3D sports career RPG. The player creates a fictional athlete representing a real country and directly controls competitions. Godot 4, GDScript, Compatibility renderer; minimalist procedural low-poly characters and venues, lightweight materials. Development must remain practical on Windows 10 with 4 GB RAM. No paid services, mandatory commercial assets, accounts, or servers. Use original or appropriately licensed assets; record attribution. No official Olympic logos, protected mascots, or implied Olympic affiliation.
@@ -72,3 +72,8 @@ The approved Golden Path full logo is the primary brand element in a cinematic s
 Fresh sessions say Your journey begins here. Valid careers display the existing athlete name; position-only sessions use a generic saved-progress caption. Long names can truncate visually with a full tooltip. Original logos remain unchanged. The standalone emblem appears in loading and the existing Locker Room header without changing its five steps or static full-body camera. No gameplay, athletic performance, competition or save-format change is included. The menu pathway is symbolic and cannot be played.
 
 The v0.2.3 preview-facing correction rotates only the creator preview instance 180°: model-forward (-Z) faces the fixed camera on +Z, with the ponytail behind the head. This constant orientation is shared by all five steps and both categories. Camera transforms, the shared athlete model, gameplay instance and serialized appearance data are unchanged.
+
+## Version 0.2.4 — Athlete Studio + Player Card
+Five steps remain: Choose Your Athlete → Where It All Begins → Make It Yours → Define Your Identity → Begin Your Legacy. Male/Female cards have equal silhouettes, all origins/options and no default category. Origin cards preserve ages and descriptions, without bonuses or penalties. Appearance uses visual Hair tiles, labeled hair/skin swatches and Body sliders with precise numeric companions. Height/weight are also available in Identity and stay synchronized. Names/country retain existing validation and catalogs; age is read-only from origin.
+
+Titles, subtitles and tabs stay above the options scroll area; only controls beneath them scroll. Right/bottom padding keeps controls separate from the scrollbar and footer. The same fixed-camera locker-room preview remains visible and uses the existing model at a clear front three-quarter angle. The Player Card shows actual identity and seven cosmetic attributes in a compact two-column grid, without invented ratings, medals or results. Back/Continue, active-tab memory, category switching and final replacement protection preserve existing draft behavior. All changes are presentation only; there is no new gameplay or save schema.

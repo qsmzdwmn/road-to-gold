@@ -29,7 +29,7 @@ func _run() -> void:
 	var camera: Camera3D = app.get_node("GoldenRoad").camera
 	var fixed := camera.transform
 	check(menu.logo.texture == Brand.FULL and menu.logo.stretch_mode == TextureRect.STRETCH_KEEP_ASPECT_CENTERED, "menu uses official full logo without distortion")
-	check(menu.version.text == "VERSION 0.2.3" and menu.version.text == Brand.version_label(), "version display derives from project metadata")
+	check(menu.version.text == "VERSION 0.2.4" and menu.version.text == Brand.version_label(), "version display derives from project metadata")
 	check(ui.status.text == "Your journey begins here.", "fresh menu displays approved journey message")
 	check(menu.tagline.text.replace("\n", " ") == "Your Story. Your Sacrifice. Your Legacy.", "approved tagline is exact")
 	check(ui.continue_button.disabled and ui.continue_button.focus_mode == Control.FOCUS_NONE and not app.repository.has_file(), "fresh menu disables Continue without writing a save")

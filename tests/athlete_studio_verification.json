@@ -1,0 +1,543 @@
+{
+  "version": "0.2.4",
+  "date": "2026-11-10",
+  "engine": "4.6.3.stable.official.7d41c59c4",
+  "native": [
+    {
+      "name": "import",
+      "exit_code": 0,
+      "passes": 0,
+      "errors": []
+    },
+    {
+      "name": "main",
+      "exit_code": 0,
+      "passes": 0,
+      "errors": []
+    },
+    {
+      "name": "prototype",
+      "exit_code": 0,
+      "passes": 35,
+      "errors": []
+    },
+    {
+      "name": "prototype-reload",
+      "exit_code": 0,
+      "passes": 1,
+      "errors": []
+    },
+    {
+      "name": "career",
+      "exit_code": 0,
+      "passes": 81,
+      "errors": []
+    },
+    {
+      "name": "career-reload",
+      "exit_code": 0,
+      "passes": 2,
+      "errors": []
+    },
+    {
+      "name": "category",
+      "exit_code": 0,
+      "passes": 77,
+      "errors": []
+    },
+    {
+      "name": "category-reload",
+      "exit_code": 0,
+      "passes": 2,
+      "errors": []
+    },
+    {
+      "name": "locker",
+      "exit_code": 0,
+      "passes": 62,
+      "errors": []
+    },
+    {
+      "name": "golden",
+      "exit_code": 0,
+      "passes": 72,
+      "errors": []
+    },
+    {
+      "name": "athlete-studio",
+      "exit_code": 0,
+      "passes": 90,
+      "errors": []
+    }
+  ],
+  "browser_core_before_final_card_and_yaw": {
+    "url": "http://127.0.0.1:8001/road-to-gold/index.html",
+    "console": [
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      },
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      },
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      },
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      },
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      },
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      }
+    ],
+    "page_errors": [],
+    "failed_requests": [],
+    "http_errors": [],
+    "checks": [
+      {
+        "pass": true,
+        "message": "version-proof visible: VERSION 0.2.4"
+      },
+      {
+        "pass": true,
+        "message": "athlete-open visible: CHOOSE YOUR ATHLETE"
+      },
+      {
+        "pass": true,
+        "message": "story visible: WHERE IT ALL BEGINS"
+      },
+      {
+        "pass": true,
+        "message": "appearance-open visible: MAKE IT YOURS"
+      },
+      {
+        "pass": true,
+        "message": "sticky-hair-bottom-MAKE visible: MAKE IT YOURS"
+      },
+      {
+        "pass": true,
+        "message": "sticky-hair-bottom-Create visible: Create the athlete you want to become."
+      },
+      {
+        "pass": true,
+        "message": "sticky-hair-bottom-HAIR visible: HAIR"
+      },
+      {
+        "pass": true,
+        "message": "sticky-hair-bottom-SKIN visible: SKIN"
+      },
+      {
+        "pass": true,
+        "message": "sticky-hair-bottom-BODY visible: BODY"
+      },
+      {
+        "pass": true,
+        "message": "sticky-hair-bottom-Gray visible: Gray"
+      },
+      {
+        "pass": true,
+        "message": "body-last-control visible: Leg proportion"
+      },
+      {
+        "pass": true,
+        "message": "tab switching and scrolling do not save a draft"
+      },
+      {
+        "pass": true,
+        "message": "hair-retained-value visible: Ponytail"
+      },
+      {
+        "pass": true,
+        "message": "identity visible: DEFINE YOUR IDENTITY"
+      },
+      {
+        "pass": true,
+        "message": "blank-name-validation visible: Enter a first and last name"
+      },
+      {
+        "pass": true,
+        "message": "legacy visible: BEGIN YOUR LEGACY"
+      },
+      {
+        "pass": true,
+        "message": "Player Card renders actual name and country"
+      },
+      {
+        "pass": true,
+        "message": "captured Player Card and full-body framing at 800x600"
+      },
+      {
+        "pass": true,
+        "message": "captured Player Card and full-body framing at 1024x600"
+      },
+      {
+        "pass": true,
+        "message": "captured Player Card and full-body framing at 1366x768"
+      },
+      {
+        "pass": true,
+        "message": "captured Player Card and full-body framing at 1920x1080"
+      },
+      {
+        "pass": true,
+        "message": "category-retained visible: Selected: Female Athlete"
+      },
+      {
+        "pass": true,
+        "message": "gameplay visible: TRACK EXPLORATION"
+      },
+      {
+        "pass": true,
+        "message": "one persistent career slot"
+      },
+      {
+        "pass": true,
+        "message": "category and origin identifiers/age persist unchanged"
+      },
+      {
+        "pass": true,
+        "message": "identity and country remain exact"
+      },
+      {
+        "pass": true,
+        "message": "every swatch, tile and shared numeric value survives final saving"
+      },
+      {
+        "pass": true,
+        "message": "existing keyboard gameplay remains functional"
+      },
+      {
+        "pass": true,
+        "message": "continue-status visible: Loaded saved career."
+      },
+      {
+        "pass": true,
+        "message": "one persistent career slot"
+      },
+      {
+        "pass": true,
+        "message": "page reload and Continue preserve entire Studio save"
+      },
+      {
+        "pass": true,
+        "message": "replace-required visible: Replace saved progress?"
+      },
+      {
+        "pass": true,
+        "message": "existing career remains unchanged before confirmation"
+      },
+      {
+        "pass": true,
+        "message": "Cancel preserves existing saved career"
+      },
+      {
+        "pass": true,
+        "message": "male-gameplay visible: TRACK EXPLORATION"
+      },
+      {
+        "pass": true,
+        "message": "one persistent career slot"
+      },
+      {
+        "pass": true,
+        "message": "male path preserves every same customization option and replacement"
+      },
+      {
+        "pass": true,
+        "message": "restart-loaded visible: Loaded saved career."
+      },
+      {
+        "pass": true,
+        "message": "one persistent career slot"
+      },
+      {
+        "pass": true,
+        "message": "full browser restart preserves confirmed Studio career"
+      },
+      {
+        "pass": true,
+        "message": "v1-track visible: TRACK EXPLORATION"
+      },
+      {
+        "pass": true,
+        "message": "v1 Continue leaves original bytes unchanged"
+      },
+      {
+        "pass": true,
+        "message": "one persistent career slot"
+      },
+      {
+        "pass": true,
+        "message": "v1 retains original schema and every saved field"
+      },
+      {
+        "pass": true,
+        "message": "v2-track visible: TRACK EXPLORATION"
+      },
+      {
+        "pass": true,
+        "message": "v2 Continue leaves original bytes unchanged"
+      },
+      {
+        "pass": true,
+        "message": "one persistent career slot"
+      },
+      {
+        "pass": true,
+        "message": "v2 retains original schema and every saved field"
+      },
+      {
+        "pass": true,
+        "message": "legacy category is never inferred"
+      },
+      {
+        "pass": true,
+        "message": "v3-track visible: TRACK EXPLORATION"
+      },
+      {
+        "pass": true,
+        "message": "v3 Continue leaves original bytes unchanged"
+      },
+      {
+        "pass": true,
+        "message": "one persistent career slot"
+      },
+      {
+        "pass": true,
+        "message": "v3 retains original schema and every saved field"
+      },
+      {
+        "pass": true,
+        "message": "no recorded engine/JavaScript/WebAssembly/storage/network errors or warnings"
+      }
+    ],
+    "evidence_directory": "/workspace/work/browser-studio/review-20261110-91adb9d4",
+    "browser": "156.0.8078.79"
+  },
+  "browser_final_card_and_yaw": {
+    "url": "http://127.0.0.1:8001/road-to-gold/index.html",
+    "console": [
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      },
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      }
+    ],
+    "page_errors": [],
+    "failed_requests": [],
+    "http_errors": [],
+    "checks": [
+      {
+        "pass": true,
+        "message": "version-proof visible: VERSION 0.2.4"
+      },
+      {
+        "pass": true,
+        "message": "keyboard-category visible: Selected: Male Athlete"
+      },
+      {
+        "pass": true,
+        "message": "horizontal-profile-heading-1280 visible: ATHLETE PROFILE"
+      },
+      {
+        "pass": true,
+        "message": "legacy-1280-Nadia visible: Nadia Runner"
+      },
+      {
+        "pass": true,
+        "message": "legacy-1280-Azerbaijan visible: Azerbaijan"
+      },
+      {
+        "pass": true,
+        "message": "legacy-1280-Female visible: Female Athlete"
+      },
+      {
+        "pass": true,
+        "message": "legacy-1280-THE visible: THE CHOSEN ONE"
+      },
+      {
+        "pass": true,
+        "message": "legacy-bottom-1280-Leg visible: Leg proportion"
+      },
+      {
+        "pass": true,
+        "message": "legacy-bottom-1280-1.05 visible: 1.05"
+      },
+      {
+        "pass": true,
+        "message": "review at 1280 never saves without confirmation"
+      },
+      {
+        "pass": true,
+        "message": "horizontal-profile-heading-800 visible: ATHLETE PROFILE"
+      },
+      {
+        "pass": true,
+        "message": "legacy-800-Nadia visible: Nadia Runner"
+      },
+      {
+        "pass": true,
+        "message": "legacy-800-Azerbaijan visible: Azerbaijan"
+      },
+      {
+        "pass": true,
+        "message": "legacy-800-Female visible: Female Athlete"
+      },
+      {
+        "pass": true,
+        "message": "legacy-800-THE visible: THE CHOSEN ONE"
+      },
+      {
+        "pass": true,
+        "message": "legacy-bottom-800-Leg visible: Leg proportion"
+      },
+      {
+        "pass": true,
+        "message": "legacy-bottom-800-1.05 visible: 1.05"
+      },
+      {
+        "pass": true,
+        "message": "review at 800 never saves without confirmation"
+      },
+      {
+        "pass": true,
+        "message": "pinned-title visible: MAKE IT YOURS"
+      },
+      {
+        "pass": true,
+        "message": "pinned-subtitle visible: Create the athlete you want to become."
+      },
+      {
+        "pass": true,
+        "message": "last-hair-color visible: Gray"
+      },
+      {
+        "pass": true,
+        "message": "body-last-control visible: Leg proportion"
+      },
+      {
+        "pass": true,
+        "message": "gameplay visible: TRACK EXPLORATION"
+      },
+      {
+        "pass": true,
+        "message": "one persistent career slot"
+      },
+      {
+        "pass": true,
+        "message": "final-build card data saves exact actual identity and origin"
+      },
+      {
+        "pass": true,
+        "message": "final-build save retains every Player Card attribute"
+      },
+      {
+        "pass": true,
+        "message": "loaded visible: Loaded saved career."
+      },
+      {
+        "pass": true,
+        "message": "one persistent career slot"
+      },
+      {
+        "pass": true,
+        "message": "final-build reload and Continue preserve complete career"
+      },
+      {
+        "pass": true,
+        "message": "no recorded engine/JavaScript/WebAssembly/storage/network errors or warnings"
+      }
+    ],
+    "evidence_directory": "/workspace/work/browser-studio/legacy-final-20261110-92eafb33",
+    "browser": "156.0.8078.79"
+  },
+  "web_export": {
+    "preset": "Web",
+    "configuration": "single-threaded Compatibility release",
+    "exit_code": 0
+  },
+  "pose": {
+    "camera_position": "(1.8, 1.65, 5.0)",
+    "camera_rotation": "(-4.840251, 19.79888, 0.0)",
+    "camera_size": 3.29999995231628,
+    "front_dot_camera": 0.864264845848083,
+    "gameplay_rotation": "(0.0, 0.0, 0.0)",
+    "preview_yaw_degrees": 230.0,
+    "rear_dot_camera": -0.216066211462021
+  }
+}

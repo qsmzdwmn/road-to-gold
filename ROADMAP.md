@@ -1,6 +1,6 @@
 # ROAD TO GOLD — Roadmap
 
-Updated for Version 0.2.3, 2026-11-09. Gates are evidence-based; implementation stops at the currently approved milestone.
+Updated for Version 0.2.4, 2026-11-09. Gates are evidence-based; implementation stops at the currently approved milestone.
 
 ## Milestones
 1. **Approval and feasibility:** agree Alpha scope and unresolved defaults; scaffold the minimal Compatibility project; pin engine/templates; export a placeholder Web scene and validate hosting, keyboard focus and persistence on a desktop browser. Check the Windows 10 / 4 GB machine early. Gate: documented real Web results and no unresolved export blocker.
@@ -55,3 +55,8 @@ Acceptance: both categories traverse all three origins; every appearance control
 Scope: approved official-logo integration, cinematic split main menu with a lightweight static curved pathway, refined tagline/buttons, named career caption, branded real-progress loader and small Locker Room emblem. Preserve all career creation, data and save contracts, gameplay track and camera. No automatic deployment.
 
 Acceptance: verify immutable source PNGs and optimized transparency/aspect ratio; all existing native suites plus focused menu tests; real Chromium loader/progress, brand rendering, keyboard/mouse menu actions, five target resolutions, new career/Continue/settings, schema 1/2/3 and restart persistence; screenshots of menu/loader/Locker Room; exact export/version evidence. Commit/push only after tests and updated screenshots. Windows 10 / 4 GB performance, additional browsers and live-host checks remain outside observed cloud evidence.
+
+## Version 0.2.4 — Athlete Studio 2.0
+Scope: complete visual creator redesign with category/origin cards, pinned Hair/Skin/Body tabs, visible swatches/tiles, linked numeric sliders, polished identity form and actual-data Player Card. Keep one medium full-body preview in the existing locker room, fixed camera, and preview-only three-quarter orientation. Preserve all schema 1/2/3 and draft/replacement behavior; no gameplay or 3D graphics milestone work.
+
+Acceptance: all existing native coverage preserved with version/tab-context adaptations, focused Studio/binding/card/header/facing/modal tests, actual Chromium full creator/persistence/legacy checks at desktop/small sizes, fresh seven-view evidence at 1280×720 and 800×600 including scroll-bottom captures, matching Web export, updated docs. No automatic deployment. Low-end physical hardware/accessibility/extra-browser measurements remain separate gates.

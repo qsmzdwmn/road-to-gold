@@ -24,6 +24,7 @@ func _run() -> void:
 	check(creator.step == 1 and creator.origin_buttons[0].is_visible_in_tree(), "story immediately follows athlete selection")
 	creator.origin_buttons[1].pressed.emit()
 	creator._next()
+	creator.select_appearance_tab(1)
 	check(creator.step == 2 and creator.fields.skin.is_visible_in_tree() and not creator.fields.first_name.is_visible_in_tree(), "appearance precedes identity")
 	creator._next()
 	check(creator.step == 3 and creator.fields.first_name.is_visible_in_tree() and "17" in creator.age_caption.text, "identity displays origin-derived age")
@@ -77,9 +78,12 @@ func _run() -> void:
 				var projected := camera.unproject_position(point)
 				visible_body = visible_body and Rect2(Vector2.ZERO, viewport_size).has_point(projected)
 		check(visible_body, "largest full body fits camera at " + str(resolution))
-	root.size = Vector2i(1280, 720)
+	root.size = Vector2i(800, 600)
 	creator.step = 2
 	creator._show_step()
+	await process_frame
+	await process_frame
+	creator.select_appearance_tab(2)
 	await process_frame
 	await process_frame
 	creator.fields.legs.get_line_edit().grab_focus()

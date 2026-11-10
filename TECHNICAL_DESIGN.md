@@ -1,6 +1,6 @@
 # ROAD TO GOLD — Technical Design
 
-Status: historical initialization notes followed by implemented contracts through Version 0.2.3, 2026-11-09.
+Status: historical initialization notes followed by implemented contracts through Version 0.2.4, 2026-11-09.
 
 ## Repository and engine inspection
 Inspected /workspace including hidden entries and searched for AGENTS.md. No project, source files, project.godot, or local agent instructions were found. The .git directory is empty and `git status --short` reports that this is not a Git repository. Existing library-files, scratch and shared directories are environment scaffolding; preserve them.
@@ -132,3 +132,10 @@ The path is a gently curved sampled ribbon with lightweight beveled edge strips 
 SaveRepository, schema 1/2/3, career/category/appearance classes, country/origin IDs and user-data paths do not change. Main reads already validated athlete names for the menu caption; it never writes names, categories or migrations. Successful menu saving retains the name with save feedback in a tooltip; actual failed/nonpersistent saves retain visible warnings. Long menu captions/errors use one-line ellipsis with full text in the tooltip to preserve layout.
 
 The v0.2.3 preview-facing correction rotates only the creator preview instance 180°: model-forward (-Z) faces the fixed camera on +Z, with the ponytail behind the head. This constant orientation is shared by all five steps and both categories. Camera transforms, the shared athlete model, gameplay instance and serialized appearance data are unchanged.
+
+## Version 0.2.4 presentation components
+`studio/choice_card.gd` keeps native Button input/focus/action text while arranging lightweight pictograms and labels; `choice_grid.gd` owns visible selection state and preserves `.select(index)` / `.selected` semantics. `studio_icon.gd` draws small original silhouettes/hair icons without extra assets or 3D scenes. `player_card.gd` renders actual CareerData into a compact panel; its text getter derives semantic content from the visible labels rather than a hidden summary. Horizontal profile header sizing (no wrap, min width, expansion) prevents one-character wrapping.
+
+Creator retains one draft, one model and one SubViewport. Heading/subtitle/tab nodes live outside ScrollContainer; its content uses 16 px right/bottom padding. Native Range sharing links each HSlider/SpinBox and the Body/Identity height-weight views to the same values. Edited text is applied before tab/step changes; hidden stale text never overwrites values. UI tab state is session-only. Data classes, SaveRepository, resources/catalogs, movement, shared model and locker-room camera remain unchanged.
+
+The preview-only yaw is 230°: model-forward (-Z) is about 30° from the fixed camera's horizontal viewing direction, with the ponytail behind the head. This stronger three-quarter view was chosen after the user requested rotation-only clarification; no face cues are added. Native tests verify positive camera-facing dot product, rear hair behind the head, unchanged camera and identity gameplay rotation, as well as maximum-body bounds. Main menu/loader use the same assets and design; only the central version becomes 0.2.4.
