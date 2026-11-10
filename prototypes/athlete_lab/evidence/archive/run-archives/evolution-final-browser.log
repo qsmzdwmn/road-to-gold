@@ -1,0 +1,54 @@
+PASS: version-proof visible: VERSION 0.2.4
+PASS: athlete-open visible: CHOOSE YOUR ATHLETE
+PASS: story visible: WHERE IT ALL BEGINS
+PASS: appearance-open visible: MAKE IT YOURS
+PASS: sticky-hair-bottom-MAKE visible: MAKE IT YOURS
+PASS: sticky-hair-bottom-Create visible: Create the athlete you want to become.
+PASS: sticky-hair-bottom-HAIR visible: HAIR
+PASS: sticky-hair-bottom-SKIN visible: SKIN
+PASS: sticky-hair-bottom-BODY visible: BODY
+PASS: sticky-hair-bottom-Gray visible: Gray
+PASS: body-last-control visible: Leg proportion
+PASS: tab switching and scrolling do not save a draft
+PASS: hair-retained-value visible: Ponytail
+PASS: identity visible: DEFINE YOUR IDENTITY
+PASS: blank-name-validation visible: Enter a first and last name
+PASS: legacy visible: BEGIN YOUR LEGACY
+PASS: Player Card renders actual name and country
+PASS: captured Player Card and full-body framing at 800x600
+PASS: captured Player Card and full-body framing at 1024x600
+PASS: captured Player Card and full-body framing at 1366x768
+PASS: captured Player Card and full-body framing at 1920x1080
+PASS: category-retained visible: Selected: Female Athlete
+PASS: gameplay visible: TRACK EXPLORATION
+PASS: one persistent career slot
+PASS: category and origin identifiers/age persist unchanged
+PASS: identity and country remain exact
+PASS: every swatch, tile and shared numeric value survives final saving
+PASS: existing keyboard gameplay remains functional
+PASS: continue-status visible: Loaded saved career.
+PASS: one persistent career slot
+PASS: page reload and Continue preserve entire Studio save
+PASS: replace-required visible: Replace saved progress?
+PASS: existing career remains unchanged before confirmation
+PASS: Cancel preserves existing saved career
+PASS: male-gameplay visible: TRACK EXPLORATION
+PASS: one persistent career slot
+PASS: male path preserves every same customization option and replacement
+PASS: restart-loaded visible: Loaded saved career.
+PASS: one persistent career slot
+PASS: full browser restart preserves confirmed Studio career
+PASS: v1-track visible: TRACK EXPLORATION
+PASS: v1 Continue leaves original bytes unchanged
+PASS: one persistent career slot
+PASS: v1 retains original schema and every saved field
+PASS: v2-track visible: TRACK EXPLORATION
+PASS: v2 Continue leaves original bytes unchanged
+PASS: one persistent career slot
+PASS: v2 retains original schema and every saved field
+PASS: legacy category is never inferred
+PASS: v3-track visible: TRACK EXPLORATION
+PASS: v3 Continue leaves original bytes unchanged
+PASS: one persistent career slot
+PASS: v3 retains original schema and every saved field
+PASS: no recorded engine/JavaScript/WebAssembly/storage/network errors or warnings

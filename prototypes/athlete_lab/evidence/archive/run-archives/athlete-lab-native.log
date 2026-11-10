@@ -1,0 +1,61 @@
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+PASS: male real humanoid skeleton with hand and foot joints
+PASS: male fallback reference meshes never duplicate rendering
+PASS: male imported mesh indices, morphs, skin binds and triangle areas are valid
+PASS: male imported vertex skin weights sum to one
+PASS: male normal backface culling stays enabled
+PASS: male stored hairstyle identifier 0 selects correct asset
+PASS: male stored hairstyle identifier 1 selects correct asset
+PASS: male stored hairstyle identifier 2 selects correct asset
+PASS: male stored hairstyle identifier 3 selects correct asset
+PASS: male skin tone 0 updates without geometry regeneration
+PASS: male skin tone 1 updates without geometry regeneration
+PASS: male skin tone 2 updates without geometry regeneration
+PASS: male skin tone 3 updates without geometry regeneration
+PASS: male skin tone 4 updates without geometry regeneration
+PASS: male skin tone 5 updates without geometry regeneration
+PASS: male hair color 0 updates without geometry regeneration
+PASS: male hair color 1 updates without geometry regeneration
+PASS: male hair color 2 updates without geometry regeneration
+PASS: male hair color 3 updates without geometry regeneration
+PASS: male hair color 4 updates without geometry regeneration
+PASS: male weight drives real imported shape channels
+PASS: male shoulders drives real imported shape channels
+PASS: male legs drives real imported shape channels
+PASS: male height retains original uniform stature scaling
+PASS: male extreme-customization rest and inverse-bind transforms agree
+PASS: male shared asset instances without mutating appearance data
+PASS: male separate model material instances stay independent
+PASS: female real humanoid skeleton with hand and foot joints
+PASS: female fallback reference meshes never duplicate rendering
+PASS: female imported mesh indices, morphs, skin binds and triangle areas are valid
+PASS: female imported vertex skin weights sum to one
+PASS: female normal backface culling stays enabled
+PASS: female stored hairstyle identifier 0 selects correct asset
+PASS: female stored hairstyle identifier 1 selects correct asset
+PASS: female stored hairstyle identifier 2 selects correct asset
+PASS: female stored hairstyle identifier 3 selects correct asset
+PASS: female skin tone 0 updates without geometry regeneration
+PASS: female skin tone 1 updates without geometry regeneration
+PASS: female skin tone 2 updates without geometry regeneration
+PASS: female skin tone 3 updates without geometry regeneration
+PASS: female skin tone 4 updates without geometry regeneration
+PASS: female skin tone 5 updates without geometry regeneration
+PASS: female hair color 0 updates without geometry regeneration
+PASS: female hair color 1 updates without geometry regeneration
+PASS: female hair color 2 updates without geometry regeneration
+PASS: female hair color 3 updates without geometry regeneration
+PASS: female hair color 4 updates without geometry regeneration
+PASS: female weight drives real imported shape channels
+PASS: female shoulders drives real imported shape channels
+PASS: female legs drives real imported shape channels
+PASS: female height retains original uniform stature scaling
+PASS: female extreme-customization rest and inverse-bind transforms agree
+PASS: female shared asset instances without mutating appearance data
+PASS: female separate model material instances stay independent
+PASS: uncategorized legacy returns to original neutral fallback without inference
+PASS: explicit fallback switch retains working original character
+PASS: fixed lab camera and model orientations unchanged
+EVOLUTION GEOMETRY STATS: {"female/0":{"bones":22,"material_surfaces":6,"mesh_rebuilds":2,"triangles":5368},"female/1":{"bones":22,"material_surfaces":7,"mesh_rebuilds":2,"triangles":6114},"female/2":{"bones":22,"material_surfaces":7,"mesh_rebuilds":2,"triangles":6220},"female/3":{"bones":22,"material_surfaces":7,"mesh_rebuilds":2,"triangles":6236},"male/0":{"bones":22,"material_surfaces":6,"mesh_rebuilds":1,"triangles":5436},"male/1":{"bones":22,"material_surfaces":7,"mesh_rebuilds":1,"triangles":6182},"male/2":{"bones":22,"material_surfaces":7,"mesh_rebuilds":1,"triangles":6288},"male/3":{"bones":22,"material_surfaces":7,"mesh_rebuilds":1,"triangles":6304}}
+ATHLETE EVOLUTION TEST FAILURES: 0

@@ -1,0 +1,235 @@
+{
+  "url": "http://127.0.0.1:8009/index.html",
+  "checks": [
+    {
+      "pass": true,
+      "message": "both real GLB imports render with humanoid skeletons"
+    },
+    {
+      "pass": true,
+      "message": "both categories display stored hairstyle IDs [2, 0]"
+    },
+    {
+      "pass": true,
+      "message": "both categories display stored hairstyle IDs [3, 1]"
+    },
+    {
+      "pass": true,
+      "message": "both categories display stored hairstyle IDs [0, 2]"
+    },
+    {
+      "pass": true,
+      "message": "both categories display stored hairstyle IDs [1, 3]"
+    },
+    {
+      "pass": true,
+      "message": "exact hair color 533522 on both models, no asset rebuild"
+    },
+    {
+      "pass": true,
+      "message": "exact hair color d8b56c on both models, no asset rebuild"
+    },
+    {
+      "pass": true,
+      "message": "exact hair color 934b32 on both models, no asset rebuild"
+    },
+    {
+      "pass": true,
+      "message": "exact hair color acafb2 on both models, no asset rebuild"
+    },
+    {
+      "pass": true,
+      "message": "exact hair color 171719 on both models, no asset rebuild"
+    },
+    {
+      "pass": true,
+      "message": "exact skin palette ['996442', '482d23'] on both models, no asset rebuild"
+    },
+    {
+      "pass": true,
+      "message": "exact skin palette ['70452f', 'f4d4b4'] on both models, no asset rebuild"
+    },
+    {
+      "pass": true,
+      "message": "exact skin palette ['482d23', 'dfb18b'] on both models, no asset rebuild"
+    },
+    {
+      "pass": true,
+      "message": "exact skin palette ['f4d4b4', 'be8b63'] on both models, no asset rebuild"
+    },
+    {
+      "pass": true,
+      "message": "exact skin palette ['dfb18b', '996442'] on both models, no asset rebuild"
+    },
+    {
+      "pass": true,
+      "message": "exact skin palette ['be8b63', '70452f'] on both models, no asset rebuild"
+    },
+    {
+      "pass": true,
+      "message": "no recorded Godot/JavaScript/WebAssembly/network errors or warnings"
+    }
+  ],
+  "errors": [],
+  "viewport": [
+    1280,
+    900
+  ],
+  "renderer": "SwiftShader software WebGL 2",
+  "screenshot_hashes": {
+    "both-front.png": "da66f43b9be8cf9dd96c80ae3e7dbbacf4c73cba5a76df92782644725dc70022",
+    "both-side.png": "21658291877ff70f73d5d59ec75287cf1e39d86dd9830557748132406a3baab4",
+    "both-three-quarter.png": "0a1da180409d9d93fb6bce54afe9f30d40b83618742f0332e75a14553c1e0daf",
+    "fallback-front.png": "7c7e291638ea99e15afbc50df91d4943b648c8b3e6983371a3ac05a5578ed750",
+    "front-high-resolution.png": "13cfcd61f351279e691f2f1f3bf867e6b85cc02daee70c174b76d8a5a75ba0da",
+    "hair-variants-1.png": "5f00d4f43942c60d6092428a723a669e1e35c29c897d36feb78329ca28c67355",
+    "hair-variants-2.png": "6544b15d2f12e19e0ffcd6d7d247f91ad4f6e7b79fae5a14211150afb7b8070e",
+    "hair-variants-3.png": "388c2c65bee237941eafe2da2070908a2f71950e6c809aa72afccc79be3b3c0d",
+    "hair-variants-4.png": "da66f43b9be8cf9dd96c80ae3e7dbbacf4c73cba5a76df92782644725dc70022"
+  },
+  "browser": "156.0.8078.79",
+  "render_metrics": {
+    "appearance": [
+      {
+        "hair_color": 0,
+        "hairstyle": 1,
+        "height": 180,
+        "legs": 1,
+        "shoulders": 1,
+        "skin": 2,
+        "weight": 75
+      },
+      {
+        "hair_color": 0,
+        "hairstyle": 3,
+        "height": 180,
+        "legs": 1,
+        "shoulders": 1,
+        "skin": 4,
+        "weight": 75
+      }
+    ],
+    "draw_calls": 15,
+    "frame_ms": [
+      146.066666666667,
+      129.6,
+      13.7,
+      136,
+      94.5,
+      108.6,
+      138.2,
+      131.066666666667,
+      118.933333333333,
+      133.333333333333,
+      141.666666666667,
+      126.666666666667,
+      141.666666666667,
+      131.866666666667,
+      128.566666666667,
+      103.966666666667,
+      142.266666666667,
+      103.733333333333,
+      140.733333333333,
+      110.633333333333,
+      129.133333333333,
+      132.433333333333,
+      119.633333333333,
+      120.8,
+      142.2,
+      120.3,
+      147.066666666667,
+      125,
+      91.6666666666665,
+      100,
+      106.6,
+      110.166666666667,
+      105.555555555556,
+      138.911111111111,
+      106.5,
+      107.333333333333,
+      113.2,
+      145.066666666666,
+      16.6666666666667,
+      100,
+      100,
+      116.366666666667,
+      100,
+      111.466666666667,
+      112.9,
+      142.4,
+      133.533333333333,
+      116.666666666667,
+      116.666666666667,
+      116.666666666667,
+      146.3,
+      127.777777777778,
+      125,
+      134.255555555555,
+      34.5666666666669,
+      114.7,
+      134.066666666666,
+      116.666666666667,
+      116.666666666667,
+      0.712500012014061,
+      149.287499987986,
+      17.3000000000002,
+      141.6,
+      124.433333333333,
+      133.333333333333,
+      135.9,
+      142.433333333333,
+      120.733333333333,
+      100.933333333333,
+      91.4333333333336,
+      100.2,
+      107.966666666667,
+      133.733333333333,
+      117.433333333334,
+      115.9,
+      117.833333333334,
+      111.6,
+      105.9,
+      106.9,
+      141.1,
+      125.966666666667,
+      107.4,
+      112.233333333333,
+      108.6,
+      121.533333333333,
+      116.666666666667,
+      116.666666666667,
+      112.033333333333,
+      107.2,
+      111.6,
+      134.633333333333,
+      116.666666666667,
+      116.666666666667,
+      109.433333333333,
+      104.3,
+      99.6
+    ],
+    "hair_colors": [
+      "171719",
+      "171719"
+    ],
+    "models": [
+      {
+        "bones": 22,
+        "material_surfaces": 7,
+        "mesh_rebuilds": 1,
+        "triangles": 6182
+      },
+      {
+        "bones": 22,
+        "material_surfaces": 7,
+        "mesh_rebuilds": 1,
+        "triangles": 6236
+      }
+    ],
+    "rendered_primitives": 12680,
+    "skin_colors": [
+      "be8b63",
+      "70452f"
+    ]
+  }
+}

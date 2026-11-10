@@ -1,0 +1,464 @@
+[
+  {
+    "path": ".github/workflows/web-pages.yml",
+    "bytes": 5369,
+    "sha256": "a25cdace929537e95648d252245255858bb1b8374551e8bc073cc95ebe600bad",
+    "group": "production-0.2.4"
+  },
+  {
+    "path": "GAME_DESIGN.md",
+    "bytes": 13153,
+    "sha256": "d8988ff40e579c022312902e89673074ff1c328c9ea3cabe728b413b5a292b51",
+    "group": "production-0.2.4"
+  },
+  {
+    "path": "README.md",
+    "bytes": 43135,
+    "sha256": "684918bd15f8c2e45ddc60069da5ecddd1fd1c78fe153e110afe2612aa714556",
+    "group": "production-0.2.4"
+  },
+  {
+    "path": "ROADMAP.md",
+    "bytes": 10272,
+    "sha256": "410330946218bab68aa9f021d6065ba9c9c7deac06edda710a412759afd6aeb0",
+    "group": "production-0.2.4"
+  },
+  {
+    "path": "TASKS.md",
+    "bytes": 22661,
+    "sha256": "d55189605f39d7bff08f11dd8b420a7a6273ceeb8f9b13446bf662bbe183b6f6",
+    "group": "mixed-document"
+  },
+  {
+    "path": "TECHNICAL_DESIGN.md",
+    "bytes": 19725,
+    "sha256": "ad15e35d6f27db6252fd4cf7dd15ad2f2167bac92ecfca4a45e5ca2c24872027",
+    "group": "production-0.2.4"
+  },
+  {
+    "path": "assets/licenses/README.md",
+    "bytes": 2602,
+    "sha256": "0908cb67b392b46f9ce6372edc027fef99808fcd442bf484372e7f404def8ff3",
+    "group": "production-0.2.4"
+  },
+  {
+    "path": "project.godot",
+    "bytes": 1086,
+    "sha256": "976041adc7003fa34a1714eb0f689565066db48f66ffc595f5a3dd9187b306d7",
+    "group": "production-0.2.4"
+  },
+  {
+    "path": "prototypes/.gdignore",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "group": "experimental"
+  },
+  {
+    "path": "prototypes/athlete_lab/ARCHITECTURE.md",
+    "bytes": 4693,
+    "sha256": "f6dcc92e112722c06642b7bdc0e4c10c9307b0ced8cbcac74b17cda86d2e3d01",
+    "group": "experimental"
+  },
+  {
+    "path": "prototypes/athlete_lab/REVIEW_NOTES.md",
+    "bytes": 1830,
+    "sha256": "f94d988f600b1091a1c3c46c60327e90b80648d9f6cbe4d5299436a5f9beeae1",
+    "group": "experimental"
+  },
+  {
+    "path": "prototypes/athlete_lab/assets/athletes/asset_manifest.json",
+    "bytes": 469,
+    "sha256": "fa9b560acac20977ce19e31ed25d515a6ecf49d973d09b5523d604fd61d43858",
+    "group": "experimental"
+  },
+  {
+    "path": "prototypes/athlete_lab/assets/athletes/female.glb",
+    "bytes": 479156,
+    "sha256": "a8b773e1a3cf0307c113d4ea3b9a0c8d53cd1cf09d2209a65e8836c328fc7b73",
+    "group": "experimental"
+  },
+  {
+    "path": "prototypes/athlete_lab/assets/athletes/female.glb.import",
+    "bytes": 1040,
+    "sha256": "9bda174c17a66af30d5f578cb88301a16da9f28e83fad9299ee00855b62c6cc3",
+    "group": "experimental"
+  },
+  {
+    "path": "prototypes/athlete_lab/assets/athletes/generation.json",
+    "bytes": 326,
+    "sha256": "b18ca84a652639bd233b8ec400dcc72dfbca89b1b770309cf3f2cfbe6eae0478",
+    "group": "experimental"
+  },
+  {
+    "path": "prototypes/athlete_lab/assets/athletes/male.glb",
+    "bytes": 484260,
+    "sha256": "fab42a8be973ae91640f391fd815fec30ebdf92283aa9ec5f4803958087a22bf",
+    "group": "experimental"
+  },
+  {
+    "path": "prototypes/athlete_lab/assets/athletes/male.glb.import",
+    "bytes": 1033,
+    "sha256": "5cad811a4dacb16601a08c828f0088ab255edb508eb243f762b14d29e6522d4f",
+    "group": "experimental"
+  },
+  {
+    "path": "prototypes/athlete_lab/assets/athletes/mesh_audit.json",
+    "bytes": 3087,
+    "sha256": "30f8c21f29d32a3a9473b909042d24155b19f70035d4fd2ff48bd07092eee7c8",
+    "group": "experimental"
+  },
+  {
+    "path": "prototypes/athlete_lab/assets/athletes/source/.gdignore",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "group": "experimental"
+  },
+  {
+    "path": "prototypes/athlete_lab/assets/athletes/source/female.blend",
+    "bytes": 1741116,
+    "sha256": "3127c3ea66722f5cb436e45c43efa8389808328542065102fab81b76d8c341b3",
+    "group": "experimental"
+  },
+  {
+    "path": "prototypes/athlete_lab/assets/athletes/source/male.blend",
+    "bytes": 1611152,
+    "sha256": "fdbb7abfeffd5733566e875e183d2b2e71ea028520800b97889dccd433035d29",
+    "group": "experimental"
+  },
+  {
+    "path": "prototypes/athlete_lab/export_presets.cfg",
+    "bytes": 781,
+    "sha256": "4f5094dc32cb45ac0ae87eba5f50afd8e8d28f40b872823df3436c8f09451d53",
+    "group": "experimental"
+  },
+  {
+    "path": "prototypes/athlete_lab/project.godot",
+    "bytes": 548,
+    "sha256": "8cacb12d3b8f62b7d434e595dc983becd6c2c3d522b83c5352e3fc51799d89d6",
+    "group": "experimental"
+  },
+  {
+    "path": "prototypes/athlete_lab/scenes/athlete_showcase.gd",
+    "bytes": 3870,
+    "sha256": "d91c3f775c4a28a421898764e763de845821cbd8e1661318980ba74d37323e87",
+    "group": "experimental"
+  },
+  {
+    "path": "prototypes/athlete_lab/scenes/athlete_showcase.gd.uid",
+    "bytes": 20,
+    "sha256": "953908909f660a010686a0a2c87a964effe3da898a1630aa7333a34e1844cc9d",
+    "group": "experimental"
+  },
+  {
+    "path": "prototypes/athlete_lab/scenes/athlete_showcase.tscn",
+    "bytes": 181,
+    "sha256": "0bca7006e31836d1c51cc491cca2181e6434d67719c28a2d0ff13052fc6bcbe0",
+    "group": "experimental"
+  },
+  {
+    "path": "prototypes/athlete_lab/scenes/reference_pre_anatomy.gd",
+    "bytes": 13687,
+    "sha256": "7d55ecd6838543ad7366d112b807e32f1d86f53b61c831e8dfe56a6896ed1b20",
+    "group": "experimental"
+  },
+  {
+    "path": "prototypes/athlete_lab/scenes/reference_pre_anatomy.gd.uid",
+    "bytes": 20,
+    "sha256": "22087cb4a502ace6657e398a7e586ecdfa9b7b3af98803749c2e32b51c1e2f3f",
+    "group": "experimental"
+  },
+  {
+    "path": "prototypes/athlete_lab/scripts/customization/athlete_mesh_builder.gd",
+    "bytes": 2111,
+    "sha256": "3bbac780db39d97d6a135cc8635cd1c5fc33199c9ea3fad5d4b5195a64aa6710",
+    "group": "experimental"
+  },
+  {
+    "path": "prototypes/athlete_lab/scripts/customization/athlete_mesh_builder.gd.uid",
+    "bytes": 20,
+    "sha256": "56aea8638ab69e4288814191371e23185689fcb572464e897d14c7edb2b60512",
+    "group": "experimental"
+  },
+  {
+    "path": "prototypes/athlete_lab/scripts/customization/fallback_athlete.gd",
+    "bytes": 4806,
+    "sha256": "296ceae7b0a722e6b4d4d0e47a111429cff0659ca6179b5f92e8cfd41004ff5c",
+    "group": "experimental"
+  },
+  {
+    "path": "prototypes/athlete_lab/scripts/customization/fallback_athlete.gd.uid",
+    "bytes": 20,
+    "sha256": "cb195df2f2779ae749e104ab136498a38f5f92539206e8adc9f00e7fd43adfa4",
+    "group": "experimental"
+  },
+  {
+    "path": "prototypes/athlete_lab/scripts/customization/fallback_polished_athlete.gd",
+    "bytes": 14967,
+    "sha256": "44e00af067338bded68e6b976c8d066d24e8707381fa84eb8163e05a567e43f5",
+    "group": "experimental"
+  },
+  {
+    "path": "prototypes/athlete_lab/scripts/customization/fallback_polished_athlete.gd.uid",
+    "bytes": 19,
+    "sha256": "b6eb58a10209e12e1c19ccc1f7e4e4e6ed6cdf5e0a3346ee0c2941fdafad2e92",
+    "group": "experimental"
+  },
+  {
+    "path": "prototypes/athlete_lab/scripts/customization/procedural_athlete.gd",
+    "bytes": 6189,
+    "sha256": "4b7f2f81be8c885e7e64ec6f89af9f925812aadbd7dcc1ae5ddf94735ad5d81c",
+    "group": "experimental"
+  },
+  {
+    "path": "prototypes/athlete_lab/scripts/customization/procedural_athlete.gd.uid",
+    "bytes": 20,
+    "sha256": "e2da691087022ce8fc0d94ce0ee3fcafeb01501519289bdd244f805bc0cdcd8a",
+    "group": "experimental"
+  },
+  {
+    "path": "prototypes/athlete_lab/scripts/data/appearance_data.gd",
+    "bytes": 1565,
+    "sha256": "cfedaf1f0d8358fbf1a2fe53e44f2d318d14715a04e6cdbd598dce8126cafd60",
+    "group": "experimental"
+  },
+  {
+    "path": "prototypes/athlete_lab/scripts/data/appearance_data.gd.uid",
+    "bytes": 20,
+    "sha256": "62aae9c02c1c0a6dba0a6cd1e8868b862b4576a5e9aad362c503511614b9f9be",
+    "group": "experimental"
+  },
+  {
+    "path": "prototypes/athlete_lab/scripts/data/athlete_category.gd",
+    "bytes": 760,
+    "sha256": "3b7645f123e0c2aabb720996b5fc8f83ac1dd7574102828afa03f9c119b21985",
+    "group": "experimental"
+  },
+  {
+    "path": "prototypes/athlete_lab/scripts/data/athlete_category.gd.uid",
+    "bytes": 19,
+    "sha256": "720d13f5ae077d8f6937cc0df19b2482405eddb6833f26517eea1574af3355be",
+    "group": "experimental"
+  },
+  {
+    "path": "prototypes/athlete_lab/tests/athlete_evolution_test.gd",
+    "bytes": 5906,
+    "sha256": "297955487b8a3771cc9148591dbdc88c0473efd80339eae935aa4ab089667e9d",
+    "group": "experimental"
+  },
+  {
+    "path": "prototypes/athlete_lab/tests/athlete_evolution_test.gd.uid",
+    "bytes": 19,
+    "sha256": "a0b60301e0588182808174db01c3d4bbf877f32804749414a3bb4d93242728ab",
+    "group": "experimental"
+  },
+  {
+    "path": "prototypes/athlete_lab/tools/audit_meshes.py",
+    "bytes": 2379,
+    "sha256": "50b5237006d8b7eb2948d0bbd2918e5d3b2d710ef6d985045898e52a583beb74",
+    "group": "experimental"
+  },
+  {
+    "path": "prototypes/athlete_lab/tools/generate_athletes.py",
+    "bytes": 14615,
+    "sha256": "c784b1cb3c3e4b0eef7c98187a81e1edf7b136d3a47a2a00cff40fda8a2cac94",
+    "group": "experimental"
+  },
+  {
+    "path": "scripts/ui/career_creator.gd",
+    "bytes": 19156,
+    "sha256": "ef9fb287184c3b19b448afc33b60b8d1f634817033934bc3b38ef9b5f882524c",
+    "group": "production-0.2.4"
+  },
+  {
+    "path": "scripts/ui/studio/choice_card.gd",
+    "bytes": 2604,
+    "sha256": "388f72f395b62293ca4df4759143d163c14ddb14d731b7ec08e755a8845a4d30",
+    "group": "production-0.2.4"
+  },
+  {
+    "path": "scripts/ui/studio/choice_card.gd.uid",
+    "bytes": 20,
+    "sha256": "ff27377207e2bf2f2cd13d227b93726ee64e970e90f8eb4649442896fd332900",
+    "group": "production-0.2.4"
+  },
+  {
+    "path": "scripts/ui/studio/choice_grid.gd",
+    "bytes": 1276,
+    "sha256": "19e10d5c1fec9b896173c8828b96edd4efcc69f091588d2fb8383496e6bb0ea0",
+    "group": "production-0.2.4"
+  },
+  {
+    "path": "scripts/ui/studio/choice_grid.gd.uid",
+    "bytes": 20,
+    "sha256": "160425d378e51755b11648134b57063091f8bc2312166c51438e208158449057",
+    "group": "production-0.2.4"
+  },
+  {
+    "path": "scripts/ui/studio/player_card.gd",
+    "bytes": 3979,
+    "sha256": "bc1cdceb856119527a1af2181ebcd1a4706a12881078c639f8d12e0f6bd6b2f4",
+    "group": "production-0.2.4"
+  },
+  {
+    "path": "scripts/ui/studio/player_card.gd.uid",
+    "bytes": 19,
+    "sha256": "32d5d3e14ed0468cd91c1a6dd43163a259c85ade10669ea3a2589fb79231fcce",
+    "group": "production-0.2.4"
+  },
+  {
+    "path": "scripts/ui/studio/studio_icon.gd",
+    "bytes": 1397,
+    "sha256": "2431146664319386f34d8277bd30275fbcbc4cef45eed6605215e41a3bf24cbb",
+    "group": "production-0.2.4"
+  },
+  {
+    "path": "scripts/ui/studio/studio_icon.gd.uid",
+    "bytes": 20,
+    "sha256": "5127e512cdcdf3f1e089459e19073fa8e73d3e596bbe8e066a9d7c17b16c20c0",
+    "group": "production-0.2.4"
+  },
+  {
+    "path": "tests/ATHLETE_STUDIO_MAPPINGS.md",
+    "bytes": 3403,
+    "sha256": "63209c140b5f6997d40cb28c55a6673e2e3c864bef9eb56ca05b1f6e3826be5f",
+    "group": "production-0.2.4"
+  },
+  {
+    "path": "tests/ATHLETE_STUDIO_VERIFICATION.md",
+    "bytes": 3083,
+    "sha256": "c583fa69d7cbe87a9e308fb65cfb2c476d7eb277a19d78795f1ae78746ab5397",
+    "group": "production-0.2.4"
+  },
+  {
+    "path": "tests/athlete_studio_test.gd",
+    "bytes": 8892,
+    "sha256": "4c3cc9684afbf37eb8c6a6ea49c4b5be104617a9d495ba28290e262d0a73c8f1",
+    "group": "production-0.2.4"
+  },
+  {
+    "path": "tests/athlete_studio_test.gd.uid",
+    "bytes": 20,
+    "sha256": "80209dd27c14bfa1e51f842da0b55a332fd6aacf66b61dd867caad78b41d47df",
+    "group": "production-0.2.4"
+  },
+  {
+    "path": "tests/athlete_studio_verification.json",
+    "bytes": 14644,
+    "sha256": "97bc4e8fc06474558ae0d9c27f84a19d43c2a6b80bebfff968ca850698747dd7",
+    "group": "production-0.2.4"
+  },
+  {
+    "path": "tests/golden_menu_test.gd",
+    "bytes": 7373,
+    "sha256": "971ba0b8544ef74ea8c7127a82ec9c9b278c98e9657afc4609b76e5f987a5131",
+    "group": "production-0.2.4"
+  },
+  {
+    "path": "tests/locker_room_test.gd",
+    "bytes": 5016,
+    "sha256": "0486f23bddbe286cdb3e250c4dd8a4d171cda20be47a52af4bb03be2473c6b89",
+    "group": "production-0.2.4"
+  },
+  {
+    "path": "tests/web-evidence/studio-01-athlete-1280.png",
+    "bytes": 57475,
+    "sha256": "3433603eb2991260a1046f0994d46ae35692e13c9257dd619d7827d67a75d135",
+    "group": "production-0.2.4"
+  },
+  {
+    "path": "tests/web-evidence/studio-01-athlete-800.png",
+    "bytes": 56079,
+    "sha256": "1fd8a96da683a8f636446b6cb7c9f7c2310ab0b03cbf81a2d79ad43b06ec835d",
+    "group": "production-0.2.4"
+  },
+  {
+    "path": "tests/web-evidence/studio-02-story-1280.png",
+    "bytes": 74873,
+    "sha256": "9683854b342deb63a7a6fdfa6578231903ffc60d1a1b2db15d7c5109f1db0c0d",
+    "group": "production-0.2.4"
+  },
+  {
+    "path": "tests/web-evidence/studio-02-story-800.png",
+    "bytes": 65665,
+    "sha256": "42e4af10c949c7fe496c7eaaef6d181972c88bb1d8ba2017b5dcc55e32b86868",
+    "group": "production-0.2.4"
+  },
+  {
+    "path": "tests/web-evidence/studio-03-body-1280.png",
+    "bytes": 63847,
+    "sha256": "ff014ed9574d25f4a7b39544d4e5712fab16db9cab9351f301383000b86bc65a",
+    "group": "production-0.2.4"
+  },
+  {
+    "path": "tests/web-evidence/studio-03-body-bottom-800.png",
+    "bytes": 57923,
+    "sha256": "878d574d898fc6adeae1b2d451b02fd72a00162433991c04a6a539c93fcffb70",
+    "group": "production-0.2.4"
+  },
+  {
+    "path": "tests/web-evidence/studio-03-hair-1280.png",
+    "bytes": 60487,
+    "sha256": "461b827131fba31a77f300d442dcd13f3ba8bbb55c64562e4e6e417f56a5625a",
+    "group": "production-0.2.4"
+  },
+  {
+    "path": "tests/web-evidence/studio-03-hair-bottom-800.png",
+    "bytes": 51077,
+    "sha256": "beb33496a26e4e46c1946321499dd5cf587088593d121acf43233a978e8aa4d6",
+    "group": "production-0.2.4"
+  },
+  {
+    "path": "tests/web-evidence/studio-03-hair-top-800.png",
+    "bytes": 50473,
+    "sha256": "b2880e73fd45665968cac39adf362ca45c7c92ddfcd14e0531fb57b3d83d8d8e",
+    "group": "production-0.2.4"
+  },
+  {
+    "path": "tests/web-evidence/studio-03-skin-1280.png",
+    "bytes": 57322,
+    "sha256": "0065c4675c380f268aa34af04e9f5dcbb780b52089e669b1ee0dd5b71be42d17",
+    "group": "production-0.2.4"
+  },
+  {
+    "path": "tests/web-evidence/studio-03-skin-800.png",
+    "bytes": 53009,
+    "sha256": "6c96004e2251e2037789b4b9fbdb66b3bbc32ed503091a207463aff3fd86c25c",
+    "group": "production-0.2.4"
+  },
+  {
+    "path": "tests/web-evidence/studio-04-identity-1280.png",
+    "bytes": 56997,
+    "sha256": "655ad620723b3186261b6c8afe89f47087268dd6836765aa9a2f6d04d5262fdc",
+    "group": "production-0.2.4"
+  },
+  {
+    "path": "tests/web-evidence/studio-04-identity-800.png",
+    "bytes": 48037,
+    "sha256": "92d8b7573d41b85fe5063eadc3849b78cf43fed82eb3ff6f9e036d98133bb2a4",
+    "group": "production-0.2.4"
+  },
+  {
+    "path": "tests/web-evidence/studio-05-legacy-bottom-1280.png",
+    "bytes": 72139,
+    "sha256": "25a451d53e7f2683baff2089d5e860595c3b8bff90311499e3b8f052c335e3e3",
+    "group": "production-0.2.4"
+  },
+  {
+    "path": "tests/web-evidence/studio-05-legacy-bottom-800.png",
+    "bytes": 60131,
+    "sha256": "6c264a0576d8d68bd654339f565458b78346637db816df6db1bed2bdfce2f8db",
+    "group": "production-0.2.4"
+  },
+  {
+    "path": "tests/web-evidence/studio-05-legacy-top-1280.png",
+    "bytes": 67202,
+    "sha256": "f4d8b730507374d22de104137c4dea96c03fc585fcb4ff5d2e410bbe9eaced1b",
+    "group": "production-0.2.4"
+  },
+  {
+    "path": "tests/web-evidence/studio-05-legacy-top-800.png",
+    "bytes": 56701,
+    "sha256": "f66ec79bfbec522dea21cf9e82ba8abe6daca2708125805edef5a6d63d5921e2",
+    "group": "production-0.2.4"
+  }
+]

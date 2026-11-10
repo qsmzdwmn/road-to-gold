@@ -1,0 +1,14 @@
+PASS: v1-track visible: TRACK EXPLORATION
+PASS: v1 Continue leaves original bytes unchanged
+PASS: one persistent career slot
+PASS: v1 retains original schema and every saved field
+PASS: v2-track visible: TRACK EXPLORATION
+PASS: v2 Continue leaves original bytes unchanged
+PASS: one persistent career slot
+PASS: v2 retains original schema and every saved field
+PASS: legacy category is never inferred
+PASS: v3-track visible: TRACK EXPLORATION
+PASS: v3 Continue leaves original bytes unchanged
+PASS: one persistent career slot
+PASS: v3 retains original schema and every saved field
+PASS: no recorded engine/JavaScript/WebAssembly/storage/network errors or warnings

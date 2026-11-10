@@ -1,0 +1,91 @@
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Started Project initialization (5 steps)[39m[0m
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Scanning file structure...[39m[0m
+[  16% ] [90m[1mfirst_scan_filesystem[22m | Loading global class names...[39m[0m
+[  33% ] [90m[1mfirst_scan_filesystem[22m | Verifying GDExtensions...[39m[0m
+[  50% ] [90m[1mfirst_scan_filesystem[22m | Creating autoload scripts...[39m[0m
+[  66% ] [90m[1mfirst_scan_filesystem[22m | Initializing plugins...[39m[0m
+[  83% ] [90m[1mfirst_scan_filesystem[22m | Starting file scan...[39m[0m
+[92m[ DONE ][39m [1mfirst_scan_filesystem[22m
+[0m
+[   0% ] [90m[1mupdate_scripts_classes[22m | Started Registering global classes... (3 steps)[39m[0m
+[   0% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  25% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  50% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[92m[ DONE ][39m [1mupdate_scripts_classes[22m
+[0m
+[   0% ] [90m[1msavepack[22m | Started Packing (102 steps)[39m[0m
+[   1% ] [90m[1msavepack[22m | Storing File: res://scripts/ui/prototype_ui.gdc[39m[0m
+[   3% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/golden_path_emblem_ui.png-6b5cacdf8cc28553a26845db3cfb9707.ctex[39m[0m
+[   3% ] [90m[1msavepack[22m | Storing File: res://assets/branding/golden_path_emblem_ui.png.import[39m[0m
+[   6% ] [90m[1msavepack[22m | Storing File: res://scripts/ui/golden_menu.gdc[39m[0m
+[   9% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/golden_path_full_ui.png-a94708d4522c7d35a4e4925ebd0e1961.ctex[39m[0m
+[   9% ] [90m[1msavepack[22m | Storing File: res://assets/branding/golden_path_full_ui.png.import[39m[0m
+[  12% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/golden_path_icon.png-058081393479782ecf258f9a2fd398be.ctex[39m[0m
+[  12% ] [90m[1msavepack[22m | Storing File: res://assets/branding/golden_path_icon.png.import[39m[0m
+[  15% ] [90m[1msavepack[22m | Storing File: res://assets/branding/golden_path_manifest.json[39m[0m
+[  18% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/road_to_gold.svg-fb775c8177a03d3ee79253d96581e5e1.ctex[39m[0m
+[  18% ] [90m[1msavepack[22m | Storing File: res://assets/branding/road_to_gold.svg.import[39m[0m
+[  21% ] [90m[1msavepack[22m | Storing File: res://resources/countries/countries.json[39m[0m
+[  23% ] [90m[1msavepack[22m | Storing File: res://resources/origins/origins.json[39m[0m
+[  26% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-45d3552fed7a1fcd51171717fa41a611-main.scn[39m[0m
+[  29% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-e86bdcbc41588769824a612967d47efc-placeholder.scn[39m[0m
+[  32% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-7c297bf0ca65270542877e37d6724130-golden_road.scn[39m[0m
+[  34% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-097286a04465090699e02aef8133e9f5-prototype_track.scn[39m[0m
+[  37% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-0e01c3428b3b6e11897dae2a246080db-career_creator.scn[39m[0m
+[  40% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-44e183414d78983f697f94de7d154d7a-prototype_ui.scn[39m[0m
+[  42% ] [90m[1msavepack[22m | Storing File: res://scripts/app/main.gdc[39m[0m
+[  45% ] [90m[1msavepack[22m | Storing File: res://scripts/branding/brand.gdc[39m[0m
+[  48% ] [90m[1msavepack[22m | Storing File: res://scripts/career/career_data.gdc[39m[0m
+[  51% ] [90m[1msavepack[22m | Storing File: res://scripts/customization/athlete_mesh_builder.gdc[39m[0m
+[  54% ] [90m[1msavepack[22m | Storing File: res://scripts/customization/locker_room.gdc[39m[0m
+[  57% ] [90m[1msavepack[22m | Storing File: res://scripts/customization/procedural_athlete.gdc[39m[0m
+[  60% ] [90m[1msavepack[22m | Storing File: res://scripts/data/appearance_data.gdc[39m[0m
+[  62% ] [90m[1msavepack[22m | Storing File: res://scripts/data/athlete_category.gdc[39m[0m
+[  65% ] [90m[1msavepack[22m | Storing File: res://scripts/data/athlete_data.gdc[39m[0m
+[  67% ] [90m[1msavepack[22m | Storing File: res://scripts/data/career_catalog.gdc[39m[0m
+[  70% ] [90m[1msavepack[22m | Storing File: res://scripts/input/placeholder_athlete.gdc[39m[0m
+[  73% ] [90m[1msavepack[22m | Storing File: res://scripts/input/placeholder_input.gdc[39m[0m
+[  76% ] [90m[1msavepack[22m | Storing File: res://scripts/menu/golden_road.gdc[39m[0m
+[  79% ] [90m[1msavepack[22m | Storing File: res://scripts/persistence/prototype_save_repository.gdc[39m[0m
+[  81% ] [90m[1msavepack[22m | Storing File: res://scripts/race/prototype_track.gdc[39m[0m
+[  84% ] [90m[1msavepack[22m | Storing File: res://scripts/ui/studio/choice_card.gdc[39m[0m
+[  87% ] [90m[1msavepack[22m | Storing File: res://scripts/ui/studio/choice_grid.gdc[39m[0m
+[  90% ] [90m[1msavepack[22m | Storing File: res://scripts/ui/studio/player_card.gdc[39m[0m
+[  93% ] [90m[1msavepack[22m | Storing File: res://scripts/ui/studio/studio_icon.gdc[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://scripts/ui/career_creator.gdc[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://scripts/ui/prototype_ui.gd.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://scripts/ui/golden_menu.gd.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://scenes/app/main.tscn.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://scenes/athletes/placeholder.tscn.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://scenes/menu/golden_road.tscn.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://scenes/race/prototype_track.tscn.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://scenes/ui/career_creator.tscn.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://scenes/ui/prototype_ui.tscn.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://scripts/app/main.gd.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://scripts/branding/brand.gd.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://scripts/career/career_data.gd.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://scripts/customization/athlete_mesh_builder.gd.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://scripts/customization/locker_room.gd.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://scripts/customization/procedural_athlete.gd.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://scripts/data/appearance_data.gd.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://scripts/data/athlete_category.gd.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://scripts/data/athlete_data.gd.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://scripts/data/career_catalog.gd.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://scripts/input/placeholder_athlete.gd.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://scripts/input/placeholder_input.gd.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://scripts/menu/golden_road.gd.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://scripts/persistence/prototype_save_repository.gd.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://scripts/race/prototype_track.gd.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://scripts/ui/studio/choice_card.gd.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://scripts/ui/studio/choice_grid.gd.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://scripts/ui/studio/player_card.gd.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://scripts/ui/studio/studio_icon.gd.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://scripts/ui/career_creator.gd.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://.godot/global_script_class_cache.cfg[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://assets/branding/golden_path_icon.png[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://.godot/uid_cache.bin[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://project.binary[39m[0m
+[92m[ DONE ][39m [1msavepack[22m
+[0m

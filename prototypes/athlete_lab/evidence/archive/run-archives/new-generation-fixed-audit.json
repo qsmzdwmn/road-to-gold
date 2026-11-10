@@ -1,0 +1,128 @@
+{
+  "male": [
+    {
+      "mesh": "AthleteMesh",
+      "vertices": 2772,
+      "triangles": 5436,
+      "degenerate_faces": 0,
+      "zero_length_edges": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "negative_face_material_indices": 0,
+      "signed_volume": 0.074398994675751,
+      "material_slots": [
+        "Skin",
+        "Kit",
+        "White",
+        "Dark",
+        "Face",
+        "Hair"
+      ]
+    },
+    {
+      "mesh": "Hair_Cropped",
+      "vertices": 1310,
+      "triangles": 2616,
+      "degenerate_faces": 0,
+      "zero_length_edges": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "negative_face_material_indices": 0,
+      "signed_volume": 0.00419810878408526,
+      "material_slots": [
+        "Hair"
+      ]
+    },
+    {
+      "mesh": "Hair_Curls",
+      "vertices": 1496,
+      "triangles": 2988,
+      "degenerate_faces": 0,
+      "zero_length_edges": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "negative_face_material_indices": 0,
+      "signed_volume": 0.0046328933906781816,
+      "material_slots": [
+        "Hair"
+      ]
+    },
+    {
+      "mesh": "Hair_Ponytail",
+      "vertices": 1523,
+      "triangles": 3042,
+      "degenerate_faces": 0,
+      "zero_length_edges": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "negative_face_material_indices": 0,
+      "signed_volume": 0.004392887130765499,
+      "material_slots": [
+        "Hair"
+      ]
+    }
+  ],
+  "female": [
+    {
+      "mesh": "AthleteMesh",
+      "vertices": 2738,
+      "triangles": 5368,
+      "degenerate_faces": 0,
+      "zero_length_edges": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "negative_face_material_indices": 0,
+      "signed_volume": 0.07256070574806642,
+      "material_slots": [
+        "Skin.001",
+        "Kit.001",
+        "White.001",
+        "Dark.001",
+        "Face.001",
+        "Hair.001"
+      ]
+    },
+    {
+      "mesh": "Hair_Cropped",
+      "vertices": 1310,
+      "triangles": 2616,
+      "degenerate_faces": 0,
+      "zero_length_edges": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "negative_face_material_indices": 0,
+      "signed_volume": 0.00419810878408526,
+      "material_slots": [
+        "Hair.001"
+      ]
+    },
+    {
+      "mesh": "Hair_Curls",
+      "vertices": 1496,
+      "triangles": 2988,
+      "degenerate_faces": 0,
+      "zero_length_edges": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "negative_face_material_indices": 0,
+      "signed_volume": 0.0046328933906781816,
+      "material_slots": [
+        "Hair.001"
+      ]
+    },
+    {
+      "mesh": "Hair_Ponytail",
+      "vertices": 1523,
+      "triangles": 3042,
+      "degenerate_faces": 0,
+      "zero_length_edges": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "negative_face_material_indices": 0,
+      "signed_volume": 0.004392887130765499,
+      "material_slots": [
+        "Hair.001"
+      ]
+    }
+  ]
+}

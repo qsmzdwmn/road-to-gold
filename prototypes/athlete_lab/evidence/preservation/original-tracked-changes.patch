@@ -1,0 +1,801 @@
+diff --git a/.github/workflows/web-pages.yml b/.github/workflows/web-pages.yml
+index cb4240e..bc0ee71 100644
+--- a/.github/workflows/web-pages.yml
++++ b/.github/workflows/web-pages.yml
+@@ -84,6 +84,7 @@ jobs:
+           godot --headless --path . --script tests/category_support_test.gd -- --reload-categories
+           godot --headless --path . --script tests/locker_room_test.gd
+           godot --headless --path . --script tests/golden_menu_test.gd
++          godot --headless --path . --script tests/athlete_studio_test.gd
+ 
+       - name: Export single-thread Web build
+         shell: bash
+diff --git a/GAME_DESIGN.md b/GAME_DESIGN.md
+index f074ba8..a978baf 100644
+--- a/GAME_DESIGN.md
++++ b/GAME_DESIGN.md
+@@ -1,6 +1,6 @@
+ # ROAD TO GOLD — Game Design
+ 
+-Status: Version 0.2.3 GOLDEN ROAD, 2026-11-09. Current behavior and future Alpha scope are distinguished below.
++Status: Version 0.2.4 ATHLETE STUDIO 2.0, 2026-11-09. Current behavior and future Alpha scope are distinguished below.
+ 
+ ## Vision and constraints
+ A zero-budget, desktop-first browser 3D sports career RPG. The player creates a fictional athlete representing a real country and directly controls competitions. Godot 4, GDScript, Compatibility renderer; minimalist procedural low-poly characters and venues, lightweight materials. Development must remain practical on Windows 10 with 4 GB RAM. No paid services, mandatory commercial assets, accounts, or servers. Use original or appropriately licensed assets; record attribution. No official Olympic logos, protected mascots, or implied Olympic affiliation.
+@@ -72,3 +72,8 @@ The approved Golden Path full logo is the primary brand element in a cinematic s
+ Fresh sessions say Your journey begins here. Valid careers display the existing athlete name; position-only sessions use a generic saved-progress caption. Long names can truncate visually with a full tooltip. Original logos remain unchanged. The standalone emblem appears in loading and the existing Locker Room header without changing its five steps or static full-body camera. No gameplay, athletic performance, competition or save-format change is included. The menu pathway is symbolic and cannot be played.
+ 
+ The v0.2.3 preview-facing correction rotates only the creator preview instance 180°: model-forward (-Z) faces the fixed camera on +Z, with the ponytail behind the head. This constant orientation is shared by all five steps and both categories. Camera transforms, the shared athlete model, gameplay instance and serialized appearance data are unchanged.
++
++## Version 0.2.4 — Athlete Studio + Player Card
++Five steps remain: Choose Your Athlete → Where It All Begins → Make It Yours → Define Your Identity → Begin Your Legacy. Male/Female cards have equal silhouettes, all origins/options and no default category. Origin cards preserve ages and descriptions, without bonuses or penalties. Appearance uses visual Hair tiles, labeled hair/skin swatches and Body sliders with precise numeric companions. Height/weight are also available in Identity and stay synchronized. Names/country retain existing validation and catalogs; age is read-only from origin.
++
++Titles, subtitles and tabs stay above the options scroll area; only controls beneath them scroll. Right/bottom padding keeps controls separate from the scrollbar and footer. The same fixed-camera locker-room preview remains visible and uses the existing model at a clear front three-quarter angle. The Player Card shows actual identity and seven cosmetic attributes in a compact two-column grid, without invented ratings, medals or results. Back/Continue, active-tab memory, category switching and final replacement protection preserve existing draft behavior. All changes are presentation only; there is no new gameplay or save schema.
+diff --git a/README.md b/README.md
+index 82d740f..0416653 100644
+--- a/README.md
++++ b/README.md
+@@ -1,6 +1,6 @@
+ # road-to-gold
+ 
+-## ROAD TO GOLD — Version 0.2.3: GOLDEN ROAD
++## ROAD TO GOLD — Version 0.2.4: ATHLETE STUDIO 2.0
+ 
+ A Godot **4.6.3 standard / GDScript** career-creation prototype using the **Compatibility** renderer. No paid assets, APIs, plugins, services, or project dependencies. Version 0.2.3 adds the approved Golden Path branding and a static cinematic Golden Road main menu. The existing category, origin and athlete data remain in THE LOCKER ROOM: a five-step creator with a static full-body procedural preview, midnight/graphite panels, ivory text and muted gold accents. The existing dark menu, settings/help, test track, camera, lighting and keyboard movement are preserved. There is no story, career-year simulation or sprint race yet.
+ 
+@@ -286,3 +286,21 @@ The v0.2.3 preview-facing correction rotates only the creator preview instance 1
+ ### Version 0.2.3 observed verification — 2026-11-09
+ 
+ **332 native assertions and 129 real Chromium checks pass.** All existing native suites remain unchanged; 72 additional menu/branding/name/facing checks pass. The final facing correction rotates only the preview instance toward the unchanged camera, leaving shared/gameplay models and save data alone. Core browser checks cover menu/loader/five resolutions, both complete creation paths, every appearance field, names, confirmation, input, page/browser restart and genuine schema 1/2/3 profiles; final focused checks cover both front-facing previews and stable framing. Official matching single-thread Web export succeeds. No runtime/console/storage/network warnings/errors were recorded in completed runs. [Full report, changed files, screenshots and limits](tests/GOLDEN_ROAD_VERIFICATION.md); [raw evidence](tests/golden_road_verification.json). Windows low-end performance, other browsers and live-host verification remain untested. No deployment was performed.
++
++## Version 0.2.4 — Athlete Studio 2.0
++
++The five-step creator now uses selectable category/origin cards, a pinned Appearance title/subtitle/tab bar, and native Hair / Skin / Body panels. Drawn 2D silhouettes are larger; hairstyle icons use small procedural shapes. All four hairstyles, five hair colors, six tones and existing numeric bounds remain unchanged. Gold sliders have exact numeric companions. Height/weight appear in Body and Identity but share the same native Range values, so either view updates the other immediately. Tabs retain their state in the session and reuse one preview/model/locker room.
++
++The fixed right preview keeps the existing orthographic camera and shared model. Only the preview instance has a clearer, constant three-quarter yaw; neither the camera nor gameplay athlete rotates. No facial cues, new models, textures or 3D environment changes are added. Controls scroll beneath the pinned heading/tabs with 16 px right/bottom padding; Back/Continue/Begin Career remain outside that scroll area.
++
++Legacy now uses a compact graphite Player Card: a small official emblem and horizontal ATHLETE PROFILE heading, prominent name, country/category/origin/derived age, then seven actual appearance metrics in two columns. The header has an explicit minimum width and horizontal expansion rather than rotating text. There are no invented sporting ratings. Unconfirmed drafts never write, and replacement still requires the original dialog and backend authorization.
++
++All three save schemas, field meanings, catalogs, validation, category handling, menu, loader, movement and gameplay track are preserved. No migrations or new saved fields are introduced. See [the pre-implementation mapping](tests/ATHLETE_STUDIO_MAPPINGS.md) and [Studio verification](tests/ATHLETE_STUDIO_VERIFICATION.md) for controls, screenshots, actual results and remaining limitations.
++
++Run the existing native commands above and:
++
++```sh
++godot --headless --path . --script tests/athlete_studio_test.gd
++```
++
++Web export/local serving instructions remain unchanged. The workflow remains manual-only; this milestone does not deploy automatically.
+diff --git a/ROADMAP.md b/ROADMAP.md
+index a1e8bbf..e7916c6 100644
+--- a/ROADMAP.md
++++ b/ROADMAP.md
+@@ -1,6 +1,6 @@
+ # ROAD TO GOLD — Roadmap
+ 
+-Updated for Version 0.2.3, 2026-11-09. Gates are evidence-based; implementation stops at the currently approved milestone.
++Updated for Version 0.2.4, 2026-11-09. Gates are evidence-based; implementation stops at the currently approved milestone.
+ 
+ ## Milestones
+ 1. **Approval and feasibility:** agree Alpha scope and unresolved defaults; scaffold the minimal Compatibility project; pin engine/templates; export a placeholder Web scene and validate hosting, keyboard focus and persistence on a desktop browser. Check the Windows 10 / 4 GB machine early. Gate: documented real Web results and no unresolved export blocker.
+@@ -55,3 +55,8 @@ Acceptance: both categories traverse all three origins; every appearance control
+ Scope: approved official-logo integration, cinematic split main menu with a lightweight static curved pathway, refined tagline/buttons, named career caption, branded real-progress loader and small Locker Room emblem. Preserve all career creation, data and save contracts, gameplay track and camera. No automatic deployment.
+ 
+ Acceptance: verify immutable source PNGs and optimized transparency/aspect ratio; all existing native suites plus focused menu tests; real Chromium loader/progress, brand rendering, keyboard/mouse menu actions, five target resolutions, new career/Continue/settings, schema 1/2/3 and restart persistence; screenshots of menu/loader/Locker Room; exact export/version evidence. Commit/push only after tests and updated screenshots. Windows 10 / 4 GB performance, additional browsers and live-host checks remain outside observed cloud evidence.
++
++## Version 0.2.4 — Athlete Studio 2.0
++Scope: complete visual creator redesign with category/origin cards, pinned Hair/Skin/Body tabs, visible swatches/tiles, linked numeric sliders, polished identity form and actual-data Player Card. Keep one medium full-body preview in the existing locker room, fixed camera, and preview-only three-quarter orientation. Preserve all schema 1/2/3 and draft/replacement behavior; no gameplay or 3D graphics milestone work.
++
++Acceptance: all existing native coverage preserved with version/tab-context adaptations, focused Studio/binding/card/header/facing/modal tests, actual Chromium full creator/persistence/legacy checks at desktop/small sizes, fresh seven-view evidence at 1280×720 and 800×600 including scroll-bottom captures, matching Web export, updated docs. No automatic deployment. Low-end physical hardware/accessibility/extra-browser measurements remain separate gates.
+diff --git a/TASKS.md b/TASKS.md
+index 36b3036..57eef23 100644
+--- a/TASKS.md
++++ b/TASKS.md
+@@ -1,6 +1,6 @@
+ # ROAD TO GOLD — Tasks
+ 
+-Status: Version 0.2.3 GOLDEN ROAD implemented; 332 native assertions, 129 real Chromium checks and matching Web export pass on 2026-11-09. Version 0.2.2 remains the preserved baseline. Version 0.2 career creation remains the preserved baseline. Implementation 01 remains the preserved technical baseline. Native checks and local Chromium verification pass. Official matching Web templates are installed and Web export succeeds; T01 retains Windows hardware and actual-host verification. Further implementation waits for approval.
++Status: Version 0.2.4 Athlete Studio implementation and final visual verification in progress (2026-11-10). Preserved v0.2.3 baseline: 332 native assertions, 129 real Chromium checks and matching Web export pass on 2026-11-09. Version 0.2.2 remains the preserved baseline. Version 0.2 career creation remains the preserved baseline. Implementation 01 remains the preserved technical baseline. Native checks and local Chromium verification pass. Official matching Web templates are installed and Web export succeeds; T01 retains Windows hardware and actual-host verification. Further implementation waits for approval.
+ 
+ ## Completed initialization
+ - [x] Inspect /workspace and search for project and AGENTS.md files; no existing project found.
+@@ -144,3 +144,29 @@ No story, competition, record or progression systems, new branding assets or aut
+ - [ ] Windows 10 / 4 GB hardware performance, additional browsers, screen readers, live-host and denied/private/quota storage remain unverified.
+ 
+ Updated screenshots were shown before committing, as requested. Source delivery and a normal push to main follow successful verification. No deployment is authorized or dispatched.
++
++## Version 0.2.4 — Athlete Studio 2.0
++- [x] Sync clean main at ae46254; inspect data/validation/persistence, branding, creator and reports; run 332 baseline assertions before editing.
++- [x] Record existing UI-to-data mapping in tests/ATHLETE_STUDIO_MAPPINGS.md.
++- [x] Reusable original 2D silhouette/hair cards, all catalog swatches, and the existing shared front-facing preview; no new 3D graphics.
++- [x] Pin title/subtitle and Hair/Skin/Body tabs outside scrolling options; add 16 px right/bottom content padding and keep footer reachable.
++- [x] Preserve all existing values/ranges/steps and link precise Body/Identity height-weight controls through native Range sharing.
++- [x] Compact Player Card with correctly sized horizontal header, small official emblem, prominent identity/origin/age, and seven actual attributes in two columns. No fabricated ratings.
++- [x] Correct header wrapping through minimum width/no-wrap/expansion constraints; add card-layout/data regression tests.
++- [x] Keep shared model, camera, gameplay and saves unchanged; preview-only fixed yaw clarified to 230° at user's rotation-only preference (about 30° from camera view).
++- [x] All 332 existing assertions retained with version/tab-context adaptations; 90 focused Studio tests pass, total 422. Covers keyboard increments, card layout, data, retention, orientation, bounds and modal fitting.
++- [x] Matching Godot 4.6.3 single-thread Web export succeeds.
++- [x] Complete core Chromium run verifies both categories, tabs, all controls, actual saving/replacement/reload/restart, and legacy schemas.
++- [x] Finish 30 final corrected-card/preview Chromium checks and fresh desktop/small screenshots; 54 earlier core checks also pass (84 staged browser checks). No recorded runtime/storage/network warnings or errors.
++- [ ] Windows 10 / 4 GB FPS/memory, other browsers, screen readers, zoom and restricted/private/quota storage remain unverified.
++
++The user reviewed and approved the compact Legacy layout, selected rotation-only orientation clarification, and authorized commit/push after final testing. Do not deploy automatically.
++
++## Version 0.2.5 — Athlete Evolution (visual review pending)
++- [x] Inspect shared generator, customization, creator/gameplay integration, movement and schemas; preserve uncommitted v0.2.4 work and back up baseline.
++- [x] Rerun existing suites before editing; implement tapered low-poly body, facial details and sports kit for explicitly selected categories.
++- [x] Preserve neutral legacy geometry/category handling; batch categorized models by shared material; color/height changes avoid mesh rebuilds.
++- [x] Anatomy Polish: narrower shoulders/arms, shorter wider neck, gentler face, subtle category waist, sports neckline, joint transitions.
++- [x] Add native geometry/material/legacy/orientation tests and an isolated review scene with renderer metrics.
++- [ ] Complete final native/browser/export verification and matched fresh front/side/three-quarter before/after evidence.
++- [ ] User visual review and approval. Do not commit, push or deploy before approval.
+diff --git a/TECHNICAL_DESIGN.md b/TECHNICAL_DESIGN.md
+index bace668..c78ccec 100644
+--- a/TECHNICAL_DESIGN.md
++++ b/TECHNICAL_DESIGN.md
+@@ -1,6 +1,6 @@
+ # ROAD TO GOLD — Technical Design
+ 
+-Status: historical initialization notes followed by implemented contracts through Version 0.2.3, 2026-11-09.
++Status: historical initialization notes followed by implemented contracts through Version 0.2.4, 2026-11-09.
+ 
+ ## Repository and engine inspection
+ Inspected /workspace including hidden entries and searched for AGENTS.md. No project, source files, project.godot, or local agent instructions were found. The .git directory is empty and `git status --short` reports that this is not a Git repository. Existing library-files, scratch and shared directories are environment scaffolding; preserve them.
+@@ -132,3 +132,10 @@ The path is a gently curved sampled ribbon with lightweight beveled edge strips
+ SaveRepository, schema 1/2/3, career/category/appearance classes, country/origin IDs and user-data paths do not change. Main reads already validated athlete names for the menu caption; it never writes names, categories or migrations. Successful menu saving retains the name with save feedback in a tooltip; actual failed/nonpersistent saves retain visible warnings. Long menu captions/errors use one-line ellipsis with full text in the tooltip to preserve layout.
+ 
+ The v0.2.3 preview-facing correction rotates only the creator preview instance 180°: model-forward (-Z) faces the fixed camera on +Z, with the ponytail behind the head. This constant orientation is shared by all five steps and both categories. Camera transforms, the shared athlete model, gameplay instance and serialized appearance data are unchanged.
++
++## Version 0.2.4 presentation components
++`studio/choice_card.gd` keeps native Button input/focus/action text while arranging lightweight pictograms and labels; `choice_grid.gd` owns visible selection state and preserves `.select(index)` / `.selected` semantics. `studio_icon.gd` draws small original silhouettes/hair icons without extra assets or 3D scenes. `player_card.gd` renders actual CareerData into a compact panel; its text getter derives semantic content from the visible labels rather than a hidden summary. Horizontal profile header sizing (no wrap, min width, expansion) prevents one-character wrapping.
++
++Creator retains one draft, one model and one SubViewport. Heading/subtitle/tab nodes live outside ScrollContainer; its content uses 16 px right/bottom padding. Native Range sharing links each HSlider/SpinBox and the Body/Identity height-weight views to the same values. Edited text is applied before tab/step changes; hidden stale text never overwrites values. UI tab state is session-only. Data classes, SaveRepository, resources/catalogs, movement, shared model and locker-room camera remain unchanged.
++
++The preview-only yaw is 230°: model-forward (-Z) is about 30° from the fixed camera's horizontal viewing direction, with the ponytail behind the head. This stronger three-quarter view was chosen after the user requested rotation-only clarification; no face cues are added. Native tests verify positive camera-facing dot product, rear hair behind the head, unchanged camera and identity gameplay rotation, as well as maximum-body bounds. Main menu/loader use the same assets and design; only the central version becomes 0.2.4.
+diff --git a/assets/licenses/README.md b/assets/licenses/README.md
+index fed27d0..ff787f3 100644
+--- a/assets/licenses/README.md
++++ b/assets/licenses/README.md
+@@ -9,3 +9,5 @@ Version 0.2's athlete preview geometry and hair are original procedural primitiv
+ The project owner supplied and approved `golden_path_full.png` and `golden_path_emblem.png` verified on main at c085d57. These source PNGs and the supplied ZIP are kept unchanged. `golden_path_full_ui.png` and `golden_path_emblem_ui.png` are aspect-preserving, lossless PNG derivatives: fully transparent outer padding is cropped to the alpha bounding box, then the artwork is resized without recoloring or redrawing. `golden_path_icon.png` fits the emblem into a transparent square without stretching. Source SHA-256 hashes, crop rectangles and derivative dimensions are recorded in `assets/branding/golden_path_manifest.json` and asserted by native tests.
+ 
+ Only the optimized derivatives are used at runtime. Original full-resolution images and the archival ZIP are excluded from Web exports. The small emblem embedded in `web/loading.html` is derived from the same approved icon. No new official title, third-party art download, font, commercial service, sporting affiliation or external dependency is introduced. The Golden Road geometry and the 64×64 radial light gradient are generated procedurally. Godot's license and third-party attribution obligations above remain in force.
++
++Version 0.2.4 adds original procedural 2D category/origin/hair pictograms and two tiny generated slider-grabber textures. These are UI-only primitives, without external art/font downloads. Official branding masters and the existing 3D model/environment are unchanged.
+diff --git a/project.godot b/project.godot
+index 2ed4c62..7b08571 100644
+--- a/project.godot
++++ b/project.godot
+@@ -4,7 +4,7 @@ config_version=5
+ [application]
+ config/name="ROAD TO GOLD"
+ config/icon="res://assets/branding/golden_path_icon.png"
+-config/version="0.2.3"
++config/version="0.2.4"
+ boot_splash/show_image=false
+ boot_splash/bg_color=Color(0.025, 0.04, 0.06, 1)
+ boot_splash/minimum_display_time=0
+diff --git a/scripts/ui/career_creator.gd b/scripts/ui/career_creator.gd
+index 1e7b2cc..8f85488 100644
+--- a/scripts/ui/career_creator.gd
++++ b/scripts/ui/career_creator.gd
+@@ -8,18 +8,30 @@ const Appearance = preload("res://scripts/data/appearance_data.gd")
+ const Brand = preload("res://scripts/branding/brand.gd")
+ const Room = preload("res://scripts/customization/locker_room.gd")
+ const Model = preload("res://scripts/customization/procedural_athlete.gd")
++const Card = preload("res://scripts/ui/studio/choice_card.gd")
++const Choices = preload("res://scripts/ui/studio/choice_grid.gd")
++const PlayerCard = preload("res://scripts/ui/studio/player_card.gd")
++const TITLES := ["CHOOSE YOUR ATHLETE", "WHERE IT ALL BEGINS", "MAKE IT YOURS", "DEFINE YOUR IDENTITY", "BEGIN YOUR LEGACY"]
++const NOTES := ["Every champion has a beginning.", "Choose the story that starts your journey.", "Create the athlete you want to become.", "Give your athlete a name and a home.", "Your journey starts here."]
+ var draft = Career.new()
+ var step := 0
++var appearance_tab := 0
+ var sections: Array[VBoxContainer] = []
+ var fields: Dictionary = {}
++var numeric_editors: Array[SpinBox] = []
+ var pending_numeric: Dictionary = {}
++var sliders: Dictionary = {}
++var body_editors: Dictionary = {}
+ var category_buttons: Array[Button] = []
+-var category_caption: Label
+ var origin_buttons: Array[Button] = []
+-var preview_model
++var tab_buttons: Array[Button] = []
++var appearance_panels: Array[VBoxContainer] = []
++var category_caption: Label
+ var origin_caption: Label
++var age_caption: Label
+ var heading: Label
+-var summary: Label
++var description: Label
++var summary
+ var error: Label
+ var next_button: Button
+ var back_button: Button
+@@ -28,45 +40,40 @@ var preview_pane: VBoxContainer
+ var viewport_container: SubViewportContainer
+ var outer_margin: MarginContainer
+ var layout: VBoxContainer
++var left_pane: VBoxContainer
++var appearance_tabs: HBoxContainer
+ var scroll: ScrollContainer
+ var progress: Array[Label] = []
+-var description: Label
+-var age_caption: Label
+ var preview_room
+-const TITLES := ["CHOOSE YOUR ATHLETE", "YOUR STORY", "YOUR APPEARANCE", "YOUR IDENTITY", "BEGIN YOUR LEGACY"]
+-const NOTES := ["Every career begins with a choice. Both categories share every origin and customization option.", "Choose where your journey begins. Your origin sets your starting age.", "Make this athlete your own. Appearance never determines athletic ability.", "A name. A country. A career waiting to begin.", "Review your athlete before stepping onto the track."]
++var preview_model
+ 
+ func _ready() -> void:
+ 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
++	theme = _creator_theme()
+ 	var background := ColorRect.new()
+ 	background.color = Color("101820")
+-	theme = _creator_theme()
+ 	background.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+ 	add_child(background)
+-	var margin := MarginContainer.new()
+-	outer_margin = margin
+-	margin.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+-	for side: String in ["left", "right", "top", "bottom"]:
+-		margin.add_theme_constant_override("margin_" + side, 28)
+-	add_child(margin)
++	outer_margin = MarginContainer.new()
++	outer_margin.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
++	add_child(outer_margin)
+ 	layout = VBoxContainer.new()
+ 	layout.add_theme_constant_override("separation", 12)
+-	margin.add_child(layout)
+-	var masthead := HBoxContainer.new()
+-	layout.add_child(masthead)
+-	var official_emblem := Brand.logo(true)
+-	official_emblem.custom_minimum_size = Vector2(44, 34)
+-	masthead.add_child(official_emblem)
+-	var wordmark := _label(masthead, "ROAD TO GOLD", 24, Color("c6a66b"))
++	outer_margin.add_child(layout)
++	var header := HBoxContainer.new()
++	layout.add_child(header)
++	var emblem := Brand.logo(true)
++	emblem.custom_minimum_size = Vector2(44,34)
++	header.add_child(emblem)
++	var wordmark := _label(header, "ROAD TO GOLD", 24, Color("c6a66b"))
++	wordmark.autowrap_mode = TextServer.AUTOWRAP_OFF
+ 	wordmark.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+-	var subtitle := _label(masthead, "CAREER CREATION  /  THE LOCKER ROOM", 14)
++	var subtitle := _label(header, "CAREER CREATION / THE LOCKER ROOM", 13)
+ 	subtitle.autowrap_mode = TextServer.AUTOWRAP_OFF
+-	wordmark.autowrap_mode = TextServer.AUTOWRAP_OFF
+ 	var steps := HBoxContainer.new()
+-	steps.add_theme_constant_override("separation", 8)
+ 	layout.add_child(steps)
+ 	for index in range(5):
+-		var indicator := _label(steps, "%02d  %s" % [index + 1, ["ATHLETE", "STORY", "APPEARANCE", "IDENTITY", "LEGACY"][index]], 14)
++		var indicator := _label(steps, "", 14)
+ 		indicator.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+ 		progress.append(indicator)
+ 	layout.add_child(HSeparator.new())
+@@ -74,127 +81,217 @@ func _ready() -> void:
+ 	split.add_theme_constant_override("separation", 24)
+ 	split.size_flags_vertical = Control.SIZE_EXPAND_FILL
+ 	layout.add_child(split)
++	left_pane = VBoxContainer.new()
++	left_pane.size_flags_horizontal = Control.SIZE_EXPAND_FILL
++	left_pane.size_flags_vertical = Control.SIZE_EXPAND_FILL
++	left_pane.size_flags_stretch_ratio = 1.22
++	left_pane.add_theme_constant_override("separation", 12)
++	split.add_child(left_pane)
++	heading = _label(left_pane, "", 26)
++	description = _label(left_pane, "", 17, Color("b7c0c5"))
++	appearance_tabs = HBoxContainer.new()
++	appearance_tabs.add_theme_constant_override("separation", 8)
++	left_pane.add_child(appearance_tabs)
+ 	scroll = ScrollContainer.new()
+ 	scroll.follow_focus = true
+ 	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+ 	scroll.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+-	scroll.size_flags_stretch_ratio = 0.85
+ 	scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
+-	split.add_child(scroll)
++	left_pane.add_child(scroll)
++	var padding := MarginContainer.new()
++	padding.add_theme_constant_override("margin_right", 16)
++	padding.add_theme_constant_override("margin_bottom", 16)
++	padding.size_flags_horizontal = Control.SIZE_EXPAND_FILL
++	scroll.add_child(padding)
+ 	var content := VBoxContainer.new()
+ 	content.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+-	scroll.add_child(content)
+-	heading = _label(content, "", 26)
+-	description = _label(content, "", 16, Color("b7c0c5"))
+ 	content.add_theme_constant_override("separation", 16)
+-	for i in range(5):
++	padding.add_child(content)
++	for index in range(5):
+ 		var section := VBoxContainer.new()
+-		section.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+ 		section.add_theme_constant_override("separation", 12)
++		section.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+ 		sections.append(section)
+ 		content.add_child(section)
++	_build_categories()
++	_build_origins()
++	_build_identity()
++	_build_appearance()
++	summary = PlayerCard.new()
++	sections[4].add_child(summary)
++	_label(sections[4], "Your career is saved only when you choose BEGIN CAREER. Replacing existing progress requires confirmation.", 14, Color("b7c0c5"))
++	_build_preview()
++	layout.add_child(HSeparator.new())
++	var footer := HBoxContainer.new()
++	footer.add_theme_constant_override("separation", 12)
++	layout.add_child(footer)
++	back_button = _button(footer, "BACK", _back)
++	var message := VBoxContainer.new()
++	message.size_flags_horizontal = Control.SIZE_EXPAND_FILL
++	message.add_theme_constant_override("separation", 2)
++	footer.add_child(message)
++	var hint := _label(message, "DRAFT / NOT SAVED UNTIL CONFIRMED", 12, Color("b7c0c5"))
++	hint.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
++	error = _label(message, "", 14, Color("ffbc9c"))
++	error.custom_minimum_size.y = 36
++	error.max_lines_visible = 2
++	error.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
++	next_button = _button(footer, "CONTINUE", _next)
++	resized.connect(_resize_layout)
++	_resize_layout()
++	hide()
++	_show_step()
++
++func _build_categories() -> void:
+ 	category_caption = _label(sections[0], "Choose an athlete category to continue.", 16, Color("c6a66b"))
+-	var category_group := ButtonGroup.new()
+-	for id: String in Category.IDS:
+-		var button := Button.new()
+-		button.text = Category.label(id)
+-		button.toggle_mode = true
+-		button.button_group = category_group
+-		button.custom_minimum_size.y = 56
++	var row := HBoxContainer.new()
++	row.add_theme_constant_override("separation", 12)
++	sections[0].add_child(row)
++	var group := ButtonGroup.new()
++	for index in range(Category.IDS.size()):
++		var id: String = Category.IDS[index]
++		var button = Card.new()
++		button.configure(Category.label(id).to_upper(), "All origins • Full customization", "athlete", index)
++		button.custom_minimum_size = Vector2(140,224)
++		button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
++		button.button_group = group
+ 		button.pressed.connect(func(): select_category(id))
++		row.add_child(button)
+ 		category_buttons.append(button)
+-		sections[0].add_child(button)
+-	origin_caption = _label(sections[1], "Selected: FROM NOTHING — age 15", 16, Color("c6a66b"))
++	_label(sections[0], "Choose how you compete. Your story and appearance remain yours.", 15, Color("b7c0c5"))
++
++func _build_origins() -> void:
++	origin_caption = _label(sections[1], "Selected: FROM NOTHING — age 15", 15, Color("c6a66b"))
+ 	var group := ButtonGroup.new()
++	var index := 0
+ 	for entry: Dictionary in Catalog.origins():
+-		var button := Button.new()
+-		button.text = "%s — age %d\n%s" % [entry.title, entry.age, entry.description]
+-		button.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+-		button.toggle_mode = true
++		var button = Card.new()
++		button.configure(entry.title, "AGE %d  /  %s" % [entry.age, entry.description], "story", index)
++		button.custom_minimum_size.y = 124
+ 		button.button_group = group
+-		button.alignment = HORIZONTAL_ALIGNMENT_LEFT
+-		button.custom_minimum_size.y = 92
+ 		button.button_pressed = entry.id == draft.origin_id
+ 		button.pressed.connect(func():
+ 			draft.origin_id = entry.id
+ 			origin_caption.text = "Selected: %s — age %d" % [entry.title, entry.age]
+-			age_caption.text = "STARTING AGE  /  %d" % entry.age
++			age_caption.text = "STARTING AGE / %d" % entry.age
+ 		)
+-		origin_buttons.append(button)
+ 		sections[1].add_child(button)
+-	age_caption = _label(sections[3], "STARTING AGE  /  15", 16, Color("c6a66b"))
+-	_name_field("first_name", "First name")
+-	_name_field("last_name", "Last name")
++		origin_buttons.append(button)
++		index += 1
++
++func _build_identity() -> void:
++	age_caption = _label(sections[3], "STARTING AGE / 15", 15, Color("c6a66b"))
++	for key: String in ["first_name", "last_name"]:
++		var line := LineEdit.new()
++		line.max_length = 32
++		line.placeholder_text = "First name" if key == "first_name" else "Last name"
++		_field(sections[3], line.placeholder_text, line)
++		fields[key] = line
++		line.text_changed.connect(func(_text): _changed())
+ 	var country := OptionButton.new()
+ 	for entry: Dictionary in Catalog.countries():
+ 		country.add_item(entry.name)
+-		country.set_item_metadata(country.item_count - 1, entry.code)
+-		if entry.code == draft.athlete.country:
+-			country.select(country.item_count - 1)
+-	_field("country", "Country", country)
++		country.set_item_metadata(country.item_count-1, entry.code)
++		if entry.code == draft.athlete.country: country.select(country.item_count-1)
++	_field(sections[3], "Country", country)
++	fields.country = country
+ 	country.item_selected.connect(func(_index): _changed())
+-	_option("skin", "Skin tone", ["Tone 1", "Tone 2", "Tone 3", "Tone 4", "Tone 5", "Tone 6"], draft.athlete.appearance.skin)
+-	_option("hairstyle", "Hairstyle", Appearance.STYLES, draft.athlete.appearance.hairstyle)
+-	_option("hair_color", "Hair color", Appearance.HAIR_NAMES, draft.athlete.appearance.hair_color)
++	for key: String in ["height", "weight"]:
++		fields[key] = _number(sections[3], key)
++
++func _build_appearance() -> void:
++	var tabs := appearance_tabs
++	var group := ButtonGroup.new()
++	for index in range(3):
++		var button := _button(tabs, ["HAIR", "SKIN", "BODY"][index], func(): select_appearance_tab(index))
++		button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
++		button.custom_minimum_size.x = 70
++		button.toggle_mode = true
++		button.button_group = group
++		tab_buttons.append(button)
++		var panel := VBoxContainer.new()
++		panel.add_theme_constant_override("separation", 12)
++		appearance_panels.append(panel)
++		sections[2].add_child(panel)
++	fields.hairstyle = _choices(appearance_panels[0], "HAIRSTYLE", Appearance.STYLES, draft.athlete.appearance.hairstyle, "hair")
++	fields.hair_color = _choices(appearance_panels[0], "HAIR COLOR", Appearance.HAIR_NAMES, draft.athlete.appearance.hair_color, "color", Appearance.HAIR_COLORS)
++	fields.skin = _choices(appearance_panels[1], "SKIN TONE", ["Tone 1","Tone 2","Tone 3","Tone 4","Tone 5","Tone 6"], draft.athlete.appearance.skin, "color", Appearance.SKIN_COLORS)
++	_label(appearance_panels[1], "Your skin tone is cosmetic and never determines athletic ability.", 15, Color("b7c0c5"))
+ 	for key: String in ["height", "weight", "shoulders", "legs"]:
+-		var spin := SpinBox.new()
+-		spin.min_value = Appearance.LIMITS[key][0]
+-		spin.max_value = Appearance.LIMITS[key][1]
+-		spin.step = 0.05 if key in ["shoulders", "legs"] else 1.0
+-		spin.value = draft.athlete.appearance.get(key)
+-		spin.suffix = "cm" if key == "height" else ("kg" if key == "weight" else "×")
+-		_field(key, {"height": "Height", "weight": "Weight", "shoulders": "Shoulder width", "legs": "Leg proportion"}[key], spin)
+-		spin.value_changed.connect(func(_value): _changed())
+-		spin.get_line_edit().text_changed.connect(func(_text): pending_numeric[key] = true)
+-	_label(sections[2], "Cosmetic choices only. All athletes share the same movement controls.", 14, Color("b7c0c5"))
+-	summary = _label(sections[4], "", 18)
+-	_label(sections[4], "BEGIN CAREER saves this athlete and opens the test track. Existing progress is replaced only after confirmation.", 14)
++		var editor := _number(appearance_panels[2], key, fields.get(key))
++		body_editors[key] = editor
++		if not fields.has(key): fields[key] = editor
++	_label(appearance_panels[2], "Height and weight are linked to Identity. Body proportions are cosmetic; movement stays the same.", 14, Color("b7c0c5"))
++	select_appearance_tab(appearance_tab)
++
++func _choices(parent: Node, title: String, labels: Array, initial: int, kind: String, colors: Array = []):
++	_label(parent, title, 14, Color("b7c0c5"))
++	var picker = Choices.new()
++	parent.add_child(picker)
++	picker.configure(labels, initial, kind, colors)
++	picker.item_selected.connect(func(_index): _changed())
++	return picker
++
++func _number(parent: Node, key: String, canonical = null) -> SpinBox:
++	var title: String = {"height":"Height","weight":"Weight","shoulders":"Shoulder width","legs":"Leg proportion"}[key]
++	_label(parent, title, 15)
++	var row := HBoxContainer.new()
++	row.add_theme_constant_override("separation", 12)
++	parent.add_child(row)
++	var slider := HSlider.new()
++	slider.size_flags_horizontal = Control.SIZE_EXPAND_FILL
++	slider.custom_minimum_size.x = 80
++	slider.tooltip_text = title + " / arrow keys adjust precisely"
++	row.add_child(slider)
++	var spin := SpinBox.new()
++	spin.min_value = Appearance.LIMITS[key][0]
++	spin.max_value = Appearance.LIMITS[key][1]
++	spin.step = 0.05 if key in ["shoulders", "legs"] else 1.0
++	spin.value = draft.athlete.appearance.get(key)
++	spin.suffix = "cm" if key == "height" else ("kg" if key == "weight" else "×")
++	spin.custom_minimum_size = Vector2(112,40)
++	spin.tooltip_text = title + " / exact value"
++	row.add_child(spin)
++	if canonical != null: canonical.share(spin)
++	spin.share(slider)
++	if not sliders.has(key): sliders[key] = slider
++	numeric_editors.append(spin)
++	if canonical == null: spin.value_changed.connect(func(_value): _changed())
++	spin.get_line_edit().text_changed.connect(func(_text): pending_numeric[spin.get_instance_id()] = spin)
++	return spin
++
++func _build_preview() -> void:
+ 	preview_pane = VBoxContainer.new()
+-	preview_pane.custom_minimum_size.x = 420
++	preview_pane.custom_minimum_size.x = 320
+ 	preview_pane.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+ 	preview_pane.size_flags_vertical = Control.SIZE_EXPAND_FILL
+ 	split.add_child(preview_pane)
+-	_label(preview_pane, "THE LOCKER ROOM  /  ATHLETE PREVIEW", 14, Color("c6a66b"))
++	_label(preview_pane, "ATHLETE STUDIO / LIVE PREVIEW", 13, Color("c6a66b"))
+ 	viewport_container = SubViewportContainer.new()
+ 	viewport_container.stretch = true
+-	viewport_container.custom_minimum_size = Vector2(200, 210)
++	viewport_container.custom_minimum_size = Vector2(200,170)
+ 	viewport_container.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+ 	viewport_container.size_flags_vertical = Control.SIZE_EXPAND_FILL
+ 	viewport_container.mouse_filter = Control.MOUSE_FILTER_IGNORE
+ 	preview_pane.add_child(viewport_container)
+ 	var viewport := SubViewport.new()
+-	viewport.size = Vector2i(320, 400)
++	viewport.size = Vector2i(320,400)
+ 	viewport.own_world_3d = true
+ 	viewport.render_target_update_mode = SubViewport.UPDATE_WHEN_VISIBLE
+ 	viewport_container.add_child(viewport)
+ 	preview_room = Room.new()
+ 	viewport.add_child(preview_room)
+ 	preview_model = Model.new()
+-	# The model's +Z ponytail marks its back; local -Z is its forward direction.
+-	# Turn only this preview toward the fixed camera's +Z side (natural 3/4 view).
+-	preview_model.rotation.y = PI
++	# Preview only: local -Z front is presented at a clear ~30-degree three-quarter angle.
++	# Camera and shared/gameplay meshes retain their existing transforms.
++	preview_model.rotation.y = deg_to_rad(230.0)
+ 	preview_room.add_child(preview_model)
+-	error = _label(layout, "", 17, Color("ffbc9c"))
+-	layout.add_child(HSeparator.new())
+-	var footer := HBoxContainer.new()
+-	footer.add_theme_constant_override("separation", 12)
+-	layout.add_child(footer)
+-	back_button = _button(footer, "BACK", _back)
+-	var hint := _label(footer, "DRAFT  /  NOT SAVED UNTIL CONFIRMED", 12, Color("b7c0c5"))
+-	hint.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+-	hint.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+-	hint.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+-	next_button = _button(footer, "CONTINUE", _next)
+-	resized.connect(_resize_layout)
+-	_resize_layout()
+-	hide()
+-	_show_step()
+ 
+-func _label(parent: Node, text: String, size: int, color := Color("e9e8e3")) -> Label:
++func _label(parent: Node, text: String, font_size: int, color := Color("e9e8e3")) -> Label:
+ 	var label := Label.new()
+ 	label.text = text
+ 	label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+-	label.add_theme_font_size_override("font_size", size)
++	label.add_theme_font_size_override("font_size", font_size)
+ 	label.add_theme_color_override("font_color", color)
+ 	parent.add_child(label)
+ 	return label
+@@ -202,61 +299,50 @@ func _label(parent: Node, text: String, size: int, color := Color("e9e8e3")) ->
+ func _button(parent: Node, text: String, callback: Callable) -> Button:
+ 	var button := Button.new()
+ 	button.text = text
+-	button.custom_minimum_size = Vector2(180, 44)
+-	button.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
++	button.custom_minimum_size = Vector2(140,44)
+ 	button.pressed.connect(callback)
+ 	parent.add_child(button)
+ 	return button
+ 
+-func _field(key: String, title: String, control: Control) -> void:
+-	var section: VBoxContainer = sections[3 if key in ["first_name", "last_name", "country"] else 2]
+-	_label(section, title, 15)
+-	control.custom_minimum_size.y = 38
++func _field(parent: Node, title: String, control: Control) -> void:
++	_label(parent, title, 15)
++	control.custom_minimum_size.y = 40
+ 	control.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+ 	control.tooltip_text = title
+-	section.add_child(control)
+-	fields[key] = control
+-
+-func _name_field(key: String, title: String) -> void:
+-	var line := LineEdit.new()
+-	line.max_length = 32
+-	line.placeholder_text = title
+-	_field(key, title, line)
+-	line.text_changed.connect(func(_value): _changed())
++	parent.add_child(control)
+ 
+-func _option(key: String, title: String, choices: Array, selected: int) -> void:
+-	var option := OptionButton.new()
+-	for item: String in choices:
+-		option.add_item(item)
+-	option.select(selected)
+-	_field(key, title, option)
+-	option.item_selected.connect(func(_index): _changed())
++func select_appearance_tab(index: int) -> void:
++	if index < 0 or index >= appearance_panels.size(): return
++	if is_node_ready(): _capture(true)
++	appearance_tab = index
++	for i in range(appearance_panels.size()):
++		appearance_panels[i].visible = i == index
++		tab_buttons[i].set_pressed_no_signal(i == index)
++	if scroll != null: scroll.scroll_vertical = 0
+ 
+ func _capture(commit_edits := false) -> void:
++	if commit_edits:
++		for editor: SpinBox in numeric_editors:
++			if pending_numeric.has(editor.get_instance_id()):
++				editor.apply()
++				pending_numeric.erase(editor.get_instance_id())
+ 	draft.athlete.first_name = fields.first_name.text
+ 	draft.athlete.last_name = fields.last_name.text
+ 	draft.athlete.country = fields.country.get_item_metadata(fields.country.selected)
+-	for key: String in ["skin", "hairstyle", "hair_color"]:
+-		draft.athlete.appearance.set(key, fields[key].selected)
+-	for key: String in ["height", "weight", "shoulders", "legs"]:
+-		if commit_edits and pending_numeric.get(key, false):
+-			fields[key].apply()
+-			pending_numeric.erase(key)
+-		draft.athlete.appearance.set(key, fields[key].value)
++	for key: String in ["skin","hairstyle","hair_color"]: draft.athlete.appearance.set(key, fields[key].selected)
++	for key: String in ["height","weight","shoulders","legs"]: draft.athlete.appearance.set(key, fields[key].value)
+ 
+ func _changed() -> void:
+-	if not is_node_ready():
+-		return
++	if not is_node_ready(): return
+ 	_capture()
++	for key: String in ["skin","hairstyle","hair_color"]: fields[key].select(fields[key].selected)
+ 	preview_model.apply_appearance(draft.athlete.appearance, draft.athlete_category)
+ 	error.text = ""
+ 
+ func select_category(id: String) -> void:
+-	if not Category.valid(id):
+-		return
++	if not Category.valid(id): return
+ 	draft.athlete_category = id
+-	for index in range(category_buttons.size()):
+-		category_buttons[index].button_pressed = Category.IDS[index] == id
++	for index in range(category_buttons.size()): category_buttons[index].set_pressed_no_signal(Category.IDS[index] == id)
+ 	category_caption.text = "Selected: " + Category.label(id)
+ 	preview_model.apply_appearance(draft.athlete.appearance, id)
+ 	error.text = ""
+@@ -270,21 +356,16 @@ func _show_step() -> void:
+ 	heading.text = TITLES[step]
+ 	description.text = NOTES[step]
+ 	for index in range(progress.size()):
+-		progress[index].add_theme_color_override("font_color", Color("c6a66b") if index <= step else Color("a0abb3"))
+-		progress[index].text = "%02d  %s%s" % [index + 1, ["ATHLETE", "STORY", "APPEARANCE", "IDENTITY", "LEGACY"][index], " •" if index == step else ""]
+-	for index in range(sections.size()):
+-		sections[index].visible = index == step
+-	preview_pane.visible = true
++		progress[index].text = "%02d  %s%s" % [index+1,["ATHLETE","STORY","APPEARANCE","IDENTITY","LEGACY"][index]," •" if index == step else ""]
++		progress[index].add_theme_color_override("font_color", Color("c6a66b") if index == step else Color("a0abb3"))
++	for index in range(sections.size()): sections[index].visible = index == step
++	appearance_tabs.visible = step == 2
+ 	back_button.text = "MAIN MENU" if step == 0 else "BACK"
+ 	next_button.text = "BEGIN CAREER" if step == 4 else "CONTINUE"
+ 	error.text = ""
+ 	scroll.scroll_vertical = 0
+-	if step == 4:
+-		var data: Dictionary = draft.to_dict()
+-		var origin := Catalog.origin(draft.origin_id)
+-		summary.text = "Category: %s\n%s\n%s %s\nCountry: %s\nAge: %d\nHeight: %.0f cm\nWeight: %.0f kg\nSkin: Tone %d\nHair: %s / %s\nShoulders: %.2f ×\nLeg proportion: %.2f ×" % [Category.label(draft.athlete_category), origin.title, data.athlete.first_name, data.athlete.last_name, Catalog.country_name(data.athlete.country), origin.age, data.athlete.appearance.height, data.athlete.appearance.weight, data.athlete.appearance.skin + 1, Appearance.STYLES[data.athlete.appearance.hairstyle], Appearance.HAIR_NAMES[data.athlete.appearance.hair_color], data.athlete.appearance.shoulders, data.athlete.appearance.legs]
+-	if visible:
+-		next_button.grab_focus()
++	if step == 4: summary.present(draft)
++	if visible: next_button.grab_focus()
+ 
+ func _next() -> void:
+ 	_capture(true)
+@@ -312,36 +393,55 @@ func _back() -> void:
+ 		_show_step()
+ 
+ func _resize_layout() -> void:
+-	if split == null:
+-		return
+-	split.vertical = size.x < 900
+-	preview_pane.custom_minimum_size.x = 0 if split.vertical else 420
+-	scroll.custom_minimum_size.y = 100 if split.vertical else 0
+-	viewport_container.custom_minimum_size.y = 150 if split.vertical else 210
+-	layout.add_theme_constant_override("separation", 8 if split.vertical else 12)
+-	for side: String in ["left", "right", "top", "bottom"]:
+-		outer_margin.add_theme_constant_override("margin_" + side, 16 if split.vertical else 28)
++	if split == null: return
++	split.vertical = size.x < 620
++	preview_pane.custom_minimum_size.x = 0 if split.vertical else (260 if size.x < 800 else 320)
++	scroll.custom_minimum_size.y = 80 if split.vertical else 0
++	if fields.has("hair_color"):
++		fields.hair_color.grid.columns = 3 if size.x < 1000 else 5
++	viewport_container.custom_minimum_size.y = 150 if split.vertical else 170
++	layout.add_theme_constant_override("separation", 8 if size.y < 680 else 12)
++	for side: String in ["left","right","top","bottom"]: outer_margin.add_theme_constant_override("margin_"+side,16 if size.x < 1000 else 24)
+ 
+ func _creator_theme() -> Theme:
+-	# Local theme: menu, track HUD and confirmation behavior remain unchanged.
+ 	var result := Theme.new()
+ 	result.default_font_size = 17
+ 	result.set_color("font_color", "Label", Color("e9e8e3"))
+-	for type: String in ["Button", "OptionButton", "LineEdit", "SpinBox", "PopupMenu"]:
+-		result.set_color("font_color", type, Color("e9e8e3"))
+-		result.set_color("font_hover_color", type, Color("e9e8e3"))
+-		result.set_color("font_pressed_color", type, Color("e9e8e3"))
+-		for state: String in ["normal", "hover", "pressed", "focus", "panel"]:
++	for type: String in ["Button","OptionButton","LineEdit","SpinBox","PopupMenu"]:
++		for color_name: String in ["font_color","font_hover_color","font_pressed_color"]: result.set_color(color_name,type,Color("e9e8e3"))
++		for state: String in ["normal","hover","pressed","focus","panel"]:
+ 			var box := StyleBoxFlat.new()
+-			box.bg_color = Color("28333b") if state in ["hover", "pressed"] else Color("172129")
+-			box.border_color = Color("c6a66b") if state in ["focus", "pressed"] else Color("41505b")
++			box.bg_color = Color("28333b") if state in ["hover","pressed"] else Color("172129")
++			box.border_color = Color("c6a66b") if state in ["focus","pressed"] else Color("41505b")
+ 			box.set_border_width_all(2 if state == "focus" else 1)
+-			box.set_corner_radius_all(3)
+-			box.content_margin_left = 14
+-			box.content_margin_right = 14
+-			box.content_margin_top = 9
+-			box.content_margin_bottom = 9
+-			if state == "focus":
+-				box.bg_color = Color.TRANSPARENT
+-			result.set_stylebox(state, type, box)
++			box.set_corner_radius_all(5)
++			box.content_margin_left = 12
++			box.content_margin_right = 12
++			box.content_margin_top = 8
++			box.content_margin_bottom = 8
++			if state == "focus": box.bg_color = Color.TRANSPARENT
++			result.set_stylebox(state,type,box)
++	var track := StyleBoxFlat.new()
++	track.bg_color = Color("28333b")
++	track.set_corner_radius_all(3)
++	track.content_margin_top = 3
++	track.content_margin_bottom = 3
++	result.set_stylebox("slider","HSlider",track)
++	var fill := track.duplicate()
++	fill.bg_color = Color("c6a66b")
++	result.set_stylebox("grabber_area","HSlider",fill)
++	result.set_stylebox("grabber_area_highlight","HSlider",fill)
++	var focus := StyleBoxFlat.new()
++	focus.bg_color = Color.TRANSPARENT
++	focus.border_color = Color("c6a66b")
++	focus.set_border_width_all(1)
++	result.set_stylebox("focus","HSlider",focus)
++	for state: String in ["grabber","grabber_highlight"]:
++		var image := Image.create(16,16,false,Image.FORMAT_RGBA8)
++		image.fill(Color.TRANSPARENT)
++		for y in range(16):
++			for x in range(16):
++				if Vector2(x-7.5,y-7.5).length() <= 6:
++					image.set_pixel(x,y,Color("c6a66b" if state=="grabber" else "e9e8e3"))
++		result.set_icon(state,"HSlider",ImageTexture.create_from_image(image))
+ 	return result
+diff --git a/tests/golden_menu_test.gd b/tests/golden_menu_test.gd
+index cca40e6..f3f6758 100644
+--- a/tests/golden_menu_test.gd
++++ b/tests/golden_menu_test.gd
+@@ -29,7 +29,7 @@ func _run() -> void:
+ 	var camera: Camera3D = app.get_node("GoldenRoad").camera
+ 	var fixed := camera.transform
+ 	check(menu.logo.texture == Brand.FULL and menu.logo.stretch_mode == TextureRect.STRETCH_KEEP_ASPECT_CENTERED, "menu uses official full logo without distortion")
+-	check(menu.version.text == "VERSION 0.2.3" and menu.version.text == Brand.version_label(), "version display derives from project metadata")
++	check(menu.version.text == "VERSION 0.2.4" and menu.version.text == Brand.version_label(), "version display derives from project metadata")
+ 	check(ui.status.text == "Your journey begins here.", "fresh menu displays approved journey message")
+ 	check(menu.tagline.text.replace("\n", " ") == "Your Story. Your Sacrifice. Your Legacy.", "approved tagline is exact")
+ 	check(ui.continue_button.disabled and ui.continue_button.focus_mode == Control.FOCUS_NONE and not app.repository.has_file(), "fresh menu disables Continue without writing a save")
+diff --git a/tests/locker_room_test.gd b/tests/locker_room_test.gd
+index fa6c320..c85e994 100644
+--- a/tests/locker_room_test.gd
++++ b/tests/locker_room_test.gd
+@@ -24,6 +24,7 @@ func _run() -> void:
+ 	check(creator.step == 1 and creator.origin_buttons[0].is_visible_in_tree(), "story immediately follows athlete selection")
+ 	creator.origin_buttons[1].pressed.emit()
+ 	creator._next()
++	creator.select_appearance_tab(1)
+ 	check(creator.step == 2 and creator.fields.skin.is_visible_in_tree() and not creator.fields.first_name.is_visible_in_tree(), "appearance precedes identity")
+ 	creator._next()
+ 	check(creator.step == 3 and creator.fields.first_name.is_visible_in_tree() and "17" in creator.age_caption.text, "identity displays origin-derived age")
+@@ -77,11 +78,14 @@ func _run() -> void:
+ 				var projected := camera.unproject_position(point)
+ 				visible_body = visible_body and Rect2(Vector2.ZERO, viewport_size).has_point(projected)
+ 		check(visible_body, "largest full body fits camera at " + str(resolution))
+-	root.size = Vector2i(1280, 720)
++	root.size = Vector2i(800, 600)
+ 	creator.step = 2
+ 	creator._show_step()
+ 	await process_frame
+ 	await process_frame
++	creator.select_appearance_tab(2)
++	await process_frame
++	await process_frame
+ 	creator.fields.legs.get_line_edit().grab_focus()
+ 	await process_frame
+ 	await process_frame

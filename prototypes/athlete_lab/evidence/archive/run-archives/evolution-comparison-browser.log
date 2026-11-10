@@ -1,0 +1,3 @@
+before {'n': 100, 'median_frame_ms': 133.333333333333, 'mean_frame_ms': 130.1666666666666} models [{'material_surfaces': 6, 'mesh_rebuilds': 1, 'triangles': 3144}, {'material_surfaces': 6, 'mesh_rebuilds': 1, 'triangles': 3312}] draws 13 errors []
+after {'n': 100, 'median_frame_ms': 133.333333333333, 'mean_frame_ms': 130.25199999999992} models [{'material_surfaces': 6, 'mesh_rebuilds': 1, 'triangles': 3712}, {'material_surfaces': 6, 'mesh_rebuilds': 1, 'triangles': 3880}] draws 13 errors []
+/workspace/work/evolution-evidence/anatomy-review-20261110-4f3064bc

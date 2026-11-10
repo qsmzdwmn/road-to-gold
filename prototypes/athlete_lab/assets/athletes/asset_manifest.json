@@ -1,0 +1,22 @@
+[
+  {
+    "file": "female.glb",
+    "bytes": 479156,
+    "sha256": "a8b773e1a3cf0307c113d4ea3b9a0c8d53cd1cf09d2209a65e8836c328fc7b73",
+    "materials": 6,
+    "textures": 0,
+    "external_uris": [],
+    "skins": 1,
+    "bones": 22
+  },
+  {
+    "file": "male.glb",
+    "bytes": 484260,
+    "sha256": "fab42a8be973ae91640f391fd815fec30ebdf92283aa9ec5f4803958087a22bf",
+    "materials": 6,
+    "textures": 0,
+    "external_uris": [],
+    "skins": 1,
+    "bones": 22
+  }
+]

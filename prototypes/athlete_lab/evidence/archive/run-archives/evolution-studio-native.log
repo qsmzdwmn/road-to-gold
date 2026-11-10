@@ -1,0 +1,93 @@
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+PASS: preview front faces camera clearly without rotating camera or gameplay
+PASS: five steps and all ten existing fields are retained
+PASS: opening Studio never saves or invents a category
+PASS: category card updates selection and preview 0
+PASS: origin card derives age 0 for category 0
+PASS: origin card derives age 1 for category 0
+PASS: origin card derives age 2 for category 0
+PASS: category card updates selection and preview 1
+PASS: origin card derives age 0 for category 1
+PASS: origin card derives age 1 for category 1
+PASS: origin card derives age 2 for category 1
+PASS: complete existing style and color catalogs become visible choices
+PASS: hairstyle tile selects model style 0
+PASS: hairstyle tile selects model style 1
+PASS: hairstyle tile selects model style 2
+PASS: hairstyle tile selects model style 3
+PASS: hair swatch updates material 0
+PASS: hair swatch updates material 1
+PASS: hair swatch updates material 2
+PASS: hair swatch updates material 3
+PASS: hair swatch updates material 4
+PASS: skin swatch retains stable tone identifier 0
+PASS: skin swatch retains stable tone identifier 1
+PASS: skin swatch retains stable tone identifier 2
+PASS: skin swatch retains stable tone identifier 3
+PASS: skin swatch retains stable tone identifier 4
+PASS: skin swatch retains stable tone identifier 5
+PASS: body, precise field, slider and draft agree at height 140
+PASS: body, precise field, slider and draft agree at height 220
+PASS: body, precise field, slider and draft agree at weight 40
+PASS: body, precise field, slider and draft agree at weight 150
+PASS: body, precise field, slider and draft agree at shoulders 0.8
+PASS: body, precise field, slider and draft agree at shoulders 1.3
+PASS: body, precise field, slider and draft agree at legs 0.85
+PASS: body, precise field, slider and draft agree at legs 1.15
+PASS: body slider supports precise keyboard increments
+PASS: tab switch retains complete draft and the same single model 0
+PASS: tab switch retains complete draft and the same single model 1
+PASS: tab switch retains complete draft and the same single model 2
+PASS: tab switch retains complete draft and the same single model 0
+PASS: tab switch retains complete draft and the same single model 2
+PASS: appearance title and tabs remain outside scrolling content
+PASS: identity exposes linked height and weight
+PASS: identity validation still blocks blank names
+PASS: identity adjustments immediately update Body controls
+PASS: Player Card heading stays horizontal and card remains compact
+PASS: Player Card shows actual trimmed identity and country
+PASS: Player Card contains actual metrics and no fabricated ratings
+PASS: Player Card mirrors every chosen appearance group
+PASS: Back and Continue retain all fields and session tab
+PASS: Player Card review never writes before BEGIN CAREER
+PASS: BEGIN CAREER saves existing schema and enters existing gameplay
+PASS: Continue restores all Studio selections
+PASS: replacement requires the original explicit modal
+PASS: replacement cancellation leaves saved bytes intact
+PASS: Studio navigation and static preview fit (800, 600) step 0
+PASS: Studio navigation and static preview fit (800, 600) step 1
+PASS: Studio navigation and static preview fit (800, 600) step 2
+PASS: Studio navigation and static preview fit (800, 600) step 3
+PASS: Player Card title and identity lead the attributes at (800, 600)
+PASS: Studio navigation and static preview fit (800, 600) step 4
+PASS: replacement modal fits (800, 600)
+PASS: Studio navigation and static preview fit (1024, 600) step 0
+PASS: Studio navigation and static preview fit (1024, 600) step 1
+PASS: Studio navigation and static preview fit (1024, 600) step 2
+PASS: Studio navigation and static preview fit (1024, 600) step 3
+PASS: Player Card title and identity lead the attributes at (1024, 600)
+PASS: Studio navigation and static preview fit (1024, 600) step 4
+PASS: replacement modal fits (1024, 600)
+PASS: Studio navigation and static preview fit (1280, 720) step 0
+PASS: Studio navigation and static preview fit (1280, 720) step 1
+PASS: Studio navigation and static preview fit (1280, 720) step 2
+PASS: Studio navigation and static preview fit (1280, 720) step 3
+PASS: Player Card title and identity lead the attributes at (1280, 720)
+PASS: Studio navigation and static preview fit (1280, 720) step 4
+PASS: replacement modal fits (1280, 720)
+PASS: Studio navigation and static preview fit (1366, 768) step 0
+PASS: Studio navigation and static preview fit (1366, 768) step 1
+PASS: Studio navigation and static preview fit (1366, 768) step 2
+PASS: Studio navigation and static preview fit (1366, 768) step 3
+PASS: Player Card title and identity lead the attributes at (1366, 768)
+PASS: Studio navigation and static preview fit (1366, 768) step 4
+PASS: replacement modal fits (1366, 768)
+PASS: Studio navigation and static preview fit (1920, 1080) step 0
+PASS: Studio navigation and static preview fit (1920, 1080) step 1
+PASS: Studio navigation and static preview fit (1920, 1080) step 2
+PASS: Studio navigation and static preview fit (1920, 1080) step 3
+PASS: Player Card title and identity lead the attributes at (1920, 1080)
+PASS: Studio navigation and static preview fit (1920, 1080) step 4
+PASS: replacement modal fits (1920, 1080)
+ATHLETE STUDIO TEST FAILURES: 0

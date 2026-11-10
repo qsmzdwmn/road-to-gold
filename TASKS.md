@@ -161,3 +161,12 @@ Updated screenshots were shown before committing, as requested. Source delivery 
 - [ ] Windows 10 / 4 GB FPS/memory, other browsers, screen readers, zoom and restricted/private/quota storage remain unverified.
 
 The user reviewed and approved the compact Legacy layout, selected rotation-only orientation clarification, and authorized commit/push after final testing. Do not deploy automatically.
+
+## Version 0.2.5 — Athlete Evolution (visual review pending)
+- [x] Inspect shared generator, customization, creator/gameplay integration, movement and schemas; preserve uncommitted v0.2.4 work and back up baseline.
+- [x] Rerun existing suites before editing; implement tapered low-poly body, facial details and sports kit for explicitly selected categories.
+- [x] Preserve neutral legacy geometry/category handling; batch categorized models by shared material; color/height changes avoid mesh rebuilds.
+- [x] Anatomy Polish: narrower shoulders/arms, shorter wider neck, gentler face, subtle category waist, sports neckline, joint transitions.
+- [x] Add native geometry/material/legacy/orientation tests and an isolated review scene with renderer metrics.
+- [ ] Complete final native/browser/export verification and matched fresh front/side/three-quarter before/after evidence.
+- [ ] User visual review and approval. Do not commit, push or deploy before approval.

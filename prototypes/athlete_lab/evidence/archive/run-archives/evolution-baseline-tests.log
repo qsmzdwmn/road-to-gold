@@ -1,0 +1,10 @@
+{'name': 'import', 'exit_code': 0, 'passes': 0, 'errors': []}
+{'name': 'main', 'exit_code': 0, 'passes': 0, 'errors': []}
+{'name': 'prototype', 'exit_code': 0, 'passes': 35, 'errors': []}
+{'name': 'prototype-reload', 'exit_code': 0, 'passes': 1, 'errors': []}
+{'name': 'career', 'exit_code': 0, 'passes': 81, 'errors': []}
+{'name': 'career-reload', 'exit_code': 0, 'passes': 2, 'errors': []}
+{'name': 'category', 'exit_code': 0, 'passes': 77, 'errors': []}
+{'name': 'category-reload', 'exit_code': 0, 'passes': 2, 'errors': []}
+{'name': 'locker', 'exit_code': 0, 'passes': 62, 'errors': []}
+{'name': 'golden', 'exit_code': 0, 'passes': 72, 'errors': []}

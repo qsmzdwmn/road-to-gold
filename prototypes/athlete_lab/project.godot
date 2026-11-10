@@ -1,0 +1,15 @@
+; Isolated visual prototype. Not referenced by the production project.
+config_version=5
+[application]
+config/name="Road to Gold Athlete Lab"
+run/main_scene="res://scenes/athlete_showcase.tscn"
+boot_splash/show_image=false
+boot_splash/bg_color=Color(0.063, 0.094, 0.125, 1)
+[display]
+window/size/viewport_width=1280
+window/size/viewport_height=900
+window/stretch/mode="canvas_items"
+[rendering]
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/default_filters/use_nearest_mipmap_filter=false

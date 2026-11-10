@@ -1,0 +1,67 @@
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+PASS: unselected legacy category retains original neutral geometry
+PASS: male batches into six shared material surfaces
+PASS: male construction parts do not duplicate rendering
+PASS: male face stays local -Z and ponytail stays behind
+PASS: male anatomy polish reduces bulk and neck length
+PASS: male continuous low-poly joint left_elbow
+PASS: male continuous low-poly joint left_wrist
+PASS: male continuous low-poly joint left_ankle
+PASS: male continuous low-poly joint right_elbow
+PASS: male continuous low-poly joint right_wrist
+PASS: male continuous low-poly joint right_ankle
+PASS: male hairstyle identifier 0
+PASS: male hairstyle identifier 1
+PASS: male hairstyle identifier 2
+PASS: male hairstyle identifier 3
+PASS: male exact skin material without geometry rebuild 0
+PASS: male exact skin material without geometry rebuild 1
+PASS: male exact skin material without geometry rebuild 2
+PASS: male exact skin material without geometry rebuild 3
+PASS: male exact skin material without geometry rebuild 4
+PASS: male exact skin material without geometry rebuild 5
+PASS: male exact hair material without geometry rebuild 0
+PASS: male exact hair material without geometry rebuild 1
+PASS: male exact hair material without geometry rebuild 2
+PASS: male exact hair material without geometry rebuild 3
+PASS: male exact hair material without geometry rebuild 4
+PASS: male height scales existing mesh without rebuilding
+PASS: male all bounds visibly respond to weight
+PASS: male all bounds visibly respond to shoulders
+PASS: male all bounds visibly respond to legs
+PASS: male same model in gameplay without mutating data
+PASS: female batches into six shared material surfaces
+PASS: female construction parts do not duplicate rendering
+PASS: female face stays local -Z and ponytail stays behind
+PASS: female anatomy polish reduces bulk and neck length
+PASS: female continuous low-poly joint left_elbow
+PASS: female continuous low-poly joint left_wrist
+PASS: female continuous low-poly joint left_ankle
+PASS: female continuous low-poly joint right_elbow
+PASS: female continuous low-poly joint right_wrist
+PASS: female continuous low-poly joint right_ankle
+PASS: female hairstyle identifier 0
+PASS: female hairstyle identifier 1
+PASS: female hairstyle identifier 2
+PASS: female hairstyle identifier 3
+PASS: female exact skin material without geometry rebuild 0
+PASS: female exact skin material without geometry rebuild 1
+PASS: female exact skin material without geometry rebuild 2
+PASS: female exact skin material without geometry rebuild 3
+PASS: female exact skin material without geometry rebuild 4
+PASS: female exact skin material without geometry rebuild 5
+PASS: female exact hair material without geometry rebuild 0
+PASS: female exact hair material without geometry rebuild 1
+PASS: female exact hair material without geometry rebuild 2
+PASS: female exact hair material without geometry rebuild 3
+PASS: female exact hair material without geometry rebuild 4
+PASS: female height scales existing mesh without rebuilding
+PASS: female all bounds visibly respond to weight
+PASS: female all bounds visibly respond to shoulders
+PASS: female all bounds visibly respond to legs
+PASS: female same model in gameplay without mutating data
+PASS: all cameras and production instance orientations preserved
+PASS: legacy switch restores original primitives and hides new face geometry
+EVOLUTION GEOMETRY STATS: {"female/0":{"material_surfaces":5,"mesh_rebuilds":13,"triangles":3480},"female/1":{"material_surfaces":6,"mesh_rebuilds":14,"triangles":3648},"female/2":{"material_surfaces":6,"mesh_rebuilds":15,"triangles":3808},"female/3":{"material_surfaces":6,"mesh_rebuilds":16,"triangles":3816},"male/0":{"material_surfaces":5,"mesh_rebuilds":2,"triangles":3480},"male/1":{"material_surfaces":6,"mesh_rebuilds":3,"triangles":3648},"male/2":{"material_surfaces":6,"mesh_rebuilds":4,"triangles":3808},"male/3":{"material_surfaces":6,"mesh_rebuilds":5,"triangles":3816}}
+ATHLETE EVOLUTION TEST FAILURES: 0
