@@ -161,3 +161,18 @@ Updated screenshots were shown before committing, as requested. Source delivery 
 - [ ] Windows 10 / 4 GB FPS/memory, other browsers, screen readers, zoom and restricted/private/quota storage remain unverified.
 
 The user reviewed and approved the compact Legacy layout, selected rotation-only orientation clarification, and authorized commit/push after final testing. Do not deploy automatically.
+
+## Version 0.2.4.1 — Athlete Studio refinement (approved)
+- [x] Fetch main at 17119be; keep the stable production body, camera, Story, Player Card and gameplay.
+- [x] Preserve saved hair IDs 0–3 exactly; append male IDs 4–9 and female IDs 10–15, without changing schemas 1/2/3 or other appearance fields.
+- [x] Six category-specific hair choices; initial Crew Cut / Long Straight; remember each category's selected hair during editing.
+- [x] Cached procedural hair meshes, one material surface per style; no experimental GLB assets or dependencies.
+- [x] Remove duplicate Identity height/weight editors; retain canonical Appearance values and Player Card metrics.
+- [x] 521 native assertions pass, including winding, bounds, style geometry, ID compatibility and actual save/reload.
+- [x] Complete staged Chromium verification: 35 flow/persistence checks, 14 clean legacy rechecks after fixing the local fixture server, and 18 final visual/accessibility checks. All twelve final hairstyle captures are included.
+- [x] User visual/test approval received 2026-11-10; main commit/push and manual Pages release explicitly authorized. Experimental Blender branch must remain separate.
+
+### v0.2.4.1 final hair polish — approved
+- [x] Target only Buzz Cut, Crew Cut, Side Part, Long Straight, Long Wavy, Shoulder Length and Braided Hair; verify the other five meshes are unchanged.
+- [x] Re-run 521 native assertions, official Web export and real Chromium comparisons/accessibility checks; record scalp coverage and matched before/after evidence.
+- [x] Final hairstyles visually approved 2026-11-10; preserve existing v0.2.4.1 UI/save work unchanged during release.

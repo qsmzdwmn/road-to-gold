@@ -38,10 +38,10 @@ func _run() -> void:
 		ui._back()
 	ui._next()
 	ui._next()
-	check(ui.appearance_tab==0 and ui.fields.hairstyle.buttons.size()==4 and ui.fields.hair_color.buttons.size()==5 and ui.fields.skin.buttons.size()==6, "complete existing style and color catalogs become visible choices")
-	for style in range(4):
+	check(ui.appearance_tab==0 and ui.fields.hairstyle.buttons.size()==6 and ui.fields.hair_color.buttons.size()==5 and ui.fields.skin.buttons.size()==6, "complete existing style and color catalogs become visible choices")
+	for style in range(6):
 		ui.fields.hairstyle.buttons[style].pressed.emit()
-		check(ui.draft.athlete.appearance.hairstyle==style and ui.fields.hairstyle.buttons[style].button_pressed and ui.preview_model.parts.tail.visible==(style==3), "hairstyle tile selects model style "+str(style))
+		check(ui.draft.athlete.appearance.hairstyle==10+style and ui.fields.hairstyle.buttons[style].button_pressed and ui.preview_model.styled_hair.style_id==10+style, "hairstyle tile selects model style "+str(style))
 	for color in range(5):
 		ui.fields.hair_color.buttons[color].pressed.emit()
 		check(ui.draft.athlete.appearance.hair_color==color and ui.preview_model.hair_material.albedo_color==Color(Appearance.HAIR_COLORS[color]), "hair swatch updates material "+str(color))
@@ -82,7 +82,7 @@ func _run() -> void:
 	await process_frame
 	check(ui.heading.get_global_rect().position.y < ui.scroll.get_global_rect().position.y and ui.tab_buttons[0].get_global_rect().end.y <= ui.scroll.get_global_rect().position.y, "appearance title and tabs remain outside scrolling content")
 	ui._next()
-	check(ui.fields.height.is_visible_in_tree() and ui.fields.weight.is_visible_in_tree() and ui.fields.height.value==190 and ui.fields.weight.value==85, "identity exposes linked height and weight")
+	check(not ui.fields.height.is_visible_in_tree() and not ui.fields.weight.is_visible_in_tree() and ui.fields.height.value==190 and ui.fields.weight.value==85, "Identity hides Appearance-only height and weight while retaining values")
 	ui._next()
 	check(ui.step==3 and not ui.error.text.is_empty(), "identity validation still blocks blank names")
 	ui.fields.first_name.text = "  Nadia  "
@@ -92,7 +92,7 @@ func _run() -> void:
 	ui.fields.height.value = 195
 	ui.fields.weight.value = 95
 	ui._changed()
-	check(ui.body_editors.height.value==195 and ui.body_editors.weight.value==95, "identity adjustments immediately update Body controls")
+	check(ui.body_editors.height.value==195 and ui.body_editors.weight.value==95, "canonical Appearance values remain synchronized")
 	await process_frame
 	ui._next()
 	await process_frame
@@ -100,7 +100,7 @@ func _run() -> void:
 	check(ui.summary.profile_title.get_line_count()==1 and ui.summary.get_combined_minimum_size().y<420, "Player Card heading stays horizontal and card remains compact")
 	check(ui.step==4 and ui.summary.name_label.text=="Nadia Runner" and ui.summary.country_label.text=="Azerbaijan", "Player Card shows actual trimmed identity and country")
 	check(ui.summary.values.size()==10 and ui.summary.values.Age.text=="20" and ui.summary.values.Height.text=="195 cm" and ui.summary.values.Weight.text=="95 kg", "Player Card contains actual metrics and no fabricated ratings")
-	check(ui.summary.values.Hairstyle.text=="Ponytail" and ui.summary.values["Hair color"].text=="Gray" and ui.summary.values.Skin.text=="Tone 6" and ui.summary.values.Shoulders.text=="1.10 ×", "Player Card mirrors every chosen appearance group")
+	check(ui.summary.values.Hairstyle.text=="High Bun" and ui.summary.values["Hair color"].text=="Gray" and ui.summary.values.Skin.text=="Tone 6" and ui.summary.values.Shoulders.text=="1.10 ×", "Player Card mirrors every chosen appearance group")
 	expected = ui.draft.to_dict()
 	for i in range(4): ui._back()
 	for i in range(4): ui._next()

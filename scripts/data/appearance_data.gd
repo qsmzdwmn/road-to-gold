@@ -2,8 +2,9 @@ extends RefCounted
 const SKIN_COLORS := ["f4d4b4", "dfb18b", "be8b63", "996442", "70452f", "482d23"]
 const HAIR_COLORS := ["171719", "533522", "d8b56c", "934b32", "acafb2"]
 const HAIR_NAMES := ["Black", "Brown", "Blond", "Auburn", "Gray"]
-const STYLES := ["Bald", "Cropped", "Short curls", "Ponytail"]
-const LIMITS := {"skin": [0, 5], "hair_color": [0, 4], "hairstyle": [0, 3], "height": [140, 220], "weight": [40, 150], "shoulders": [0.8, 1.3], "legs": [0.85, 1.15]}
+const Hairstyles = preload("res://scripts/data/hairstyle_catalog.gd")
+const STYLES := Hairstyles.LEGACY_NAMES + Hairstyles.MALE_NAMES + Hairstyles.FEMALE_NAMES
+const LIMITS := {"skin": [0, 5], "hair_color": [0, 4], "hairstyle": [0, 15], "height": [140, 220], "weight": [40, 150], "shoulders": [0.8, 1.3], "legs": [0.85, 1.15]}
 var skin := 2
 var hair_color := 0
 var hairstyle := 1

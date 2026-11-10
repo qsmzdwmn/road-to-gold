@@ -6,6 +6,10 @@ var buttons: Array[Button] = []
 var grid: GridContainer
 
 func configure(labels: Array, initial: int, kind: String, colors: Array = []) -> void:
+	if grid != null:
+		remove_child(grid)
+		grid.queue_free()
+	buttons.clear()
 	grid = GridContainer.new()
 	grid.columns = 2 if kind == "hair" else (3 if labels.size() == 6 else 5)
 	grid.add_theme_constant_override("h_separation", 10)
@@ -17,7 +21,7 @@ func configure(labels: Array, initial: int, kind: String, colors: Array = []) ->
 		button.configure(labels[index], "", kind if colors.is_empty() else "", index, Color(colors[index]) if not colors.is_empty() else Color.TRANSPARENT)
 		button.button_group = group
 		button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-		button.custom_minimum_size = Vector2(90 if colors.is_empty() else 64, 90 if colors.is_empty() else 78)
+		button.custom_minimum_size = Vector2(90 if colors.is_empty() else 64, 112 if kind.begins_with("hair") else (90 if colors.is_empty() else 78))
 		button.pressed.connect(func():
 			select(index)
 			item_selected.emit(index)

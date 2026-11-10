@@ -139,3 +139,11 @@ The v0.2.3 preview-facing correction rotates only the creator preview instance 1
 Creator retains one draft, one model and one SubViewport. Heading/subtitle/tab nodes live outside ScrollContainer; its content uses 16 px right/bottom padding. Native Range sharing links each HSlider/SpinBox and the Body/Identity height-weight views to the same values. Edited text is applied before tab/step changes; hidden stale text never overwrites values. UI tab state is session-only. Data classes, SaveRepository, resources/catalogs, movement, shared model and locker-room camera remain unchanged.
 
 The preview-only yaw is 230°: model-forward (-Z) is about 30° from the fixed camera's horizontal viewing direction, with the ponytail behind the head. This stronger three-quarter view was chosen after the user requested rotation-only clarification; no face cues are added. Native tests verify positive camera-facing dot product, rear hair behind the head, unchanged camera and identity gameplay rotation, as well as maximum-body bounds. Main menu/loader use the same assets and design; only the central version becomes 0.2.4.
+
+## v0.2.4.1 refinement (uncommitted review build)
+
+`hairstyle_catalog.gd` reserves IDs 0–3 for the exact legacy names/geometry. New male IDs 4–9 and female IDs 10–15 are append-only; the creator's six tile indices map to these IDs. Category-specific draft memories are session-only. Appearance validation accepts integers 0–15; schema versions and serialized keys are unchanged, with no automatic rewriting of old saves. Older application versions cannot interpret the new IDs and will reject rather than overwrite those saves.
+
+`procedural_hair.gd` bakes closed low-resolution forms into one material surface and shares immutable style meshes. Only hairstyle changes build a previously uncached mesh; color and body changes reuse it. The existing production body dimensions, preview yaw/static camera and movement are retained. IDs 0–3 still use the original hair primitives. No Blender assets enter production.
+
+Height and weight now have one canonical numeric editor each, in Appearance Body alongside shoulders and legs. Identity contains names, country and derived age only. Player Card code/layout and Story logic remain unchanged.

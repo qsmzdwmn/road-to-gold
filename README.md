@@ -304,3 +304,13 @@ godot --headless --path . --script tests/athlete_studio_test.gd
 ```
 
 Web export/local serving instructions remain unchanged. The workflow remains manual-only; this milestone does not deploy automatically.
+
+## v0.2.4.1 — Athlete Studio Refinement
+
+This release adds six male and six female hairstyles, category-specific draft selections, and Appearance-only height/weight controls. Original saved hair IDs 0–3 retain their names and geometry; new IDs 4–15 are appended without a schema change. Story and Player Card layout are unchanged. The production body is retained; no experimental GLBs are used.
+
+Run `godot --headless --path . --script tests/studio_refinement_test.gd` in addition to the existing regression suites. Browser export/serving instructions above still apply. See [refinement verification and screenshots](tests/STUDIO_REFINEMENT_VERIFICATION.md). Visual approval and release authorization were received on 2026-11-10. The manual Pages workflow runs all 521 native assertions, including this refinement suite.
+
+The latest geometry-only follow-up is documented in [final hairstyle polish comparisons and verification](tests/HAIRSTYLE_POLISH_VERIFICATION.md). This supersedes the earlier hairstyle pictures and records the visually approved geometry. Historical review reports retain their original pre-approval status for provenance.
+
+Release verification is recorded in [the v0.2.4.1 release report](tests/RELEASE_0_2_4_1.md). Publication uses the existing manual workflow on main with deploy enabled; pushing alone does not deploy.

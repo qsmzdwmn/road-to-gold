@@ -11,3 +11,5 @@ The project owner supplied and approved `golden_path_full.png` and `golden_path_
 Only the optimized derivatives are used at runtime. Original full-resolution images and the archival ZIP are excluded from Web exports. The small emblem embedded in `web/loading.html` is derived from the same approved icon. No new official title, third-party art download, font, commercial service, sporting affiliation or external dependency is introduced. The Golden Road geometry and the 64×64 radial light gradient are generated procedurally. Godot's license and third-party attribution obligations above remain in force.
 
 Version 0.2.4 adds original procedural 2D category/origin/hair pictograms and two tiny generated slider-grabber textures. These are UI-only primitives, without external art/font downloads. Official branding masters and the existing 3D model/environment are unchanged.
+
+The v0.2.4.1 review build adds original procedural hairstyle meshes and category-specific 2D hair pictograms. No external assets, textures, fonts, Blender prototypes or paid dependencies are used.

@@ -1,0 +1,292 @@
+{
+  "date": "2026-11-10",
+  "version": "0.2.4.1-polish-review",
+  "native": [
+    {
+      "suite": "import",
+      "exit_code": 0,
+      "passes": 0,
+      "errors": []
+    },
+    {
+      "suite": "main",
+      "exit_code": 0,
+      "passes": 0,
+      "errors": []
+    },
+    {
+      "suite": "prototype",
+      "exit_code": 0,
+      "passes": 35,
+      "errors": []
+    },
+    {
+      "suite": "prototype-reload",
+      "exit_code": 0,
+      "passes": 1,
+      "errors": []
+    },
+    {
+      "suite": "career",
+      "exit_code": 0,
+      "passes": 81,
+      "errors": []
+    },
+    {
+      "suite": "career-reload",
+      "exit_code": 0,
+      "passes": 2,
+      "errors": []
+    },
+    {
+      "suite": "category",
+      "exit_code": 0,
+      "passes": 77,
+      "errors": []
+    },
+    {
+      "suite": "category-reload",
+      "exit_code": 0,
+      "passes": 2,
+      "errors": []
+    },
+    {
+      "suite": "locker",
+      "exit_code": 0,
+      "passes": 62,
+      "errors": []
+    },
+    {
+      "suite": "golden",
+      "exit_code": 0,
+      "passes": 72,
+      "errors": []
+    },
+    {
+      "suite": "studio",
+      "exit_code": 0,
+      "passes": 92,
+      "errors": []
+    },
+    {
+      "suite": "refinement",
+      "exit_code": 0,
+      "passes": 97,
+      "errors": []
+    }
+  ],
+  "browser_comparisons": {
+    "url": "http://127.0.0.1:8012/index.html",
+    "console": [
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      }
+    ],
+    "page_errors": [],
+    "failed_requests": [],
+    "http_errors": [],
+    "checks": [
+      {
+        "pass": true,
+        "message": "final real render Buzz Cut"
+      },
+      {
+        "pass": true,
+        "message": "final real render Crew Cut"
+      },
+      {
+        "pass": true,
+        "message": "final real render Textured Crop"
+      },
+      {
+        "pass": true,
+        "message": "final real render Short Fade"
+      },
+      {
+        "pass": true,
+        "message": "final real render Side Part"
+      },
+      {
+        "pass": true,
+        "message": "final real render Curly Top"
+      },
+      {
+        "pass": true,
+        "message": "final real render Long Straight"
+      },
+      {
+        "pass": true,
+        "message": "final real render High Ponytail"
+      },
+      {
+        "pass": true,
+        "message": "final real render Long Wavy"
+      },
+      {
+        "pass": true,
+        "message": "final real render Braided Hair"
+      },
+      {
+        "pass": true,
+        "message": "final real render Shoulder Length"
+      },
+      {
+        "pass": true,
+        "message": "final real render High Bun"
+      },
+      {
+        "pass": true,
+        "message": "accessible-MAKE IT YOURS visible: MAKE IT YOURS"
+      },
+      {
+        "pass": true,
+        "message": "accessible-HAIR visible: HAIR"
+      },
+      {
+        "pass": true,
+        "message": "accessible-SKIN visible: SKIN"
+      },
+      {
+        "pass": true,
+        "message": "accessible-BODY visible: BODY"
+      },
+      {
+        "pass": true,
+        "message": "accessible-Gray visible: Gray"
+      },
+      {
+        "pass": true,
+        "message": "no recorded engine/JavaScript/WebAssembly/storage/network errors or warnings"
+      }
+    ],
+    "browser": "156.0.8078.79"
+  },
+  "browser_final_side_part": {
+    "url": "http://127.0.0.1:8012/index.html",
+    "console": [
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      }
+    ],
+    "page_errors": [],
+    "failed_requests": [],
+    "http_errors": [],
+    "checks": [
+      {
+        "pass": true,
+        "message": "no recorded engine/JavaScript/WebAssembly/storage/network errors or warnings"
+      }
+    ]
+  },
+  "mesh_audit": {
+    "pass": true,
+    "scalp_vertices_checked": 27,
+    "scalp_vertices_outside_buzz": 0,
+    "styles": [
+      {
+        "changed": true,
+        "expected_change": true,
+        "id": 4,
+        "triangles": 80
+      },
+      {
+        "changed": true,
+        "expected_change": true,
+        "id": 5,
+        "triangles": 80
+      },
+      {
+        "changed": false,
+        "expected_change": false,
+        "id": 6,
+        "triangles": 384
+      },
+      {
+        "changed": false,
+        "expected_change": false,
+        "id": 7,
+        "triangles": 128
+      },
+      {
+        "changed": true,
+        "expected_change": true,
+        "id": 8,
+        "triangles": 180
+      },
+      {
+        "changed": false,
+        "expected_change": false,
+        "id": 9,
+        "triangles": 576
+      },
+      {
+        "changed": true,
+        "expected_change": true,
+        "id": 10,
+        "triangles": 664
+      },
+      {
+        "changed": false,
+        "expected_change": false,
+        "id": 11,
+        "triangles": 192
+      },
+      {
+        "changed": true,
+        "expected_change": true,
+        "id": 12,
+        "triangles": 784
+      },
+      {
+        "changed": true,
+        "expected_change": true,
+        "id": 13,
+        "triangles": 1368
+      },
+      {
+        "changed": true,
+        "expected_change": true,
+        "id": 14,
+        "triangles": 664
+      },
+      {
+        "changed": false,
+        "expected_change": false,
+        "id": 15,
+        "triangles": 192
+      }
+    ]
+  },
+  "unchanged_protected_sha256": {
+    "scripts/ui/career_creator.gd": "526a2ed6abf03eb5d9002b90b4996e7b18d891029c5c239f7e4debd518a17ea4",
+    "scripts/ui/studio/player_card.gd": "bc1cdceb856119527a1af2181ebcd1a4706a12881078c639f8d12e0f6bd6b2f4",
+    "scripts/customization/procedural_athlete.gd": "90e4e42df9626cc7f856b84af8145ca217a0f53c90ca1ac0f6e64fd204242e2b",
+    "scripts/data/appearance_data.gd": "78a9c8c126c135c6d2359ba0269da1d34bbc49c232bc03eea63cb15b9da853a6",
+    "scripts/data/hairstyle_catalog.gd": "e19ae2486a829802e385d7af604b3ad48217a2e65f4eed801fadd2b6a074609c",
+    "project.godot": "160f44dbd75aa90057047944702cc330783d823dcfdbbea7b7a920b4e271525e"
+  },
+  "hair_before_sha256": "aba229f1d583f2341c513df9de908498b994d0955deca7559096d696b0961780",
+  "hair_after_sha256": "9419a891f9b03990a3ae0788120becd83653755d37a040493b7563fd5548a45e",
+  "export": "official Godot 4.6.3 single-thread Web release succeeds",
+  "committed": false,
+  "pushed": false,
+  "deployed": false
+}

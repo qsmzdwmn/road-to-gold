@@ -1,0 +1,287 @@
+{
+  "date": "2026-11-10",
+  "version": "0.2.4.1",
+  "approval": "User explicitly approved final hairstyles and main release/Pages deployment.",
+  "base_commit": "17119be381b49b4fa5c07b67282cf0a8f16658c6",
+  "native": [
+    {
+      "suite": "import",
+      "exit_code": 0,
+      "passes": 0,
+      "errors": []
+    },
+    {
+      "suite": "main",
+      "exit_code": 0,
+      "passes": 0,
+      "errors": []
+    },
+    {
+      "suite": "prototype",
+      "exit_code": 0,
+      "passes": 35,
+      "errors": []
+    },
+    {
+      "suite": "prototype-reload",
+      "exit_code": 0,
+      "passes": 1,
+      "errors": []
+    },
+    {
+      "suite": "career",
+      "exit_code": 0,
+      "passes": 81,
+      "errors": []
+    },
+    {
+      "suite": "career-reload",
+      "exit_code": 0,
+      "passes": 2,
+      "errors": []
+    },
+    {
+      "suite": "category",
+      "exit_code": 0,
+      "passes": 77,
+      "errors": []
+    },
+    {
+      "suite": "category-reload",
+      "exit_code": 0,
+      "passes": 2,
+      "errors": []
+    },
+    {
+      "suite": "locker",
+      "exit_code": 0,
+      "passes": 62,
+      "errors": []
+    },
+    {
+      "suite": "golden",
+      "exit_code": 0,
+      "passes": 72,
+      "errors": []
+    },
+    {
+      "suite": "studio",
+      "exit_code": 0,
+      "passes": 92,
+      "errors": []
+    },
+    {
+      "suite": "refinement",
+      "exit_code": 0,
+      "passes": 97,
+      "errors": []
+    }
+  ],
+  "browser": {
+    "url": "http://127.0.0.1:8020/index.html",
+    "console": [
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      },
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      },
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      }
+    ],
+    "page_errors": [],
+    "failed_requests": [],
+    "http_errors": [],
+    "checks": [
+      {
+        "pass": true,
+        "message": "version-proof visible: VERSION 0.2.4.1"
+      },
+      {
+        "pass": true,
+        "message": "captured actual male Buzz Cut selection and preview"
+      },
+      {
+        "pass": true,
+        "message": "captured actual male Crew Cut selection and preview"
+      },
+      {
+        "pass": true,
+        "message": "captured actual male Textured Crop selection and preview"
+      },
+      {
+        "pass": true,
+        "message": "captured actual male Short Fade selection and preview"
+      },
+      {
+        "pass": true,
+        "message": "captured actual male Side Part selection and preview"
+      },
+      {
+        "pass": true,
+        "message": "captured actual male Curly Top selection and preview"
+      },
+      {
+        "pass": true,
+        "message": "captured actual female Long Straight selection and preview"
+      },
+      {
+        "pass": true,
+        "message": "captured actual female High Ponytail selection and preview"
+      },
+      {
+        "pass": true,
+        "message": "captured actual female Long Wavy selection and preview"
+      },
+      {
+        "pass": true,
+        "message": "captured actual female Braided Hair selection and preview"
+      },
+      {
+        "pass": true,
+        "message": "captured actual female Shoulder Length selection and preview"
+      },
+      {
+        "pass": true,
+        "message": "captured actual female High Bun selection and preview"
+      },
+      {
+        "pass": true,
+        "message": "male catalog returns after female selection"
+      },
+      {
+        "pass": true,
+        "message": "Identity has no duplicate Height or Weight controls"
+      },
+      {
+        "pass": true,
+        "message": "legacy-hair visible: High Bun"
+      },
+      {
+        "pass": true,
+        "message": "legacy-height visible: 190 cm"
+      },
+      {
+        "pass": true,
+        "message": "legacy-weight visible: 85 kg"
+      },
+      {
+        "pass": true,
+        "message": "track visible: TRACK EXPLORATION"
+      },
+      {
+        "pass": true,
+        "message": "one persistent career slot"
+      },
+      {
+        "pass": true,
+        "message": "category-local High Bun and every body value save exactly"
+      },
+      {
+        "pass": true,
+        "message": "new IDs use existing schema 3"
+      },
+      {
+        "pass": true,
+        "message": "keyboard movement remains functional"
+      },
+      {
+        "pass": true,
+        "message": "loaded visible: Loaded saved career."
+      },
+      {
+        "pass": true,
+        "message": "one persistent career slot"
+      },
+      {
+        "pass": true,
+        "message": "page reload and Continue preserve all new hairstyle data"
+      },
+      {
+        "pass": true,
+        "message": "replacement visible: Replace saved progress?"
+      },
+      {
+        "pass": true,
+        "message": "no existing save replacement without confirmation"
+      },
+      {
+        "pass": true,
+        "message": "Cancel preserves existing saved career"
+      },
+      {
+        "pass": true,
+        "message": "male-track visible: TRACK EXPLORATION"
+      },
+      {
+        "pass": true,
+        "message": "one persistent career slot"
+      },
+      {
+        "pass": true,
+        "message": "male Side Part saves its new stable ID"
+      },
+      {
+        "pass": true,
+        "message": "restart-loaded visible: Loaded saved career."
+      },
+      {
+        "pass": true,
+        "message": "one persistent career slot"
+      },
+      {
+        "pass": true,
+        "message": "browser restart preserves male hairstyle and complete career"
+      },
+      {
+        "pass": true,
+        "message": "no recorded engine/JavaScript/WebAssembly/storage/network errors or warnings"
+      }
+    ],
+    "browser": "156.0.8078.79"
+  },
+  "export": {
+    "exit_code": 0,
+    "engine": "4.6.3.stable.official.7d41c59c4",
+    "html_bytes": 19245,
+    "pck_bytes": 365764,
+    "wasm_bytes": 37700666
+  },
+  "packed_build": {
+    "experimental_directory_present": false,
+    "experimental_glb_present": false,
+    "production_model_present": true,
+    "version": "0.2.4.1"
+  },
+  "pck_sha256": "e695666097067d0e344ef45ebf12e88b330aaedde619290bc23f283ad80a4183",
+  "experimental_branch_merged": false,
+  "publication": "Manual main Pages workflow to be dispatched only after this source commit is pushed and its remote SHA verified."
+}

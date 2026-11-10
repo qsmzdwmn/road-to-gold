@@ -39,7 +39,8 @@ func _run() -> void:
 	var original_appearance: Dictionary = creator.draft.athlete.appearance.to_dict()
 	creator.select_category("male")
 	creator.select_category("female")
-	check(creator.draft.athlete.appearance.to_dict() == original_appearance, "switching category never resets customization")
+	original_appearance.hairstyle = 10
+	check(creator.draft.athlete.appearance.to_dict() == original_appearance, "switching category preserves non-hair customization and uses its default hairstyle")
 	var dimensions: Dictionary = {}
 	for category: String in Category.IDS:
 		for origin: Dictionary in Catalog.origins():

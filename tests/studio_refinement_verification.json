@@ -1,0 +1,771 @@
+{
+  "date": "2026-11-10",
+  "baseline_commit": "17119be381b49b4fa5c07b67282cf0a8f16658c6",
+  "version": "0.2.4.1",
+  "native": [
+    {
+      "suite": "import",
+      "exit_code": 0,
+      "passes": 0,
+      "errors": []
+    },
+    {
+      "suite": "main",
+      "exit_code": 0,
+      "passes": 0,
+      "errors": []
+    },
+    {
+      "suite": "prototype",
+      "exit_code": 0,
+      "passes": 35,
+      "errors": []
+    },
+    {
+      "suite": "prototype-reload",
+      "exit_code": 0,
+      "passes": 1,
+      "errors": []
+    },
+    {
+      "suite": "career",
+      "exit_code": 0,
+      "passes": 81,
+      "errors": []
+    },
+    {
+      "suite": "career-reload",
+      "exit_code": 0,
+      "passes": 2,
+      "errors": []
+    },
+    {
+      "suite": "category",
+      "exit_code": 0,
+      "passes": 77,
+      "errors": []
+    },
+    {
+      "suite": "category-reload",
+      "exit_code": 0,
+      "passes": 2,
+      "errors": []
+    },
+    {
+      "suite": "locker",
+      "exit_code": 0,
+      "passes": 62,
+      "errors": []
+    },
+    {
+      "suite": "golden",
+      "exit_code": 0,
+      "passes": 72,
+      "errors": []
+    },
+    {
+      "suite": "studio",
+      "exit_code": 0,
+      "passes": 92,
+      "errors": []
+    },
+    {
+      "suite": "refinement",
+      "exit_code": 0,
+      "passes": 97,
+      "errors": []
+    }
+  ],
+  "browser_core_checks": [
+    {
+      "pass": true,
+      "message": "version-proof visible: VERSION 0.2.4.1"
+    },
+    {
+      "pass": true,
+      "message": "captured actual male Buzz Cut selection and preview"
+    },
+    {
+      "pass": true,
+      "message": "captured actual male Crew Cut selection and preview"
+    },
+    {
+      "pass": true,
+      "message": "captured actual male Textured Crop selection and preview"
+    },
+    {
+      "pass": true,
+      "message": "captured actual male Short Fade selection and preview"
+    },
+    {
+      "pass": true,
+      "message": "captured actual male Side Part selection and preview"
+    },
+    {
+      "pass": true,
+      "message": "captured actual male Curly Top selection and preview"
+    },
+    {
+      "pass": true,
+      "message": "captured actual female Long Straight selection and preview"
+    },
+    {
+      "pass": true,
+      "message": "captured actual female High Ponytail selection and preview"
+    },
+    {
+      "pass": true,
+      "message": "captured actual female Long Wavy selection and preview"
+    },
+    {
+      "pass": true,
+      "message": "captured actual female Braided Hair selection and preview"
+    },
+    {
+      "pass": true,
+      "message": "captured actual female Shoulder Length selection and preview"
+    },
+    {
+      "pass": true,
+      "message": "captured actual female High Bun selection and preview"
+    },
+    {
+      "pass": true,
+      "message": "male catalog returns after female selection"
+    },
+    {
+      "pass": true,
+      "message": "Identity has no duplicate Height or Weight controls"
+    },
+    {
+      "pass": true,
+      "message": "legacy-hair visible: High Bun"
+    },
+    {
+      "pass": true,
+      "message": "legacy-height visible: 190 cm"
+    },
+    {
+      "pass": true,
+      "message": "legacy-weight visible: 85 kg"
+    },
+    {
+      "pass": true,
+      "message": "track visible: TRACK EXPLORATION"
+    },
+    {
+      "pass": true,
+      "message": "one persistent career slot"
+    },
+    {
+      "pass": true,
+      "message": "category-local High Bun and every body value save exactly"
+    },
+    {
+      "pass": true,
+      "message": "new IDs use existing schema 3"
+    },
+    {
+      "pass": true,
+      "message": "keyboard movement remains functional"
+    },
+    {
+      "pass": true,
+      "message": "loaded visible: Loaded saved career."
+    },
+    {
+      "pass": true,
+      "message": "one persistent career slot"
+    },
+    {
+      "pass": true,
+      "message": "page reload and Continue preserve all new hairstyle data"
+    },
+    {
+      "pass": true,
+      "message": "replacement visible: Replace saved progress?"
+    },
+    {
+      "pass": true,
+      "message": "no existing save replacement without confirmation"
+    },
+    {
+      "pass": true,
+      "message": "Cancel preserves existing saved career"
+    },
+    {
+      "pass": true,
+      "message": "male-track visible: TRACK EXPLORATION"
+    },
+    {
+      "pass": true,
+      "message": "one persistent career slot"
+    },
+    {
+      "pass": true,
+      "message": "male Side Part saves its new stable ID"
+    },
+    {
+      "pass": true,
+      "message": "restart-loaded visible: Loaded saved career."
+    },
+    {
+      "pass": true,
+      "message": "one persistent career slot"
+    },
+    {
+      "pass": true,
+      "message": "browser restart preserves male hairstyle and complete career"
+    }
+  ],
+  "initial_browser_run_with_fixture_host_failure": {
+    "url": "http://127.0.0.1:8011/index.html",
+    "console": [
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      },
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      },
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      },
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      },
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      },
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      }
+    ],
+    "page_errors": [
+      "Failed to load worklet module script: http://127.0.0.1:8001/road-to-gold/index.audio.position.worklet.js (Network error)",
+      "Failed to load worklet module script: http://127.0.0.1:8001/road-to-gold/index.audio.worklet.js (Network error)",
+      "Failed to load worklet module script: http://127.0.0.1:8001/road-to-gold/index.audio.position.worklet.js (Network error)",
+      "Failed to load worklet module script: http://127.0.0.1:8001/road-to-gold/index.audio.worklet.js (Network error)",
+      "Failed to load worklet module script: http://127.0.0.1:8001/road-to-gold/index.audio.position.worklet.js (Network error)",
+      "Failed to load worklet module script: http://127.0.0.1:8001/road-to-gold/index.audio.worklet.js (Network error)"
+    ],
+    "failed_requests": [],
+    "http_errors": [],
+    "checks": [
+      {
+        "pass": true,
+        "message": "version-proof visible: VERSION 0.2.4.1"
+      },
+      {
+        "pass": true,
+        "message": "captured actual male Buzz Cut selection and preview"
+      },
+      {
+        "pass": true,
+        "message": "captured actual male Crew Cut selection and preview"
+      },
+      {
+        "pass": true,
+        "message": "captured actual male Textured Crop selection and preview"
+      },
+      {
+        "pass": true,
+        "message": "captured actual male Short Fade selection and preview"
+      },
+      {
+        "pass": true,
+        "message": "captured actual male Side Part selection and preview"
+      },
+      {
+        "pass": true,
+        "message": "captured actual male Curly Top selection and preview"
+      },
+      {
+        "pass": true,
+        "message": "captured actual female Long Straight selection and preview"
+      },
+      {
+        "pass": true,
+        "message": "captured actual female High Ponytail selection and preview"
+      },
+      {
+        "pass": true,
+        "message": "captured actual female Long Wavy selection and preview"
+      },
+      {
+        "pass": true,
+        "message": "captured actual female Braided Hair selection and preview"
+      },
+      {
+        "pass": true,
+        "message": "captured actual female Shoulder Length selection and preview"
+      },
+      {
+        "pass": true,
+        "message": "captured actual female High Bun selection and preview"
+      },
+      {
+        "pass": true,
+        "message": "male catalog returns after female selection"
+      },
+      {
+        "pass": true,
+        "message": "Identity has no duplicate Height or Weight controls"
+      },
+      {
+        "pass": true,
+        "message": "legacy-hair visible: High Bun"
+      },
+      {
+        "pass": true,
+        "message": "legacy-height visible: 190 cm"
+      },
+      {
+        "pass": true,
+        "message": "legacy-weight visible: 85 kg"
+      },
+      {
+        "pass": true,
+        "message": "track visible: TRACK EXPLORATION"
+      },
+      {
+        "pass": true,
+        "message": "one persistent career slot"
+      },
+      {
+        "pass": true,
+        "message": "category-local High Bun and every body value save exactly"
+      },
+      {
+        "pass": true,
+        "message": "new IDs use existing schema 3"
+      },
+      {
+        "pass": true,
+        "message": "keyboard movement remains functional"
+      },
+      {
+        "pass": true,
+        "message": "loaded visible: Loaded saved career."
+      },
+      {
+        "pass": true,
+        "message": "one persistent career slot"
+      },
+      {
+        "pass": true,
+        "message": "page reload and Continue preserve all new hairstyle data"
+      },
+      {
+        "pass": true,
+        "message": "replacement visible: Replace saved progress?"
+      },
+      {
+        "pass": true,
+        "message": "no existing save replacement without confirmation"
+      },
+      {
+        "pass": true,
+        "message": "Cancel preserves existing saved career"
+      },
+      {
+        "pass": true,
+        "message": "male-track visible: TRACK EXPLORATION"
+      },
+      {
+        "pass": true,
+        "message": "one persistent career slot"
+      },
+      {
+        "pass": true,
+        "message": "male Side Part saves its new stable ID"
+      },
+      {
+        "pass": true,
+        "message": "restart-loaded visible: Loaded saved career."
+      },
+      {
+        "pass": true,
+        "message": "one persistent career slot"
+      },
+      {
+        "pass": true,
+        "message": "browser restart preserves male hairstyle and complete career"
+      },
+      {
+        "pass": true,
+        "message": "v1-track visible: TRACK EXPLORATION"
+      },
+      {
+        "pass": true,
+        "message": "v1 load leaves original bytes untouched"
+      },
+      {
+        "pass": true,
+        "message": "one persistent career slot"
+      },
+      {
+        "pass": true,
+        "message": "v1 retains schema and all old hairstyle IDs"
+      },
+      {
+        "pass": true,
+        "message": "v2-track visible: TRACK EXPLORATION"
+      },
+      {
+        "pass": true,
+        "message": "v2 load leaves original bytes untouched"
+      },
+      {
+        "pass": true,
+        "message": "one persistent career slot"
+      },
+      {
+        "pass": true,
+        "message": "v2 retains schema and all old hairstyle IDs"
+      },
+      {
+        "pass": true,
+        "message": "v3-track visible: TRACK EXPLORATION"
+      },
+      {
+        "pass": true,
+        "message": "v3 load leaves original bytes untouched"
+      },
+      {
+        "pass": true,
+        "message": "one persistent career slot"
+      },
+      {
+        "pass": true,
+        "message": "v3 retains schema and all old hairstyle IDs"
+      },
+      {
+        "pass": false,
+        "message": "no recorded engine/JavaScript/WebAssembly/storage/network errors or warnings"
+      }
+    ],
+    "browser": "156.0.8078.79"
+  },
+  "browser_legacy_retest": {
+    "url": "http://127.0.0.1:8001/road-to-gold/index.html",
+    "console": [
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      },
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      },
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      }
+    ],
+    "page_errors": [],
+    "failed_requests": [],
+    "http_errors": [],
+    "checks": [
+      {
+        "pass": true,
+        "message": "v1-track visible: TRACK EXPLORATION"
+      },
+      {
+        "pass": true,
+        "message": "v1 load leaves original bytes untouched"
+      },
+      {
+        "pass": true,
+        "message": "one persistent career slot"
+      },
+      {
+        "pass": true,
+        "message": "v1 retains schema and all old hairstyle IDs"
+      },
+      {
+        "pass": true,
+        "message": "v2-track visible: TRACK EXPLORATION"
+      },
+      {
+        "pass": true,
+        "message": "v2 load leaves original bytes untouched"
+      },
+      {
+        "pass": true,
+        "message": "one persistent career slot"
+      },
+      {
+        "pass": true,
+        "message": "v2 retains schema and all old hairstyle IDs"
+      },
+      {
+        "pass": true,
+        "message": "legacy category remains unselected"
+      },
+      {
+        "pass": true,
+        "message": "v3-track visible: TRACK EXPLORATION"
+      },
+      {
+        "pass": true,
+        "message": "v3 load leaves original bytes untouched"
+      },
+      {
+        "pass": true,
+        "message": "one persistent career slot"
+      },
+      {
+        "pass": true,
+        "message": "v3 retains schema and all old hairstyle IDs"
+      },
+      {
+        "pass": true,
+        "message": "no recorded engine/JavaScript/WebAssembly/storage/network errors or warnings"
+      }
+    ],
+    "browser": "156.0.8078.79"
+  },
+  "browser_final_visuals": {
+    "url": "http://127.0.0.1:8011/index.html",
+    "console": [
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      }
+    ],
+    "page_errors": [],
+    "failed_requests": [],
+    "http_errors": [],
+    "checks": [
+      {
+        "pass": true,
+        "message": "final real render Buzz Cut"
+      },
+      {
+        "pass": true,
+        "message": "final real render Crew Cut"
+      },
+      {
+        "pass": true,
+        "message": "final real render Textured Crop"
+      },
+      {
+        "pass": true,
+        "message": "final real render Short Fade"
+      },
+      {
+        "pass": true,
+        "message": "final real render Side Part"
+      },
+      {
+        "pass": true,
+        "message": "final real render Curly Top"
+      },
+      {
+        "pass": true,
+        "message": "final real render Long Straight"
+      },
+      {
+        "pass": true,
+        "message": "final real render High Ponytail"
+      },
+      {
+        "pass": true,
+        "message": "final real render Long Wavy"
+      },
+      {
+        "pass": true,
+        "message": "final real render Braided Hair"
+      },
+      {
+        "pass": true,
+        "message": "final real render Shoulder Length"
+      },
+      {
+        "pass": true,
+        "message": "final real render High Bun"
+      },
+      {
+        "pass": true,
+        "message": "accessible-MAKE IT YOURS visible: MAKE IT YOURS"
+      },
+      {
+        "pass": true,
+        "message": "accessible-HAIR visible: HAIR"
+      },
+      {
+        "pass": true,
+        "message": "accessible-SKIN visible: SKIN"
+      },
+      {
+        "pass": true,
+        "message": "accessible-BODY visible: BODY"
+      },
+      {
+        "pass": true,
+        "message": "accessible-Gray visible: Gray"
+      },
+      {
+        "pass": true,
+        "message": "no recorded engine/JavaScript/WebAssembly/storage/network errors or warnings"
+      }
+    ],
+    "browser": "156.0.8078.79"
+  },
+  "browser_phase_note": "35 functional assertions passed before fixture-host audio-worklet failures. The obsolete localhost server was restarted; all 14 legacy rechecks then passed cleanly. Final 18 visual/accessibility checks cover the final hair geometry. These are separate staged runs, not one clean initial aggregate.",
+  "geometry": {
+    "Braided Hair": {
+      "aabb": "[P: (-0.218234, -0.506053, -0.22), S: (0.436469, 0.746053, 0.412)]",
+      "triangles": 960
+    },
+    "Buzz Cut": {
+      "aabb": "[P: (-0.161, 0.04, -0.157), S: (0.322, 0.155, 0.322)]",
+      "triangles": 64
+    },
+    "Crew Cut": {
+      "aabb": "[P: (-0.17, 0.08, -0.107), S: (0.34, 0.135, 0.238)]",
+      "triangles": 48
+    },
+    "Curly Top": {
+      "aabb": "[P: (-0.175, 0.04, -0.168), S: (0.35, 0.235, 0.36)]",
+      "triangles": 576
+    },
+    "High Bun": {
+      "aabb": "[P: (-0.175, 0.04, -0.168), S: (0.35, 0.34, 0.36)]",
+      "triangles": 192
+    },
+    "High Ponytail": {
+      "aabb": "[P: (-0.175, -0.43, -0.168), S: (0.47, 0.73, 0.4935)]",
+      "triangles": 192
+    },
+    "Long Straight": {
+      "aabb": "[P: (-0.22, -0.53, -0.2045), S: (0.44, 0.77, 0.4965)]",
+      "triangles": 208
+    },
+    "Long Wavy": {
+      "aabb": "[P: (-0.265, -0.55, -0.2045), S: (0.53, 0.79, 0.4965)]",
+      "triangles": 272
+    },
+    "Short Fade": {
+      "aabb": "[P: (-0.1645, 0.025, -0.158), S: (0.329, 0.27, 0.34)]",
+      "triangles": 128
+    },
+    "Shoulder Length": {
+      "aabb": "[P: (-0.22, -0.3, -0.2045), S: (0.44, 0.54, 0.4965)]",
+      "triangles": 208
+    },
+    "Side Part": {
+      "aabb": "[P: (-0.174807, 0.123977, -0.162), S: (0.325831, 0.129728, 0.34)]",
+      "triangles": 128
+    },
+    "Textured Crop": {
+      "aabb": "[P: (-0.175, 0.04, -0.168), S: (0.35, 0.225835, 0.36)]",
+      "triangles": 384
+    }
+  },
+  "unchanged_contracts": {
+    "story_function_unchanged": true,
+    "player_card_file_unchanged": true,
+    "player_card_sha256": "bc1cdceb856119527a1af2181ebcd1a4706a12881078c639f8d12e0f6bd6b2f4",
+    "save_repository_and_schema_files_unchanged": true,
+    "experimental_assets_used": false,
+    "gameplay_unchanged": true
+  },
+  "web_export": {
+    "official_engine": "4.6.3.stable.official.7d41c59c4",
+    "single_threaded": true,
+    "successful": true,
+    "experimental_glbs_present": false,
+    "version": "0.2.4.1",
+    "pck_sha256": "110a36f8956496ec9a8e56605b0a11f686614703e4b3e9013e1cc29b1460a45a"
+  },
+  "committed": false,
+  "pushed": false,
+  "deployed": false
+}

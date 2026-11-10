@@ -1,5 +1,7 @@
 extends Node3D
 ## Cosmetic geometry only. Never changes movement speed or collision bounds.
+const Hair = preload("res://scripts/customization/procedural_hair.gd")
+var styled_hair
 const Category = preload("res://scripts/data/athlete_category.gd")
 const Appearance = preload("res://scripts/data/appearance_data.gd")
 var athlete_category := ""
@@ -34,6 +36,8 @@ func _ready() -> void:
 		part.mesh = mesh
 		parts[key] = part
 		add_child(part)
+	styled_hair = Hair.new()
+	add_child(styled_hair)
 	apply_appearance(appearance, athlete_category)
 
 func _material(color: Color) -> StandardMaterial3D:
@@ -90,4 +94,9 @@ func apply_appearance(data, category := "") -> void:
 	parts.curl_left.visible = data.hairstyle == 2
 	parts.curl_right.visible = data.hairstyle == 2
 	parts.tail.visible = data.hairstyle == 3
+	styled_hair.visible = data.hairstyle >= 4
+	if styled_hair.visible:
+		for key: String in ["hair","curl_left","curl_right","tail"]: parts[key].hide()
+		styled_hair.position = Vector3(0,head_y,0)
+		styled_hair.set_style(data.hairstyle,hair_material)
 	scale = Vector3.ONE * stature

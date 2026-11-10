@@ -52,13 +52,13 @@ func _run() -> void:
 			creator.fields.country.select(i)
 	creator.fields.skin.select(5)
 	creator.fields.hair_color.select(3)
-	creator.fields.hairstyle.select(3)
+	creator.fields.hairstyle.select(1)
 	creator.fields.height.value = 195
 	creator.fields.weight.value = 95
 	creator.fields.shoulders.value = 1.2
 	creator.fields.legs.value = 1.1
 	creator._changed()
-	check(creator.preview_model.parts.tail.visible and not creator.preview_model.parts.curl_left.visible, "ponytail preview is distinct from curls")
+	check(creator.preview_model.styled_hair.style_id==11 and creator.preview_model.styled_hair.visible, "ponytail preview is distinct from curls")
 	check(creator.preview_model.skin_material.albedo_color == Color("482d23"), "skin selection updates preview material")
 	check(creator.preview_model.hair_material.albedo_color == Color("934b32"), "hair color updates preview material")
 	check(creator.preview_model.scale.x > 1 and creator.preview_model.parts.torso.scale.x > 0.48, "height, weight and proportions visibly scale geometry")

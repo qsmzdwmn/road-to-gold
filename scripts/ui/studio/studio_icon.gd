@@ -7,15 +7,32 @@ func _draw() -> void:
 	var center := size * Vector2(0.5, 0.48)
 	var ink := Color("c6a66b")
 	var quiet := Color("89969e")
-	if kind == "hair":
+	if kind.begins_with("hair"):
 		draw_circle(center, 12, quiet)
-		if index == 1: draw_rect(Rect2(center + Vector2(-13,-14), Vector2(26,9)), ink)
-		if index == 2:
-			for x in [-9,0,9]: draw_circle(center + Vector2(x,-11), 7, ink)
-		if index == 3:
-			draw_arc(center, 13, PI, TAU, 16, ink, 6)
-			draw_line(center + Vector2(12,-3), center + Vector2(17,17), ink, 7)
-		draw_line(center + Vector2(-17,22), center + Vector2(17,22), quiet, 3)
+		if kind == "hair_female":
+			draw_arc(center,13,PI,TAU,16,ink,5)
+			if index == 5: draw_circle(center+Vector2(0,-19),7,ink)
+			elif index == 1: draw_line(center+Vector2(12,-9),center+Vector2(18,22),ink,6)
+			else:
+				for side in [-1,1]:
+					var length := 14 if index == 4 else 24
+					if index == 3:
+						for y in range(-2,length,5): draw_circle(center+Vector2(side*13,y),3,ink)
+					elif index == 2:
+						var points := PackedVector2Array()
+						for y in range(-8,length,3): points.append(center+Vector2(side*(13+sin(y*.3)*3),y))
+						draw_polyline(points,ink,4)
+					else: draw_line(center+Vector2(side*13,-6),center+Vector2(side*13,length),ink,5)
+		else:
+			if index == 0: draw_arc(center,12,PI,TAU,12,ink,3)
+			elif index == 1: draw_rect(Rect2(center+Vector2(-13,-15),Vector2(26,8)),ink)
+			elif index in [2,5]:
+				for x in [-9,-3,3,9]: draw_circle(center+Vector2(x,-12),4 if index==2 else 6,ink)
+			elif index == 3: draw_arc(center+Vector2(0,-3),11,PI,TAU,12,ink,7)
+			else:
+				draw_line(center+Vector2(-12,-8),center+Vector2(3,-16),ink,7)
+				draw_line(center+Vector2(8,-14),center+Vector2(13,-8),ink,5)
+		draw_line(center+Vector2(-17,27),center+Vector2(17,27),quiet,3)
 	elif kind == "athlete":
 		center = Vector2(size.x * 0.5, 50)
 		draw_circle(center + Vector2(0,-26), 12, ink)

@@ -4,6 +4,8 @@ signal confirmed(career)
 const Category = preload("res://scripts/data/athlete_category.gd")
 const Career = preload("res://scripts/career/career_data.gd")
 const Catalog = preload("res://scripts/data/career_catalog.gd")
+const Hairstyles = preload("res://scripts/data/hairstyle_catalog.gd")
+var category_hairstyles := {"male": 5, "female": 10}
 const Appearance = preload("res://scripts/data/appearance_data.gd")
 const Brand = preload("res://scripts/branding/brand.gd")
 const Room = preload("res://scripts/customization/locker_room.gd")
@@ -196,8 +198,6 @@ func _build_identity() -> void:
 	_field(sections[3], "Country", country)
 	fields.country = country
 	country.item_selected.connect(func(_index): _changed())
-	for key: String in ["height", "weight"]:
-		fields[key] = _number(sections[3], key)
 
 func _build_appearance() -> void:
 	var tabs := appearance_tabs
@@ -213,7 +213,7 @@ func _build_appearance() -> void:
 		panel.add_theme_constant_override("separation", 12)
 		appearance_panels.append(panel)
 		sections[2].add_child(panel)
-	fields.hairstyle = _choices(appearance_panels[0], "HAIRSTYLE", Appearance.STYLES, draft.athlete.appearance.hairstyle, "hair")
+	fields.hairstyle = _choices(appearance_panels[0], "HAIRSTYLE", Hairstyles.names("male"), 1, "hair_male")
 	fields.hair_color = _choices(appearance_panels[0], "HAIR COLOR", Appearance.HAIR_NAMES, draft.athlete.appearance.hair_color, "color", Appearance.HAIR_COLORS)
 	fields.skin = _choices(appearance_panels[1], "SKIN TONE", ["Tone 1","Tone 2","Tone 3","Tone 4","Tone 5","Tone 6"], draft.athlete.appearance.skin, "color", Appearance.SKIN_COLORS)
 	_label(appearance_panels[1], "Your skin tone is cosmetic and never determines athletic ability.", 15, Color("b7c0c5"))
@@ -221,7 +221,7 @@ func _build_appearance() -> void:
 		var editor := _number(appearance_panels[2], key, fields.get(key))
 		body_editors[key] = editor
 		if not fields.has(key): fields[key] = editor
-	_label(appearance_panels[2], "Height and weight are linked to Identity. Body proportions are cosmetic; movement stays the same.", 14, Color("b7c0c5"))
+	_label(appearance_panels[2], "Height, weight and body proportions are cosmetic; movement stays the same.", 14, Color("b7c0c5"))
 	select_appearance_tab(appearance_tab)
 
 func _choices(parent: Node, title: String, labels: Array, initial: int, kind: String, colors: Array = []):
@@ -329,7 +329,10 @@ func _capture(commit_edits := false) -> void:
 	draft.athlete.first_name = fields.first_name.text
 	draft.athlete.last_name = fields.last_name.text
 	draft.athlete.country = fields.country.get_item_metadata(fields.country.selected)
-	for key: String in ["skin","hairstyle","hair_color"]: draft.athlete.appearance.set(key, fields[key].selected)
+	for key: String in ["skin","hair_color"]: draft.athlete.appearance.set(key, fields[key].selected)
+	if Category.valid(draft.athlete_category):
+		draft.athlete.appearance.hairstyle = Hairstyles.ids(draft.athlete_category)[fields.hairstyle.selected]
+		category_hairstyles[draft.athlete_category] = draft.athlete.appearance.hairstyle
 	for key: String in ["height","weight","shoulders","legs"]: draft.athlete.appearance.set(key, fields[key].value)
 
 func _changed() -> void:
@@ -341,7 +344,10 @@ func _changed() -> void:
 
 func select_category(id: String) -> void:
 	if not Category.valid(id): return
+	_capture(true)
 	draft.athlete_category = id
+	draft.athlete.appearance.hairstyle = category_hairstyles[id]
+	fields.hairstyle.configure(Hairstyles.names(id), Hairstyles.ids(id).find(category_hairstyles[id]), "hair_" + id)
 	for index in range(category_buttons.size()): category_buttons[index].set_pressed_no_signal(Category.IDS[index] == id)
 	category_caption.text = "Selected: " + Category.label(id)
 	preview_model.apply_appearance(draft.athlete.appearance, id)
