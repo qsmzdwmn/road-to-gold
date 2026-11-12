@@ -1,8 +1,8 @@
 # road-to-gold
 
-## ROAD TO GOLD — Version 0.3.0: Career Hub foundation (review build)
+## ROAD TO GOLD — Version 0.4.0: Training foundation (review build)
 
-A Godot **4.6.3 standard / GDScript** career-creation prototype using the **Compatibility** renderer. No paid assets, APIs, plugins, services, or project dependencies. Version 0.2.3 adds the approved Golden Path branding and a static cinematic Golden Road main menu. The existing category, origin and athlete data remain in THE LOCKER ROOM: a five-step creator with a static full-body procedural preview, midnight/graphite panels, ivory text and muted gold accents. The existing dark menu, settings/help, test track, camera, lighting and keyboard movement are preserved. Version 0.3.0 adds a responsive, read-only Career Hub with real athlete data and honest unavailable states. There is no story, career-year simulation or sprint race yet.
+A Godot **4.6.3 standard / GDScript** career-creation prototype using the **Compatibility** renderer. No paid assets, APIs, plugins, services, or project dependencies. Version 0.2.3 adds the approved Golden Path branding and a static cinematic Golden Road main menu. The existing category, origin and athlete data remain in THE LOCKER ROOM: a five-step creator with a static full-body procedural preview, midnight/graphite panels, ivory text and muted gold accents. The existing dark menu, settings/help, test track, camera, lighting and keyboard movement are preserved. Version 0.3.0 adds a responsive Career Hub with real athlete data and honest unavailable states. Version 0.4.0 adds deterministic Training with previews, fatigue management and protected schema 4 migration. There is no story, career-year simulation or sprint race yet.
 
 ## Run locally
 
@@ -26,7 +26,7 @@ On Windows use the Godot executable's full path if it is not on PATH. For termin
 
 Opening New Career never writes this file. All creator steps share an in-memory draft; Back/Next and returning to the menu retain it within the session. A page reload discards unconfirmed drafts. Only final BEGIN CAREER commits a new record; if any slot already exists, a confirmation dialog must be accepted before replacement. Invalid names/data block creation. Failed writes leave the old save intact and keep the editable summary visible with an error.
 
-Continue reads all three schemas; a legacy save is never automatically rewritten or assigned an invented athlete. Save & Menu stores track position while preserving the complete career or the original legacy format. Escape/menu without saving does not update position. Invalid/unsupported saves disable Continue, show an error and remain unchanged unless the user explicitly confirms replacement. Writes use a temporary file then rename. Full backup/migration, multi-tab conflict handling and import/export remain future work.
+Continue reads schemas 1–4; a legacy save is never automatically rewritten or assigned an invented athlete. Save & Menu stores track position while preserving the complete career or the original legacy format. Escape/menu without saving does not update position. Invalid/unsupported saves disable Continue, show an error and remain unchanged even if New Career replacement is confirmed. Writes use a temporary file then rename. Schema 4 training migration keeps a verified original-save backup. General backup/restore UI, multi-tab conflict handling and import/export remain future work.
 
 In Web builds, Godot maps `user://` to browser storage, normally backed by IndexedDB. The UI warns when the filesystem reports nonpersistent storage. A successful write does not guarantee a browser has durably synchronized it. Wait briefly before closing/reloading, and verify on the actual browser/host. Saves are scoped to profile and site origin; they are not synced to another device. Private browsing, denied storage, clearing site data or changing host may lose saves. Use one tab for this prototype.
 
@@ -339,3 +339,22 @@ python3 -m http.server 8000 --directory builds/web
 Open `http://localhost:8000/index.html` in Chromium. Keep the same origin/port/profile for persistence tests. Create a career, inspect Hub and My Athlete, use Save & Menu, reload and Continue. Verify responsive scrolling at 1280×720 and 800×600. The existing Pages workflow remains manual-only; no workflow was dispatched.
 
 Latest Career Hub UI polish and fresh Chromium screenshots: [review report](tests/CAREER_HUB_UI_POLISH.md). This remains a feature-branch PR review build; it is not merged or deployed.
+
+## v0.4.0 Training foundation — PR review
+
+In Career Hub, choose Training. Ratings start at 50.00, independently of category, origin and appearance. Each Training Day has two actions. Select Sprint Drills, Start Practice, Endurance Run or Recovery Session to preview exact changes, then Confirm & Save. Cancel changes nothing. End Training Day previews fatigue reduction and resets daily actions; it never advances athlete age or the calendar. No timers or offline gains.
+
+The first confirmed training operation migrates a schema 2/3 career to schema 4 and keeps a verified, byte-identical original at `user://prototype_v1.json.pre-training-<content-hash>.bak`. Opening Training or cancelling does not migrate. The backup belongs to browser-local storage too; clearing site data removes it. Schema 4 is unreadable by older game versions. New careers initially use schema 3 until their first training operation. Legacy category absence and appearance IDs remain unchanged. Schema 1 still opens the original position sandbox.
+
+Malformed/incompatible/future saves are protected even from confirmed New Career replacement; they must be deliberately backed up/recovered outside the game rather than silently replaced. Schema 4 requires valid known training rules. Position saves preserve the entire training block. Training writes compare the expected saved-file hash and only publish the candidate state after a successful write. Duplicate confirmation and stale actions are rejected. This is optimistic protection; multiple active tabs remain unsupported. Web save completion cannot guarantee survival of browser storage clearing or an immediate forced close; keep the tab open briefly.
+
+Additional native checks, with isolated test user storage:
+
+```sh
+godot --headless --path . --script tests/training_rules_test.gd
+godot --headless --path . --script tests/training_persistence_test.gd
+godot --headless --path . --script tests/training_integration_test.gd
+godot --headless --path . --script tests/training_integration_test.gd -- --reload-training
+```
+
+Godot 4.6.3 Compatibility single-thread Web export and local HTTP serving instructions above remain valid. No workflow has been dispatched. See [finalization](tests/TRAINING_FOUNDATION_FINALIZATION.md) and [training verification](tests/TRAINING_FOUNDATION_VERIFICATION.md) for real test results, migration evidence, screenshots and limitations.

@@ -88,6 +88,10 @@ jobs:
           godot --headless --path . --script tests/studio_refinement_test.gd
           godot --headless --path . --script tests/career_hub_test.gd
           godot --headless --path . --script tests/career_hub_test.gd -- --reload-hub
+          godot --headless --path . --script tests/training_rules_test.gd
+          godot --headless --path . --script tests/training_persistence_test.gd
+          godot --headless --path . --script tests/training_integration_test.gd
+          godot --headless --path . --script tests/training_integration_test.gd -- --reload-training
 
       - name: Export single-thread Web build
         shell: bash

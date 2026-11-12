@@ -11,6 +11,9 @@ const Model = preload("res://scripts/customization/procedural_athlete.gd")
 var repository = Repository.new()
 var exploring := false
 var current_career = null
+var career_token := ""
+var training_snapshot: Dictionary = {}
+var training_busy := false
 var pending_career = null
 var creator
 var career_visual
@@ -31,6 +34,7 @@ func _ready() -> void:
 	hub.save_requested.connect(_save_hub_and_menu)
 	hub.track_requested.connect(_enter_track)
 	hub.settings_requested.connect(_hub_settings)
+	hub.training_requested.connect(_training_requested)
 	ui.settings_closed.connect(_settings_closed)
 	ui.hub_requested.connect(func(): _enter_hub("Back at Athlete HQ. Save & Menu keeps your track position.",false))
 	career_visual = Model.new()
@@ -95,6 +99,8 @@ func _commit_career(replace_authorized: bool) -> void:
 	if not repository.save_career(pending_career, Vector3.ZERO, replace_authorized):
 		creator.error.text = repository.error_message
 		return
+	training_snapshot=repository.load_snapshot()
+	career_token=repository.snapshot_token()
 	current_career = pending_career
 	pending_career = null
 	athlete.position = Vector3.ZERO
@@ -106,6 +112,8 @@ func _continue() -> void:
 	if snapshot.is_empty():
 		_refresh_save()
 		return
+	training_snapshot=snapshot
+	career_token=repository.snapshot_token()
 	current_career = Career.from_dict(snapshot.career) if snapshot.kind == "career" else null
 	athlete.position = Vector3(snapshot.position[0], 0, snapshot.position[1])
 	if current_career != null:
@@ -128,6 +136,7 @@ func _enter_hub(message := "Loaded saved career.", reset_page := true) -> void:
 	career_visual.apply_appearance(current_career.athlete.appearance,current_career.athlete_category)
 	career_visual.show()
 	hub.open(current_career,message,reset_page)
+	hub.training_panel.present(repository.training_for(training_snapshot),career_token,training_snapshot.get("schema_version")!=4)
 
 func _save_hub_and_menu() -> void:
 	# Never downgrade a missing/replaced career slot to an unrelated position probe.
@@ -170,7 +179,7 @@ func _enter_track() -> void:
 		career_visual.apply_appearance(current_career.athlete.appearance, current_career.athlete_category)
 
 func _save_and_menu() -> void:
-	var succeeded: bool = repository.save_position(athlete.position)
+	var succeeded: bool = repository.save_position(athlete.position,career_token)
 	var message: String = _save_notice() if succeeded else repository.error_message
 	_menu()
 	if not succeeded or (OS.has_feature("web") and not OS.is_userfs_persistent()):
@@ -223,3 +232,18 @@ func _unhandled_key_input(event: InputEvent) -> void:
 func _process(_delta: float) -> void:
 	if exploring:
 		ui.coordinates.text = "Position  %.1f / %.1f m" % [athlete.position.x, athlete.position.z]
+
+func _training_requested(id: String, expected_token: String) -> void:
+	if training_busy:return
+	training_busy=true
+	if not hub.visible or hub.active_section!="training" or expected_token!=career_token:
+		hub.training_panel.failed("Training preview is no longer current.")
+		training_busy=false
+		return
+	var result: Dictionary=repository.commit_training(id,expected_token,athlete.position)
+	if result.ok:
+		career_token=result.token
+		training_snapshot=repository.load_snapshot()
+		hub.training_panel.present(result.after,career_token,false,"Saved · "+("End Training Day" if id=="end_day" else preload("res://scripts/training/training_service.gd").ACTIVITIES[id].title)+"\n"+result.summary+"\n"+_save_notice())
+	else:hub.training_panel.failed(result.error)
+	training_busy=false

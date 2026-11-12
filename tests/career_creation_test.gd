@@ -147,7 +147,10 @@ func _run() -> void:
 	app._refresh_save()
 	check(app.ui.continue_button.disabled and not repo.error_message.is_empty(), "malformed v2 save disables Continue and reports validation error")
 	check(not repo.save_position(Vector3.ZERO) and FileAccess.get_file_as_string(PATH) == damaged, "track cannot overwrite unreadable career")
-	check(repo.save_career(other, Vector3.ZERO, true), "confirmed valid career can replace damaged slot")
+	check(not repo.save_career(other, Vector3.ZERO, true) and FileAccess.get_file_as_string(PATH)==damaged, "even confirmed creation preserves malformed save")
+	# Leave a valid fixture for the existing separate-process reload check.
+	DirAccess.remove_absolute(PATH)
+	check(repo.save_career(other, Vector3.ZERO), "fresh career remains possible in a deliberately cleared test slot")
 	print("CAREER TEST FAILURES: ", failures)
 	app.queue_free()
 	await process_frame

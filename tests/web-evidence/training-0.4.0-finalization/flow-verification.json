@@ -1,0 +1,163 @@
+{
+  "url": "http://127.0.0.1:8024/index.html",
+  "console": [
+    {
+      "type": "log",
+      "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+    },
+    {
+      "type": "log",
+      "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+    },
+    {
+      "type": "log",
+      "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+    },
+    {
+      "type": "log",
+      "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+    },
+    {
+      "type": "log",
+      "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+    },
+    {
+      "type": "log",
+      "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+    },
+    {
+      "type": "log",
+      "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+    },
+    {
+      "type": "log",
+      "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+    },
+    {
+      "type": "log",
+      "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+    }
+  ],
+  "page_errors": [],
+  "failed_requests": [],
+  "http_errors": [],
+  "checks": [
+    {
+      "pass": true,
+      "message": "version visible: VERSION 0.4.0"
+    },
+    {
+      "pass": true,
+      "message": "day visible: Training Day 1"
+    },
+    {
+      "pass": true,
+      "message": "initial-rating visible: Speed 50.00"
+    },
+    {
+      "pass": true,
+      "message": "one primary career slot"
+    },
+    {
+      "pass": true,
+      "message": "preview-exact-gain visible: 50.60"
+    },
+    {
+      "pass": true,
+      "message": "one primary career slot"
+    },
+    {
+      "pass": true,
+      "message": "cancel preserves schema 3 with no backup or progression"
+    },
+    {
+      "pass": true,
+      "message": "confirmation visible: Confirm & Save"
+    },
+    {
+      "pass": true,
+      "message": "one primary career slot"
+    },
+    {
+      "pass": true,
+      "message": "first action migrates and autosaves exact deterministic values"
+    },
+    {
+      "pass": true,
+      "message": "original career backup survives in IndexedDB"
+    },
+    {
+      "pass": true,
+      "message": "result-value visible: 50.60"
+    },
+    {
+      "pass": true,
+      "message": "confirmation visible: Confirm & Save"
+    },
+    {
+      "pass": true,
+      "message": "one primary career slot"
+    },
+    {
+      "pass": true,
+      "message": "second workout consumes final daily action with exact gains"
+    },
+    {
+      "pass": true,
+      "message": "day-preview visible: Training Day: 1"
+    },
+    {
+      "pass": true,
+      "message": "one primary career slot"
+    },
+    {
+      "pass": true,
+      "message": "End Day autosaves separately from athlete age"
+    },
+    {
+      "pass": true,
+      "message": "confirmation visible: Confirm & Save"
+    },
+    {
+      "pass": true,
+      "message": "one primary career slot"
+    },
+    {
+      "pass": true,
+      "message": "Recovery Session updates fatigue, rating and daily flag"
+    },
+    {
+      "pass": true,
+      "message": "one primary career slot"
+    },
+    {
+      "pass": true,
+      "message": "sandbox movement save retains training exactly"
+    },
+    {
+      "pass": true,
+      "message": "reload-day visible: Training Day 2"
+    },
+    {
+      "pass": true,
+      "message": "one primary career slot"
+    },
+    {
+      "pass": true,
+      "message": "reload Continue preserves trained career and sandbox position"
+    },
+    {
+      "pass": true,
+      "message": "one primary career slot"
+    },
+    {
+      "pass": true,
+      "message": "full browser restart preserves schema 4 and original backup"
+    },
+    {
+      "pass": true,
+      "message": "no recorded engine/JavaScript/WebAssembly/storage/network errors or warnings"
+    }
+  ],
+  "browser": "156.0.8078.79"
+}

@@ -63,3 +63,6 @@ Acceptance: all existing native coverage preserved with version/tab-context adap
 
 ## v0.3.0 — Golden Legacy + Athlete HQ foundation
 Review scope: responsive Overview/My Athlete, real saved athlete data, Begin/Continue routing, unchanged Player Card/appearance, shared Settings, and honest unavailable pages. Preserve schema 1/2/3 and movement sandbox. Acceptance: existing native coverage, both categories × three origins, legacy compatibility, local Chromium persistence/navigation/layout screenshots and official single-thread Web export. No training, races, AI, progression or experimental GLBs. Await visual/functional approval before any commit, push, merge or deployment.
+
+## v0.4.0 — deterministic Training foundation
+Implement rules/tests → schema4/backup/failure protection → Training UI/Hub integration → native and real Chromium persistence/export/screenshots. Preserve Athlete Studio, Player Card, stable models, cosmetics and sandbox movement. Await visual/functional approval before commit/push/merge/deploy. Calendar, aging, competition/race integration, backup-download UI and multi-tab coordination remain future milestones.

@@ -68,7 +68,7 @@ func _run() -> void:
 				check(hub.active_section==section and hub.pages[section].visible and hub.pages.values().filter(func(p):return p.visible).size()==1,"navigation has exactly one active page "+section)
 			check("No recorded performances" in _visible_text(hub.pages.records),"Records has an honest empty state without a fake result")
 			hub.select_section("training")
-			check("Coming Soon" in _visible_text(hub.pages.training) and "No training sessions" in _visible_text(hub.pages.training),"Training cannot start an unfinished mechanic")
+			check("Training Day" in _visible_text(hub.pages.training) and hub.training_panel.token==app.career_token,"Training uses the current saved career and day")
 			hub.select_section("calendar")
 			check("No events scheduled" in _visible_text(hub.pages.calendar),"Calendar has no fictitious event schedule")
 			hub.select_section("my_athlete")
@@ -128,6 +128,7 @@ func _run() -> void:
 	var future:="{\"schema_version\":99}";_write(future);app._menu();app._continue()
 	check(not hub.visible and app.ui.continue_button.disabled and FileAccess.get_file_as_string(PATH)==future,"unsupported saves remain protected and are not opened as a career")
 	# Leave a real valid fixture for the separate-process reload check.
+	DirAccess.remove_absolute(PATH) # Only this disposable test fixture; incompatible saves cannot be replaced.
 	check(repository.save_career(Career.from_dict(expected),Vector3.ZERO,true),"test fixture stores one real schema 3 career")
 	app.queue_free();await process_frame
 	print("CAREER HUB TEST FAILURES: ",failures);quit(failures)
