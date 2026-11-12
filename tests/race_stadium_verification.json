@@ -1,0 +1,1078 @@
+{
+  "native": [
+    {
+      "suite": "import",
+      "exit_code": 0,
+      "passes": 0,
+      "errors": []
+    },
+    {
+      "suite": "main",
+      "exit_code": 0,
+      "passes": 0,
+      "errors": []
+    },
+    {
+      "suite": "prototype",
+      "exit_code": 0,
+      "passes": 35,
+      "errors": []
+    },
+    {
+      "suite": "prototype-reload",
+      "exit_code": 0,
+      "passes": 1,
+      "errors": []
+    },
+    {
+      "suite": "career",
+      "exit_code": 0,
+      "passes": 82,
+      "errors": []
+    },
+    {
+      "suite": "career-reload",
+      "exit_code": 0,
+      "passes": 2,
+      "errors": []
+    },
+    {
+      "suite": "category",
+      "exit_code": 0,
+      "passes": 77,
+      "errors": []
+    },
+    {
+      "suite": "category-reload",
+      "exit_code": 0,
+      "passes": 2,
+      "errors": []
+    },
+    {
+      "suite": "locker",
+      "exit_code": 0,
+      "passes": 62,
+      "errors": []
+    },
+    {
+      "suite": "golden",
+      "exit_code": 0,
+      "passes": 72,
+      "errors": []
+    },
+    {
+      "suite": "studio",
+      "exit_code": 0,
+      "passes": 92,
+      "errors": []
+    },
+    {
+      "suite": "refinement",
+      "exit_code": 0,
+      "passes": 97,
+      "errors": []
+    },
+    {
+      "suite": "hub",
+      "exit_code": 0,
+      "passes": 186,
+      "errors": []
+    },
+    {
+      "suite": "hub-reload",
+      "exit_code": 0,
+      "passes": 2,
+      "errors": []
+    },
+    {
+      "suite": "training-rules",
+      "exit_code": 0,
+      "passes": 41,
+      "errors": []
+    },
+    {
+      "suite": "training-persistence",
+      "exit_code": 0,
+      "passes": 30,
+      "errors": []
+    },
+    {
+      "suite": "training-integration",
+      "exit_code": 0,
+      "passes": 86,
+      "errors": []
+    },
+    {
+      "suite": "training-reload",
+      "exit_code": 0,
+      "passes": 2,
+      "errors": []
+    },
+    {
+      "suite": "race-simulation",
+      "exit_code": 0,
+      "passes": 27,
+      "errors": []
+    },
+    {
+      "suite": "race-persistence",
+      "exit_code": 0,
+      "passes": 30,
+      "errors": []
+    },
+    {
+      "suite": "race-integration",
+      "exit_code": 0,
+      "passes": 35,
+      "errors": []
+    },
+    {
+      "suite": "stadium-environment",
+      "exit_code": 0,
+      "passes": 15,
+      "errors": []
+    },
+    {
+      "suite": "race-animation",
+      "exit_code": 0,
+      "passes": 17,
+      "errors": []
+    }
+  ],
+  "final_browser_runs": {
+    "browser-trailing-final": {
+      "url": "http://127.0.0.1:8026/index.html",
+      "console": [
+        {
+          "type": "log",
+          "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+        },
+        {
+          "type": "log",
+          "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+        },
+        {
+          "type": "log",
+          "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+        },
+        {
+          "type": "log",
+          "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"rhythm\",\"phase\":\"preparation\"}"
+        },
+        {
+          "type": "log",
+          "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"hold\",\"phase\":\"marks\"}"
+        },
+        {
+          "type": "log",
+          "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"hold\",\"phase\":\"set\"}"
+        },
+        {
+          "type": "log",
+          "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"hold\",\"phase\":\"running\"}"
+        },
+        {
+          "type": "log",
+          "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"hold\",\"phase\":\"results\"}"
+        },
+        {
+          "type": "log",
+          "text": "RACE_METRICS {\"frames\":54,\"godot_static_memory_bytes\":0,\"max_draw_calls\":164,\"mean_frame_ms\":332.19,\"p95_frame_ms\":539.7,\"runners\":8}"
+        },
+        {
+          "type": "log",
+          "text": "RACE_INPUT {\"mode\":\"hold\",\"reaction_us\":2200000,\"valid_presses\":1}"
+        },
+        {
+          "type": "log",
+          "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"hold\",\"phase\":\"preparation\"}"
+        },
+        {
+          "type": "log",
+          "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"hold\",\"phase\":\"marks\"}"
+        },
+        {
+          "type": "log",
+          "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"hold\",\"phase\":\"set\"}"
+        },
+        {
+          "type": "log",
+          "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"hold\",\"phase\":\"running\"}"
+        },
+        {
+          "type": "log",
+          "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"Race interrupted. Retry for a valid attempt.\",\"mode\":\"hold\",\"phase\":\"invalid\"}"
+        },
+        {
+          "type": "log",
+          "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+        },
+        {
+          "type": "log",
+          "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+        },
+        {
+          "type": "log",
+          "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+        }
+      ],
+      "page_errors": [],
+      "failed_requests": [],
+      "http_errors": [],
+      "checks": [
+        {
+          "pass": true,
+          "message": "observed actual race phase running"
+        },
+        {
+          "pass": true,
+          "message": "real rendered player legs remain at the moving player position after 50m"
+        },
+        {
+          "pass": true,
+          "message": "observed actual race phase results"
+        },
+        {
+          "pass": true,
+          "message": "deliberately slower trailing race does not replace existing PB"
+        },
+        {
+          "pass": true,
+          "message": "trailing-camera test preserves training and sandbox"
+        },
+        {
+          "pass": true,
+          "message": "observed actual race phase running"
+        },
+        {
+          "pass": true,
+          "message": "observed actual race phase invalid"
+        },
+        {
+          "pass": true,
+          "message": "actual keyboard interruption produces no result write"
+        },
+        {
+          "pass": true,
+          "message": "full browser restart preserves PB, results and training"
+        },
+        {
+          "pass": true,
+          "message": "no recorded engine/JavaScript/WebAssembly/storage/network errors or warnings"
+        }
+      ],
+      "browser": "156.0.8078.79",
+      "saved_result": {
+        "career_fingerprint": "83341c38ab1ee084a23f48d3f86a1dd0148dc787a91ef17478c3c61a019f8cc3",
+        "category": "male",
+        "event_id": "sprint_100m",
+        "id": "aa2a9c0241083ad12cb62a6c0ddbdb2c83b0a287ed79d43164893189ebef482f",
+        "mode": "hold",
+        "rows": [
+          {
+            "id": "ai_1",
+            "lane": 0,
+            "name": "Leo March",
+            "rank": 5,
+            "reaction_us": 220000,
+            "status": "FIN",
+            "time_us": 12903605
+          },
+          {
+            "id": "ai_2",
+            "lane": 1,
+            "name": "Noah Vale",
+            "rank": 2,
+            "reaction_us": 240000,
+            "status": "FIN",
+            "time_us": 12613381
+          },
+          {
+            "id": "ai_3",
+            "lane": 2,
+            "name": "Eli Rowan",
+            "rank": 6,
+            "reaction_us": 190000,
+            "status": "FIN",
+            "time_us": 13003984
+          },
+          {
+            "id": "player",
+            "lane": 3,
+            "name": "Alex Gold",
+            "rank": 8,
+            "reaction_us": 2200000,
+            "status": "FIN",
+            "time_us": 14471338
+          },
+          {
+            "id": "ai_4",
+            "lane": 4,
+            "name": "Owen Ash",
+            "rank": 1,
+            "reaction_us": 260000,
+            "status": "FIN",
+            "time_us": 12409118
+          },
+          {
+            "id": "ai_5",
+            "lane": 5,
+            "name": "Kai Mercer",
+            "rank": 7,
+            "reaction_us": 230000,
+            "status": "FIN",
+            "time_us": 13150785
+          },
+          {
+            "id": "ai_6",
+            "lane": 6,
+            "name": "Adam Reed",
+            "rank": 3,
+            "reaction_us": 210000,
+            "status": "FIN",
+            "time_us": 12732463
+          },
+          {
+            "id": "ai_7",
+            "lane": 7,
+            "name": "Luca Stone",
+            "rank": 4,
+            "reaction_us": 250000,
+            "status": "FIN",
+            "time_us": 12810102
+          }
+        ],
+        "rules_version": 1,
+        "seed": 7361502,
+        "source_token": "226495ea3429822d51d1b32f9bb05e1f8177549844b1a828238d4242995b2397"
+      },
+      "pb": {
+        "male/sprint_100m": {
+          "mode": "hold",
+          "result_id": "ce378b4cc1ab4f4a2cb0c374c03c9669b369839d3a0b6cee5fac1945c3b8e990",
+          "rules_version": 1,
+          "time_cs": 1231,
+          "time_us": 12304671
+        }
+      }
+    },
+    "browser-legacy-final": {
+      "url": "http://127.0.0.1:8026/index.html",
+      "console": [
+        {
+          "type": "log",
+          "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+        },
+        {
+          "type": "log",
+          "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+        },
+        {
+          "type": "log",
+          "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+        },
+        {
+          "type": "log",
+          "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+        },
+        {
+          "type": "log",
+          "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+        },
+        {
+          "type": "log",
+          "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+        },
+        {
+          "type": "log",
+          "text": "RACE_PHASE {\"category\":\"\",\"message\":\"\",\"mode\":\"rhythm\",\"phase\":\"preparation\"}"
+        },
+        {
+          "type": "log",
+          "text": "RACE_PHASE {\"category\":\"female\",\"message\":\"\",\"mode\":\"hold\",\"phase\":\"preparation\"}"
+        },
+        {
+          "type": "log",
+          "text": "RACE_PHASE {\"category\":\"female\",\"message\":\"\",\"mode\":\"hold\",\"phase\":\"marks\"}"
+        },
+        {
+          "type": "log",
+          "text": "RACE_PHASE {\"category\":\"female\",\"message\":\"\",\"mode\":\"hold\",\"phase\":\"set\"}"
+        },
+        {
+          "type": "log",
+          "text": "RACE_PHASE {\"category\":\"female\",\"message\":\"\",\"mode\":\"hold\",\"phase\":\"running\"}"
+        },
+        {
+          "type": "log",
+          "text": "RACE_PHASE {\"category\":\"female\",\"message\":\"\",\"mode\":\"hold\",\"phase\":\"results\"}"
+        },
+        {
+          "type": "log",
+          "text": "RACE_METRICS {\"frames\":63,\"godot_static_memory_bytes\":0,\"max_draw_calls\":163,\"mean_frame_ms\":249.8,\"p95_frame_ms\":375.4,\"runners\":8}"
+        },
+        {
+          "type": "log",
+          "text": "RACE_INPUT {\"mode\":\"hold\",\"reaction_us\":50000,\"valid_presses\":1}"
+        },
+        {
+          "type": "log",
+          "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+        },
+        {
+          "type": "log",
+          "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+        },
+        {
+          "type": "log",
+          "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+        },
+        {
+          "type": "log",
+          "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+        },
+        {
+          "type": "log",
+          "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+        },
+        {
+          "type": "log",
+          "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+        }
+      ],
+      "page_errors": [],
+      "failed_requests": [],
+      "http_errors": [],
+      "checks": [
+        {
+          "pass": true,
+          "message": "isolated fixture targets one career slot"
+        },
+        {
+          "pass": true,
+          "message": "uncategorized readiness is read-only"
+        },
+        {
+          "pass": true,
+          "message": "explicit category choice persists, preserves legacy values and verifies byte-original backup"
+        },
+        {
+          "pass": true,
+          "message": "observed actual race phase running"
+        },
+        {
+          "pass": true,
+          "message": "Hold mode selected through visible UI"
+        },
+        {
+          "pass": true,
+          "message": "observed actual race phase results"
+        },
+        {
+          "pass": true,
+          "message": "legacy race preserves all training and saves categorized PB"
+        },
+        {
+          "pass": true,
+          "message": "legacy race survives reload"
+        },
+        {
+          "pass": true,
+          "message": "isolated fixture targets one career slot"
+        },
+        {
+          "pass": true,
+          "message": "future-protected visible: Unsupported competition data"
+        },
+        {
+          "pass": true,
+          "message": "future competition block is untouched"
+        },
+        {
+          "pass": true,
+          "message": "no recorded engine/JavaScript/WebAssembly/storage/network errors or warnings"
+        }
+      ],
+      "browser": "156.0.8078.79"
+    },
+    "browser-rhythm-final": {
+      "url": "http://127.0.0.1:8026/index.html",
+      "console": [
+        {
+          "type": "log",
+          "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+        },
+        {
+          "type": "log",
+          "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+        },
+        {
+          "type": "log",
+          "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+        },
+        {
+          "type": "log",
+          "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"rhythm\",\"phase\":\"preparation\"}"
+        },
+        {
+          "type": "log",
+          "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"rhythm\",\"phase\":\"marks\"}"
+        },
+        {
+          "type": "log",
+          "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"rhythm\",\"phase\":\"set\"}"
+        },
+        {
+          "type": "log",
+          "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"rhythm\",\"phase\":\"running\"}"
+        },
+        {
+          "type": "log",
+          "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"rhythm\",\"phase\":\"results\"}"
+        },
+        {
+          "type": "log",
+          "text": "RACE_METRICS {\"frames\":76,\"godot_static_memory_bytes\":0,\"max_draw_calls\":163,\"mean_frame_ms\":227.09,\"p95_frame_ms\":329.6,\"runners\":8}"
+        },
+        {
+          "type": "log",
+          "text": "RACE_INPUT {\"mode\":\"rhythm\",\"reaction_us\":116667,\"valid_presses\":32}"
+        }
+      ],
+      "page_errors": [],
+      "failed_requests": [],
+      "http_errors": [],
+      "checks": [
+        {
+          "pass": true,
+          "message": "observed actual race phase running"
+        },
+        {
+          "pass": true,
+          "message": "observed actual race phase results"
+        },
+        {
+          "pass": true,
+          "message": "final export completes Rhythm mode using physical alternating keys at 800x600"
+        },
+        {
+          "pass": true,
+          "message": "final Rhythm run leaves all training values unchanged"
+        },
+        {
+          "pass": true,
+          "message": "no recorded engine/JavaScript/WebAssembly/storage/network errors or warnings"
+        }
+      ],
+      "browser": "156.0.8078.79",
+      "saved_result": {
+        "career_fingerprint": "83341c38ab1ee084a23f48d3f86a1dd0148dc787a91ef17478c3c61a019f8cc3",
+        "category": "male",
+        "event_id": "sprint_100m",
+        "id": "6dd4740d8a0b4ecd2835990f62e99278699b9d84742363adf586cd7d83ea9a80",
+        "mode": "rhythm",
+        "rows": [
+          {
+            "id": "ai_1",
+            "lane": 0,
+            "name": "Leo March",
+            "rank": 5,
+            "reaction_us": 220000,
+            "status": "FIN",
+            "time_us": 12903605
+          },
+          {
+            "id": "ai_2",
+            "lane": 1,
+            "name": "Noah Vale",
+            "rank": 2,
+            "reaction_us": 240000,
+            "status": "FIN",
+            "time_us": 12613381
+          },
+          {
+            "id": "ai_3",
+            "lane": 2,
+            "name": "Eli Rowan",
+            "rank": 6,
+            "reaction_us": 190000,
+            "status": "FIN",
+            "time_us": 13003984
+          },
+          {
+            "id": "player",
+            "lane": 3,
+            "name": "Alex Gold",
+            "rank": 8,
+            "reaction_us": 116667,
+            "status": "FIN",
+            "time_us": 13985931
+          },
+          {
+            "id": "ai_4",
+            "lane": 4,
+            "name": "Owen Ash",
+            "rank": 1,
+            "reaction_us": 260000,
+            "status": "FIN",
+            "time_us": 12409118
+          },
+          {
+            "id": "ai_5",
+            "lane": 5,
+            "name": "Kai Mercer",
+            "rank": 7,
+            "reaction_us": 230000,
+            "status": "FIN",
+            "time_us": 13150785
+          },
+          {
+            "id": "ai_6",
+            "lane": 6,
+            "name": "Adam Reed",
+            "rank": 3,
+            "reaction_us": 210000,
+            "status": "FIN",
+            "time_us": 12732463
+          },
+          {
+            "id": "ai_7",
+            "lane": 7,
+            "name": "Luca Stone",
+            "rank": 4,
+            "reaction_us": 250000,
+            "status": "FIN",
+            "time_us": 12810102
+          }
+        ],
+        "rules_version": 1,
+        "seed": 6665302,
+        "source_token": "8612bf02128652807728a33c3d273bec137a73889d5128a25611af5a7c6efdf6"
+      }
+    }
+  },
+  "balance": {
+    "attributes": {
+      "actions_used": 0,
+      "attributes": {
+        "acceleration": 5000,
+        "recovery": 5000,
+        "speed": 5000,
+        "stamina": 5000
+      },
+      "day": 1,
+      "fatigue": 0,
+      "recovery_used": false,
+      "revision": 0,
+      "rules_version": 1
+    },
+    "baseline_hold": {
+      "distance_at_8_35s": 64.2376877813544,
+      "mode": "hold",
+      "reaction_us": 200000,
+      "rows": [
+        {
+          "id": "ai_4",
+          "lane": 4,
+          "name": "Owen Ash",
+          "rank": 1,
+          "reaction_us": 260000,
+          "status": "FIN",
+          "time_us": 12409118
+        },
+        {
+          "id": "player",
+          "lane": 3,
+          "name": "Baseline Player",
+          "rank": 2,
+          "reaction_us": 200000,
+          "status": "FIN",
+          "time_us": 12471338
+        },
+        {
+          "id": "ai_2",
+          "lane": 1,
+          "name": "Noah Vale",
+          "rank": 3,
+          "reaction_us": 240000,
+          "status": "FIN",
+          "time_us": 12613381
+        },
+        {
+          "id": "ai_6",
+          "lane": 6,
+          "name": "Adam Reed",
+          "rank": 4,
+          "reaction_us": 210000,
+          "status": "FIN",
+          "time_us": 12732463
+        },
+        {
+          "id": "ai_7",
+          "lane": 7,
+          "name": "Luca Stone",
+          "rank": 5,
+          "reaction_us": 250000,
+          "status": "FIN",
+          "time_us": 12810102
+        },
+        {
+          "id": "ai_1",
+          "lane": 0,
+          "name": "Leo March",
+          "rank": 6,
+          "reaction_us": 220000,
+          "status": "FIN",
+          "time_us": 12903605
+        },
+        {
+          "id": "ai_3",
+          "lane": 2,
+          "name": "Eli Rowan",
+          "rank": 7,
+          "reaction_us": 190000,
+          "status": "FIN",
+          "time_us": 13003984
+        },
+        {
+          "id": "ai_5",
+          "lane": 5,
+          "name": "Kai Mercer",
+          "rank": 8,
+          "reaction_us": 230000,
+          "status": "FIN",
+          "time_us": 13150785
+        }
+      ]
+    },
+    "baseline_rhythm": {
+      "distance_at_8_35s": 64.2376877813544,
+      "mode": "rhythm",
+      "reaction_us": 200000,
+      "rows": [
+        {
+          "id": "ai_4",
+          "lane": 4,
+          "name": "Owen Ash",
+          "rank": 1,
+          "reaction_us": 260000,
+          "status": "FIN",
+          "time_us": 12409118
+        },
+        {
+          "id": "player",
+          "lane": 3,
+          "name": "Baseline Player",
+          "rank": 2,
+          "reaction_us": 200000,
+          "status": "FIN",
+          "time_us": 12471338
+        },
+        {
+          "id": "ai_2",
+          "lane": 1,
+          "name": "Noah Vale",
+          "rank": 3,
+          "reaction_us": 240000,
+          "status": "FIN",
+          "time_us": 12613381
+        },
+        {
+          "id": "ai_6",
+          "lane": 6,
+          "name": "Adam Reed",
+          "rank": 4,
+          "reaction_us": 210000,
+          "status": "FIN",
+          "time_us": 12732463
+        },
+        {
+          "id": "ai_7",
+          "lane": 7,
+          "name": "Luca Stone",
+          "rank": 5,
+          "reaction_us": 250000,
+          "status": "FIN",
+          "time_us": 12810102
+        },
+        {
+          "id": "ai_1",
+          "lane": 0,
+          "name": "Leo March",
+          "rank": 6,
+          "reaction_us": 220000,
+          "status": "FIN",
+          "time_us": 12903605
+        },
+        {
+          "id": "ai_3",
+          "lane": 2,
+          "name": "Eli Rowan",
+          "rank": 7,
+          "reaction_us": 190000,
+          "status": "FIN",
+          "time_us": 13003984
+        },
+        {
+          "id": "ai_5",
+          "lane": 5,
+          "name": "Kai Mercer",
+          "rank": 8,
+          "reaction_us": 230000,
+          "status": "FIN",
+          "time_us": 13150785
+        }
+      ]
+    },
+    "delayed_hold": {
+      "distance_at_8_35s": 47.677916666667,
+      "mode": "hold",
+      "reaction_us": 1983333,
+      "rows": [
+        {
+          "id": "ai_4",
+          "lane": 4,
+          "name": "Owen Ash",
+          "rank": 1,
+          "reaction_us": 260000,
+          "status": "FIN",
+          "time_us": 12409118
+        },
+        {
+          "id": "ai_2",
+          "lane": 1,
+          "name": "Noah Vale",
+          "rank": 2,
+          "reaction_us": 240000,
+          "status": "FIN",
+          "time_us": 12613381
+        },
+        {
+          "id": "ai_6",
+          "lane": 6,
+          "name": "Adam Reed",
+          "rank": 3,
+          "reaction_us": 210000,
+          "status": "FIN",
+          "time_us": 12732463
+        },
+        {
+          "id": "ai_7",
+          "lane": 7,
+          "name": "Luca Stone",
+          "rank": 4,
+          "reaction_us": 250000,
+          "status": "FIN",
+          "time_us": 12810102
+        },
+        {
+          "id": "ai_1",
+          "lane": 0,
+          "name": "Leo March",
+          "rank": 5,
+          "reaction_us": 220000,
+          "status": "FIN",
+          "time_us": 12903605
+        },
+        {
+          "id": "ai_3",
+          "lane": 2,
+          "name": "Eli Rowan",
+          "rank": 6,
+          "reaction_us": 190000,
+          "status": "FIN",
+          "time_us": 13003984
+        },
+        {
+          "id": "ai_5",
+          "lane": 5,
+          "name": "Kai Mercer",
+          "rank": 7,
+          "reaction_us": 230000,
+          "status": "FIN",
+          "time_us": 13150785
+        },
+        {
+          "id": "player",
+          "lane": 3,
+          "name": "Baseline Player",
+          "rank": 8,
+          "reaction_us": 1983333,
+          "status": "FIN",
+          "time_us": 14254671
+        }
+      ]
+    }
+  },
+  "performance": [
+    {
+      "frames": 79,
+      "godot_static_memory_bytes": 0,
+      "max_draw_calls": 124,
+      "mean_frame_ms": 232.51,
+      "p95_frame_ms": 291.6,
+      "runners": 8,
+      "approx_fps": 4.3,
+      "variant": "base",
+      "browser": "156.0.8078.79",
+      "js_heap": {
+        "used": 49319000,
+        "total": 54047876
+      },
+      "page_errors": [],
+      "warnings_errors": []
+    },
+    {
+      "frames": 79,
+      "godot_static_memory_bytes": 0,
+      "max_draw_calls": 131,
+      "mean_frame_ms": 324.5,
+      "p95_frame_ms": 417.2,
+      "runners": 8,
+      "approx_fps": 3.08,
+      "variant": "refined",
+      "browser": "156.0.8078.79",
+      "js_heap": {
+        "used": 10321568,
+        "total": 11106392
+      },
+      "page_errors": [],
+      "warnings_errors": []
+    },
+    {
+      "frames": 79,
+      "godot_static_memory_bytes": 0,
+      "max_draw_calls": 131,
+      "mean_frame_ms": 316.66,
+      "p95_frame_ms": 414.6,
+      "runners": 8,
+      "approx_fps": 3.16,
+      "variant": "refined",
+      "browser": "156.0.8078.79",
+      "js_heap": {
+        "used": 10412760,
+        "total": 11135064
+      },
+      "page_errors": [],
+      "warnings_errors": []
+    },
+    {
+      "frames": 79,
+      "godot_static_memory_bytes": 0,
+      "max_draw_calls": 124,
+      "mean_frame_ms": 250.89,
+      "p95_frame_ms": 323.9,
+      "runners": 8,
+      "approx_fps": 3.99,
+      "variant": "base",
+      "browser": "156.0.8078.79",
+      "js_heap": {
+        "used": 49169144,
+        "total": 50377860
+      },
+      "page_errors": [],
+      "warnings_errors": []
+    }
+  ],
+  "protected_sources": {
+    "all_unchanged": true,
+    "files": {
+      "scripts/race/sprint_physics.gd": {
+        "baseline": "c2610284216c1284876516ac8f61174fb17f1882b4d5c42cdb84c9fb946d5978",
+        "current": "c2610284216c1284876516ac8f61174fb17f1882b4d5c42cdb84c9fb946d5978"
+      },
+      "scripts/race/race_session.gd": {
+        "baseline": "dcba065a8fdb5f6f3ed63c3cb5e7a0916a8fae4f2e174351d11da2b5bf02bee7",
+        "current": "dcba065a8fdb5f6f3ed63c3cb5e7a0916a8fae4f2e174351d11da2b5bf02bee7"
+      },
+      "scripts/race/sprint_input.gd": {
+        "baseline": "e6b41f7e27004c34eced194d118acb9a47d8615dd0ee84ad4cd0435995f1113e",
+        "current": "e6b41f7e27004c34eced194d118acb9a47d8615dd0ee84ad4cd0435995f1113e"
+      },
+      "scripts/race/race_roster.gd": {
+        "baseline": "49d6fdd341352c98ac08800999aa7a3888b80b7b5d4d4a19f343bfa20b19e502",
+        "current": "49d6fdd341352c98ac08800999aa7a3888b80b7b5d4d4a19f343bfa20b19e502"
+      },
+      "scripts/race/competition_data.gd": {
+        "baseline": "e8fc177a7a403e33cc2b4e4d1210b39b5726aaa1d6b3e0a30821a09609c3b145",
+        "current": "e8fc177a7a403e33cc2b4e4d1210b39b5726aaa1d6b3e0a30821a09609c3b145"
+      },
+      "scripts/persistence/prototype_save_repository.gd": {
+        "baseline": "0a6740e412194f64b917eefa59e88fb90509b39d82b8669bf856b7ada70a94ed",
+        "current": "0a6740e412194f64b917eefa59e88fb90509b39d82b8669bf856b7ada70a94ed"
+      },
+      "scripts/training/training_state.gd": {
+        "baseline": "7f955bf999259da2cf9f1c9063645c264fbaadd6a72faf3e7a2610f862d03fc4",
+        "current": "7f955bf999259da2cf9f1c9063645c264fbaadd6a72faf3e7a2610f862d03fc4"
+      },
+      "scripts/training/training_service.gd": {
+        "baseline": "e8c3c7935e828c29bab4d503480c9ba67b208fd834791f9191330eb46d9825d7",
+        "current": "e8c3c7935e828c29bab4d503480c9ba67b208fd834791f9191330eb46d9825d7"
+      },
+      "scripts/ui/career_creator.gd": {
+        "baseline": "526a2ed6abf03eb5d9002b90b4996e7b18d891029c5c239f7e4debd518a17ea4",
+        "current": "526a2ed6abf03eb5d9002b90b4996e7b18d891029c5c239f7e4debd518a17ea4"
+      },
+      "scripts/ui/studio/player_card.gd": {
+        "baseline": "bc1cdceb856119527a1af2181ebcd1a4706a12881078c639f8d12e0f6bd6b2f4",
+        "current": "bc1cdceb856119527a1af2181ebcd1a4706a12881078c639f8d12e0f6bd6b2f4"
+      },
+      "scripts/input/placeholder_athlete.gd": {
+        "baseline": "aea05fd0bf5950cc8f7c015aafe95c87162c0b66299a200cd3dde15476ea6599",
+        "current": "aea05fd0bf5950cc8f7c015aafe95c87162c0b66299a200cd3dde15476ea6599"
+      },
+      "scripts/input/placeholder_input.gd": {
+        "baseline": "129879af8023c1953418b2a15adabfd33ccf9088ff0ca46a62b58bc73d35ed44",
+        "current": "129879af8023c1953418b2a15adabfd33ccf9088ff0ca46a62b58bc73d35ed44"
+      }
+    }
+  },
+  "presentation_review": {
+    "browser": "156.0.8078.79",
+    "page_errors": [],
+    "console": [
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      },
+      {
+        "type": "log",
+        "text": "REVIEW_READY"
+      },
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      },
+      {
+        "type": "log",
+        "text": "REVIEW_READY"
+      }
+    ],
+    "staged_geometry_review": true
+  },
+  "web_export": {
+    "engine": "4.6.3.stable.official.7d41c59c4",
+    "template_version": "4.6.3.stable",
+    "single_thread": true,
+    "preset": "Web",
+    "success": true,
+    "pck_bytes": 460064,
+    "pck_sha256": "703af864d371e87f390822a7ba1fc2b850afe7823272e7766d1e8da2f13054c5"
+  }
+}

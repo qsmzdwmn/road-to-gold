@@ -8,12 +8,15 @@ signal resume_requested
 signal hub_requested
 signal settings_closed
 
+const RaceQuality=preload("res://scripts/race/race_quality.gd")
 const GoldenMenu = preload("res://scripts/ui/golden_menu.gd")
 const Brand = preload("res://scripts/branding/brand.gd")
 var golden_menu
 var legacy_margin: MarginContainer
 var legacy_status: Label
 var menu: VBoxContainer
+var race_quality:OptionButton
+var quality_notice:Label
 var settings: VBoxContainer
 var hud: VBoxContainer
 var resume: Button
@@ -65,7 +68,12 @@ func _ready() -> void:
 	_label(stack, Brand.version_label(), 14)
 	settings = _section(stack)
 	_label(settings, "SETTINGS", 24)
-	_label(settings, "Move: WASD or arrow keys\nEscape: menu / pause\nSave & Menu: store position\n\nFixed low-cost graphics.\nNo audio in this prototype.", 18)
+	_label(settings, "Move: WASD or arrow keys\nEscape: menu / pause\nSave & Menu: store position\n\nNo audio in this prototype.", 18)
+	_label(settings,"Race graphics",18)
+	race_quality=OptionButton.new();race_quality.add_item("Performance (recommended)");race_quality.set_item_metadata(0,RaceQuality.PERFORMANCE);race_quality.add_item("Enhanced");race_quality.set_item_metadata(1,RaceQuality.ENHANCED);race_quality.custom_minimum_size.y=40;settings.add_child(race_quality)
+	race_quality.select(1 if RaceQuality.load_mode()==RaceQuality.ENHANCED else 0)
+	race_quality.item_selected.connect(_race_quality_selected)
+	quality_notice=_label(settings,"Race only. All eight runners and stadium architecture retained.",14)
 	_button(settings, "Back", _settings_back)
 	hud = _section(stack)
 	_label(hud, "TRACK EXPLORATION", 24)
@@ -114,6 +122,14 @@ func _button(parent: Node, text: String, callback: Callable) -> Button:
 	button.pressed.connect(callback)
 	parent.add_child(button)
 	return button
+
+func _race_quality_selected(_index:int):
+	var mode:String=race_quality.get_selected_metadata()
+	if RaceQuality.save_mode(mode)==OK:
+		quality_notice.text="Applies to the next race. Career data is unchanged."
+	else:
+		race_quality.select(1 if RaceQuality.load_mode()==RaceQuality.ENHANCED else 0)
+		quality_notice.text="Could not save graphics preference. Previous quality retained."
 
 func _settings_back() -> void:
 	show_menu()

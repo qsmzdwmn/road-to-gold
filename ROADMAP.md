@@ -66,3 +66,9 @@ Review scope: responsive Overview/My Athlete, real saved athlete data, Begin/Con
 
 ## v0.4.0 — deterministic Training foundation
 Implement rules/tests → schema4/backup/failure protection → Training UI/Hub integration → native and real Chromium persistence/export/screenshots. Preserve Athlete Studio, Player Card, stable models, cosmetics and sandbox movement. Await visual/functional approval before commit/push/merge/deploy. Calendar, aging, competition/race integration, backup-download UI and multi-tab coordination remain future milestones.
+
+## v0.5.0 — Development Meet / Stadium 1.0 review
+
+Current work is uncommitted on `feature/v0.5.0-stadium-rebuild`, branching from `feature/v0.5.0-first-100m-race`. Implemented: deterministic 100m, eight runners, both controls, starter/false starts, results/PB, safe schema4 integration and a coherent low-poly oval venue around the original sprint straight. Verify native regressions, browser controls/persistence, curve joins, camera clearance, export and measured performance before visual approval.
+
+Deferred: skeletal running animation, certified full-distance oval competitions, active infield sports, crowds with AI, additional meets and physical low-end Windows measurements. Commit, push, merge and deployment remain separate approval gates.
