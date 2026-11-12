@@ -1,0 +1,59 @@
+{
+  "url": "http://127.0.0.1:8024/index.html",
+  "console": [
+    {
+      "type": "log",
+      "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+    },
+    {
+      "type": "log",
+      "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+    },
+    {
+      "type": "log",
+      "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+    },
+    {
+      "type": "log",
+      "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+    },
+    {
+      "type": "log",
+      "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+    },
+    {
+      "type": "log",
+      "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+    }
+  ],
+  "page_errors": [],
+  "failed_requests": [],
+  "http_errors": [],
+  "checks": [
+    {
+      "pass": true,
+      "message": "fixture uses isolated single browser slot"
+    },
+    {
+      "pass": true,
+      "message": "migration-exact-preview visible: 50.60"
+    },
+    {
+      "pass": true,
+      "message": "saved-feedback visible: Saved"
+    },
+    {
+      "pass": true,
+      "message": "one primary career slot"
+    },
+    {
+      "pass": true,
+      "message": "final migration commits exact preview with byte-original backup and no inferred category"
+    },
+    {
+      "pass": true,
+      "message": "no recorded engine/JavaScript/WebAssembly/storage/network errors or warnings"
+    }
+  ],
+  "browser": "156.0.8078.79"
+}

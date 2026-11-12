@@ -1,9 +1,12 @@
 extends Control
-## Read-only career presentation. Main owns routing; Repository remains the only writer.
+## Career presentation and training commands. Main routes; Repository is the only writer.
 signal menu_requested
 signal save_requested
 signal track_requested
 signal settings_requested
+signal training_requested(id: String, token: String)
+const TrainingPanel=preload("res://scripts/ui/hub/training_panel.gd")
+var training_panel
 const Brand = preload("res://scripts/branding/brand.gd")
 const Catalog = preload("res://scripts/data/career_catalog.gd")
 const Category = preload("res://scripts/data/athlete_category.gd")
@@ -67,7 +70,7 @@ func _ready() -> void:
 		var button := _button(links,SECTIONS[id],func(): select_section(id))
 		if id=="training":
 			button.text="Training"
-			button.tooltip_text="Training is not available yet. Opens an information page only."
+			button.tooltip_text="Train attributes and manage fatigue."
 		button.toggle_mode=true
 		button.button_group=group
 		button.alignment=HORIZONTAL_ALIGNMENT_LEFT
@@ -120,7 +123,9 @@ func _ready() -> void:
 		pages[id]=page
 	_build_overview(pages.overview)
 	_build_athlete(pages.my_athlete)
-	_empty(pages.training,"Coming Soon","Training is not available yet. No training sessions can be started in this version. Your athlete's attributes stay unchanged.")
+	training_panel=TrainingPanel.new()
+	pages.training.add_child(training_panel)
+	training_panel.command_requested.connect(func(id: String, token: String): training_requested.emit(id,token))
 	_empty(pages.calendar,"No events scheduled","The career calendar is not available yet. There are no competitions to enter or dates to advance.")
 	_empty(pages.records,"No recorded performances","No race results or personal bests have been recorded. Competitions and record tracking are not available yet.")
 	main.add_child(HSeparator.new())
@@ -200,8 +205,8 @@ func _build_overview(page: VBoxContainer) -> void:
 	hero_row.add_child(state)
 	_label(state,"CAREER STATUS",12,GOLD)
 	_label(state,"Profile ready",19)
-	_label(state,"Training · Coming Soon",13,MUTED)
-	_label(state,"Not available yet",12,MUTED)
+	_label(state,"Training available",13,MUTED)
+	_label(state,"Choose Training to begin",12,MUTED)
 	var origin_row := VBoxContainer.new()
 	origin_row.add_theme_constant_override("separation",4)
 	page.add_child(origin_row)

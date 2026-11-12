@@ -1,0 +1,183 @@
+{
+  "url": "http://127.0.0.1:8024/index.html",
+  "console": [
+    {
+      "type": "log",
+      "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+    },
+    {
+      "type": "log",
+      "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+    },
+    {
+      "type": "log",
+      "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+    },
+    {
+      "type": "log",
+      "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+    },
+    {
+      "type": "log",
+      "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+    },
+    {
+      "type": "log",
+      "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+    },
+    {
+      "type": "log",
+      "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+    },
+    {
+      "type": "log",
+      "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+    },
+    {
+      "type": "log",
+      "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+    },
+    {
+      "type": "log",
+      "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+    },
+    {
+      "type": "log",
+      "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+    },
+    {
+      "type": "log",
+      "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+    },
+    {
+      "type": "log",
+      "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+    },
+    {
+      "type": "log",
+      "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+    },
+    {
+      "type": "log",
+      "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+    }
+  ],
+  "page_errors": [],
+  "failed_requests": [],
+  "http_errors": [],
+  "checks": [
+    {
+      "pass": true,
+      "message": "confirmation visible: Confirm & Save"
+    },
+    {
+      "pass": true,
+      "message": "one primary career slot"
+    },
+    {
+      "pass": true,
+      "message": "female Endurance Run uses baseline gains and fatigue"
+    },
+    {
+      "pass": true,
+      "message": "confirmation visible: Confirm & Save"
+    },
+    {
+      "pass": true,
+      "message": "one primary career slot"
+    },
+    {
+      "pass": true,
+      "message": "female recovery uses deterministic diminishing-return rounding"
+    },
+    {
+      "pass": true,
+      "message": "fixture uses isolated single browser slot"
+    },
+    {
+      "pass": true,
+      "message": "legacy-category visible: Not selected"
+    },
+    {
+      "pass": true,
+      "message": "legacy-style visible: Ponytail"
+    },
+    {
+      "pass": true,
+      "message": "one primary career slot"
+    },
+    {
+      "pass": true,
+      "message": "opening legacy Training leaves original schema unchanged"
+    },
+    {
+      "pass": true,
+      "message": "confirmation visible: Confirm & Save"
+    },
+    {
+      "pass": true,
+      "message": "one primary career slot"
+    },
+    {
+      "pass": true,
+      "message": "legacy migration preserves absent category, age and original hairstyle"
+    },
+    {
+      "pass": true,
+      "message": "legacy original backup is byte-identical in browser storage"
+    },
+    {
+      "pass": true,
+      "message": "one primary career slot"
+    },
+    {
+      "pass": true,
+      "message": "Hub Save & Menu preserves migrated legacy training"
+    },
+    {
+      "pass": true,
+      "message": "one primary career slot"
+    },
+    {
+      "pass": true,
+      "message": "migrated legacy training reloads unchanged"
+    },
+    {
+      "pass": true,
+      "message": "fixture uses isolated single browser slot"
+    },
+    {
+      "pass": true,
+      "message": "future-rules-error visible: Unsupported training rules"
+    },
+    {
+      "pass": true,
+      "message": "one primary career slot"
+    },
+    {
+      "pass": true,
+      "message": "future training rules remain untouched and unavailable"
+    },
+    {
+      "pass": true,
+      "message": "fixture uses isolated single browser slot"
+    },
+    {
+      "pass": true,
+      "message": "schema1-track visible: TRACK EXPLORATION"
+    },
+    {
+      "pass": true,
+      "message": "one primary career slot"
+    },
+    {
+      "pass": true,
+      "message": "schema 1 still opens sandbox without inventing athlete/training"
+    },
+    {
+      "pass": true,
+      "message": "no recorded engine/JavaScript/WebAssembly/storage/network errors or warnings"
+    }
+  ],
+  "browser": "156.0.8078.79"
+}

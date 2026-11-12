@@ -197,3 +197,12 @@ The user reviewed and approved the compact Legacy layout, selected rotation-only
 - [x] Fetch remote main and confirm feature branch is based on latest `e88438a`.
 - [x] Review intended production changes and preserve experimental branch separately.
 - [ ] Merge and deployment await separate user approval.
+
+## v0.4.0 Training foundation — review branch
+- [x] Verify latest main and isolate `feature/v0.4.0-training-foundation`.
+- [x] Deterministic rules, integer hundredths, preview/confirmation shared path, two actions/day and explicit End Training Day.
+- [x] Schema4 validation, schema2/3 original backups, legacy category preservation, incompatible-save protection, duplicate/stale/failure tests before enabling UI writes.
+- [x] Training UI and autosave integration; retain training through sandbox/Save & Menu.
+- [x] 869 native assertions, 74 real Chromium checks, official Web export and final screenshots; see training report.
+- [x] User visual/functional approval; feature-branch commit/push and PR authorized.
+- [ ] Merge and deployment require separate approval.
