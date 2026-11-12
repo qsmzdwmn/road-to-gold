@@ -1,0 +1,11 @@
+{
+  "scripts/ui/studio/player_card.gd": true,
+  "scripts/ui/career_creator.gd": true,
+  "scripts/persistence/prototype_save_repository.gd": true,
+  "scripts/career/career_data.gd": true,
+  "scripts/data/appearance_data.gd": true,
+  "scripts/data/hairstyle_catalog.gd": true,
+  "scripts/customization/procedural_athlete.gd": true,
+  "scripts/customization/procedural_hair.gd": true,
+  "scripts/customization/locker_room.gd": true
+}

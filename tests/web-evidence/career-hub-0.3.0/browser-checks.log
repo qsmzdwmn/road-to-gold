@@ -1,0 +1,34 @@
+PASS: version visible: VERSION 0.3.0
+PASS: hub-open visible: Overview
+PASS: hub-name visible: Nadia Gold
+PASS: hub-country visible: Azerbaijan
+PASS: hub-origin visible: THE CHOSEN ONE
+PASS: one persistent career slot
+PASS: Begin Career persists exact existing schema and canonical appearance before Hub
+PASS: empty-records visible: No recorded performances
+PASS: empty-training visible: Not available yet
+PASS: profile visible: ATHLETE PROFILE
+PASS: profile-height visible: 178 cm
+PASS: profile-weight visible: 67 kg
+PASS: training visible: Training is not available yet
+PASS: calendar visible: No events scheduled
+PASS: records visible: No recorded performances
+PASS: settings-reused visible: SETTINGS
+PASS: settings-return-profile visible: ATHLETE PROFILE
+PASS: one persistent career slot
+PASS: viewing pages and shared settings never rewrites career data
+PASS: menu-after-escape visible: ROAD TO GOLD
+PASS: continue-hub visible: Nadia Gold
+PASS: one persistent career slot
+PASS: Hub Save & Menu preserves schema, appearance and position exactly
+PASS: reload-hub visible: Nadia Gold
+PASS: one persistent career slot
+PASS: page reload and Continue reopen the same single career
+PASS: sandbox-mode visible: TRACK EXPLORATION
+PASS: back-from-track visible: Nadia Gold
+PASS: one persistent career slot
+PASS: sandbox movement saves position without changing career or inventing results
+PASS: restart-hub visible: Nadia Gold
+PASS: one persistent career slot
+PASS: full browser restart retains career and opens Hub
+PASS: no recorded engine/JavaScript/WebAssembly/storage/network errors or warnings

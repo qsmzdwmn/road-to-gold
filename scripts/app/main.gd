@@ -4,6 +4,7 @@ const Controls = preload("res://scripts/input/placeholder_input.gd")
 const Category = preload("res://scripts/data/athlete_category.gd")
 const Career = preload("res://scripts/career/career_data.gd")
 const CreatorScene = preload("res://scenes/ui/career_creator.tscn")
+const HubScene = preload("res://scenes/ui/career_hub.tscn")
 const Model = preload("res://scripts/customization/procedural_athlete.gd")
 @onready var athlete = $Track/Athlete
 @onready var ui = $CanvasLayer/UI
@@ -13,6 +14,8 @@ var current_career = null
 var pending_career = null
 var creator
 var career_visual
+var hub
+var settings_from_hub := false
 
 func _ready() -> void:
 	Controls.install_actions()
@@ -21,6 +24,15 @@ func _ready() -> void:
 	$CanvasLayer.add_child(creator)
 	creator.cancelled.connect(_menu)
 	creator.confirmed.connect(_career_requested)
+	hub = HubScene.instantiate()
+	hub.theme = ui.theme
+	$CanvasLayer.add_child(hub)
+	hub.menu_requested.connect(_menu)
+	hub.save_requested.connect(_save_hub_and_menu)
+	hub.track_requested.connect(_enter_track)
+	hub.settings_requested.connect(_hub_settings)
+	ui.settings_closed.connect(_settings_closed)
+	ui.hub_requested.connect(func(): _enter_hub("Back at Athlete HQ. Save & Menu keeps your track position.",false))
 	career_visual = Model.new()
 	athlete.add_child(career_visual)
 	career_visual.hide()
@@ -57,6 +69,8 @@ func _refresh_save() -> void:
 	ui.status.tooltip_text = ui.status.text
 
 func _new_requested() -> void:
+	hub.hide()
+	settings_from_hub = false
 	exploring = false
 	athlete.active = false
 	$Track.hide()
@@ -85,8 +99,7 @@ func _commit_career(replace_authorized: bool) -> void:
 	pending_career = null
 	athlete.position = Vector3.ZERO
 	creator.hide()
-	_enter_track()
-	ui.status.text = _save_notice()
+	_enter_hub(_save_notice())
 
 func _continue() -> void:
 	var snapshot: Dictionary = repository.load_snapshot()
@@ -95,16 +108,60 @@ func _continue() -> void:
 		return
 	current_career = Career.from_dict(snapshot.career) if snapshot.kind == "career" else null
 	athlete.position = Vector3(snapshot.position[0], 0, snapshot.position[1])
-	_enter_track()
-	ui.status.text = ("Loaded saved career. Category: " + Category.label(current_career.athlete_category)) if current_career != null else "Loaded saved test position."
+	if current_career != null:
+		_enter_hub("Loaded saved career.")
+	else:
+		_enter_track()
+		ui.status.text = "Loaded saved test position."
+
+func _enter_hub(message := "Loaded saved career.", reset_page := true) -> void:
+	if current_career == null:
+		_menu()
+		return
+	exploring = false
+	athlete.active = false
+	settings_from_hub = false
+	$Track.hide()
+	$GoldenRoad.hide()
+	creator.hide()
+	ui.hide()
+	career_visual.apply_appearance(current_career.athlete.appearance,current_career.athlete_category)
+	career_visual.show()
+	hub.open(current_career,message,reset_page)
+
+func _save_hub_and_menu() -> void:
+	# Never downgrade a missing/replaced career slot to an unrelated position probe.
+	var snapshot: Dictionary = repository.load_snapshot()
+	if snapshot.is_empty() or snapshot.kind!="career":
+		hub.status.text="Save failed: the saved career could not be verified. Your session is still open; no replacement was written."
+		hub.status.tooltip_text=hub.status.text+" " + repository.error_message
+		return
+	if Career.from_dict(snapshot.career).to_dict()!=current_career.to_dict():
+		hub.status.text="Save failed: the saved career changed. Return to the menu and Continue to reopen it."
+		hub.status.tooltip_text=hub.status.text
+		return
+	_save_and_menu()
+
+func _hub_settings() -> void:
+	settings_from_hub = true
+	hub.hide()
+	ui.show()
+	ui.show_settings()
+
+func _settings_closed() -> void:
+	if settings_from_hub:
+		_enter_hub("Loaded saved career.",false)
 
 func _enter_track() -> void:
+	hub.hide()
+	settings_from_hub = false
 	_set_track_visible(true)
 	exploring = true
 	athlete.active = true
 	creator.hide()
 	ui.show()
 	ui.show_track()
+	ui.hub_button.visible = current_career != null
 	career_visual.visible = current_career != null
 	for child: Node in athlete.get_children():
 		if child is MeshInstance3D:
@@ -128,6 +185,8 @@ func _save_notice() -> String:
 	return "Progress saved locally."
 
 func _menu() -> void:
+	hub.hide()
+	settings_from_hub = false
 	_set_track_visible(false)
 	exploring = false
 	athlete.active = false
@@ -151,8 +210,12 @@ func _notification(what: int) -> void:
 
 func _unhandled_key_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
-		if creator.visible:
+		if settings_from_hub and ui.settings.visible:
+			_enter_hub("Loaded saved career.",false)
+		elif creator.visible:
 			creator._back()
+		elif hub.visible and hub.active_section!="overview":
+			hub.select_section("overview")
 		else:
 			_menu()
 		get_viewport().set_input_as_handled()

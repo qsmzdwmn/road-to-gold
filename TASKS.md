@@ -176,3 +176,24 @@ The user reviewed and approved the compact Legacy layout, selected rotation-only
 - [x] Target only Buzz Cut, Crew Cut, Side Part, Long Straight, Long Wavy, Shoulder Length and Braided Hair; verify the other five meshes are unchanged.
 - [x] Re-run 521 native assertions, official Web export and real Chromium comparisons/accessibility checks; record scalp coverage and matched before/after evidence.
 - [x] Final hairstyles visually approved 2026-11-10; preserve existing v0.2.4.1 UI/save work unchanged during release.
+
+## v0.3.0 Career Hub foundation — review only
+- [x] Audit released v0.2.4.1 main and clean tree; isolate `feature/v0.3.0-career-hub`.
+- [x] Add Overview, read-only My Athlete, sidebar and shared Settings.
+- [x] Route confirmed new/continued careers to Hub through existing save system.
+- [x] Keep legacy category unselected; preserve schemas, appearance IDs and approved Player Card.
+- [x] Label unavailable training/calendar/records honestly; retain movement sandbox.
+- [x] Add native Hub regression, responsive screenshots and local real Chromium checks; see verification report for exact coverage/results.
+- [x] User visual and functional approval received; feature-branch commit/push and PR authorized.
+- [ ] Commit/push/merge/deploy only after separate authorization; none performed.
+
+### Career Hub UI polish — pending visual approval
+- [x] Compact athlete/status band, event/record columns, lightweight sandbox row and upper-right Save & Menu.
+- [x] Clean single-line Training sidebar label; Coming Soon inside Training.
+- [x] Preserve My Athlete, Player Card, model, routing and saves.
+- [x] Fresh Chromium screenshots and visual polish approved; finalize through a feature-branch PR. No merge or deployment.
+
+### v0.3.0 finalization
+- [x] Fetch remote main and confirm feature branch is based on latest `e88438a`.
+- [x] Review intended production changes and preserve experimental branch separately.
+- [ ] Merge and deployment await separate user approval.

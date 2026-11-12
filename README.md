@@ -1,15 +1,15 @@
 # road-to-gold
 
-## ROAD TO GOLD — Version 0.2.4: ATHLETE STUDIO 2.0
+## ROAD TO GOLD — Version 0.3.0: Career Hub foundation (review build)
 
-A Godot **4.6.3 standard / GDScript** career-creation prototype using the **Compatibility** renderer. No paid assets, APIs, plugins, services, or project dependencies. Version 0.2.3 adds the approved Golden Path branding and a static cinematic Golden Road main menu. The existing category, origin and athlete data remain in THE LOCKER ROOM: a five-step creator with a static full-body procedural preview, midnight/graphite panels, ivory text and muted gold accents. The existing dark menu, settings/help, test track, camera, lighting and keyboard movement are preserved. There is no story, career-year simulation or sprint race yet.
+A Godot **4.6.3 standard / GDScript** career-creation prototype using the **Compatibility** renderer. No paid assets, APIs, plugins, services, or project dependencies. Version 0.2.3 adds the approved Golden Path branding and a static cinematic Golden Road main menu. The existing category, origin and athlete data remain in THE LOCKER ROOM: a five-step creator with a static full-body procedural preview, midnight/graphite panels, ivory text and muted gold accents. The existing dark menu, settings/help, test track, camera, lighting and keyboard movement are preserved. Version 0.3.0 adds a responsive, read-only Career Hub with real athlete data and honest unavailable states. There is no story, career-year simulation or sprint race yet.
 
 ## Run locally
 
 1. Install/extract Godot 4.6.3 **standard**, not the .NET build. Import `project.godot` in the Project Manager.
 2. Press **F6** with `scenes/app/main.tscn` open, or **F5** to run the project.
-3. Select **New Career** → **Choose Your Athlete** → **Your Story** → **Your Appearance** → **Your Identity** → **Begin Your Legacy** → **Begin Career**. Use Back/Continue without losing choices. The last button saves and opens the test track; existing progress requires a replacement confirmation. **Continue** loads either an existing v0.1 track session or a v0.2 career.
-4. Move with **WASD or arrow keys**. **Escape** returns to the menu without saving. **Save & Menu** writes the current position. **Continue** restores it. **Settings → Back** returns to the menu.
+3. Select **New Career** → **Choose Your Athlete** → **Your Story** → **Your Appearance** → **Your Identity** → **Begin Your Legacy** → **Begin Career**. Use Back/Continue without losing choices. The last button saves and opens **Career Hub**; existing progress requires a replacement confirmation. **Continue** opens Hub for schema 2/3 careers; schema 1 position-only saves retain the original test track. Overview displays saved athlete data and honest empty states. My Athlete reuses the approved Player Card and stable appearance preview. Training, Calendar and Records are informational only. Settings reuses the existing screen. **Explore Track** opens the existing movement sandbox; **Career HQ** returns to Hub.
+4. In the track sandbox, move with **WASD or arrow keys**. **Escape** returns to the menu without saving. **Save & Menu** writes the current position. **Continue** restores it. **Settings → Back** returns to the menu.
 5. Losing application focus pauses movement; choose **Resume** to continue. The track limits exploration to its marked area.
 
 Command-line alternative, from the project root:
@@ -314,3 +314,28 @@ Run `godot --headless --path . --script tests/studio_refinement_test.gd` in addi
 The latest geometry-only follow-up is documented in [final hairstyle polish comparisons and verification](tests/HAIRSTYLE_POLISH_VERIFICATION.md). This supersedes the earlier hairstyle pictures and records the visually approved geometry. Historical review reports retain their original pre-approval status for provenance.
 
 Release verification is recorded in [the v0.2.4.1 release report](tests/RELEASE_0_2_4_1.md). Publication uses the existing manual workflow on main with deploy enabled; pushing alone does not deploy.
+
+## Career Hub review build
+
+Work is isolated on `feature/v0.3.0-career-hub`, based on released v0.2.4.1 (`e88438a`). The Hub is visually approved and prepared for PR review; merging and deployment require separate approval. [Audit](tests/CAREER_HUB_AUDIT.md) and [verification/screenshots](tests/CAREER_HUB_VERIFICATION.md) document this milestone.
+
+Hub navigation is read-only. Main Menu/Escape leaves without writing; Save & Menu explicitly saves the existing position and career through the original repository. The Hub guards against missing/replaced career slots. This does not implement full multi-tab conflict resolution. No save schemas or customization IDs change.
+
+Run the new native regression after the existing suites using isolated user data (the tests write disposable local save fixtures):
+
+```sh
+godot --headless --path . --script tests/career_hub_test.gd
+godot --headless --path . --script tests/career_hub_test.gd -- --reload-hub
+```
+
+For a local browser build, export with the matching official 4.6.3 templates, then serve rather than opening `file://`:
+
+```sh
+mkdir -p builds/web
+godot --headless --path . --export-release Web builds/web/index.html
+python3 -m http.server 8000 --directory builds/web
+```
+
+Open `http://localhost:8000/index.html` in Chromium. Keep the same origin/port/profile for persistence tests. Create a career, inspect Hub and My Athlete, use Save & Menu, reload and Continue. Verify responsive scrolling at 1280×720 and 800×600. The existing Pages workflow remains manual-only; no workflow was dispatched.
+
+Latest Career Hub UI polish and fresh Chromium screenshots: [review report](tests/CAREER_HUB_UI_POLISH.md). This remains a feature-branch PR review build; it is not merged or deployed.
