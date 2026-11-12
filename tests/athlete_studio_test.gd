@@ -107,7 +107,7 @@ func _run() -> void:
 	check(ui.draft.to_dict()==expected and ui.appearance_tab==2, "Back and Continue retain all fields and session tab")
 	check(not app.repository.has_file(), "Player Card review never writes before BEGIN CAREER")
 	ui._next()
-	check(app.exploring and app.repository.load_snapshot().schema_version==3 and Career.from_dict(app.repository.load_snapshot().career).to_dict()==expected, "BEGIN CAREER saves existing schema and enters existing gameplay")
+	check(app.hub.visible and not app.exploring and app.repository.load_snapshot().schema_version==3 and Career.from_dict(app.repository.load_snapshot().career).to_dict()==expected, "BEGIN CAREER saves existing schema and opens Career Hub")
 	app._menu()
 	app._continue()
 	check(app.current_career.to_dict()==expected, "Continue restores all Studio selections")

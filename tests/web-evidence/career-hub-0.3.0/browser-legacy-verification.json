@@ -1,0 +1,118 @@
+{
+  "url": "http://127.0.0.1:8022/index.html",
+  "console": [
+    {
+      "type": "log",
+      "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+    },
+    {
+      "type": "log",
+      "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+    },
+    {
+      "type": "log",
+      "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+    },
+    {
+      "type": "log",
+      "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+    },
+    {
+      "type": "log",
+      "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+    },
+    {
+      "type": "log",
+      "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+    },
+    {
+      "type": "log",
+      "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+    },
+    {
+      "type": "log",
+      "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+    },
+    {
+      "type": "log",
+      "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+    }
+  ],
+  "page_errors": [],
+  "failed_requests": [],
+  "http_errors": [],
+  "checks": [
+    {
+      "pass": true,
+      "message": "male-name visible: Adrian Gold"
+    },
+    {
+      "pass": true,
+      "message": "male-category visible: Male Athlete"
+    },
+    {
+      "pass": true,
+      "message": "male-age visible: Starting age 17"
+    },
+    {
+      "pass": true,
+      "message": "one persistent career slot"
+    },
+    {
+      "pass": true,
+      "message": "male Legacy creation opens Hub"
+    },
+    {
+      "pass": true,
+      "message": "fixture uses isolated single browser slot"
+    },
+    {
+      "pass": true,
+      "message": "legacy-category visible: Not selected"
+    },
+    {
+      "pass": true,
+      "message": "legacy-age visible: Starting age 15"
+    },
+    {
+      "pass": true,
+      "message": "one persistent career slot"
+    },
+    {
+      "pass": true,
+      "message": "schema 2 Continue leaves legacy data unchanged"
+    },
+    {
+      "pass": true,
+      "message": "legacy-hair visible: Ponytail"
+    },
+    {
+      "pass": true,
+      "message": "one persistent career slot"
+    },
+    {
+      "pass": true,
+      "message": "explicit legacy save preserves schema 2 and no category"
+    },
+    {
+      "pass": true,
+      "message": "fixture uses isolated single browser slot"
+    },
+    {
+      "pass": true,
+      "message": "probe-track visible: TRACK EXPLORATION"
+    },
+    {
+      "pass": true,
+      "message": "one persistent career slot"
+    },
+    {
+      "pass": true,
+      "message": "schema 1 loads original track without invented career"
+    },
+    {
+      "pass": true,
+      "message": "no recorded engine/JavaScript/WebAssembly/storage/network errors or warnings"
+    }
+  ]
+}

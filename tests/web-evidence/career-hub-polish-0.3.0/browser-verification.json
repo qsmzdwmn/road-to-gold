@@ -1,0 +1,183 @@
+{
+  "url": "http://127.0.0.1:8022/index.html",
+  "console": [
+    {
+      "type": "log",
+      "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+    },
+    {
+      "type": "log",
+      "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+    },
+    {
+      "type": "log",
+      "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+    },
+    {
+      "type": "log",
+      "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+    },
+    {
+      "type": "log",
+      "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+    },
+    {
+      "type": "log",
+      "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+    },
+    {
+      "type": "log",
+      "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+    },
+    {
+      "type": "log",
+      "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+    },
+    {
+      "type": "log",
+      "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+    }
+  ],
+  "page_errors": [],
+  "failed_requests": [],
+  "http_errors": [],
+  "checks": [
+    {
+      "pass": true,
+      "message": "version visible: VERSION 0.3.0"
+    },
+    {
+      "pass": true,
+      "message": "hub-open visible: Overview"
+    },
+    {
+      "pass": true,
+      "message": "hub-name visible: Nadia Gold"
+    },
+    {
+      "pass": true,
+      "message": "hub-country visible: Azerbaijan"
+    },
+    {
+      "pass": true,
+      "message": "hub-origin visible: THE CHOSEN ONE"
+    },
+    {
+      "pass": true,
+      "message": "one persistent career slot"
+    },
+    {
+      "pass": true,
+      "message": "Begin Career persists exact existing schema and canonical appearance before Hub"
+    },
+    {
+      "pass": true,
+      "message": "empty-records visible: No recorded performances"
+    },
+    {
+      "pass": true,
+      "message": "empty-training visible: Not available yet"
+    },
+    {
+      "pass": true,
+      "message": "profile visible: ATHLETE PROFILE"
+    },
+    {
+      "pass": true,
+      "message": "profile-height visible: 178 cm"
+    },
+    {
+      "pass": true,
+      "message": "profile-weight visible: 67 kg"
+    },
+    {
+      "pass": true,
+      "message": "training visible: Training is not available yet"
+    },
+    {
+      "pass": true,
+      "message": "calendar visible: No events scheduled"
+    },
+    {
+      "pass": true,
+      "message": "records visible: No recorded performances"
+    },
+    {
+      "pass": true,
+      "message": "settings-reused visible: SETTINGS"
+    },
+    {
+      "pass": true,
+      "message": "settings-return-profile visible: ATHLETE PROFILE"
+    },
+    {
+      "pass": true,
+      "message": "one persistent career slot"
+    },
+    {
+      "pass": true,
+      "message": "viewing pages and shared settings never rewrites career data"
+    },
+    {
+      "pass": true,
+      "message": "menu-after-escape visible: ROAD TO GOLD"
+    },
+    {
+      "pass": true,
+      "message": "continue-hub visible: Nadia Gold"
+    },
+    {
+      "pass": true,
+      "message": "one persistent career slot"
+    },
+    {
+      "pass": true,
+      "message": "Hub Save & Menu preserves schema, appearance and position exactly"
+    },
+    {
+      "pass": true,
+      "message": "reload-hub visible: Nadia Gold"
+    },
+    {
+      "pass": true,
+      "message": "one persistent career slot"
+    },
+    {
+      "pass": true,
+      "message": "page reload and Continue reopen the same single career"
+    },
+    {
+      "pass": true,
+      "message": "sandbox-mode visible: TRACK EXPLORATION"
+    },
+    {
+      "pass": true,
+      "message": "back-from-track visible: Nadia Gold"
+    },
+    {
+      "pass": true,
+      "message": "one persistent career slot"
+    },
+    {
+      "pass": true,
+      "message": "sandbox movement saves position without changing career or inventing results"
+    },
+    {
+      "pass": true,
+      "message": "restart-hub visible: Nadia Gold"
+    },
+    {
+      "pass": true,
+      "message": "one persistent career slot"
+    },
+    {
+      "pass": true,
+      "message": "full browser restart retains career and opens Hub"
+    },
+    {
+      "pass": true,
+      "message": "no recorded engine/JavaScript/WebAssembly/storage/network errors or warnings"
+    }
+  ],
+  "browser": "156.0.8078.79"
+}

@@ -5,6 +5,8 @@ signal continue_requested
 signal save_requested
 signal menu_requested
 signal resume_requested
+signal hub_requested
+signal settings_closed
 
 const GoldenMenu = preload("res://scripts/ui/golden_menu.gd")
 const Brand = preload("res://scripts/branding/brand.gd")
@@ -15,6 +17,7 @@ var menu: VBoxContainer
 var settings: VBoxContainer
 var hud: VBoxContainer
 var resume: Button
+var hub_button: Button
 var continue_button: Button
 var status: Label
 var coordinates: Label
@@ -63,7 +66,7 @@ func _ready() -> void:
 	settings = _section(stack)
 	_label(settings, "SETTINGS", 24)
 	_label(settings, "Move: WASD or arrow keys\nEscape: menu / pause\nSave & Menu: store position\n\nFixed low-cost graphics.\nNo audio in this prototype.", 18)
-	_button(settings, "Back", show_menu)
+	_button(settings, "Back", _settings_back)
 	hud = _section(stack)
 	_label(hud, "TRACK EXPLORATION", 24)
 	_label(hud, "WASD / arrows to move\nEscape to pause", 18)
@@ -71,6 +74,8 @@ func _ready() -> void:
 	resume = _button(hud, "Resume", func(): resume_requested.emit())
 	_button(hud, "Save & Menu", func(): save_requested.emit())
 	_button(hud, "Menu (without saving)", func(): menu_requested.emit())
+	hub_button = _button(hud,"Career HQ",func(): hub_requested.emit())
+	hub_button.hide()
 	legacy_status = _label(stack, "", 16)
 	status = legacy_status
 	confirmation = ConfirmationDialog.new()
@@ -109,6 +114,10 @@ func _button(parent: Node, text: String, callback: Callable) -> Button:
 	button.pressed.connect(callback)
 	parent.add_child(button)
 	return button
+
+func _settings_back() -> void:
+	show_menu()
+	settings_closed.emit()
 
 func show_menu() -> void:
 	legacy_margin.hide()

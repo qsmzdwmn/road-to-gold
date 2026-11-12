@@ -1,0 +1,18 @@
+PASS: male-name visible: Adrian Gold
+PASS: male-category visible: Male Athlete
+PASS: male-age visible: Starting age 17
+PASS: one persistent career slot
+PASS: male Legacy creation opens Hub
+PASS: fixture uses isolated single browser slot
+PASS: legacy-category visible: Not selected
+PASS: legacy-age visible: Starting age 15
+PASS: one persistent career slot
+PASS: schema 2 Continue leaves legacy data unchanged
+PASS: legacy-hair visible: Ponytail
+PASS: one persistent career slot
+PASS: explicit legacy save preserves schema 2 and no category
+PASS: fixture uses isolated single browser slot
+PASS: probe-track visible: TRACK EXPLORATION
+PASS: one persistent career slot
+PASS: schema 1 loads original track without invented career
+PASS: no recorded engine/JavaScript/WebAssembly/storage/network errors or warnings

@@ -86,6 +86,8 @@ jobs:
           godot --headless --path . --script tests/golden_menu_test.gd
           godot --headless --path . --script tests/athlete_studio_test.gd
           godot --headless --path . --script tests/studio_refinement_test.gd
+          godot --headless --path . --script tests/career_hub_test.gd
+          godot --headless --path . --script tests/career_hub_test.gd -- --reload-hub
 
       - name: Export single-thread Web build
         shell: bash

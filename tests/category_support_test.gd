@@ -84,6 +84,7 @@ func _run() -> void:
 				app._confirm_new()
 			var saved: Dictionary = repo.load_snapshot()
 			check(saved.schema_version == 3 and saved.career.athlete_category == category and saved.career.origin_id == origin.id and saved.career.age == origin.age, "%s / %s saved with correct category and age" % [category, origin.id])
+			app.hub.track_requested.emit()
 			app.athlete.position = Vector3(1, 0, -2)
 			app._save_and_menu()
 			app._continue()

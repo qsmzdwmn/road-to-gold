@@ -50,6 +50,7 @@ func _run() -> void:
 	for i in range(5):
 		app.creator._next()
 	check(repository.load_position() == Vector3.ZERO, "confirmed career saves initial position")
+	app.hub.track_requested.emit() # Preserve physical-input regression through the explicit sandbox entry.
 	var before: Vector3 = app.athlete.position
 	key(KEY_W, true)
 	for i in range(15):
