@@ -92,6 +92,12 @@ jobs:
           godot --headless --path . --script tests/training_persistence_test.gd
           godot --headless --path . --script tests/training_integration_test.gd
           godot --headless --path . --script tests/training_integration_test.gd -- --reload-training
+          godot --headless --path . --script tests/race_simulation_test.gd
+          godot --headless --path . --script tests/race_persistence_test.gd
+          godot --headless --path . --script tests/race_integration_test.gd
+          godot --headless --path . --script tests/stadium_environment_test.gd
+          godot --headless --path . --script tests/race_animation_test.gd
+          godot --headless --path . --script tests/race_quality_test.gd
 
       - name: Export single-thread Web build
         shell: bash

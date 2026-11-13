@@ -4,6 +4,10 @@ signal menu_requested
 signal save_requested
 signal track_requested
 signal settings_requested
+signal race_requested
+const Competition=preload("res://scripts/race/competition_data.gd")
+var pb_overview:Label
+var records_body:VBoxContainer
 signal training_requested(id: String, token: String)
 const TrainingPanel=preload("res://scripts/ui/hub/training_panel.gd")
 var training_panel
@@ -127,7 +131,8 @@ func _ready() -> void:
 	pages.training.add_child(training_panel)
 	training_panel.command_requested.connect(func(id: String, token: String): training_requested.emit(id,token))
 	_empty(pages.calendar,"No events scheduled","The career calendar is not available yet. There are no competitions to enter or dates to advance.")
-	_empty(pages.records,"No recorded performances","No race results or personal bests have been recorded. Competitions and record tracking are not available yet.")
+	records_body=VBoxContainer.new();records_body.add_theme_constant_override("separation",12);pages.records.add_child(records_body)
+	present_competition({})
 	main.add_child(HSeparator.new())
 	status=_label(main,"",13,MUTED)
 	status.custom_minimum_size.y=36
@@ -218,14 +223,15 @@ func _build_overview(page: VBoxContainer) -> void:
 	page.add_child(overview_grid)
 	var event := _card(overview_grid)
 	_label(event,"UPCOMING EVENT",12,GOLD)
-	_label(event,"No events scheduled",19)
+	_label(event,"Development Meet - 100m",19)
 	event.add_child(HSeparator.new())
-	_label(event,"Competition scheduling is coming soon.",14,MUTED)
+	_label(event,"Repeatable categorized event. Training days stay separate.",14,MUTED)
+	_button(event,"Enter 100m",func():race_requested.emit())
 	var records := _card(overview_grid)
 	_label(records,"PERSONAL BEST",12,GOLD)
-	_label(records,"No recorded performances",19)
+	pb_overview=_label(records,"No recorded performances",19)
 	records.add_child(HSeparator.new())
-	_label(records,"Your results will appear here when competitions are available.",14,MUTED)
+	_label(records,"Valid saved 100m finishes update your category Personal Best.",14,MUTED)
 	var sandbox := HBoxContainer.new()
 	sandbox.add_theme_constant_override("separation",16)
 	page.add_child(sandbox)
@@ -314,3 +320,18 @@ func _resize() -> void:
 	for edge: String in ["left","right","top","bottom"]:main_margin.add_theme_constant_override("margin_"+edge,16 if size.x<1000 else 24)
 	overview_grid.columns=2
 	athlete_layout.vertical=size.x<1100
+
+func present_competition(block:Dictionary):
+	if records_body==null:return
+	for child:Node in records_body.get_children():records_body.remove_child(child);child.queue_free()
+	var scope:=Category.competition_scope(career.athlete_category,Competition.EVENT) if career!=null else ""
+	var pb:Dictionary=block.get("records",{}).get(scope,{})
+	pb_overview.text=(Competition.time_text(pb.time_us)+" s - 100m") if not pb.is_empty() else "No recorded performances"
+	_label(records_body,"100m PERSONAL BEST",20,GOLD)
+	_label(records_body,pb_overview.text,24)
+	if career!=null:_label(records_body,Category.label(career.athlete_category),15,MUTED)
+	if block.has("latest"):
+		_label(records_body,"LATEST DEVELOPMENT MEET",16,GOLD)
+		for row:Dictionary in Competition.classify(block.latest.rows):
+			_label(records_body,"%s  %s  %s" % [str(row.rank) if row.rank>0 else "DNF",row.name,Competition.time_text(row.time_us)+" s" if row.status=="FIN" else "DNF"],16)
+	else:_label(records_body,"Finish a valid Development Meet to record a result. No historical results are invented.",16,MUTED)

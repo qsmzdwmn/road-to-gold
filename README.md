@@ -358,3 +358,31 @@ godot --headless --path . --script tests/training_integration_test.gd -- --reloa
 ```
 
 Godot 4.6.3 Compatibility single-thread Web export and local HTTP serving instructions above remain valid. No workflow has been dispatched. See [finalization](tests/TRAINING_FOUNDATION_FINALIZATION.md) and [training verification](tests/TRAINING_FOUNDATION_VERIFICATION.md) for real test results, migration evidence, screenshots and limitations.
+
+## v0.5.0 — Development Meet and Stadium 1.0 review
+
+The uncommitted review build on `feature/v0.5.0-stadium-rebuild` extends the race development branch. Career Hub → Enter 100m opens readiness. Choose Rhythm Sprint (alternate A/D or arrows around four presses/second) or Hold Sprint (hold Space after GO). Release sprint keys before Ready. Early presses recall the attempt; Escape or focus loss interrupts it. Eight runners race the authoritative 100m straight; the surrounding oval and athletics equipment are decorative.
+
+Completed results show Place, Lane, Athlete and Time, with the player highlighted. Results/PB save through the existing repository; legacy athletes must explicitly select a category before racing. Original saves are backed up on migration, and training/sandbox saves retain competition data. Invalid/future/stale saves are protected.
+
+Run all existing tests plus these focused suites in disposable user storage:
+
+```sh
+godot --headless --path . --script tests/race_simulation_test.gd
+godot --headless --path . --script tests/race_persistence_test.gd
+godot --headless --path . --script tests/race_integration_test.gd
+godot --headless --path . --script tests/stadium_environment_test.gd
+godot --headless --path . --script tests/race_animation_test.gd
+```
+
+The existing official Godot 4.6.3 single-thread `Web` preset and HTTP-server instructions still apply. No workflow or deployment is triggered. See [stadium verification, screenshots and measured limits](tests/RACE_STADIUM_VERIFICATION.md).
+
+### v0.5.0 performance gate follow-up
+
+Settings → Race graphics now offers **Performance (default)** and **Enhanced**. Both retain all eight runners and the complete stadium. Performance reduces the crowd and replaces costly dynamic shadows/MSAA with cheap contact shadows; Enhanced restores the approved appearance. Preferences use `user://race_graphics.cfg`, independently of career saves. The setting applies to the next race.
+
+**1,007 native assertions, 13 additional Chromium quality checks and the official single-thread Web export pass.** Hardware GPU testing is unavailable in this cloud environment; SwiftShader FPS is not representative of normal GPU performance. See [measurements, memory, screenshots and the remaining release gate](tests/PERFORMANCE_RELEASE_GATE.md). No commit, push or deployment performed.
+
+### v0.5.0 release PR preparation
+
+Approved for feature-branch integration review. Fresh validation: **1,007 native assertions, 45 Chromium checks and the official Godot 4.6.3 single-thread Web export pass**. Performance is the default graphics profile; Enhanced remains selectable. Existing career/Training/PB and legacy-save protections are verified. Physical low-end Windows GPU performance and genuine browser-window blur remain unverified. See [release preparation and limitations](tests/V0_5_0_RELEASE_PREPARATION.md). The manual workflow includes all new native suites; no merge or deployment is authorized by this preparation.

@@ -3,6 +3,8 @@ extends RefCounted
 const Career = preload("res://scripts/career/career_data.gd")
 const TrainingState = preload("res://scripts/training/training_state.gd")
 const Rules = preload("res://scripts/training/training_service.gd")
+const Competition=preload("res://scripts/race/competition_data.gd")
+const Category=preload("res://scripts/data/athlete_category.gd")
 const DEFAULT_PATH := "user://prototype_v1.json"
 const MAX_BYTES := 16384
 var path: String
@@ -47,6 +49,11 @@ func load_snapshot() -> Dictionary:
 		var training_error := TrainingState.validate(parsed.get("training"))
 		if not training_error.is_empty():return _invalid(training_error+" Saved progress was left unchanged.")
 		parsed.training=TrainingState.normalize(parsed.training)
+	if parsed.has("competition"):
+		if parsed.schema_version!=4:return _invalid("Competition data requires schema 4; saved progress was left unchanged.")
+		var competition_error:=Competition.validate(parsed.competition,parsed.career.get("athlete_category",""))
+		if not competition_error.is_empty():return _invalid(competition_error+" Saved progress was left unchanged.")
+		parsed.competition=Competition.normalize_block(parsed.competition)
 	return parsed
 
 func load_position() -> Variant:
@@ -154,3 +161,43 @@ func commit_training(id: String, expected_token: String, position: Vector3) -> D
 	if not _write(snapshot,position):return {"ok":false,"error":error_message}
 	result.token=snapshot_token()
 	return result
+
+func career_fingerprint(snapshot:Dictionary) -> String:
+	return JSON.stringify(Career.from_dict(snapshot.career).to_dict()).sha256_text()
+
+func choose_race_category(category:String,expected_token:String,position:Vector3) -> Dictionary:
+	var snapshot:=load_snapshot()
+	if snapshot.is_empty() or snapshot.get("kind")!="career" or not Category.valid(category):return {"ok":false,"error":"A valid saved career and explicit category are required."}
+	if snapshot.career.has("athlete_category"):return {"ok":false,"error":"This career already has an athlete category."}
+	if expected_token.is_empty() or snapshot_token()!=expected_token:return {"ok":false,"error":"Saved progress changed. Continue again before selecting a category."}
+	var original:=FileAccess.get_file_as_string(path)
+	if not _backup(original):return {"ok":false,"error":error_message}
+	if snapshot_token()!=expected_token:return {"ok":false,"error":"Saved progress changed during preparation."}
+	if snapshot.schema_version!=4:snapshot.training=TrainingState.initial()
+	snapshot.schema_version=4;snapshot.career.athlete_category=category
+	if not _write(snapshot,position):return {"ok":false,"error":error_message}
+	return {"ok":true,"token":snapshot_token()}
+
+func commit_race(result:Dictionary,expected_token:String,position:Vector3) -> Dictionary:
+	var snapshot:=load_snapshot()
+	if snapshot.is_empty() or snapshot.get("kind")!="career":return {"ok":false,"error":"Saved career is unavailable or incompatible. "+error_message}
+	var validation:=Competition.validate_result(result)
+	if not validation.is_empty():return {"ok":false,"error":validation}
+	if snapshot.career.get("athlete_category","")!=result.category or career_fingerprint(snapshot)!=result.career_fingerprint:return {"ok":false,"error":"Race result belongs to a different career/category."}
+	if snapshot.has("competition") and snapshot.competition.latest.id==result.id:
+		return {"ok":true,"duplicate":true,"token":snapshot_token(),"new_pb":false}
+	if expected_token.is_empty() or snapshot_token()!=expected_token or result.source_token!=expected_token:return {"ok":false,"error":"Saved progress changed. This result cannot overwrite a newer save."}
+	var previous:Dictionary=snapshot.get("competition",{})
+	var next:=Competition.apply(previous,result)
+	validation=Competition.validate(next,result.category)
+	if not validation.is_empty():return {"ok":false,"error":validation}
+	var original:=FileAccess.get_file_as_string(path)
+	if snapshot.schema_version!=4:
+		if not _backup(original):return {"ok":false,"error":error_message}
+		snapshot.training=TrainingState.initial()
+	if snapshot_token()!=expected_token:return {"ok":false,"error":"Saved progress changed during preparation."}
+	var scope:=Category.competition_scope(result.category,Competition.EVENT)
+	var new_pb:bool=next.records.has(scope) and (not previous.get("records",{}).has(scope) or next.records[scope].time_cs<previous.records[scope].time_cs)
+	snapshot.schema_version=4;snapshot.competition=next
+	if not _write(snapshot,position):return {"ok":false,"error":error_message}
+	return {"ok":true,"duplicate":false,"token":snapshot_token(),"new_pb":new_pb}

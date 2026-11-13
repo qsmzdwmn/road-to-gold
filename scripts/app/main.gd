@@ -5,6 +5,8 @@ const Category = preload("res://scripts/data/athlete_category.gd")
 const Career = preload("res://scripts/career/career_data.gd")
 const CreatorScene = preload("res://scenes/ui/career_creator.tscn")
 const HubScene = preload("res://scenes/ui/career_hub.tscn")
+const RaceScene=preload("res://scenes/race/race_screen.tscn")
+var race_view
 const Model = preload("res://scripts/customization/procedural_athlete.gd")
 @onready var athlete = $Track/Athlete
 @onready var ui = $CanvasLayer/UI
@@ -35,6 +37,11 @@ func _ready() -> void:
 	hub.track_requested.connect(_enter_track)
 	hub.settings_requested.connect(_hub_settings)
 	hub.training_requested.connect(_training_requested)
+	hub.race_requested.connect(_enter_race)
+	race_view=RaceScene.instantiate();race_view.theme=ui.theme;$CanvasLayer.add_child(race_view)
+	race_view.hub_requested.connect(_return_from_race)
+	race_view.category_requested.connect(_race_category)
+	race_view.result_ready.connect(_race_finished)
 	ui.settings_closed.connect(_settings_closed)
 	ui.hub_requested.connect(func(): _enter_hub("Back at Athlete HQ. Save & Menu keeps your track position.",false))
 	career_visual = Model.new()
@@ -73,6 +80,7 @@ func _refresh_save() -> void:
 	ui.status.tooltip_text = ui.status.text
 
 func _new_requested() -> void:
+	race_view.close()
 	hub.hide()
 	settings_from_hub = false
 	exploring = false
@@ -123,6 +131,7 @@ func _continue() -> void:
 		ui.status.text = "Loaded saved test position."
 
 func _enter_hub(message := "Loaded saved career.", reset_page := true) -> void:
+	race_view.close()
 	if current_career == null:
 		_menu()
 		return
@@ -137,6 +146,7 @@ func _enter_hub(message := "Loaded saved career.", reset_page := true) -> void:
 	career_visual.show()
 	hub.open(current_career,message,reset_page)
 	hub.training_panel.present(repository.training_for(training_snapshot),career_token,training_snapshot.get("schema_version")!=4)
+	hub.present_competition(training_snapshot.get("competition",{}))
 
 func _save_hub_and_menu() -> void:
 	# Never downgrade a missing/replaced career slot to an unrelated position probe.
@@ -162,6 +172,7 @@ func _settings_closed() -> void:
 		_enter_hub("Loaded saved career.",false)
 
 func _enter_track() -> void:
+	race_view.close()
 	hub.hide()
 	settings_from_hub = false
 	_set_track_visible(true)
@@ -194,6 +205,7 @@ func _save_notice() -> String:
 	return "Progress saved locally."
 
 func _menu() -> void:
+	race_view.close()
 	hub.hide()
 	settings_from_hub = false
 	_set_track_visible(false)
@@ -247,3 +259,31 @@ func _training_requested(id: String, expected_token: String) -> void:
 		hub.training_panel.present(result.after,career_token,false,"Saved · "+("End Training Day" if id=="end_day" else preload("res://scripts/training/training_service.gd").ACTIVITIES[id].title)+"\n"+result.summary+"\n"+_save_notice())
 	else:hub.training_panel.failed(result.error)
 	training_busy=false
+
+func _enter_race() -> void:
+	var snapshot:=repository.load_snapshot()
+	if snapshot.is_empty() or snapshot.get("kind")!="career" or repository.snapshot_token()!=career_token:
+		hub.status.text="Saved progress changed or is unavailable. Return to the menu and Continue before racing."
+		return
+	exploring=false;athlete.active=false;hub.hide();ui.hide();creator.hide();$Track.hide();$GoldenRoad.hide()
+	race_view.open(snapshot,current_career,career_token,repository.career_fingerprint(snapshot))
+
+func _return_from_race() -> void:
+	_enter_hub("Returned from Development Meet. Training and sandbox progress preserved.")
+
+func _race_category(category:String) -> void:
+	var result:Dictionary=repository.choose_race_category(category,career_token,athlete.position)
+	if not result.ok:
+		race_view.readiness_status.text=result.error
+		return
+	career_token=result.token;training_snapshot=repository.load_snapshot();current_career=Career.from_dict(training_snapshot.career)
+	race_view.open(training_snapshot,current_career,career_token,repository.career_fingerprint(training_snapshot))
+
+func _race_finished(result:Dictionary) -> void:
+	var outcome:Dictionary=repository.commit_race(result,race_view.source_token,athlete.position)
+	if outcome.ok:
+		career_token=outcome.token;training_snapshot=repository.load_snapshot()
+		# Race Again gets a fresh entry snapshot; pending result keeps its original identity.
+		race_view.snapshot=training_snapshot.duplicate(true)
+		race_view.source_token=career_token
+	race_view.save_outcome(outcome)

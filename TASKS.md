@@ -206,3 +206,38 @@ The user reviewed and approved the compact Legacy layout, selected rotation-only
 - [x] 869 native assertions, 74 real Chromium checks, official Web export and final screenshots; see training report.
 - [x] User visual/functional approval; feature-branch commit/push and PR authorized.
 - [ ] Merge and deployment require separate approval.
+
+## v0.5.0 — Development Meet and Stadium 1.0 (uncommitted review)
+
+- [x] Isolate race implementation from main, then branch `feature/v0.5.0-stadium-rebuild` from the race branch.
+- [x] Eight deterministic runners, Rhythm/Hold controls, false starts, GO-relative reaction, interruption and exact finish classification.
+- [x] Schema4 competition/PB integration, original backups, category confirmation, failed/stale/duplicate/future-save protection.
+- [x] Compact responsive readiness and leaderboard; player identification and fixed action buttons.
+- [x] Coherent decorative oval, original authoritative straight/lane coordinates, two stands, static instanced crowd, infield equipment, daylight and perimeter concourse.
+- [x] Optional static venue establishing view during readiness; immediate player-follow cut at Ready with no extra delay.
+- [x] Race-only speed-driven procedural strides, acceleration lean, idle easing, two shared limb batches and compact navy HUD.
+- [x] 993 native assertions, 27 final focused Chromium checks, official Web export, controlled balance comparison, screenshots/video and browser performance comparison recorded in `tests/RACE_STADIUM_VERIFICATION.md`.
+- [x] Visual/functional approval received for v0.5.0 feature-branch commit/push and PR preparation; merge and deployment await separate approval.
+
+Physical 4 GB Windows hardware, other browser engines and skeletal running animation remain unverified/deferred. No experimental models or Training balance changes.
+
+## v0.5.0 final performance release gate
+
+- [x] Identify default and explicitly requested browser rendering backends: SwiftShader; no exposed hardware GPU.
+- [x] Isolate shadows, MSAA, crowd and optional decoration; retain complete stadium architecture in both production modes.
+- [x] Add race-only Performance/Enhanced preference with conservative default and separate graphics storage.
+- [x] 1,007 native assertions, 13 additional real Chromium checks and matching official Web export pass.
+- [x] Record FPS/frame-time/draw-call/process-memory measurements with software-rendering limitations.
+- [ ] Hardware-accelerated low-end Windows measurements remain unverified.
+- [x] Owner approved release PR preparation with documented limitations.
+- [x] Commit/push/PR preparation authorized; do not merge or deploy without separate approval.
+
+## v0.5.0 integration PR preparation
+
+- [x] Fetch origin/main and verify no divergence from the v0.4.0 merge baseline.
+- [x] Review the intended race/stadium/quality integration and preserve the experimental branch.
+- [x] Rerun 1,007 native assertions, 45 real Chromium checks and official Godot 4.6.3 single-thread Web export.
+- [x] Document physical GPU, browser-focus and asynchronous storage limitations.
+- [x] Extend only the manual workflow validation commands with six new native suites.
+- [x] Release candidate reviewed and validated for commit/push/PR; final remote verification is reported with the PR URL.
+- [ ] Merge and deployment require explicit later approval; no v0.5.1 work.
