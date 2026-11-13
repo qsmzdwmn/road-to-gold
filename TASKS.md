@@ -1,6 +1,6 @@
 # ROAD TO GOLD — Tasks
 
-Status: Version 0.2.4 Athlete Studio implementation and final visual verification in progress (2026-11-10). Preserved v0.2.3 baseline: 332 native assertions, 129 real Chromium checks and matching Web export pass on 2026-11-09. Version 0.2.2 remains the preserved baseline. Version 0.2 career creation remains the preserved baseline. Implementation 01 remains the preserved technical baseline. Native checks and local Chromium verification pass. Official matching Web templates are installed and Web export succeeds; T01 retains Windows hardware and actual-host verification. Further implementation waits for approval.
+Status: v0.5.1 Stadium Audio has owner listening and UI approval. Final native/browser/export verification and feature-branch PR preparation are authorized. Production main remains v0.5.0. Merge and deployment require separate approval. Historical milestone results follow; current release results are in tests/V0_5_1_RELEASE_PREPARATION.md.
 
 ## Completed initialization
 - [x] Inspect /workspace and search for project and AGENTS.md files; no existing project found.
@@ -241,3 +241,16 @@ Physical 4 GB Windows hardware, other browser engines and skeletal running anima
 - [x] Extend only the manual workflow validation commands with six new native suites.
 - [x] Release candidate reviewed and validated for commit/push/PR; final remote verification is reported with the PR URL.
 - [ ] Merge and deployment require explicit later approval; no v0.5.1 work.
+
+## v0.5.1 Stadium Audio — approved release PR
+
+- [x] Owner listening approval received for all ten assets and Settings UI.
+- [x] Music / Sound Effects / Stadium Crowd buses, bounded mixer and Mute All.
+- [x] Validated audio preferences separate from careers and graphics settings.
+- [x] Responsive Settings, visible ON/OFF switch, pinned Back and keyboard access.
+- [x] Hub fades, authoritative race cues, gait footsteps and saved-PB reaction.
+- [x] Preserve preview-site work outside the game release and exclude tools/ from Web.
+- [x] Complete 1,088 native assertions, 63 Chromium checks and 13 package-load assertions; all ten approved audio hashes unchanged.
+- [x] Release candidate verified for authorized feature commit/push/PR; final remote status is reported with the PR.
+- [ ] Verify true hidden-tab freezing and physical low-end GPU/audio hardware (limitations).
+- [ ] Merge only with explicit owner approval; do not deploy in this milestone.

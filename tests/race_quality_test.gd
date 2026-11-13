@@ -37,6 +37,8 @@ func run():
 	for size in [Vector2i(1280,720),Vector2i(800,600)]:
 		root.size=size;app.ui.show_settings()
 		for frame in range(5):await process_frame
+		app.ui.settings_scroll.ensure_control_visible(app.ui.race_quality)
+		await process_frame
 		var back=app.ui.settings.get_child(app.ui.settings.get_child_count()-1)
 		check(Rect2(Vector2.ZERO,Vector2(size)).encloses(back.get_global_rect()) and Rect2(Vector2.ZERO,Vector2(size)).encloses(app.ui.race_quality.get_global_rect()),"quality selector and Back accessible at %s" % size)
 	app.ui.race_quality.select(1);app.ui._race_quality_selected(1)

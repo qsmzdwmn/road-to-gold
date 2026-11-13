@@ -13,3 +13,19 @@ Only the optimized derivatives are used at runtime. Original full-resolution ima
 Version 0.2.4 adds original procedural 2D category/origin/hair pictograms and two tiny generated slider-grabber textures. These are UI-only primitives, without external art/font downloads. Official branding masters and the existing 3D model/environment are unchanged.
 
 The v0.2.4.1 review build adds original procedural hairstyle meshes and category-specific 2D hair pictograms. No external assets, textures, fonts, Blender prototypes or paid dependencies are used.
+
+## v0.5.1 approved original audio
+All files in `assets/audio/` are original offline synthesis for ROAD TO GOLD,
+created by `tools/generate_audio.py` with deterministic seed 510. The Hub score
+is an original D-minor instrumental composition (90 BPM, twelve bars); the
+other sounds use synthesized transients, harmonic nonverbal distant cheers,
+and discrete applause. No recorded voices, commercial music, downloaded samples,
+external APIs or paid assets are used. There is no runtime synthesis.
+
+These are authored project assets supplied for ROAD TO GOLD. No third-party
+audio license or attribution obligation is introduced; this statement does not
+choose a new distribution license for the owner's project. Existing
+Godot and third-party engine notices still apply. NumPy and ffmpeg/libvorbis are
+offline developer tools, not bundled runtime dependencies. `manifest.json`
+records source parameters, durations, PCM sizes, peaks, RMS and file hashes.
+The owner has personally listened to and approved all ten original audio assets.

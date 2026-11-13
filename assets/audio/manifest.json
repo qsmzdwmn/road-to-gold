@@ -1,0 +1,97 @@
+{
+  "generator": "tools/generate_audio.py",
+  "seed": 510,
+  "sample_rate": 24000,
+  "assets": {
+    "hub_music.ogg": {
+      "seconds": 32.0,
+      "channels": 2,
+      "bytes": 84829,
+      "pcm_bytes": 3072000,
+      "peak": 0.42,
+      "rms": 0.1257,
+      "sha256": "186265c402ce42345ac40f230dbf4bd0f39b4a5443526d1bf9b024c724c6fb41"
+    },
+    "stadium_crowd.ogg": {
+      "seconds": 12.0,
+      "channels": 1,
+      "bytes": 66690,
+      "pcm_bytes": 576000,
+      "peak": 0.3,
+      "rms": 0.0447,
+      "sha256": "38b1ed7f109c85851c6aef9462fc85ef4c0b51c3ddacd6b724c18aa2ffb5e201"
+    },
+    "crowd_finish.ogg": {
+      "seconds": 2.4,
+      "channels": 1,
+      "bytes": 17686,
+      "pcm_bytes": 115200,
+      "peak": 0.48,
+      "rms": 0.0709,
+      "sha256": "0dee4921f4877db48b305f1894a42a887c24eae9d97145a90a16f0d894e37499"
+    },
+    "crowd_pb.ogg": {
+      "seconds": 3.2,
+      "channels": 1,
+      "bytes": 18053,
+      "pcm_bytes": 153600,
+      "peak": 0.52,
+      "rms": 0.1043,
+      "sha256": "28bc099dd9f8a70097e7f5d2c99ae1ddef5360fbc8329c53856909b82773beaa"
+    },
+    "start_pistol.wav": {
+      "seconds": 0.3,
+      "channels": 1,
+      "bytes": 14444,
+      "pcm_bytes": 14400,
+      "peak": 0.3387,
+      "rms": 0.0294,
+      "sha256": "2a13308d2126544fbd3f1d63a000a06a1af0787cc558170350b2aabcb561b4f5"
+    },
+    "footstep_left.wav": {
+      "seconds": 0.12,
+      "channels": 1,
+      "bytes": 5804,
+      "pcm_bytes": 5760,
+      "peak": 0.1644,
+      "rms": 0.0366,
+      "sha256": "c0c3b5af69895f259e92201be8adef9e64d89dd190875c41cf711c805870141f"
+    },
+    "footstep_right.wav": {
+      "seconds": 0.12,
+      "channels": 1,
+      "bytes": 5804,
+      "pcm_bytes": 5760,
+      "peak": 0.1658,
+      "rms": 0.0348,
+      "sha256": "7f8f88161eab985e4cf44d24bd417ecd524a1dd7bab250708879dcce4595281a"
+    },
+    "finish.wav": {
+      "seconds": 0.7,
+      "channels": 1,
+      "bytes": 33644,
+      "pcm_bytes": 33600,
+      "peak": 0.34,
+      "rms": 0.0899,
+      "sha256": "11316c218ef9e61b34d24baca53e9153a92d7c94e886c7e99c30f1cea3df7b95"
+    },
+    "ui_navigation.wav": {
+      "seconds": 0.085,
+      "channels": 1,
+      "bytes": 4124,
+      "pcm_bytes": 4080,
+      "peak": 0.16,
+      "rms": 0.093,
+      "sha256": "96ba38977835611da0cd329f2dcc1cdbe7c13e38d781dd1c39293de880874180"
+    },
+    "ui_confirm.wav": {
+      "seconds": 0.18,
+      "channels": 1,
+      "bytes": 8684,
+      "pcm_bytes": 8640,
+      "peak": 0.2,
+      "rms": 0.0957,
+      "sha256": "29b003144cc5e8149b51c909c747ade1b1e9236951c20cdd4b0afcd3da1b1c0c"
+    }
+  }
+}

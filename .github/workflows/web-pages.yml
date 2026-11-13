@@ -98,6 +98,8 @@ jobs:
           godot --headless --path . --script tests/stadium_environment_test.gd
           godot --headless --path . --script tests/race_animation_test.gd
           godot --headless --path . --script tests/race_quality_test.gd
+          godot --headless --path . --script tests/audio_preferences_test.gd
+          godot --headless --path . --script tests/audio_lifecycle_test.gd
 
       - name: Export single-thread Web build
         shell: bash
@@ -109,6 +111,7 @@ jobs:
           test -s builds/web/index.wasm
           test -s builds/web/index.pck
           touch builds/web/.nojekyll
+          python3 tests/verify_audio_export.py builds/web/index.pck
 
       - name: Upload Pages-ready artifact
         uses: actions/upload-pages-artifact@v3

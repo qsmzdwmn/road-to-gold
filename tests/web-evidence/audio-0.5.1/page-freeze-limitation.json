@@ -1,0 +1,149 @@
+{
+  "status": "NOT VERIFIED: environment limitation",
+  "observation": "Chromium retained document.hidden=false; CDP did not emit a real freeze event. Genuine blur and real AudioContext suspension were verified separately.",
+  "attempt": {
+    "url": "http://127.0.0.1:8031/web/index.html",
+    "console": [
+      {
+        "type": "log",
+        "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      },
+      {
+        "type": "log",
+        "text": "RACE_VISIBILITY {\"focused\":false,\"hidden\":false}"
+      },
+      {
+        "type": "log",
+        "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"rhythm\",\"phase\":\"preparation\"}"
+      },
+      {
+        "type": "log",
+        "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"rhythm\",\"phase\":\"marks\"}"
+      },
+      {
+        "type": "log",
+        "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"rhythm\",\"phase\":\"set\"}"
+      },
+      {
+        "type": "log",
+        "text": "AUDIO_EVENT {\"count\":1,\"cue\":\"pistol\"}"
+      },
+      {
+        "type": "log",
+        "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"rhythm\",\"phase\":\"running\"}"
+      },
+      {
+        "type": "log",
+        "text": "RACE_VISIBILITY {\"focused\":false,\"hidden\":false}"
+      },
+      {
+        "type": "log",
+        "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"Race interrupted. Retry for a valid attempt.\",\"mode\":\"rhythm\",\"phase\":\"invalid\"}"
+      }
+    ],
+    "page_errors": [],
+    "failed_requests": [],
+    "http_errors": [],
+    "checks": [
+      {
+        "pass": true,
+        "message": "observed actual race phase running"
+      },
+      {
+        "pass": false,
+        "message": "actual same-window Chromium tab becomes hidden"
+      }
+    ],
+    "snapshots": {
+      "before": {
+        "contexts": [
+          {
+            "state": "running",
+            "sampleRate": 44100,
+            "baseLatency": 0.01,
+            "outputLatency": 0.032,
+            "rms": 6.945334273575861e-05
+          }
+        ],
+        "starts": [
+          {
+            "duration": 0.08498866213151927,
+            "loop": false,
+            "rate": 1,
+            "at": 4.960362811791383,
+            "state": "running"
+          },
+          {
+            "duration": 32,
+            "loop": false,
+            "rate": 1,
+            "at": 5.2128798185941045,
+            "state": "running"
+          },
+          {
+            "duration": 0.08498866213151927,
+            "loop": false,
+            "rate": 1,
+            "at": 7.970249433106576,
+            "state": "running"
+          },
+          {
+            "duration": 12,
+            "loop": false,
+            "rate": 1,
+            "at": 8.440453514739229,
+            "state": "running"
+          },
+          {
+            "duration": 0.08498866213151927,
+            "loop": false,
+            "rate": 1,
+            "at": 12.440090702947845,
+            "state": "running"
+          },
+          {
+            "duration": 0.3,
+            "loop": false,
+            "rate": 1,
+            "at": 15.490612244897958,
+            "state": "running"
+          },
+          {
+            "duration": 0.12,
+            "loop": false,
+            "rate": 1,
+            "at": 16.451337868480724,
+            "state": "running"
+          },
+          {
+            "duration": 0.12,
+            "loop": false,
+            "rate": 1,
+            "at": 16.90122448979592,
+            "state": "running"
+          },
+          {
+            "duration": 0.12,
+            "loop": false,
+            "rate": 1,
+            "at": 17.40045351473923,
+            "state": "running"
+          }
+        ],
+        "stops": 8
+      }
+    },
+    "visibility": {
+      "hidden": false,
+      "focused": false
+    }
+  }
+}

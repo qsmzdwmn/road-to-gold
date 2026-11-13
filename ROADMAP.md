@@ -72,3 +72,12 @@ Implement rules/tests → schema4/backup/failure protection → Training UI/Hub 
 Current work is uncommitted on `feature/v0.5.0-stadium-rebuild`, branching from `feature/v0.5.0-first-100m-race`. Implemented: deterministic 100m, eight runners, both controls, starter/false starts, results/PB, safe schema4 integration and a coherent low-poly oval venue around the original sprint straight. Verify native regressions, browser controls/persistence, curve joins, camera clearance, export and measured performance before visual approval.
 
 Deferred: skeletal running animation, certified full-distance oval competitions, active infield sports, crowds with AI, additional meets and physical low-end Windows measurements. Commit, push, merge and deployment remain separate approval gates.
+
+### v0.5.1 Stadium Audio — approved release PR preparation
+
+- Original offline-generated Hub music, stadium ambience, race and UI cues.
+- Independent category volumes, Mute All and separate browser-local preferences.
+- Presentation-only race hooks, trusted-interaction gate and bounded voices.
+- Owner listening approval received for all ten assets and Settings UI.
+- Final native/browser verification and export inspection before the release PR.
+- Feature commit/push/PR authorized; merge and deployment require separate approval.

@@ -1,0 +1,24 @@
+{
+  "godot": "4.6.3.stable.official.7d41c59c4",
+  "preset": "Web",
+  "single_thread": true,
+  "result": "success",
+  "files": {
+    "index.html": {
+      "bytes": 19245,
+      "sha256": "b90da42674112334c0e8523f3b11e35b95f773cbef47ff22a834861513a03f52"
+    },
+    "index.js": {
+      "bytes": 315759,
+      "sha256": "e3f56ee40e6f84371053db06692cfac15e2c8659547b11c6b2dfa1996dabd981"
+    },
+    "index.wasm": {
+      "bytes": 37700666,
+      "sha256": "26b61ce95247012ab3dca3ff51e96d1cdbff44ee91a8c20a83e150afca83f1b6"
+    },
+    "index.pck": {
+      "bytes": 715512,
+      "sha256": "c042163f32a5f065b00dea6617473161a6ae60102fbe7e8ecffad2d046816b57"
+    }
+  }
+}

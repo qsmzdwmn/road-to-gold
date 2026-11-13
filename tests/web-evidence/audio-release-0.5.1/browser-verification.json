@@ -1,0 +1,2097 @@
+{
+  "url": "http://127.0.0.1:8035/index.html",
+  "console": [
+    {
+      "type": "log",
+      "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+    },
+    {
+      "type": "log",
+      "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+    },
+    {
+      "type": "log",
+      "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+    },
+    {
+      "type": "log",
+      "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+    },
+    {
+      "type": "log",
+      "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+    },
+    {
+      "type": "log",
+      "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+    },
+    {
+      "type": "log",
+      "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"rhythm\",\"phase\":\"preparation\"}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"hold\",\"phase\":\"marks\"}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"False start \u2014 attempt invalid. No time or Personal Best recorded.\",\"mode\":\"hold\",\"phase\":\"invalid\"}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"hold\",\"phase\":\"preparation\"}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"hold\",\"phase\":\"marks\"}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"hold\",\"phase\":\"set\"}"
+    },
+    {
+      "type": "log",
+      "text": "AUDIO_EVENT {\"count\":1,\"cue\":\"pistol\"}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"hold\",\"phase\":\"running\"}"
+    },
+    {
+      "type": "log",
+      "text": "AUDIO_EVENT {\"count\":1,\"cue\":\"finish\"}"
+    },
+    {
+      "type": "log",
+      "text": "AUDIO_EVENT {\"count\":1,\"cue\":\"cheer\"}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"hold\",\"phase\":\"results\"}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_METRICS {\"frames\":83,\"godot_static_memory_bytes\":0,\"max_draw_calls\":115,\"mean_frame_ms\":190.49,\"p95_frame_ms\":255.5,\"runners\":8}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_INPUT {\"mode\":\"hold\",\"reaction_us\":116667,\"valid_presses\":1}"
+    },
+    {
+      "type": "log",
+      "text": "AUDIO_EVENT {\"count\":1,\"cue\":\"pb\"}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"hold\",\"phase\":\"preparation\"}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"rhythm\",\"phase\":\"marks\"}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"rhythm\",\"phase\":\"set\"}"
+    },
+    {
+      "type": "log",
+      "text": "AUDIO_EVENT {\"count\":2,\"cue\":\"pistol\"}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"rhythm\",\"phase\":\"running\"}"
+    },
+    {
+      "type": "log",
+      "text": "AUDIO_EVENT {\"count\":2,\"cue\":\"finish\"}"
+    },
+    {
+      "type": "log",
+      "text": "AUDIO_EVENT {\"count\":2,\"cue\":\"cheer\"}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"rhythm\",\"phase\":\"results\"}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_METRICS {\"frames\":89,\"godot_static_memory_bytes\":0,\"max_draw_calls\":115,\"mean_frame_ms\":194.43,\"p95_frame_ms\":240.8,\"runners\":8}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_INPUT {\"mode\":\"rhythm\",\"reaction_us\":116667,\"valid_presses\":37}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"rhythm\",\"phase\":\"preparation\"}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"rhythm\",\"phase\":\"marks\"}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"rhythm\",\"phase\":\"set\"}"
+    },
+    {
+      "type": "log",
+      "text": "AUDIO_EVENT {\"count\":3,\"cue\":\"pistol\"}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"rhythm\",\"phase\":\"running\"}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"Race interrupted. Retry for a valid attempt.\",\"mode\":\"rhythm\",\"phase\":\"invalid\"}"
+    },
+    {
+      "type": "log",
+      "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+    },
+    {
+      "type": "log",
+      "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+    },
+    {
+      "type": "log",
+      "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+    }
+  ],
+  "page_errors": [],
+  "failed_requests": [],
+  "http_errors": [],
+  "checks": [
+    {
+      "pass": true,
+      "message": "no playback or signal before user interaction"
+    },
+    {
+      "pass": true,
+      "message": "first Settings interaction unlocks one UI sample in a running AudioContext"
+    },
+    {
+      "pass": true,
+      "message": "three volumes and global mute persisted separately in IndexedDB"
+    },
+    {
+      "pass": true,
+      "message": "mute suppresses navigation playback"
+    },
+    {
+      "pass": true,
+      "message": "music-reloaded visible: 17%"
+    },
+    {
+      "pass": true,
+      "message": "all audio preferences survive page reload"
+    },
+    {
+      "pass": true,
+      "message": "graphics-preserved visible: Performance"
+    },
+    {
+      "pass": true,
+      "message": "Enhanced graphics option persists separately"
+    },
+    {
+      "pass": true,
+      "message": "Performance remains available and is restored before racing"
+    },
+    {
+      "pass": true,
+      "message": "Hub plays the original looping score"
+    },
+    {
+      "pass": true,
+      "message": "measured nonzero Web Audio output in Hub"
+    },
+    {
+      "pass": true,
+      "message": "Hub score actually repeats beyond its 32-second duration"
+    },
+    {
+      "pass": true,
+      "message": "training-confirmation visible: Confirm & Save"
+    },
+    {
+      "pass": true,
+      "message": "Training works with audio and saves schema 4 progression"
+    },
+    {
+      "pass": true,
+      "message": "Mute All produces silence while Hub music is active"
+    },
+    {
+      "pass": true,
+      "message": "Hub Settings return does not restart music"
+    },
+    {
+      "pass": true,
+      "message": "stadium ambience starts in readiness"
+    },
+    {
+      "pass": true,
+      "message": "crowd ambience actually repeats beyond its 12-second duration"
+    },
+    {
+      "pass": true,
+      "message": "observed actual race phase marks"
+    },
+    {
+      "pass": true,
+      "message": "observed actual race phase invalid"
+    },
+    {
+      "pass": true,
+      "message": "false start produces no pistol and leaves career unchanged"
+    },
+    {
+      "pass": true,
+      "message": "observed actual race phase running"
+    },
+    {
+      "pass": true,
+      "message": "Hold mode selected through visible UI"
+    },
+    {
+      "pass": true,
+      "message": "one pistol buffer starts at actual Running transition"
+    },
+    {
+      "pass": true,
+      "message": "observed actual race phase results"
+    },
+    {
+      "pass": true,
+      "message": "Hold Sprint still finishes and saves"
+    },
+    {
+      "pass": true,
+      "message": "pistol does not repeat during race or results"
+    },
+    {
+      "pass": true,
+      "message": "gait crossings produce speed-synchronized player footstep samples"
+    },
+    {
+      "pass": true,
+      "message": "one restrained player finish cue"
+    },
+    {
+      "pass": true,
+      "message": "PB celebration follows successful new record save"
+    },
+    {
+      "pass": true,
+      "message": "race crowd, footsteps and race one-shots stop after leaving; only Hub/UI audio remains"
+    },
+    {
+      "pass": true,
+      "message": "race and audio transitions preserve Training progress"
+    },
+    {
+      "pass": true,
+      "message": "observed actual race phase running"
+    },
+    {
+      "pass": true,
+      "message": "observed actual race phase results"
+    },
+    {
+      "pass": true,
+      "message": "Rhythm Sprint completes through actual alternating key input with audio"
+    },
+    {
+      "pass": true,
+      "message": "both sprint modes preserve Training data"
+    },
+    {
+      "pass": true,
+      "message": "observed actual race phase running"
+    },
+    {
+      "pass": true,
+      "message": "fresh attempt gets exactly one fresh pistol"
+    },
+    {
+      "pass": true,
+      "message": "browser AudioContext suspension observed"
+    },
+    {
+      "pass": true,
+      "message": "interruption enters invalid state"
+    },
+    {
+      "pass": true,
+      "message": "audio resume/input never replays a starting pistol"
+    },
+    {
+      "pass": true,
+      "message": "interruption preserves PB and training"
+    },
+    {
+      "pass": true,
+      "message": "career and Personal Best survive reload with separate audio preferences"
+    },
+    {
+      "pass": true,
+      "message": "unmute preference persists alongside career data"
+    },
+    {
+      "pass": true,
+      "message": "actual AudioContext suspension confirmed"
+    },
+    {
+      "pass": true,
+      "message": "synthetic freeze callback silences voices"
+    },
+    {
+      "pass": true,
+      "message": "resume restores exactly one current Hub loop"
+    },
+    {
+      "pass": true,
+      "message": "resume cannot replay pistol or change career"
+    },
+    {
+      "pass": true,
+      "message": "lifecycle callbacks have no JavaScript errors"
+    },
+    {
+      "pass": true,
+      "message": "no engine, JavaScript, WASM, audio or storage errors"
+    }
+  ],
+  "snapshots": {
+    "before-interaction": {
+      "contexts": [
+        {
+          "state": "running",
+          "sampleRate": 44100,
+          "baseLatency": 0.01,
+          "outputLatency": 0.032,
+          "rms": 0
+        }
+      ],
+      "starts": [],
+      "stops": 0,
+      "live": []
+    },
+    "hub": {
+      "contexts": [
+        {
+          "state": "running",
+          "sampleRate": 44100,
+          "baseLatency": 0.01,
+          "outputLatency": 0.032,
+          "rms": 0.01799836818896282
+        }
+      ],
+      "starts": [
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 7.192380952380953,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 10.170340136054422,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 13.252789115646259,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 16.35265306122449,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 18.52081632653061,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 20.82249433106576,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 23.16190476190476,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 25.460680272108842,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 27.74204081632653,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 29.950839002267575,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 39.84253968253968,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 42.17034013605442,
+          "state": "running"
+        },
+        {
+          "duration": 32,
+          "loop": false,
+          "rate": 1,
+          "at": 42.54185941043084,
+          "state": "running"
+        }
+      ],
+      "stops": 12,
+      "live": [
+        {
+          "duration": 32
+        }
+      ]
+    },
+    "hub-muted": {
+      "contexts": [
+        {
+          "state": "running",
+          "sampleRate": 44100,
+          "baseLatency": 0.01,
+          "outputLatency": 0.032,
+          "rms": 0
+        }
+      ],
+      "starts": [
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 7.192380952380953,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 10.170340136054422,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 13.252789115646259,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 16.35265306122449,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 18.52081632653061,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 20.82249433106576,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 23.16190476190476,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 25.460680272108842,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 27.74204081632653,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 29.950839002267575,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 39.84253968253968,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 42.17034013605442,
+          "state": "running"
+        },
+        {
+          "duration": 32,
+          "loop": false,
+          "rate": 1,
+          "at": 42.54185941043084,
+          "state": "running"
+        },
+        {
+          "duration": 32,
+          "loop": false,
+          "rate": 1,
+          "at": 74.65215419501133,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 76.08018140589569,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 77.98131519274376,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 81.49043083900227,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 85.19111111111111,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 87.0312925170068,
+          "state": "running"
+        }
+      ],
+      "stops": 18,
+      "live": []
+    },
+    "readiness": {
+      "contexts": [
+        {
+          "state": "running",
+          "sampleRate": 44100,
+          "baseLatency": 0.01,
+          "outputLatency": 0.032,
+          "rms": 0.0001004140500814711
+        }
+      ],
+      "starts": [
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 7.192380952380953,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 10.170340136054422,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 13.252789115646259,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 16.35265306122449,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 18.52081632653061,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 20.82249433106576,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 23.16190476190476,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 25.460680272108842,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 27.74204081632653,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 29.950839002267575,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 39.84253968253968,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 42.17034013605442,
+          "state": "running"
+        },
+        {
+          "duration": 32,
+          "loop": false,
+          "rate": 1,
+          "at": 42.54185941043084,
+          "state": "running"
+        },
+        {
+          "duration": 32,
+          "loop": false,
+          "rate": 1,
+          "at": 74.65215419501133,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 76.08018140589569,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 77.98131519274376,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 81.49043083900227,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 85.19111111111111,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 87.0312925170068,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 90.85097505668934,
+          "state": "running"
+        },
+        {
+          "duration": 32,
+          "loop": false,
+          "rate": 1,
+          "at": 90.89160997732426,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 92.69115646258503,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 95.35274376417233,
+          "state": "running"
+        },
+        {
+          "duration": 12,
+          "loop": false,
+          "rate": 1,
+          "at": 95.88099773242631,
+          "state": "running"
+        }
+      ],
+      "stops": 21,
+      "live": [
+        {
+          "duration": 32
+        },
+        {
+          "duration": 12
+        }
+      ]
+    },
+    "context-suspended": {
+      "contexts": [
+        {
+          "state": "suspended",
+          "sampleRate": 44100,
+          "baseLatency": 0.01,
+          "outputLatency": 0.032,
+          "rms": 0.002209022554858945
+        }
+      ],
+      "starts": [
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 7.192380952380953,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 10.170340136054422,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 13.252789115646259,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 16.35265306122449,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 18.52081632653061,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 20.82249433106576,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 23.16190476190476,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 25.460680272108842,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 27.74204081632653,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 29.950839002267575,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 39.84253968253968,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 42.17034013605442,
+          "state": "running"
+        },
+        {
+          "duration": 32,
+          "loop": false,
+          "rate": 1,
+          "at": 42.54185941043084,
+          "state": "running"
+        },
+        {
+          "duration": 32,
+          "loop": false,
+          "rate": 1,
+          "at": 74.65215419501133,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 76.08018140589569,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 77.98131519274376,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 81.49043083900227,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 85.19111111111111,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 87.0312925170068,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 90.85097505668934,
+          "state": "running"
+        },
+        {
+          "duration": 32,
+          "loop": false,
+          "rate": 1,
+          "at": 90.89160997732426,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 92.69115646258503,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 95.35274376417233,
+          "state": "running"
+        },
+        {
+          "duration": 12,
+          "loop": false,
+          "rate": 1,
+          "at": 95.88099773242631,
+          "state": "running"
+        },
+        {
+          "duration": 12,
+          "loop": false,
+          "rate": 1,
+          "at": 107.91183673469388,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 109.52272108843538,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 114.04190476190476,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 116.92117913832199,
+          "state": "running"
+        },
+        {
+          "duration": 12,
+          "loop": false,
+          "rate": 1,
+          "at": 116.94149659863946,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 119.78013605442177,
+          "state": "running"
+        },
+        {
+          "duration": 0.3,
+          "loop": false,
+          "rate": 1,
+          "at": 122.30240362811791,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 123.30086167800454,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 123.68108843537415,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 123.87265306122448,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 124.0409977324263,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 124.21224489795918,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 124.380589569161,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 124.601179138322,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 124.75210884353741,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 124.93206349206349,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 125.05106575963718,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 125.19038548752835,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 125.49224489795918,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 125.6518820861678,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 125.83183673469388,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 125.9827664399093,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 126.14240362811792,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 126.29043083900227,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 126.42104308390023,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 126.58068027210885,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 126.87092970521542,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 127.03056689342404,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 127.20181405895691,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 127.37015873015874,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 127.4920634920635,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 127.6604081632653,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 127.98258503401361,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 128.14222222222222,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 128.29024943310657,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 128.40054421768707,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 128.5601814058957,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 128.80108843537414,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 128.93170068027212,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 129.04199546485262,
+          "state": "running"
+        },
+        {
+          "duration": 12,
+          "loop": false,
+          "rate": 1,
+          "at": 129.09133786848074,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 129.2103401360544,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 129.35256235827666,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 129.62249433106575,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 129.7705215419501,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 129.89242630385488,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 130.04045351473923,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 130.19138321995464,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 130.35972789115647,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 130.4816326530612,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 130.64126984126983,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 130.75156462585034,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 130.91120181405896,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 131.221768707483,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 131.35238095238094,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 131.47138321995465,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 131.65133786848074,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 131.77034013605441,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 131.9328798185941,
+          "state": "running"
+        },
+        {
+          "duration": 0.6999773242630386,
+          "loop": false,
+          "rate": 1,
+          "at": 132.281179138322,
+          "state": "running"
+        },
+        {
+          "duration": 2.4,
+          "loop": false,
+          "rate": 1,
+          "at": 132.281179138322,
+          "state": "running"
+        },
+        {
+          "duration": 3.2,
+          "loop": false,
+          "rate": 1,
+          "at": 132.67011337868482,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 137.71174603174603,
+          "state": "running"
+        },
+        {
+          "duration": 32,
+          "loop": false,
+          "rate": 1,
+          "at": 137.82204081632653,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 139.41260770975057,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 141.9203628117914,
+          "state": "running"
+        },
+        {
+          "duration": 12,
+          "loop": false,
+          "rate": 1,
+          "at": 142.08,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 144.57034013605443,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 148.07074829931972,
+          "state": "running"
+        },
+        {
+          "duration": 0.3,
+          "loop": false,
+          "rate": 1,
+          "at": 150.99065759637188,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 151.8614058956916,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 152.18068027210884,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 152.4622222222222,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 152.6102494331066,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 152.91210884353742,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 153.06013605442178,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 153.22267573696146,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 153.38231292517005,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 153.51002267573696,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 153.820589569161,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 153.96281179138322,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 154.09052154195012,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 154.25015873015872,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 154.40108843537416,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 154.61006802721087,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 154.75229024943312,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 154.86258503401362,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 155.00190476190477,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 155.27183673469386,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 155.40244897959184,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 155.56208616780046,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 155.8726530612245,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 156.03229024943312,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 156.22095238095238,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 156.380589569161,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 156.52281179138322,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 156.69115646258504,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 156.85079365079366,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 157.01043083900225,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 157.1526530612245,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 157.34131519274376,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 157.51256235827665,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 157.69251700680272,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 157.86086167800454,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 158.0001814058957,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 158.322358276644,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 158.46167800453514,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 158.6009977324263,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 158.7606349206349,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 158.940589569161,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 159.14086167800454,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 159.47174603174602,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 159.81133786848073,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 159.9912925170068,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 160.14222222222222,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 160.3308843537415,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 160.47020408163266,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 160.5921088435374,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 160.882358276644,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 160.98104308390023,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 161.2625850340136,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 161.42222222222222,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 161.70086167800454,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 161.8314739229025,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 161.941768707483,
+          "state": "running"
+        },
+        {
+          "duration": 0.6999773242630386,
+          "loop": false,
+          "rate": 1,
+          "at": 162.19138321995464,
+          "state": "running"
+        },
+        {
+          "duration": 2.4,
+          "loop": false,
+          "rate": 1,
+          "at": 162.19138321995464,
+          "state": "running"
+        },
+        {
+          "duration": 12,
+          "loop": false,
+          "rate": 1,
+          "at": 162.47002267573697,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 166.07201814058956,
+          "state": "running"
+        },
+        {
+          "duration": 32,
+          "loop": false,
+          "rate": 1,
+          "at": 166.2113378684807,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 167.6219501133787,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 170.15002267573695,
+          "state": "running"
+        },
+        {
+          "duration": 12,
+          "loop": false,
+          "rate": 1,
+          "at": 170.3328798185941,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 173.44145124716553,
+          "state": "running"
+        },
+        {
+          "duration": 0.3,
+          "loop": false,
+          "rate": 1,
+          "at": 175.75183673469388,
+          "state": "running"
+        }
+      ],
+      "stops": 153,
+      "live": [
+        {
+          "duration": 12
+        },
+        {
+          "duration": 0.3
+        }
+      ]
+    },
+    "final": {
+      "contexts": [
+        {
+          "state": "running",
+          "sampleRate": 44100,
+          "baseLatency": 0.01,
+          "outputLatency": 0.032,
+          "rms": 0.020352170104157918
+        }
+      ],
+      "starts": [
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 2.571609977324263,
+          "state": "running"
+        },
+        {
+          "duration": 32,
+          "loop": false,
+          "rate": 1,
+          "at": 2.681904761904762,
+          "state": "running"
+        }
+      ],
+      "stops": 1,
+      "live": [
+        {
+          "duration": 32
+        }
+      ]
+    },
+    "before-lifecycle": {
+      "contexts": [
+        {
+          "state": "running",
+          "sampleRate": 44100,
+          "baseLatency": 0.01,
+          "outputLatency": 0.032,
+          "rms": 0.01751896086852107
+        }
+      ],
+      "starts": [
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 2.571609977324263,
+          "state": "running"
+        },
+        {
+          "duration": 32,
+          "loop": false,
+          "rate": 1,
+          "at": 2.681904761904762,
+          "state": "running"
+        }
+      ],
+      "stops": 1,
+      "live": [
+        {
+          "duration": 32
+        }
+      ]
+    },
+    "audio-suspended": {
+      "contexts": [
+        {
+          "state": "suspended",
+          "sampleRate": 44100,
+          "baseLatency": 0.01,
+          "outputLatency": 0.032,
+          "rms": 0.01881400519175298
+        }
+      ],
+      "starts": [
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 2.571609977324263,
+          "state": "running"
+        },
+        {
+          "duration": 32,
+          "loop": false,
+          "rate": 1,
+          "at": 2.681904761904762,
+          "state": "running"
+        }
+      ],
+      "stops": 1,
+      "live": [
+        {
+          "duration": 32
+        }
+      ]
+    },
+    "synthetic-freeze": {
+      "contexts": [
+        {
+          "state": "suspended",
+          "sampleRate": 44100,
+          "baseLatency": 0.01,
+          "outputLatency": 0.032,
+          "rms": 0.01881400519175298
+        }
+      ],
+      "starts": [
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 2.571609977324263,
+          "state": "running"
+        },
+        {
+          "duration": 32,
+          "loop": false,
+          "rate": 1,
+          "at": 2.681904761904762,
+          "state": "running"
+        }
+      ],
+      "stops": 2,
+      "live": []
+    }
+  },
+  "focus_state": {
+    "hidden": false,
+    "focused": true
+  }
+}

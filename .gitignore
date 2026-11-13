@@ -2,3 +2,5 @@
 builds/
 work/
 *.tmp
+
+__pycache__/

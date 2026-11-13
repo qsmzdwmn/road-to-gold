@@ -17,6 +17,8 @@ var legacy_status: Label
 var menu: VBoxContainer
 var race_quality:OptionButton
 var quality_notice:Label
+var audio_settings
+var settings_scroll: ScrollContainer
 var settings: VBoxContainer
 var hud: VBoxContainer
 var resume: Button
@@ -68,12 +70,17 @@ func _ready() -> void:
 	_label(stack, Brand.version_label(), 14)
 	settings = _section(stack)
 	_label(settings, "SETTINGS", 24)
-	_label(settings, "Move: WASD or arrow keys\nEscape: menu / pause\nSave & Menu: store position\n\nNo audio in this prototype.", 18)
-	_label(settings,"Race graphics",18)
-	race_quality=OptionButton.new();race_quality.add_item("Performance (recommended)");race_quality.set_item_metadata(0,RaceQuality.PERFORMANCE);race_quality.add_item("Enhanced");race_quality.set_item_metadata(1,RaceQuality.ENHANCED);race_quality.custom_minimum_size.y=40;settings.add_child(race_quality)
+	settings_scroll=ScrollContainer.new();settings_scroll.horizontal_scroll_mode=ScrollContainer.SCROLL_MODE_DISABLED;settings_scroll.follow_focus=true;settings.add_child(settings_scroll)
+	var settings_body=VBoxContainer.new();settings_body.size_flags_horizontal=Control.SIZE_EXPAND_FILL;settings_body.add_theme_constant_override("separation",10);settings_scroll.add_child(settings_body)
+	var padding=MarginContainer.new();padding.size_flags_horizontal=Control.SIZE_EXPAND_FILL;padding.add_theme_constant_override("margin_right",12);settings_body.add_child(padding)
+	audio_settings=preload("res://scripts/ui/audio_settings_panel.gd").new();padding.add_child(audio_settings)
+	resized.connect(_resize_settings);_resize_settings()
+	_label(settings_body,"Race graphics",18)
+	race_quality=OptionButton.new();race_quality.add_item("Performance (recommended)");race_quality.set_item_metadata(0,RaceQuality.PERFORMANCE);race_quality.add_item("Enhanced");race_quality.set_item_metadata(1,RaceQuality.ENHANCED);race_quality.custom_minimum_size.y=40;settings_body.add_child(race_quality)
 	race_quality.select(1 if RaceQuality.load_mode()==RaceQuality.ENHANCED else 0)
 	race_quality.item_selected.connect(_race_quality_selected)
-	quality_notice=_label(settings,"Race only. All eight runners and stadium architecture retained.",14)
+	quality_notice=_label(settings_body,"Race only. All eight runners and stadium architecture retained.",14)
+	_label(settings_body,"Move: WASD / arrows · Escape: menu / pause\nSave & Menu: store position",14)
 	_button(settings, "Back", _settings_back)
 	hud = _section(stack)
 	_label(hud, "TRACK EXPLORATION", 24)
@@ -98,6 +105,9 @@ func _ready() -> void:
 	golden_menu.continue_requested.connect(func(): continue_requested.emit())
 	golden_menu.settings_requested.connect(show_settings)
 	show_menu()
+
+func _resize_settings():
+	if settings_scroll!=null:settings_scroll.custom_minimum_size.y=clampf(get_viewport_rect().size.y-340.0,200.0,500.0)
 
 func _section(parent: Node) -> VBoxContainer:
 	var box := VBoxContainer.new()

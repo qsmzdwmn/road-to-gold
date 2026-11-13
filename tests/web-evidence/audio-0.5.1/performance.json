@@ -1,0 +1,504 @@
+{
+  "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+  "runs": [
+    {
+      "label": "muted",
+      "metrics": {
+        "frames": 30,
+        "godot_static_memory_bytes": 0,
+        "max_draw_calls": 115,
+        "mean_frame_ms": 501.16,
+        "p95_frame_ms": 519.3,
+        "runners": 8
+      },
+      "renderer_rss": [
+        {
+          "pid": 10149,
+          "rss_bytes": 35299328
+        },
+        {
+          "pid": 10145,
+          "rss_bytes": 50843648
+        },
+        {
+          "pid": 10146,
+          "rss_bytes": 316858368
+        },
+        {
+          "pid": 10123,
+          "rss_bytes": 88252416
+        }
+      ],
+      "js_heap": {
+        "used": 22686077,
+        "total": 23268009,
+        "limit": 4395630592
+      },
+      "audio_snapshot": {
+        "contexts": [
+          {
+            "state": "running",
+            "sampleRate": 44100,
+            "baseLatency": 0.01,
+            "outputLatency": 0.032,
+            "rms": 0
+          }
+        ],
+        "starts": [
+          {
+            "duration": 0.08498866213151927,
+            "loop": false,
+            "rate": 1,
+            "wall": 5153,
+            "at": 3.2711111111111113,
+            "state": "running"
+          },
+          {
+            "duration": 32,
+            "loop": false,
+            "rate": 1,
+            "wall": 5734.799999999814,
+            "at": 3.84,
+            "state": "running"
+          },
+          {
+            "duration": 0.08498866213151927,
+            "loop": false,
+            "rate": 1,
+            "wall": 7343,
+            "at": 5.372517006802721,
+            "state": "running"
+          }
+        ],
+        "stops": 3
+      },
+      "phase_stamps": [
+        {
+          "phase": "preparation",
+          "wall": 15936.600000000559
+        },
+        {
+          "phase": "marks",
+          "wall": 27075.10000000056
+        },
+        {
+          "phase": "set",
+          "wall": 28150.700000000186
+        },
+        {
+          "phase": "running",
+          "wall": 29649.10000000056
+        },
+        {
+          "phase": "results",
+          "wall": 42666.700000000186
+        }
+      ]
+    },
+    {
+      "label": "enabled",
+      "metrics": {
+        "frames": 31,
+        "godot_static_memory_bytes": 0,
+        "max_draw_calls": 115,
+        "mean_frame_ms": 501.56,
+        "p95_frame_ms": 517.5,
+        "runners": 8
+      },
+      "renderer_rss": [
+        {
+          "pid": 10149,
+          "rss_bytes": 35303424
+        },
+        {
+          "pid": 10145,
+          "rss_bytes": 51175424
+        },
+        {
+          "pid": 10146,
+          "rss_bytes": 408059904
+        },
+        {
+          "pid": 10123,
+          "rss_bytes": 84463616
+        }
+      ],
+      "js_heap": {
+        "used": 33204433,
+        "total": 33919501,
+        "limit": 4395630592
+      },
+      "audio_snapshot": {
+        "contexts": [
+          {
+            "state": "running",
+            "sampleRate": 44100,
+            "baseLatency": 0.01,
+            "outputLatency": 0.032,
+            "rms": 1.3198160998669084e-05
+          }
+        ],
+        "starts": [
+          {
+            "duration": 0.08498866213151927,
+            "loop": false,
+            "rate": 1,
+            "wall": 5153,
+            "at": 3.2711111111111113,
+            "state": "running"
+          },
+          {
+            "duration": 32,
+            "loop": false,
+            "rate": 1,
+            "wall": 5734.799999999814,
+            "at": 3.84,
+            "state": "running"
+          },
+          {
+            "duration": 0.08498866213151927,
+            "loop": false,
+            "rate": 1,
+            "wall": 7343,
+            "at": 5.372517006802721,
+            "state": "running"
+          },
+          {
+            "duration": 0.08498866213151927,
+            "loop": false,
+            "rate": 1,
+            "wall": 50190.799999999814,
+            "at": 46.03065759637188,
+            "state": "running"
+          },
+          {
+            "duration": 32,
+            "loop": false,
+            "rate": 1,
+            "wall": 50228.10000000056,
+            "at": 46.0712925170068,
+            "state": "running"
+          },
+          {
+            "duration": 0.08498866213151927,
+            "loop": false,
+            "rate": 1,
+            "wall": 52097.60000000056,
+            "at": 47.89115646258504,
+            "state": "running"
+          },
+          {
+            "duration": 0.08498866213151927,
+            "loop": false,
+            "rate": 1,
+            "wall": 54425.200000000186,
+            "at": 50.11156462585034,
+            "state": "running"
+          },
+          {
+            "duration": 0.08498866213151927,
+            "loop": false,
+            "rate": 1,
+            "wall": 57124.60000000056,
+            "at": 52.72090702947846,
+            "state": "running"
+          },
+          {
+            "duration": 12,
+            "loop": false,
+            "rate": 1,
+            "wall": 57373.60000000056,
+            "at": 52.97052154195011,
+            "state": "running"
+          },
+          {
+            "duration": 0.08498866213151927,
+            "loop": false,
+            "rate": 1,
+            "wall": 63842.200000000186,
+            "at": 58.93224489795919,
+            "state": "running"
+          },
+          {
+            "duration": 0.3,
+            "loop": false,
+            "rate": 1,
+            "wall": 67232,
+            "at": 62.19174603174603,
+            "state": "running"
+          },
+          {
+            "duration": 0.12,
+            "loop": false,
+            "rate": 1,
+            "wall": 69245.90000000037,
+            "at": 64.15092970521542,
+            "state": "running"
+          },
+          {
+            "duration": 0.12,
+            "loop": false,
+            "rate": 1,
+            "wall": 69730.60000000056,
+            "at": 64.64145124716553,
+            "state": "running"
+          },
+          {
+            "duration": 12,
+            "loop": false,
+            "rate": 1,
+            "wall": 70094.40000000037,
+            "at": 64.97233560090703,
+            "state": "running"
+          },
+          {
+            "duration": 0.12,
+            "loop": false,
+            "rate": 1,
+            "wall": 70232.5,
+            "at": 65.1116553287982,
+            "state": "running"
+          },
+          {
+            "duration": 0.12,
+            "loop": false,
+            "rate": 1,
+            "wall": 70724.10000000056,
+            "at": 65.57024943310658,
+            "state": "running"
+          },
+          {
+            "duration": 0.12,
+            "loop": false,
+            "rate": 1,
+            "wall": 71228.10000000056,
+            "at": 66.04045351473923,
+            "state": "running"
+          },
+          {
+            "duration": 0.12,
+            "loop": false,
+            "rate": 1,
+            "wall": 71727.20000000019,
+            "at": 66.52226757369614,
+            "state": "running"
+          },
+          {
+            "duration": 0.12,
+            "loop": false,
+            "rate": 1,
+            "wall": 72241.5,
+            "at": 67.04181405895692,
+            "state": "running"
+          },
+          {
+            "duration": 0.12,
+            "loop": false,
+            "rate": 1,
+            "wall": 72728.29999999981,
+            "at": 67.51201814058957,
+            "state": "running"
+          },
+          {
+            "duration": 0.12,
+            "loop": false,
+            "rate": 1,
+            "wall": 73243.79999999981,
+            "at": 68.02285714285715,
+            "state": "running"
+          },
+          {
+            "duration": 0.12,
+            "loop": false,
+            "rate": 1,
+            "wall": 73732.29999999981,
+            "at": 68.49015873015873,
+            "state": "running"
+          },
+          {
+            "duration": 0.12,
+            "loop": false,
+            "rate": 1,
+            "wall": 74242,
+            "at": 69.0009977324263,
+            "state": "running"
+          },
+          {
+            "duration": 0.12,
+            "loop": false,
+            "rate": 1,
+            "wall": 74743.90000000037,
+            "at": 69.50022675736962,
+            "state": "running"
+          },
+          {
+            "duration": 0.12,
+            "loop": false,
+            "rate": 1,
+            "wall": 75243.29999999981,
+            "at": 70.00235827664399,
+            "state": "running"
+          },
+          {
+            "duration": 0.12,
+            "loop": false,
+            "rate": 1,
+            "wall": 75744,
+            "at": 70.5015873015873,
+            "state": "running"
+          },
+          {
+            "duration": 0.12,
+            "loop": false,
+            "rate": 1,
+            "wall": 76258.20000000019,
+            "at": 71.00081632653061,
+            "state": "running"
+          },
+          {
+            "duration": 0.12,
+            "loop": false,
+            "rate": 1,
+            "wall": 76745,
+            "at": 71.46231292517007,
+            "state": "running"
+          },
+          {
+            "duration": 0.12,
+            "loop": false,
+            "rate": 1,
+            "wall": 77244.5,
+            "at": 71.96154195011339,
+            "state": "running"
+          },
+          {
+            "duration": 0.12,
+            "loop": false,
+            "rate": 1,
+            "wall": 77742.90000000037,
+            "at": 72.44045351473923,
+            "state": "running"
+          },
+          {
+            "duration": 0.12,
+            "loop": false,
+            "rate": 1,
+            "wall": 78247.90000000037,
+            "at": 72.91065759637188,
+            "state": "running"
+          },
+          {
+            "duration": 0.12,
+            "loop": false,
+            "rate": 1,
+            "wall": 78748.60000000056,
+            "at": 73.3924716553288,
+            "state": "running"
+          },
+          {
+            "duration": 0.12,
+            "loop": false,
+            "rate": 1,
+            "wall": 79245.29999999981,
+            "at": 73.86267573696145,
+            "state": "running"
+          },
+          {
+            "duration": 0.6999773242630386,
+            "loop": false,
+            "rate": 1,
+            "wall": 79768.5,
+            "at": 74.38222222222223,
+            "state": "running"
+          },
+          {
+            "duration": 2.4,
+            "loop": false,
+            "rate": 1,
+            "wall": 79768.5,
+            "at": 74.38222222222223,
+            "state": "running"
+          },
+          {
+            "duration": 12,
+            "loop": false,
+            "rate": 1,
+            "wall": 82414.70000000019,
+            "at": 76.98285714285714,
+            "state": "running"
+          }
+        ],
+        "stops": 33
+      },
+      "phase_stamps": [
+        {
+          "phase": "preparation",
+          "wall": 15936.600000000559
+        },
+        {
+          "phase": "marks",
+          "wall": 27075.10000000056
+        },
+        {
+          "phase": "set",
+          "wall": 28150.700000000186
+        },
+        {
+          "phase": "running",
+          "wall": 29649.10000000056
+        },
+        {
+          "phase": "results",
+          "wall": 42666.700000000186
+        },
+        {
+          "phase": "preparation",
+          "wall": 57123.200000000186
+        },
+        {
+          "phase": "marks",
+          "wall": 63840.5
+        },
+        {
+          "phase": "set",
+          "wall": 65713.90000000037
+        },
+        {
+          "phase": "running",
+          "wall": 67216
+        },
+        {
+          "phase": "results",
+          "wall": 80231.10000000056
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "pass": true,
+      "message": "observed actual race phase running"
+    },
+    {
+      "pass": true,
+      "message": "Hold mode selected through visible UI"
+    },
+    {
+      "pass": true,
+      "message": "observed actual race phase results"
+    },
+    {
+      "pass": true,
+      "message": "observed actual race phase running"
+    },
+    {
+      "pass": true,
+      "message": "Hold mode selected through visible UI"
+    },
+    {
+      "pass": true,
+      "message": "observed actual race phase results"
+    }
+  ],
+  "errors": []
+}

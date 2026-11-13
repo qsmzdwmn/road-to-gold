@@ -1,0 +1,200 @@
+{
+  "url": "http://127.0.0.1:8031/web/index.html",
+  "console": [
+    {
+      "type": "log",
+      "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+    },
+    {
+      "type": "log",
+      "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+    },
+    {
+      "type": "log",
+      "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+    },
+    {
+      "type": "log",
+      "text": "RACE_VISIBILITY {\"focused\":false,\"hidden\":false}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"rhythm\",\"phase\":\"preparation\"}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"rhythm\",\"phase\":\"marks\"}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"rhythm\",\"phase\":\"set\"}"
+    },
+    {
+      "type": "log",
+      "text": "AUDIO_EVENT {\"count\":1,\"cue\":\"pistol\"}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"rhythm\",\"phase\":\"running\"}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_VISIBILITY {\"focused\":false,\"hidden\":false}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"Race interrupted. Retry for a valid attempt.\",\"mode\":\"rhythm\",\"phase\":\"invalid\"}"
+    }
+  ],
+  "page_errors": [],
+  "failed_requests": [],
+  "http_errors": [],
+  "checks": [
+    {
+      "pass": true,
+      "message": "observed actual race phase running"
+    },
+    {
+      "pass": true,
+      "message": "real headed Chromium focus or visibility loss observed"
+    },
+    {
+      "pass": true,
+      "message": "observed actual race phase invalid"
+    },
+    {
+      "pass": true,
+      "message": "actual browser visibility callback invalidates race"
+    },
+    {
+      "pass": true,
+      "message": "tab resume cannot replay pistol"
+    },
+    {
+      "pass": true,
+      "message": "real tab interruption leaves all career/PB/training data unchanged"
+    },
+    {
+      "pass": true,
+      "message": "no audio or engine errors after real visibility transition"
+    }
+  ],
+  "snapshots": {
+    "hidden": {
+      "contexts": [
+        {
+          "state": "running",
+          "sampleRate": 44100,
+          "baseLatency": 0.01,
+          "outputLatency": 0.032,
+          "rms": 0
+        }
+      ],
+      "starts": [
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 4.4117913832199545,
+          "state": "running"
+        },
+        {
+          "duration": 32,
+          "loop": false,
+          "rate": 1,
+          "at": 4.83265306122449,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 7.3317006802721085,
+          "state": "running"
+        },
+        {
+          "duration": 12,
+          "loop": false,
+          "rate": 1,
+          "at": 7.842539682539683,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 11.601269841269842,
+          "state": "running"
+        },
+        {
+          "duration": 0.3,
+          "loop": false,
+          "rate": 1,
+          "at": 13.850702947845805,
+          "state": "running"
+        }
+      ],
+      "stops": 6
+    }
+  },
+  "visibility": {
+    "hidden": false,
+    "focused": false
+  },
+  "hidden_audio": {
+    "contexts": [
+      {
+        "state": "running",
+        "sampleRate": 44100,
+        "baseLatency": 0.01,
+        "outputLatency": 0.032,
+        "rms": 0
+      }
+    ],
+    "starts": [
+      {
+        "duration": 0.08498866213151927,
+        "loop": false,
+        "rate": 1,
+        "at": 4.4117913832199545,
+        "state": "running"
+      },
+      {
+        "duration": 32,
+        "loop": false,
+        "rate": 1,
+        "at": 4.83265306122449,
+        "state": "running"
+      },
+      {
+        "duration": 0.08498866213151927,
+        "loop": false,
+        "rate": 1,
+        "at": 7.3317006802721085,
+        "state": "running"
+      },
+      {
+        "duration": 12,
+        "loop": false,
+        "rate": 1,
+        "at": 7.842539682539683,
+        "state": "running"
+      },
+      {
+        "duration": 0.08498866213151927,
+        "loop": false,
+        "rate": 1,
+        "at": 11.601269841269842,
+        "state": "running"
+      },
+      {
+        "duration": 0.3,
+        "loop": false,
+        "rate": 1,
+        "at": 13.850702947845805,
+        "state": "running"
+      }
+    ],
+    "stops": 6
+  }
+}

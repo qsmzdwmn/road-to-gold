@@ -1,0 +1,83 @@
+{
+  "url": "http://127.0.0.1:8032/index.html",
+  "console": [
+    {
+      "type": "log",
+      "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+    },
+    {
+      "type": "log",
+      "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+    },
+    {
+      "type": "log",
+      "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+    },
+    {
+      "type": "log",
+      "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+    },
+    {
+      "type": "log",
+      "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+    },
+    {
+      "type": "log",
+      "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+    }
+  ],
+  "page_errors": [],
+  "failed_requests": [],
+  "http_errors": [],
+  "checks": [
+    {
+      "pass": true,
+      "message": "mute-label visible: Mute All"
+    },
+    {
+      "pass": true,
+      "message": "off-state visible: OFF"
+    },
+    {
+      "pass": true,
+      "message": "on-state visible: ON"
+    },
+    {
+      "pass": true,
+      "message": "keyboard-unmute visible: OFF"
+    },
+    {
+      "pass": true,
+      "message": "keyboard-mute visible: ON"
+    },
+    {
+      "pass": true,
+      "message": "keyboard tour adjusts all three volume sliders and reaches Mute All"
+    },
+    {
+      "pass": true,
+      "message": "graphics-tab-access visible: Performance"
+    },
+    {
+      "pass": true,
+      "message": "menu-return visible: New Career"
+    },
+    {
+      "pass": true,
+      "message": "updated Mute All state and slider values survive reload"
+    },
+    {
+      "pass": true,
+      "message": "reloaded-state visible: ON"
+    },
+    {
+      "pass": true,
+      "message": "editing audio settings never creates a career save"
+    },
+    {
+      "pass": true,
+      "message": "no engine, Web Audio, JavaScript or storage errors"
+    }
+  ],
+  "snapshots": {}
+}

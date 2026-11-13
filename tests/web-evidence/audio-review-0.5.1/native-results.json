@@ -1,0 +1,158 @@
+[
+  {
+    "suite": "import",
+    "exit_code": 0,
+    "passes": 0,
+    "errors": []
+  },
+  {
+    "suite": "main",
+    "exit_code": 0,
+    "passes": 0,
+    "errors": []
+  },
+  {
+    "suite": "prototype",
+    "exit_code": 0,
+    "passes": 35,
+    "errors": []
+  },
+  {
+    "suite": "prototype-reload",
+    "exit_code": 0,
+    "passes": 1,
+    "errors": []
+  },
+  {
+    "suite": "career",
+    "exit_code": 0,
+    "passes": 82,
+    "errors": []
+  },
+  {
+    "suite": "career-reload",
+    "exit_code": 0,
+    "passes": 2,
+    "errors": []
+  },
+  {
+    "suite": "category",
+    "exit_code": 0,
+    "passes": 77,
+    "errors": []
+  },
+  {
+    "suite": "category-reload",
+    "exit_code": 0,
+    "passes": 2,
+    "errors": []
+  },
+  {
+    "suite": "locker",
+    "exit_code": 0,
+    "passes": 62,
+    "errors": []
+  },
+  {
+    "suite": "golden",
+    "exit_code": 0,
+    "passes": 72,
+    "errors": []
+  },
+  {
+    "suite": "studio",
+    "exit_code": 0,
+    "passes": 92,
+    "errors": []
+  },
+  {
+    "suite": "refinement",
+    "exit_code": 0,
+    "passes": 97,
+    "errors": []
+  },
+  {
+    "suite": "hub",
+    "exit_code": 0,
+    "passes": 186,
+    "errors": []
+  },
+  {
+    "suite": "hub-reload",
+    "exit_code": 0,
+    "passes": 2,
+    "errors": []
+  },
+  {
+    "suite": "training-rules",
+    "exit_code": 0,
+    "passes": 41,
+    "errors": []
+  },
+  {
+    "suite": "training-persistence",
+    "exit_code": 0,
+    "passes": 30,
+    "errors": []
+  },
+  {
+    "suite": "training-integration",
+    "exit_code": 0,
+    "passes": 86,
+    "errors": []
+  },
+  {
+    "suite": "training-reload",
+    "exit_code": 0,
+    "passes": 2,
+    "errors": []
+  },
+  {
+    "suite": "race-simulation",
+    "exit_code": 0,
+    "passes": 27,
+    "errors": []
+  },
+  {
+    "suite": "race-persistence",
+    "exit_code": 0,
+    "passes": 30,
+    "errors": []
+  },
+  {
+    "suite": "race-integration",
+    "exit_code": 0,
+    "passes": 35,
+    "errors": []
+  },
+  {
+    "suite": "stadium-environment",
+    "exit_code": 0,
+    "passes": 15,
+    "errors": []
+  },
+  {
+    "suite": "race-animation",
+    "exit_code": 0,
+    "passes": 17,
+    "errors": []
+  },
+  {
+    "suite": "race-quality",
+    "exit_code": 0,
+    "passes": 14,
+    "errors": []
+  },
+  {
+    "suite": "audio-preferences",
+    "exit_code": 0,
+    "passes": 15,
+    "errors": []
+  },
+  {
+    "suite": "audio-lifecycle",
+    "exit_code": 0,
+    "passes": 63,
+    "errors": []
+  }
+]

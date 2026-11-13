@@ -1,14 +1,14 @@
 # road-to-gold
 
-## ROAD TO GOLD — Version 0.4.0: Training foundation (review build)
+## ROAD TO GOLD — Version 0.5.1: Stadium Audio (release PR)
 
-A Godot **4.6.3 standard / GDScript** career-creation prototype using the **Compatibility** renderer. No paid assets, APIs, plugins, services, or project dependencies. Version 0.2.3 adds the approved Golden Path branding and a static cinematic Golden Road main menu. The existing category, origin and athlete data remain in THE LOCKER ROOM: a five-step creator with a static full-body procedural preview, midnight/graphite panels, ivory text and muted gold accents. The existing dark menu, settings/help, test track, camera, lighting and keyboard movement are preserved. Version 0.3.0 adds a responsive Career Hub with real athlete data and honest unavailable states. Version 0.4.0 adds deterministic Training with previews, fatigue management and protected schema 4 migration. There is no story, career-year simulation or sprint race yet.
+A Godot **4.6.3 standard / GDScript** career-creation prototype using the **Compatibility** renderer. No paid assets, APIs, plugins, services, or project dependencies. Version 0.2.3 adds the approved Golden Path branding and a static cinematic Golden Road main menu. The existing category, origin and athlete data remain in THE LOCKER ROOM: a five-step creator with a static full-body procedural preview, midnight/graphite panels, ivory text and muted gold accents. The existing dark menu, settings/help, test track, camera, lighting and keyboard movement are preserved. Version 0.3.0 adds a responsive Career Hub with real athlete data and honest unavailable states. Version 0.4.0 adds deterministic Training with previews, fatigue management and protected schema 4 migration. Version 0.5.0 adds the eight-runner 100m Development Meet, results/PBs and selectable race graphics quality. Version 0.5.1 adds owner-approved original audio and independent audio Settings. Story and career-year simulation are not implemented.
 
 ## Run locally
 
 1. Install/extract Godot 4.6.3 **standard**, not the .NET build. Import `project.godot` in the Project Manager.
 2. Press **F6** with `scenes/app/main.tscn` open, or **F5** to run the project.
-3. Select **New Career** → **Choose Your Athlete** → **Your Story** → **Your Appearance** → **Your Identity** → **Begin Your Legacy** → **Begin Career**. Use Back/Continue without losing choices. The last button saves and opens **Career Hub**; existing progress requires a replacement confirmation. **Continue** opens Hub for schema 2/3 careers; schema 1 position-only saves retain the original test track. Overview displays saved athlete data and honest empty states. My Athlete reuses the approved Player Card and stable appearance preview. Training, Calendar and Records are informational only. Settings reuses the existing screen. **Explore Track** opens the existing movement sandbox; **Career HQ** returns to Hub.
+3. Select **New Career** → **Choose Your Athlete** → **Your Story** → **Your Appearance** → **Your Identity** → **Begin Your Legacy** → **Begin Career**. Use Back/Continue without losing choices. The last button saves and opens **Career Hub**; existing progress requires a replacement confirmation. **Continue** opens Hub for schema 2/3/4 careers; schema 1 position-only saves retain the original test track. Overview displays saved athlete data and honest empty states. My Athlete reuses the approved Player Card and stable appearance preview. Training, Calendar and Records are informational only. Settings reuses the existing screen. **Explore Track** opens the existing movement sandbox; **Career HQ** returns to Hub.
 4. In the track sandbox, move with **WASD or arrow keys**. **Escape** returns to the menu without saving. **Save & Menu** writes the current position. **Continue** restores it. **Settings → Back** returns to the menu.
 5. Losing application focus pauses movement; choose **Resume** to continue. The track limits exploration to its marked area.
 
@@ -386,3 +386,59 @@ Settings → Race graphics now offers **Performance (default)** and **Enhanced**
 ### v0.5.0 release PR preparation
 
 Approved for feature-branch integration review. Fresh validation: **1,007 native assertions, 45 Chromium checks and the official Godot 4.6.3 single-thread Web export pass**. Performance is the default graphics profile; Enhanced remains selectable. Existing career/Training/PB and legacy-save protections are verified. Physical low-end Windows GPU performance and genuine browser-window blur remain unverified. See [release preparation and limitations](tests/V0_5_0_RELEASE_PREPARATION.md). The manual workflow includes all new native suites; no merge or deployment is authorized by this preparation.
+
+## v0.5.1 Stadium Audio
+
+All ten original audio assets and the updated Settings UI have owner listening
+and visual approval. This feature adds Hub music, phase-driven crowd ambience,
+a GO-synchronized pistol, player gait footsteps, finish/PB reactions and soft UI
+activation sounds. Seven fixed player slots bound simultaneous playback; Web uses
+sample playback and native builds use streams. No runtime synthesis, external
+API, paid asset, bus effects or extra 3D audio emitters are used.
+
+Settings provides independent Music, Sound Effects and Stadium Crowd sliders,
+plus Mute All with a large switch and explicit ON/OFF text. Back stays outside
+the scroll area at 800×600. Performance remains the default graphics profile;
+Enhanced remains selectable. All volumes update immediately.
+
+Audio preferences use **user://audio_settings.cfg**, separately from careers and
+race_graphics.cfg. Defaults are Music 35%, SFX 65%, Crowd 30%, Mute All off.
+Invalid values fall back safely; unknown preference versions are preserved.
+Failed saves are reported as session-only changes. Browser storage can be
+transient; keep the tab open briefly after writes. Career schemas 1–4 and Training
+balance remain unchanged.
+
+Trusted input gates audio. Music fades across Hub transitions. Starter/finish/PB
+cues are guarded against duplicates, and PB celebration requires a successful
+save reporting a new record. Race exit stops race one-shots and fades out crowd
+ambience; Hub music resumes appropriately. Interrupted attempts never replay old
+start cues on resume. Visual race cues remain available when audio is muted.
+
+The ten approved source files total 259,762 bytes; original hashes are recorded
+in assets/audio/manifest.json. Do not regenerate approved assets without review.
+The optional offline source generator requires NumPy and ffmpeg/libvorbis; neither
+is needed to run or export the game. Provenance is in assets/licenses/README.md.
+Temporary listening websites, converted review copies and preview publishing
+scripts are excluded from this release. tools/ is also excluded from Web exports.
+
+Use the official Godot 4.6.3 single-thread Web procedure above, serve the exported
+folder over localhost HTTP or HTTPS, and run the complete native suite including:
+
+```sh
+godot --headless --path . --script tests/audio_preferences_test.gd
+godot --headless --path . --script tests/audio_lifecycle_test.gd
+```
+
+Optional Chromium QA uses developer-only Playwright, Pillow, NumPy, Chromium and
+Tesseract. It creates a disposable profile under ignored work/ and must target a
+local test origin, never production:
+
+```sh
+python3 tests/browser_audio_verification.py --url http://localhost:8000/index.html
+```
+
+See tests/V0_5_1_RELEASE_PREPARATION.md for final results, package inspection and
+limitations. Physical low-end Windows GPU performance, physical audio output
+latency, iPhone Safari and genuine hidden-tab page freezing remain unverified.
+Real browser focus loss and AudioContext suspension have been exercised; synthetic
+freeze/resume callback checks are not claimed as actual page suspension.

@@ -1,0 +1,159 @@
+{
+  "url": "http://127.0.0.1:8035/index.html",
+  "console": [
+    {
+      "type": "log",
+      "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+    },
+    {
+      "type": "log",
+      "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+    },
+    {
+      "type": "log",
+      "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+    },
+    {
+      "type": "log",
+      "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+    },
+    {
+      "type": "log",
+      "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+    },
+    {
+      "type": "log",
+      "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+    },
+    {
+      "type": "log",
+      "text": "RACE_PHASE {\"category\":\"\",\"message\":\"\",\"mode\":\"rhythm\",\"phase\":\"preparation\"}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_PHASE {\"category\":\"female\",\"message\":\"\",\"mode\":\"hold\",\"phase\":\"preparation\"}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_PHASE {\"category\":\"female\",\"message\":\"\",\"mode\":\"hold\",\"phase\":\"marks\"}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_PHASE {\"category\":\"female\",\"message\":\"\",\"mode\":\"hold\",\"phase\":\"set\"}"
+    },
+    {
+      "type": "log",
+      "text": "AUDIO_EVENT {\"count\":1,\"cue\":\"pistol\"}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_PHASE {\"category\":\"female\",\"message\":\"\",\"mode\":\"hold\",\"phase\":\"running\"}"
+    },
+    {
+      "type": "log",
+      "text": "AUDIO_EVENT {\"count\":1,\"cue\":\"finish\"}"
+    },
+    {
+      "type": "log",
+      "text": "AUDIO_EVENT {\"count\":1,\"cue\":\"cheer\"}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_PHASE {\"category\":\"female\",\"message\":\"\",\"mode\":\"hold\",\"phase\":\"results\"}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_METRICS {\"frames\":141,\"godot_static_memory_bytes\":0,\"max_draw_calls\":114,\"mean_frame_ms\":117.12,\"p95_frame_ms\":174.4,\"runners\":8}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_INPUT {\"mode\":\"hold\",\"reaction_us\":100000,\"valid_presses\":1}"
+    },
+    {
+      "type": "log",
+      "text": "AUDIO_EVENT {\"count\":1,\"cue\":\"pb\"}"
+    },
+    {
+      "type": "log",
+      "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+    },
+    {
+      "type": "log",
+      "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+    },
+    {
+      "type": "log",
+      "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+    },
+    {
+      "type": "log",
+      "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+    },
+    {
+      "type": "log",
+      "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+    },
+    {
+      "type": "log",
+      "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+    }
+  ],
+  "page_errors": [],
+  "failed_requests": [],
+  "http_errors": [],
+  "checks": [
+    {
+      "pass": true,
+      "message": "isolated legacy fixture targets exactly one career slot"
+    },
+    {
+      "pass": true,
+      "message": "legacy readiness never infers category or rewrites saved values"
+    },
+    {
+      "pass": true,
+      "message": "explicit category migration preserves appearance/age and original-save backup"
+    },
+    {
+      "pass": true,
+      "message": "observed actual race phase running"
+    },
+    {
+      "pass": true,
+      "message": "Hold mode selected through visible UI"
+    },
+    {
+      "pass": true,
+      "message": "legacy migrated athlete receives one actual-GO pistol"
+    },
+    {
+      "pass": true,
+      "message": "observed actual race phase results"
+    },
+    {
+      "pass": true,
+      "message": "female legacy race saves category PB and preserves Training"
+    },
+    {
+      "pass": true,
+      "message": "legacy migration and PB survive browser reload"
+    },
+    {
+      "pass": true,
+      "message": "isolated legacy fixture targets exactly one career slot"
+    },
+    {
+      "pass": true,
+      "message": "future-protected visible: Unsupported competition data"
+    },
+    {
+      "pass": true,
+      "message": "future competition data remains untouched"
+    },
+    {
+      "pass": true,
+      "message": "legacy browser checks have no engine, audio or storage errors"
+    }
+  ],
+  "snapshots": {}
+}

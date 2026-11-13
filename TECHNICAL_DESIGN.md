@@ -168,3 +168,35 @@ The repository adds an optional versioned `competition` block inside schema 4, p
 Race-only presentation now extracts the stable model’s existing limb boxes into simple hip/shoulder pivots. `race_animation.gd` drives opposing strides from actual runner speed, smooths idle and acceleration lean, and corrects shoe contact without touching simulation coordinates. `race_limb_batch.gd` renders 48 skin parts and 16 shoes through two shared cube MultiMeshes with per-athlete colors; static body/hair/clothing stay batched under the lean pivot. No skeleton, animation asset, shared-model edit or save field is introduced. The lower player-follow view is primary. An optional static establishing view is available only in readiness; Ready cuts directly to the lower camera. The live HUD has a compact navy panel.
 
 Race quality preferences are isolated in `race_quality.gd`/`user://race_graphics.cfg`; no career schema or writer changes. Performance is the production default and uses no shadow map/MSAA, a uniformly sampled 116-instance crowd sharing the original mesh/material, and one feathered unlit contact-shadow batch. Enhanced restores the original 346-instance crowd, dynamic shadows and 2× MSAA. All static architectural mesh data and actor simulation/camera/HUD contracts remain unchanged. See `tests/PERFORMANCE_RELEASE_GATE.md` for actual measurements and unsupported hardware claims.
+
+## v0.5.1 audio presentation layer
+
+Main owns one persistent `AudioDirector`. `default_bus_layout.tres` routes Music,
+Sound Effects and Stadium Crowd to Master. Seven monophonic player slots are
+music, crowd, crowd reaction, pistol, player footstep, finish and UI. Long loops
+cross-fade by frame-rate-independent gain smoothing; a Hub data refresh does not
+recreate the mixer or restart its score. Master mute retains stored category gains.
+Music is Hub-only in this milestone; menu and creator use soft activation sounds.
+
+`AudioPreferences` validates finite 0–100 volumes and a boolean Mute All, writes a
+temporary ConfigFile then renames it, and refuses unknown preference versions.
+Its file is `user://audio_settings.cfg`. Career repository, schemas 1–4, Training,
+records and graphics preferences are outside its responsibilities. Settings apply
+immediately; persistence errors explicitly mark the session-only change.
+
+`RaceAudioPresenter` observes authoritative phase boundaries and player state,
+without touching simulation data. Only Set → Running emits the pistol. Gait
+half-cycle crossings emit at most one footstep per observation; stalls skip
+missed contacts instead of bursting. Player finish is observed in the physics
+presentation hook as well as the render hook, including a last-place finisher
+whose finish advances the session to Results in the same tick. Successfully
+saved `new_pb` outcomes alone permit the PB cue. Retry resets attempt guards;
+interruptions/exit stop race one-shots. Crowd reaction replacement prevents
+stacking finish and PB cheers.
+
+Trusted input gates audio. Godot owns the browser AudioContext; the game creates
+no competing context. Focus/visibility changes suspend presentation audio and
+restore only current-context loops, never old one-shots. UI activation has a
+100 ms cooldown; pointer hover, automatic focus and slider repeats produce no
+navigation-sound spam. Web uses sample playback; native uses stream playback.
+Original assets are generated offline and licensed/provenanced in assets/licenses.

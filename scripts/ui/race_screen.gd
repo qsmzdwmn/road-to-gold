@@ -13,6 +13,7 @@ const TrainingState=preload("res://scripts/training/training_state.gd")
 const TrainingRules=preload("res://scripts/training/training_service.gd")
 const GOLD=Color("c6a66b")
 const MUTED=Color("a5b5be")
+var audio_presenter
 var session
 var world
 var world_container
@@ -135,6 +136,7 @@ func _resize():
 	results_panel.size=area.size;invalid_panel.size=Vector2(minf(600,area.size.x),minf(240,area.size.y))
 
 func open(value:Dictionary,athlete_career,token:String,career_fingerprint:String):
+	if audio_presenter!=null:audio_presenter.reset()
 	if physics_budget_before<0:physics_budget_before=Engine.max_physics_steps_per_frame
 	Engine.max_physics_steps_per_frame=maxi(128,physics_budget_before)
 	snapshot=value.duplicate(true);career=athlete_career;source_token=token;fingerprint=career_fingerprint
@@ -180,6 +182,7 @@ func _physics_process(_delta:float):
 		print("RACE_STALL ",JSON.stringify({"gap_ms":float(now-last_physics_us)/1000.0}));session.interrupt("Race interrupted by a long frame pause. Retry for a valid attempt.");last_physics_us=now;_refresh_phase();return
 	last_physics_us=now
 	var before:String=session.phase;session.step()
+	if audio_presenter!=null and before=="running" and world!=null and not world.animations.is_empty():audio_presenter.player_state(session.runners[0],world.animations[0].phase)
 	if session.phase!=before:_refresh_phase()
 	if session.phase=="results" and not result_emitted:
 		result_emitted=true;pending_result=session.result(source_token,fingerprint);_render_results();_save_result()
@@ -198,6 +201,7 @@ func _refresh_hud():
 	if session.phase=="running":cue.text="GO" if session.ticks<45 else ""
 
 func _refresh_phase():
+	if audio_presenter!=null:audio_presenter.phase_changed(session.phase)
 	print("RACE_PHASE ",JSON.stringify({"phase":session.phase,"category":session.category,"mode":session.mode,"message":session.message}))
 	stadium_button.visible=session.phase=="preparation";stadium_button.text="Race View" if world!=null and world.establishing else "Stadium View"
 	preparation.visible=session.phase=="preparation";results_panel.visible=session.phase=="results";invalid_panel.visible=session.phase=="invalid"
@@ -241,6 +245,7 @@ func _save_result():
 	result_ready.emit(pending_result)
 
 func save_outcome(result:Dictionary):
+	if audio_presenter!=null:audio_presenter.saved_result(result.get("ok",false),result.get("new_pb",false))
 	saved=result.get("ok",false)
 	if saved:
 		result_status.text="Saved - "+("NEW PERSONAL BEST" if result.get("new_pb",false) else "Result recorded")
@@ -262,6 +267,7 @@ func retry():
 	open(snapshot,career,source_token,fingerprint)
 
 func close():
+	if audio_presenter!=null:audio_presenter.close()
 	_restore_physics_budget()
 	hide()
 	if world_container!=null:world_container.queue_free();world_container=null;world_viewport=null;world=null
@@ -294,6 +300,8 @@ func _restore_physics_budget():
 		physics_budget_before=-1
 
 func _process(_delta:float):
+	if audio_presenter!=null and visible and session!=null and world!=null and not world.animations.is_empty():
+		audio_presenter.player_state(session.runners[0],world.animations[0].phase)
 	if player_marker!=null:
 		player_marker.visible=visible and session!=null and session.phase in ["marks","set","running"] and world!=null
 		if player_marker.visible:

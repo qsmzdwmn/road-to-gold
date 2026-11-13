@@ -1,0 +1,16 @@
+{
+  "approved_asset_count": 10,
+  "all_source_hashes_unchanged": true,
+  "assets": {
+    "hub_music.ogg": "186265c402ce42345ac40f230dbf4bd0f39b4a5443526d1bf9b024c724c6fb41",
+    "stadium_crowd.ogg": "38b1ed7f109c85851c6aef9462fc85ef4c0b51c3ddacd6b724c18aa2ffb5e201",
+    "crowd_finish.ogg": "0dee4921f4877db48b305f1894a42a887c24eae9d97145a90a16f0d894e37499",
+    "crowd_pb.ogg": "28bc099dd9f8a70097e7f5d2c99ae1ddef5360fbc8329c53856909b82773beaa",
+    "start_pistol.wav": "2a13308d2126544fbd3f1d63a000a06a1af0787cc558170350b2aabcb561b4f5",
+    "footstep_left.wav": "c0c3b5af69895f259e92201be8adef9e64d89dd190875c41cf711c805870141f",
+    "footstep_right.wav": "7f8f88161eab985e4cf44d24bd417ecd524a1dd7bab250708879dcce4595281a",
+    "finish.wav": "11316c218ef9e61b34d24baca53e9153a92d7c94e886c7e99c30f1cea3df7b95",
+    "ui_navigation.wav": "96ba38977835611da0cd329f2dcc1cdbe7c13e38d781dd1c39293de880874180",
+    "ui_confirm.wav": "29b003144cc5e8149b51c909c747ade1b1e9236951c20cdd4b0afcd3da1b1c0c"
+  }
+}

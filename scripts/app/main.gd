@@ -6,6 +6,7 @@ const Career = preload("res://scripts/career/career_data.gd")
 const CreatorScene = preload("res://scenes/ui/career_creator.tscn")
 const HubScene = preload("res://scenes/ui/career_hub.tscn")
 const RaceScene=preload("res://scenes/race/race_screen.tscn")
+var audio
 var race_view
 const Model = preload("res://scripts/customization/procedural_athlete.gd")
 @onready var athlete = $Track/Athlete
@@ -24,6 +25,8 @@ var settings_from_hub := false
 
 func _ready() -> void:
 	Controls.install_actions()
+	audio=preload("res://scripts/audio/audio_director.gd").new();audio.name="AudioDirector";add_child(audio)
+	ui.audio_settings.bind_director(audio)
 	creator = CreatorScene.instantiate()
 	creator.theme = ui.theme
 	$CanvasLayer.add_child(creator)
@@ -39,6 +42,7 @@ func _ready() -> void:
 	hub.training_requested.connect(_training_requested)
 	hub.race_requested.connect(_enter_race)
 	race_view=RaceScene.instantiate();race_view.theme=ui.theme;$CanvasLayer.add_child(race_view)
+	race_view.audio_presenter=preload("res://scripts/audio/race_audio_presenter.gd").new(audio)
 	race_view.hub_requested.connect(_return_from_race)
 	race_view.category_requested.connect(_race_category)
 	race_view.result_ready.connect(_race_finished)
@@ -80,6 +84,7 @@ func _refresh_save() -> void:
 	ui.status.tooltip_text = ui.status.text
 
 func _new_requested() -> void:
+	audio.set_context("silent")
 	race_view.close()
 	hub.hide()
 	settings_from_hub = false
@@ -144,6 +149,7 @@ func _enter_hub(message := "Loaded saved career.", reset_page := true) -> void:
 	ui.hide()
 	career_visual.apply_appearance(current_career.athlete.appearance,current_career.athlete_category)
 	career_visual.show()
+	audio.set_context("hub")
 	hub.open(current_career,message,reset_page)
 	hub.training_panel.present(repository.training_for(training_snapshot),career_token,training_snapshot.get("schema_version")!=4)
 	hub.present_competition(training_snapshot.get("competition",{}))
@@ -172,6 +178,7 @@ func _settings_closed() -> void:
 		_enter_hub("Loaded saved career.",false)
 
 func _enter_track() -> void:
+	audio.set_context("silent")
 	race_view.close()
 	hub.hide()
 	settings_from_hub = false
@@ -205,6 +212,7 @@ func _save_notice() -> String:
 	return "Progress saved locally."
 
 func _menu() -> void:
+	audio.set_context("silent")
 	race_view.close()
 	hub.hide()
 	settings_from_hub = false

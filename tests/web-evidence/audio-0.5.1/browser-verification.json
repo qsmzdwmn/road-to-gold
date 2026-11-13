@@ -1,0 +1,1390 @@
+{
+  "url": "http://127.0.0.1:8031/web/index.html",
+  "console": [
+    {
+      "type": "log",
+      "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+    },
+    {
+      "type": "log",
+      "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+    },
+    {
+      "type": "log",
+      "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+    },
+    {
+      "type": "log",
+      "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+    },
+    {
+      "type": "log",
+      "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+    },
+    {
+      "type": "log",
+      "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+    },
+    {
+      "type": "log",
+      "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"rhythm\",\"phase\":\"preparation\"}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"hold\",\"phase\":\"marks\"}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"False start \u2014 attempt invalid. No time or Personal Best recorded.\",\"mode\":\"hold\",\"phase\":\"invalid\"}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"hold\",\"phase\":\"preparation\"}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"hold\",\"phase\":\"marks\"}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"hold\",\"phase\":\"set\"}"
+    },
+    {
+      "type": "log",
+      "text": "AUDIO_EVENT {\"count\":1,\"cue\":\"pistol\"}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"hold\",\"phase\":\"running\"}"
+    },
+    {
+      "type": "log",
+      "text": "AUDIO_EVENT {\"count\":1,\"cue\":\"finish\"}"
+    },
+    {
+      "type": "log",
+      "text": "AUDIO_EVENT {\"count\":1,\"cue\":\"cheer\"}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"hold\",\"phase\":\"results\"}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_METRICS {\"frames\":89,\"godot_static_memory_bytes\":0,\"max_draw_calls\":115,\"mean_frame_ms\":181.84,\"p95_frame_ms\":244.3,\"runners\":8}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_INPUT {\"mode\":\"hold\",\"reaction_us\":83333,\"valid_presses\":1}"
+    },
+    {
+      "type": "log",
+      "text": "AUDIO_EVENT {\"count\":1,\"cue\":\"pb\"}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"hold\",\"phase\":\"preparation\"}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"hold\",\"phase\":\"marks\"}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"hold\",\"phase\":\"set\"}"
+    },
+    {
+      "type": "log",
+      "text": "AUDIO_EVENT {\"count\":2,\"cue\":\"pistol\"}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"\",\"mode\":\"hold\",\"phase\":\"running\"}"
+    },
+    {
+      "type": "log",
+      "text": "RACE_PHASE {\"category\":\"male\",\"message\":\"Race interrupted. Retry for a valid attempt.\",\"mode\":\"hold\",\"phase\":\"invalid\"}"
+    },
+    {
+      "type": "log",
+      "text": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org"
+    },
+    {
+      "type": "log",
+      "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+    },
+    {
+      "type": "log",
+      "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+    }
+  ],
+  "page_errors": [],
+  "failed_requests": [],
+  "http_errors": [],
+  "checks": [
+    {
+      "pass": true,
+      "message": "no playback or signal before user interaction"
+    },
+    {
+      "pass": true,
+      "message": "first Settings interaction unlocks one UI sample in a running AudioContext"
+    },
+    {
+      "pass": true,
+      "message": "three volumes and global mute persisted separately in IndexedDB"
+    },
+    {
+      "pass": true,
+      "message": "mute suppresses navigation playback"
+    },
+    {
+      "pass": true,
+      "message": "music-reloaded visible: 17%"
+    },
+    {
+      "pass": true,
+      "message": "all audio preferences survive page reload"
+    },
+    {
+      "pass": true,
+      "message": "graphics-preserved visible: Performance"
+    },
+    {
+      "pass": true,
+      "message": "Hub plays the original looping score"
+    },
+    {
+      "pass": true,
+      "message": "measured nonzero Web Audio output in Hub"
+    },
+    {
+      "pass": true,
+      "message": "Hub score actually repeats beyond its 32-second duration"
+    },
+    {
+      "pass": true,
+      "message": "Mute All produces silence while Hub music is active"
+    },
+    {
+      "pass": true,
+      "message": "Hub Settings return does not restart music"
+    },
+    {
+      "pass": true,
+      "message": "stadium ambience starts in readiness"
+    },
+    {
+      "pass": true,
+      "message": "crowd ambience actually repeats beyond its 12-second duration"
+    },
+    {
+      "pass": true,
+      "message": "observed actual race phase marks"
+    },
+    {
+      "pass": true,
+      "message": "observed actual race phase invalid"
+    },
+    {
+      "pass": true,
+      "message": "false start produces no pistol and leaves career unchanged"
+    },
+    {
+      "pass": true,
+      "message": "observed actual race phase running"
+    },
+    {
+      "pass": true,
+      "message": "Hold mode selected through visible UI"
+    },
+    {
+      "pass": true,
+      "message": "one pistol buffer starts at actual Running transition"
+    },
+    {
+      "pass": true,
+      "message": "observed actual race phase results"
+    },
+    {
+      "pass": true,
+      "message": "Hold Sprint still finishes and saves"
+    },
+    {
+      "pass": true,
+      "message": "pistol does not repeat during race or results"
+    },
+    {
+      "pass": true,
+      "message": "gait crossings produce speed-synchronized player footstep samples"
+    },
+    {
+      "pass": true,
+      "message": "one restrained player finish cue"
+    },
+    {
+      "pass": true,
+      "message": "PB celebration follows successful new record save"
+    },
+    {
+      "pass": true,
+      "message": "observed actual race phase running"
+    },
+    {
+      "pass": true,
+      "message": "fresh attempt gets exactly one fresh pistol"
+    },
+    {
+      "pass": true,
+      "message": "browser AudioContext suspension observed"
+    },
+    {
+      "pass": true,
+      "message": "interruption enters invalid state"
+    },
+    {
+      "pass": true,
+      "message": "audio resume/input never replays a starting pistol"
+    },
+    {
+      "pass": true,
+      "message": "interruption preserves PB and training"
+    },
+    {
+      "pass": true,
+      "message": "career and Personal Best survive reload with separate audio preferences"
+    },
+    {
+      "pass": true,
+      "message": "unmute preference persists alongside career data"
+    },
+    {
+      "pass": true,
+      "message": "actual AudioContext suspension confirmed"
+    },
+    {
+      "pass": true,
+      "message": "synthetic freeze callback silences voices"
+    },
+    {
+      "pass": true,
+      "message": "resume restores exactly one current Hub loop"
+    },
+    {
+      "pass": true,
+      "message": "resume cannot replay pistol or change career"
+    },
+    {
+      "pass": true,
+      "message": "lifecycle callbacks have no JavaScript errors"
+    },
+    {
+      "pass": true,
+      "message": "no engine, JavaScript, WASM, audio or storage errors"
+    }
+  ],
+  "snapshots": {
+    "before-interaction": {
+      "contexts": [
+        {
+          "state": "running",
+          "sampleRate": 44100,
+          "baseLatency": 0.01,
+          "outputLatency": 0.032,
+          "rms": 0
+        }
+      ],
+      "starts": [],
+      "stops": 0
+    },
+    "hub": {
+      "contexts": [
+        {
+          "state": "running",
+          "sampleRate": 44100,
+          "baseLatency": 0.01,
+          "outputLatency": 0.032,
+          "rms": 0.01934750669112902
+        }
+      ],
+      "starts": [
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 6.861496598639456,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 9.871383219954648,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 11.990204081632653,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 14.262857142857143,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 16.172698412698413,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 18.361179138321994,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 20.74122448979592,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 22.71201814058957,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 31.761995464852607,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 33.95047619047619,
+          "state": "running"
+        },
+        {
+          "duration": 32,
+          "loop": false,
+          "rate": 1,
+          "at": 34.281360544217684,
+          "state": "running"
+        }
+      ],
+      "stops": 10
+    },
+    "hub-muted": {
+      "contexts": [
+        {
+          "state": "running",
+          "sampleRate": 44100,
+          "baseLatency": 0.01,
+          "outputLatency": 0.032,
+          "rms": 0
+        }
+      ],
+      "starts": [
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 6.861496598639456,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 9.871383219954648,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 11.990204081632653,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 14.262857142857143,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 16.172698412698413,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 18.361179138321994,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 20.74122448979592,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 22.71201814058957,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 31.761995464852607,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 33.95047619047619,
+          "state": "running"
+        },
+        {
+          "duration": 32,
+          "loop": false,
+          "rate": 1,
+          "at": 34.281360544217684,
+          "state": "running"
+        },
+        {
+          "duration": 32,
+          "loop": false,
+          "rate": 1,
+          "at": 66.34231292517006,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 68.00253968253968,
+          "state": "running"
+        }
+      ],
+      "stops": 12
+    },
+    "readiness": {
+      "contexts": [
+        {
+          "state": "running",
+          "sampleRate": 44100,
+          "baseLatency": 0.01,
+          "outputLatency": 0.032,
+          "rms": 0.00010981107494942085
+        }
+      ],
+      "starts": [
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 6.861496598639456,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 9.871383219954648,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 11.990204081632653,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 14.262857142857143,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 16.172698412698413,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 18.361179138321994,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 20.74122448979592,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 22.71201814058957,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 31.761995464852607,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 33.95047619047619,
+          "state": "running"
+        },
+        {
+          "duration": 32,
+          "loop": false,
+          "rate": 1,
+          "at": 34.281360544217684,
+          "state": "running"
+        },
+        {
+          "duration": 32,
+          "loop": false,
+          "rate": 1,
+          "at": 66.34231292517006,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 68.00253968253968,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 71.70031746031746,
+          "state": "running"
+        },
+        {
+          "duration": 32,
+          "loop": false,
+          "rate": 1,
+          "at": 71.73224489795918,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 73.66240362811791,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 76.16145124716553,
+          "state": "running"
+        },
+        {
+          "duration": 12,
+          "loop": false,
+          "rate": 1,
+          "at": 76.64036281179138,
+          "state": "running"
+        }
+      ],
+      "stops": 15
+    },
+    "context-suspended": {
+      "contexts": [
+        {
+          "state": "suspended",
+          "sampleRate": 44100,
+          "baseLatency": 0.01,
+          "outputLatency": 0.032,
+          "rms": 0.00743088684664722
+        }
+      ],
+      "starts": [
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 6.861496598639456,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 9.871383219954648,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 11.990204081632653,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 14.262857142857143,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 16.172698412698413,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 18.361179138321994,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 20.74122448979592,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 22.71201814058957,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 31.761995464852607,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 33.95047619047619,
+          "state": "running"
+        },
+        {
+          "duration": 32,
+          "loop": false,
+          "rate": 1,
+          "at": 34.281360544217684,
+          "state": "running"
+        },
+        {
+          "duration": 32,
+          "loop": false,
+          "rate": 1,
+          "at": 66.34231292517006,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 68.00253968253968,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 71.70031746031746,
+          "state": "running"
+        },
+        {
+          "duration": 32,
+          "loop": false,
+          "rate": 1,
+          "at": 71.73224489795918,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 73.66240362811791,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 76.16145124716553,
+          "state": "running"
+        },
+        {
+          "duration": 12,
+          "loop": false,
+          "rate": 1,
+          "at": 76.64036281179138,
+          "state": "running"
+        },
+        {
+          "duration": 12,
+          "loop": false,
+          "rate": 1,
+          "at": 88.66249433106576,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 90.45043083900227,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 94.78095238095239,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 97.86049886621315,
+          "state": "running"
+        },
+        {
+          "duration": 12,
+          "loop": false,
+          "rate": 1,
+          "at": 97.9504761904762,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 100.85006802721088,
+          "state": "running"
+        },
+        {
+          "duration": 0.3,
+          "loop": false,
+          "rate": 1,
+          "at": 103.54068027210884,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 104.66104308390022,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 104.98031746031747,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 105.26185941043084,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 105.401179138322,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 105.56081632653061,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 105.70013605442176,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 105.86267573696145,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 106.00199546485261,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 106.14131519274376,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 106.27192743764172,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 106.40253968253968,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 106.71020408163265,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 106.87274376417234,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 107.03238095238095,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 107.19201814058957,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 107.36036281179139,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 107.56063492063493,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 107.7318820861678,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 107.86249433106576,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 108.01052154195011,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 108.19047619047619,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 108.37043083900227,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 108.52136054421769,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 108.6722902494331,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 108.84063492063493,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 108.99156462585034,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 109.16281179138322,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 109.30213151927438,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 109.47047619047619,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 109.6126984126984,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 109.73170068027211,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 110.0712925170068,
+          "state": "running"
+        },
+        {
+          "duration": 12,
+          "loop": false,
+          "rate": 1,
+          "at": 110.09160997732427,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 110.22222222222223,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 110.38185941043083,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 110.66049886621315,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 110.7911111111111,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 110.94204081632653,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 111.06104308390023,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 111.19165532879819,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 111.31065759637188,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 111.44126984126984,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 111.74022675736961,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 111.89115646258503,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 112.04208616780045,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 112.17269841269841,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 112.33233560090703,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 112.45133786848072,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 112.60226757369614,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 112.84027210884354,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 113.01151927437641,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 113.14213151927437,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 113.25242630385488,
+          "state": "running"
+        },
+        {
+          "duration": 0.12,
+          "loop": false,
+          "rate": 1,
+          "at": 113.39174603174604,
+          "state": "running"
+        },
+        {
+          "duration": 0.6999773242630386,
+          "loop": false,
+          "rate": 1,
+          "at": 113.50204081632653,
+          "state": "running"
+        },
+        {
+          "duration": 2.4,
+          "loop": false,
+          "rate": 1,
+          "at": 113.50204081632653,
+          "state": "running"
+        },
+        {
+          "duration": 3.2,
+          "loop": false,
+          "rate": 1,
+          "at": 114.22185941043084,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 118.73233560090704,
+          "state": "running"
+        },
+        {
+          "duration": 32,
+          "loop": false,
+          "rate": 1,
+          "at": 118.85133786848073,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 120.61024943310657,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 123.24281179138322,
+          "state": "running"
+        },
+        {
+          "duration": 12,
+          "loop": false,
+          "rate": 1,
+          "at": 123.4314739229025,
+          "state": "running"
+        },
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 126.64163265306122,
+          "state": "running"
+        },
+        {
+          "duration": 0.3,
+          "loop": false,
+          "rate": 1,
+          "at": 129.24226757369615,
+          "state": "running"
+        }
+      ],
+      "stops": 84
+    },
+    "final": {
+      "contexts": [
+        {
+          "state": "running",
+          "sampleRate": 44100,
+          "baseLatency": 0.01,
+          "outputLatency": 0.032,
+          "rms": 0.018587555203355272
+        }
+      ],
+      "starts": [
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 2.6528798185941045,
+          "state": "running"
+        },
+        {
+          "duration": 32,
+          "loop": false,
+          "rate": 1,
+          "at": 2.8212244897959184,
+          "state": "running"
+        }
+      ],
+      "stops": 1
+    },
+    "before-lifecycle": {
+      "contexts": [
+        {
+          "state": "running",
+          "sampleRate": 44100,
+          "baseLatency": 0.01,
+          "outputLatency": 0.032,
+          "rms": 0.018890556768859163
+        }
+      ],
+      "starts": [
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 2.6528798185941045,
+          "state": "running"
+        },
+        {
+          "duration": 32,
+          "loop": false,
+          "rate": 1,
+          "at": 2.8212244897959184,
+          "state": "running"
+        }
+      ],
+      "stops": 1
+    },
+    "audio-suspended": {
+      "contexts": [
+        {
+          "state": "suspended",
+          "sampleRate": 44100,
+          "baseLatency": 0.01,
+          "outputLatency": 0.032,
+          "rms": 0.01991525562720142
+        }
+      ],
+      "starts": [
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 2.6528798185941045,
+          "state": "running"
+        },
+        {
+          "duration": 32,
+          "loop": false,
+          "rate": 1,
+          "at": 2.8212244897959184,
+          "state": "running"
+        }
+      ],
+      "stops": 1
+    },
+    "synthetic-freeze": {
+      "contexts": [
+        {
+          "state": "suspended",
+          "sampleRate": 44100,
+          "baseLatency": 0.01,
+          "outputLatency": 0.032,
+          "rms": 0.01991525562720142
+        }
+      ],
+      "starts": [
+        {
+          "duration": 0.08498866213151927,
+          "loop": false,
+          "rate": 1,
+          "at": 2.6528798185941045,
+          "state": "running"
+        },
+        {
+          "duration": 32,
+          "loop": false,
+          "rate": 1,
+          "at": 2.8212244897959184,
+          "state": "running"
+        }
+      ],
+      "stops": 2
+    }
+  },
+  "focus_state": {
+    "hidden": false,
+    "focused": true
+  }
+}

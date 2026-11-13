@@ -1,0 +1,19 @@
+{
+  "godot_version": [
+    4,
+    6,
+    3
+  ],
+  "metadata": {
+    "application/config/name": "ROAD TO GOLD",
+    "application/config/version": "0.5.1"
+  },
+  "pack_sha256": "8c7f949c6a613719a24c49bc90390ecf352736ff07fdce21d0fece54bee0c551",
+  "file_count": 146,
+  "all_entry_md5_verified": true,
+  "approved_audio_hashes_unchanged": true,
+  "audio_imports": 10,
+  "stream_load_assertions": 13,
+  "no_preview_tools_tests_or_experimental_models": true,
+  "probe_log": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org\n\nPASS: EXPORTED AUDIO hub_music.ogg\nPASS: EXPORTED AUDIO stadium_crowd.ogg\nPASS: EXPORTED AUDIO crowd_finish.ogg\nPASS: EXPORTED AUDIO crowd_pb.ogg\nPASS: EXPORTED AUDIO start_pistol.wav\nPASS: EXPORTED AUDIO footstep_left.wav\nPASS: EXPORTED AUDIO footstep_right.wav\nPASS: EXPORTED AUDIO finish.wav\nPASS: EXPORTED AUDIO ui_navigation.wav\nPASS: EXPORTED AUDIO ui_confirm.wav\nPASS: exported audio buses\nPASS: exported default quality Performance\nPASS: no preview website resources\n"
+}
